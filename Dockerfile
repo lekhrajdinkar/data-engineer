@@ -26,9 +26,9 @@ ENV _JAVA_OPTIONS="-Xmx24g"
 RUN apk add --no-cache python3 \
     && python3 -m ensurepip \
     && apk add python3-dev \
-    && rm -rf /var/cache/apk/* \
-    && if [[ ! -e /usr/bin/python ]] then ln -sf /usr/bin/python3 /usr/bin/python; fi \
-    && if [[ ! -e /usr/bin/pip ]] then ln -s pip3 /usr/bin/pip; fi
+    && rm -rf /usr/lib/python*/ensurepip \
+    && if [[ ! -e /usr/bin/pip ]]; then ln -s pip3 /usr/bin/pip; fi \
+    && if [[ ! -e /usr/bin/python ]]; then ln -sf /usr/bin/python3 /usr/bin/python; fi
 
 # pip
 RUN pip install  --upgrade pip setuptools
@@ -43,7 +43,7 @@ RUN apk update && apk upgrade \
 
 # java
 RUN apk update && apk upgrade \
-    && apk add ca-certificates  && upgrade-ca-certificates \
+    #&& apk add ca-certificates  && upgrade-ca-certificates \
     && apk add --no-cache openjdk17 --repository=https://dl-cdn.alpinelinux.org/alpine/v3.17/community \
     && rm -rf /var/cache/apk/*
 
@@ -71,7 +71,7 @@ RUN echo spark.hadoop.fs.s3a.aws.credential.provider=com.amazonaws.auth.EC2Conat
 
 EXPOSE 80
 ADD ./ .
-RUN chmod +x ./app-run.sh
+RUN chmod +x ./app_run.sh
 CMD ["./app-run.sh"]
 
 
