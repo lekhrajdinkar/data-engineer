@@ -1,6 +1,6 @@
 {
-  "input_path": "dir1/source.csv",
-  "output_path": "dir2/target.csv",
+  "input_path": "DIR_SOURCE/elt-2-source.csv",
+  "output_path": "DIR_TARGET/elt-2-target",
   "columns_to_remove": ["columnA", "columnB"],
   "derived_column_name": "additional_column",
   "transformation": "add_10"

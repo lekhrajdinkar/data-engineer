@@ -1,3 +1,6 @@
+DIR_TARGET/
+/DIR_TARGET/**
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
