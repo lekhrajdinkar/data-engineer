@@ -1,8 +1,16 @@
 {
   "input_path": "/Users/lekhrajdinkar/Documents/GitHub/02-etl-pyspark/DIR_SOURCE/etl-1-source.csv",
   "output_path": "/Users/lekhrajdinkar/Documents/GitHub/02-etl-pyspark/DIR_TARGET/etl-1-target",
-  "transformation": "multiply_by_2",
-  "derived_column_name": "new_column",
-  "columns_to_remove": ["column1", "column2"]
+
+  "transformations": {
+    "t0-demo": "multiply_by_2"
+  },
+
+  "filters": {
+    "f0-demo": {
+      "columns_to_remove": ["junk_col1", "junk_col2"]
+    }
+  }
+
 }
 
