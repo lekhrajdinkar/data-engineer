@@ -1,0 +1,7 @@
+{
+  "input_path": "dir1/source.csv",
+  "output_path": "dir2/target.csv",
+  "columns_to_remove": ["column1", "column2"],
+  "derived_column_name": "new_column",
+  "transformation": "multiply_by_2"
+}
