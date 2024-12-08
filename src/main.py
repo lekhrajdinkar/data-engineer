@@ -1,9 +1,11 @@
 import json
 import sys
-import pandas as pd
 from pyspark.sql import SparkSession
+
 from etlModule.filter.filter_1 import filter_demo
 from etlModule.transformer.controller import apply_transformations
+from databaseModule.save_2_db import write_to_database
+from databaseModule.db_config import DATABASE_CONFIG
 
 
 def load_config(etl_name: str):
@@ -30,6 +32,11 @@ def main():
     df_filtered = filter_demo(df_transformed, etl_config['filters']['f0-demo'])
 
     df_filtered.write.csv(output_path, mode='overwrite', header=True)
+    print(f"Data successfully stored in the csv file")
+
+    if etl_config['output_to_db'] == True :
+        write_to_database(df, DATABASE_CONFIG)
+        print(f"Data successfully stored in the table: {DATABASE_CONFIG['table']}")
 
     spark.stop()
 
