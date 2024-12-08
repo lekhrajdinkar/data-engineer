@@ -4,6 +4,7 @@
 - database : [docker-compose-postgres.yml](docker-compose-postgres.yml)
 - lsof -i :8000
 -  fastapi : http://127.0.0.1:8000/run_etl
+  - swagger : http://localhost:8000/docs
 ```
 body:
 {

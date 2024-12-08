@@ -4,7 +4,7 @@ from src.etlModule.filter.filter_1 import filter_demo
 from src.etlModule.transformer.controller import apply_transformations
 from src.commonModule.init_srv import load_env_config, load_etl_config
 from src.databaseModule.entity.FundEntity import FundEntity
-from src.databaseModule.save_dataframe_2_db import save_dataframe_to_db, get_db_session
+from src.databaseModule.save_dataframe_2_db import save_dataframe_to_db, get_db_session, save_dataframe_to_db_generic
 
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
@@ -51,6 +51,7 @@ def main(etl_name):
         if etl_config['output_to_db'] == True :
             session, engine = get_db_session()
             FundEntity.metadata.create_all(engine) # create table
+            #save_dataframe_to_db_generic(df, session, FundEntity)
             save_dataframe_to_db(df, session, FundEntity)
 
         spark.stop()
