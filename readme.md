@@ -3,6 +3,21 @@
 ---
 
 # project Structure
+- database : [docker-compose-postgres.yml](docker-compose-postgres.yml)
+- lsof -i :8000
+-  fastapi : http://127.0.0.1:8000/run_etl
+```
+body:
+{
+    "etl_name" : "etl-1"
+}
+
+response:
+{
+    "status": "success",
+    "message": "ETL - etl-1 process completed successfully"
+}
+```
 ```
 # /Users/lekhrajdinkar/Documents/GitHub/02-etl-pyspark
 

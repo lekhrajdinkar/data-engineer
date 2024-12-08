@@ -1,4 +1,4 @@
-from commonModule.init_srv import load_env_config
+from src.commonModule.init_srv import load_env_config
 from sqlalchemy import create_engine
 
 app_config = load_env_config();

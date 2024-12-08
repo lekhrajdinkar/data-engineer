@@ -2,7 +2,7 @@ from pyspark.sql import SparkSession
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.exc import SQLAlchemyError
-from databaseModule.db_connection_util import DATABASE_URL
+from src.databaseModule.db_connection_util import DATABASE_URL
 
 # Function to create and configure the database connection
 def get_db_session():
