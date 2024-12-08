@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # mac
-# export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home
-# export PATH=$JAVA_HOME/bin:$PATH
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home
+export PATH=$JAVA_HOME/bin:$PATH
 
 # Check if the environment argument is passed
 # $0 represents the script name

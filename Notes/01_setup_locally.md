@@ -2,11 +2,13 @@
 - https://chatgpt.com/c/674f855d-41b4-800d-a76f-39b5e7bff18c - setup Dockerfile
 - https://chatgpt.com/c/67548d97-6268-800d-a8af-b8ccf576e5f0 - Theory-1
 - https://chatgpt.com/c/6754cff4-b63c-800d-9e2f-caba7735697e - project
+- [readme.md](../readme.md) :point_left:
 ---
 
 # install 
 - **Python**:
-  - 3.9.6
+  - 3.9.6 
+  - 3.12
 - **Java 17**: 
   - not higher.
   - else, java.lang.UnsupportedOperationException: **getSubject** is supported only if a security manager is allowed.
@@ -22,16 +24,25 @@
     export PATH=$JAVA_HOME/bin:$PATH
     ```
 - **Spark**: 
-  - Hadoop (optional): Some Spark versions require Hadoop dependencies. 
-  - 3.5.3 has hadoop.
-  - environment variable: spark and hadoop 
+  - https://www.apache.org/dyn/closer.lua/spark/spark-3.5.3/spark-3.5.3-bin-hadoop3.tgz
     ```
     export SPARK_HOME=/Users/lekhrajdinkar/Documents/spark-3.5.3-bin-hadoop3
     export PATH=$SPARK_HOME/bin:$PATH
+    ```
+- **hadoop**:
+  - https://github.com/steveloughran/winutils ( for windows only )
+      ```
+    === MAC : spark-3.5.3-bin-hadoop3  spark and hadoop , same ===
     
     export HADOOP_HOME=Users/lekhrajdinkar/Documents/spark-3.5.3-bin-hadoop3
     export PATH=$HADOOP_HOME/bin:$PATH
     export HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop
+    
+    === windows : winutils ===
+    
+    set HADOOP_HOME=C:\Users\Manisha\Documents\winutils-master\hadoop-3.0.0
+    set PATH=%HADOOP_HOME%\bin;%PATH%
+    set HADOOP_CONF_DIR=$HADOOP_HOME\etc\hadoop
     ```
 ---
 # start spark session
