@@ -1,9 +1,13 @@
 from pyspark.sql import DataFrame
 
+from pyspark.sql import functions as F
+
 def validate_data(df: DataFrame) -> DataFrame:
-    """
-    Basic validation to ensure no null values in critical columns.
-    """
-    if df.filter(df['id'].isNull()).count() > 0:
-        raise ValueError("Validation failed: 'id' column contains null values.")
+    # Check for null values in critical columns
+    critical_columns = ['id', 'fund', 'price', 'quantity']
+    df = df.filter(~F.col('id').isNull())
+    df = df.filter(~F.col('fund').isNull())
+    df = df.filter(~F.col('price').isNull())
+    df = df.filter(~F.col('quantity').isNull())
+
     return df
