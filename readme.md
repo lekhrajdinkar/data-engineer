@@ -1,7 +1,5 @@
-# reference:
-- https://chatgpt.com/c/6754cff4-b63c-800d-9e2f-caba7735697e
+[Notes](Notes)
 ---
-
 # project Structure
 - database : [docker-compose-postgres.yml](docker-compose-postgres.yml)
 - lsof -i :8000
