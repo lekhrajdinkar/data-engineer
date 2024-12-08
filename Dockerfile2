@@ -1,0 +1,18 @@
+# Use the official Spark image
+FROM bitnami/spark:3.4.0
+
+# Set working directory
+WORKDIR /app
+
+# Copy the local source code to the container
+COPY . .
+
+# Install dependencies
+RUN pip install --no-cache-dir -r requirements.txt
+
+EXPOSE 80
+
+RUN chmod +x ./app_run.sh
+
+ENTRYPOINT ["app_run.sh"]
+CMD ["etl-1"]

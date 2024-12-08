@@ -1,0 +1,23 @@
+{
+  "input_path": "/Users/lekhrajdinkar/Documents/GitHub/02-etl-pyspark/DIR_SOURCE/etl-1-source.csv",
+  "output_path": "/Users/lekhrajdinkar/Documents/GitHub/02-etl-pyspark/DIR_TARGET/etl-1-target",
+  "output_to_db": true,
+
+  "transformations": {
+    "multiply": [
+      {"onCol": "price", "factor": 2, "mode": "new_col"},
+      {"onCol": "quantity", "factor": 10, "mode": "new_col"}
+    ],
+    "add": [
+      {"onCol": "price", "factor": 10,"mode": "new_col"}
+    ]
+  },
+
+  "filters": {
+    "f0-demo": {
+      "columns_to_remove": ["junk_col1", "junk_col2"]
+    }
+  }
+
+}
+

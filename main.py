@@ -1,1 +1,0 @@
-print("ETL APP");
