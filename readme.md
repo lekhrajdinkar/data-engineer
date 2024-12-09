@@ -64,3 +64,24 @@ response:
 - requirements.txt: Python dependencies needed for the project.
 - Dockerfile: Used to containerize the application, likely for deployment or running in different environments.
 - `app_run.sh`: A shell script to automate the execution of the application.
+
+---
+## Spark History Server
+- Spark UI becomes unavailable after the Spark session stops because it is tied to the lifecycle of the session
+- persist the Spark application event data and access it later for debugging or analysis.
+- Configure Spark to log events to a director or s3:
+```
+# spark-defaults.conf
+
+spark.eventLog.enabled true
+
+spark.eventLog.dir hdfs://<path-to-hdfs> (or a local directory)
+
+spark.eventLog.dir s3://your-bucket-name/spark-logs/
+spark.hadoop.fs.s3a.access.key YOUR_ACCESS_KEY
+spark.hadoop.fs.s3a.secret.key YOUR_SECRET_KEY
+spark.hadoop.fs.s3a.impl org.apache.hadoop.fs.s3a.S3AFileSystem
+```
+- start: **./sbin/start-history-server.sh**
+  - spark.history.fs.logDirectory <above-path>
+  - http://<hostname>:18080

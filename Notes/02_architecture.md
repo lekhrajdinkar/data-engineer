@@ -1,3 +1,5 @@
+- https://chatgpt.com/c/6756481b-c08c-800d-9b78-2e024a506c16 - parquet and orc format
+--- 
 # A. Spark::`Intro`
 - `polyglot` (Scala, Python [PySpark], Java, R, and SQL) + CLI
 - wide libraries for a variety of tasks.
