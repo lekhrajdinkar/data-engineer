@@ -19,7 +19,7 @@
   - **Mesos**
   - **YARN** (Hadoop)
   - **Kubernetes**
-  - **Standalone**: Spark’s own cluster manager
+  - **Standalone**: Spark’s own cluster manager (Local mode)
     - this is what used in local project
     - ccgg etl project
 
@@ -46,6 +46,8 @@
 +---------------------+      +-------------------------+
 
 ```
+
+
 ## 1. RDD
 - Resilient Distributed Dataset
 - immutable
@@ -79,7 +81,34 @@
   - assigns resources (CPU, memory) to the `driver` and `executor nodes`
 
 ## 3. worker node/s
-### 3.1. Task
+### 3.1. Job / DAG
+- highest-level unit of work in Spark.
+- think f --> entire **execution path** from the input-data to the final-result
+- When an action is invoked on df, Spark computes the full **Directed Acyclic Graph** (`DAG`)
+- DAG is divided into **stages**, based on transformations.
+- **stages are distributed to worker nodes as tasks**. :point_left:
+- job-1 
+  - stage-1 (task-1)
+    - task-1.1 ( on partition-1)
+    - task-1.2 ( on partition-2)
+    - ...
+```
+# 1. This action triggers a Spark job
+
+df = spark.read.csv("data.csv")
+df = df.filter(df["age"] > 30)
+df = df.groupBy("city").count()
+df.show()
+
+# 2. DAG
+[Input Data] --> [Filter] --> [Shuffle] --> [GroupBy] --> [Count]
+
+# 3. split in task/stages
+Stage 1: Input Data --> Filter
+Stage 2: Shuffle --> GroupBy --> Count
+
+```
+### 3.2. Task
 - Tasks are `units of work` created by dividing the data into partitions.
 - Tasks run in parallel across `executors`.
 - operations:
@@ -92,7 +121,8 @@
     - collect
     - ...
 
-### 3.2. Executors (parallelism)
+### 3.2. Executors 
+- task executor.
 - `distributed processes` that run on **worker nodes**.
 - Executes the `tasks` assigned by the driver (on **partitions of the data**)
 - caching/persistence
