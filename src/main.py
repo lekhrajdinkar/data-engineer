@@ -10,6 +10,7 @@ from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 
 etlapp = FastAPI()
+sparkGlobalSession = SparkSession.builder.appName("PySpark-ETL-session").getOrCreate()
 
 @etlapp.get("/")
 async def read_root():
@@ -38,9 +39,9 @@ def main(etl_name):
         print(etl_config)
         input_path = etl_config['input_path']
         output_path = etl_config['output_path']
-        spark = SparkSession.builder.appName("PySpark-ETL-session-"+etl_name).getOrCreate()
+        sparkGlobalSession = SparkSession.builder.appName("PySpark-ETL-session-"+etl_name).getOrCreate()
 
-        df = spark.read.option("header", "true").csv(input_path)  # Use the header option
+        df = sparkGlobalSession.read.option("header", "true").csv(input_path)  # Use the header option
 
         df_transformed = apply_transformations(df, etl_config['transformations'])
         df_filtered = filter_demo(df_transformed, etl_config['filters']['f0-demo'])
@@ -54,7 +55,7 @@ def main(etl_name):
             #save_dataframe_to_db_generic(df, session, FundEntity)
             save_dataframe_to_db(df, session, FundEntity)
 
-        spark.stop()
+        # spark.stop()
         return {
             "status": "success",
             "message": f"ETL - {etl_name} process completed successfully"
@@ -64,5 +65,5 @@ def main(etl_name):
         return {"status": "error", "message": str(e)}
 
 if __name__ == "__main__":
-    etl_name = sys.argv[1] # reading commad line arg
+    etl_name = sys.argv[1] # reading command line arg
     main(etl_name)
