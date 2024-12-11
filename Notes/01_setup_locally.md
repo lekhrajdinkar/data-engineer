@@ -3,6 +3,7 @@
 - https://chatgpt.com/c/67548d97-6268-800d-a8af-b8ccf576e5f0 - Theory-1
 - https://chatgpt.com/c/6754cff4-b63c-800d-9e2f-caba7735697e - project
 - https://chatgpt.com/c/67554038-a4d4-800d-a0aa-d51f621943a5 - Spark UI
+- https://chatgpt.com/c/67578727-cefc-800d-9b0d-20eee5402296 - trandformation and action on df
 
 - [readme.md](../readme.md) :point_left:
 ---
