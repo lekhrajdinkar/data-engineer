@@ -9,7 +9,7 @@ from src.databaseModule.save_dataframe_2_db import save_dataframe_to_db, get_db_
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 
-etlapp = FastAPI()
+etlapp = FastAPI(title="ETL Service - lekhraj")
 sparkGlobalSession = SparkSession.builder.appName("PySpark-ETL-session").getOrCreate()
 
 @etlapp.get("/")
