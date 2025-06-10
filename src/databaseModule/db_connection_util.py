@@ -2,6 +2,7 @@ from src.commonModule.init_srv import load_env_config
 from sqlalchemy import create_engine
 
 app_config = load_env_config();
+print(f" type of app_config json load : {type(app_config)}")
 db_config = app_config['db']
 
 db_host = db_config['host']
