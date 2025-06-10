@@ -17,14 +17,12 @@ curl -X 'POST' \
   -d '{  "etl_name": "etl-2" }'
 
 ```
-- update path here [env](env)
-```json
+- update path, here [env](env)
+```
   "input_path": "C:\\Users\\Manisha\\Documents\\GitHub\\02-etl-pyspark\\DIR_SOURCE\\etl-1-source.csv",
   "output_path": "C:\\Users\\Manisha\\Documents\\GitHub\\02-etl-pyspark\\DIR_SOURCE\\etl-1-target",
 ```
 ```
-# /Users/lekhrajdinkar/Documents/GitHub/02-etl-pyspark
-
 02-etl-pyspark/
 │
 ├── Notes
@@ -50,7 +48,6 @@ curl -X 'POST' \
 └── requirements.txt
 └── Dockerfile
 └── app_run.sh
-
 ```
 - DIR_SOURCE: The source data directory containing CSV files for ETL processing.
 - DIR_TARGET: Target directory where transformed data will be stored (not listed with specific files, but inferred from the structure).
