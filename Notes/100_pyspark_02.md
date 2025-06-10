@@ -16,8 +16,3 @@ df = sc.createDataFrame(rdd, schema)
 df.show() # print
 df.explain() # prints the execution plan
 ```
-
-## 2. transformation
-```python
-
-```

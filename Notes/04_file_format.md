@@ -48,3 +48,8 @@ apt-get install parquet-tools  # Ubuntu
     - improving parallel processing.
 - use case :
   - If working in a Hadoop/Hive ecosystem or need advanced indexing and compression for large datasets
+
+---
+## C Avro
+- **Row-based**
+- better for streaming
