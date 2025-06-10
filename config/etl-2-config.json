@@ -1,6 +1,6 @@
 {
-  "input_path": "/Users/lekhrajdinkar/Documents/GitHub/02-etl-pyspark/DIR_SOURCE/etl-1-source.csv",
-  "output_path": "/Users/lekhrajdinkar/Documents/GitHub/02-etl-pyspark/DIR_TARGET/etl-1-target",
+  "input_path": "/Users/lekhrajdinkar/Documents/GitHub/idea/02-etl-pyspark/DIR_SOURCE/etl-1-source.csv",
+  "output_path": "/Users/lekhrajdinkar/Documents/GitHub/idea/02-etl-pyspark/DIR_TARGET/etl-1-target",
   "output_to_db": true,
 
   "transformations": {

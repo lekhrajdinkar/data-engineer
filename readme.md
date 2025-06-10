@@ -2,20 +2,25 @@
 ---
 # project Structure
 - database : [docker-compose-postgres.yml](docker-compose-postgres.yml)
-- lsof -i :8000
--  fastapi : http://127.0.0.1:8000/run_etl
-  - swagger : http://localhost:8000/docs
+- **lsof -i :8000** : list all processes that are currently using port 8000
+- fastapi : http://127.0.0.1:8000/run_etl
+- swagger **doc** : http://localhost:8000/docs
+- project configs:
+  - etl config: [config](config)
+  - env config: [env](env)
+  - json file --> json.load() --> **dictionary**
 ```
-body:
-{
-    "etl_name" : "etl-1"
-}
+curl -X 'POST' \
+  'http://localhost:8000/run_etl/' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{  "etl_name": "etl-2" }'
 
-response:
-{
-    "status": "success",
-    "message": "ETL - etl-1 process completed successfully"
-}
+```
+- update path here [env](env)
+```json
+  "input_path": "C:\\Users\\Manisha\\Documents\\GitHub\\02-etl-pyspark\\DIR_SOURCE\\etl-1-source.csv",
+  "output_path": "C:\\Users\\Manisha\\Documents\\GitHub\\02-etl-pyspark\\DIR_SOURCE\\etl-1-target",
 ```
 ```
 # /Users/lekhrajdinkar/Documents/GitHub/02-etl-pyspark
@@ -47,7 +52,6 @@ response:
 └── app_run.sh
 
 ```
-- Notes: A directory likely containing documentation or project notes.
 - DIR_SOURCE: The source data directory containing CSV files for ETL processing.
 - DIR_TARGET: Target directory where transformed data will be stored (not listed with specific files, but inferred from the structure).
 - config: Contains configuration files (likely JSON), such as etl-1.json, which could define processing rules or mappings for different ETL steps.
@@ -67,6 +71,7 @@ response:
 
 ---
 ## Spark History Server
+- may be need to need ENV VAR again :point_left:
 - Spark UI becomes unavailable after the Spark session stops because it is tied to the lifecycle of the session
 - persist the Spark application event data and access it later for debugging or analysis.
 - Configure Spark to log events to a director or s3:
