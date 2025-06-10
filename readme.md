@@ -1,10 +1,14 @@
 [Notes](Notes)
 ---
 # project Structure
-- database : [docker-compose-postgres.yml](docker-compose-postgres.yml)
+- **run**
+  - database : [docker-compose-postgres.yml](docker-compose-postgres.yml)
+  - [app_run.bat](app_run.bat) | [app_run.sh](app_run.sh)
+  - [Dockerfile](Dockerfile)
 - **lsof -i :8000** : list all processes that are currently using port 8000
-- fastapi : http://127.0.0.1:8000/run_etl
-- swagger **doc** : http://localhost:8000/docs
+- **fastapi** : http://127.0.0.1:8000/run_etl
+- **sqlachely** : session, engine, session.all/add_all( entities), s.commit()
+- swagger **doc** : http://localhost:8000/docs :point_left:
 - project configs:
   - etl config: [config](config)
   - env config: [env](env)
@@ -65,6 +69,9 @@ curl -X 'POST' \
 - requirements.txt: Python dependencies needed for the project.
 - Dockerfile: Used to containerize the application, likely for deployment or running in different environments.
 - `app_run.sh`: A shell script to automate the execution of the application.
+- result
+
+![img.png](img.png)
 
 ---
 ## Spark History Server
