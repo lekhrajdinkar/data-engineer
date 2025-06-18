@@ -1,0 +1,49 @@
+site_name: ETL PySpark Notes
+site_description: Documentation for ETL processes using PySpark
+site_author: Your Name
+
+# Navigation based on your Notes folder
+nav:
+  - 00_panda: 00_panda.md
+  - 01_setup_locally: 01_setup_locally.md
+  - 02_architecture: 02_architecture.md
+  - 03_ETL_1: 03_ETL_1.md
+  - 03_ETL_2: 03_ETL_2.md
+  - 04_file_format: 04_file_format.md
+  - 100_pyspark_01_start: 100_pyspark_01_start.md
+  - 100_pyspark_02: 100_pyspark_02.md
+  # Add more entries matching your filenames
+
+theme:
+  name: material
+  features:
+    - navigation.expand
+    - navigation.sections
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+
+repo_url: https://github.com/lekhrajdinkar/02-etl-pyspark
+repo_name: GitHub
+edit_uri: edit/main/Notes/
+
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: true
+  - pymdownx.superfences
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.betterem
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+
+plugins:
+  - search
