@@ -975,7 +975,7 @@
 <li>Applies a function/lambda to each <strong>row</strong> of the DataFrame</li>
 <li>Row-wise transformations,  One row at a time.</li>
 <li>mapPartition(): Applies a function/lambda to each <strong>partition</strong> (instead of each row)
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">lambda1</span><span class="p">(</span><span class="n">iterator</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">lambda1</span><span class="p">(</span><span class="n">iterator</span><span class="p">):</span>
   <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">iterator</span><span class="p">:</span>
     <span class="k">yield</span> <span class="p">(</span><span class="n">row</span><span class="o">.</span><span class="n">number</span> <span class="o">*</span> <span class="mi">10</span><span class="p">,)</span>
 <span class="n">df</span><span class="o">.</span><span class="n">rdd</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span>
@@ -1066,7 +1066,7 @@
 <h2 id="10-performance-optimize-a-slow-pyspark-job">10 performance : optimize a slow PySpark job<a class="headerlink" href="#10-performance-optimize-a-slow-pyspark-job" title="Permanent link">&para;</a></h2>
 <h3 id="cache">cache<a class="headerlink" href="#cache" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><span class="c1"># CACHE :: Data reused multiple times + Small enough to fit in cluster memory</span>
-<span class="kn">from</span> <span class="nn">pyspark.storagelevel</span> <span class="kn">import</span> <span class="n">StorageLevel</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pyspark.storagelevel</span><span class="w"> </span><span class="kn">import</span> <span class="n">StorageLevel</span>
 <span class="n">df</span><span class="o">.</span><span class="n">persist</span><span class="p">(</span><span class="n">StorageLevel</span><span class="o">.</span><span class="n">MEMORY_AND_DISK</span><span class="p">)</span>
 
 <span class="n">df</span><span class="o">.</span><span class="n">cache</span><span class="p">()</span>  <span class="c1"># or df.persist(StorageLevel.MEMORY_ONLY)</span>
@@ -1093,7 +1093,7 @@
 <ul>
 <li>a read-only variable cached on each worker to avoid shipping it multiple times </li>
 <li>used for small lookup table.
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">pyspark</span> <span class="kn">import</span> <span class="n">SparkContext</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">pyspark</span><span class="w"> </span><span class="kn">import</span> <span class="n">SparkContext</span>
 <span class="n">sc</span> <span class="o">=</span> <span class="n">SparkContext</span><span class="p">()</span>
 <span class="c1"># Small lookup dictionary</span>
 <span class="n">country_codes</span> <span class="o">=</span> <span class="p">{</span>    <span class="s2">&quot;US&quot;</span><span class="p">:</span> <span class="s2">&quot;United States&quot;</span><span class="p">,</span>    <span class="s2">&quot;IN&quot;</span><span class="p">:</span> <span class="s2">&quot;India&quot;</span><span class="p">,</span>    <span class="s2">&quot;UK&quot;</span><span class="p">:</span> <span class="s2">&quot;United Kingdom&quot;</span><span class="p">}</span>
@@ -1107,8 +1107,8 @@
 <span class="c1"># Returns: [&#39;United States&#39;, &#39;India&#39;, &#39;United Kingdom&#39;, &#39;India&#39;, &#39;United States&#39;]</span>
 </code></pre></div></li>
 <li><strong>Broadcast join</strong>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">pyspark.sql</span> <span class="kn">import</span> <span class="n">SparkSession</span>
-<span class="kn">from</span> <span class="nn">pyspark.sql.functions</span> <span class="kn">import</span> <span class="n">broadcast</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">pyspark.sql</span><span class="w"> </span><span class="kn">import</span> <span class="n">SparkSession</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pyspark.sql.functions</span><span class="w"> </span><span class="kn">import</span> <span class="n">broadcast</span>
 
 <span class="n">spark</span> <span class="o">=</span> <span class="n">SparkSession</span><span class="o">.</span><span class="n">builder</span><span class="o">.</span><span class="n">getOrCreate</span><span class="p">()</span>
 
