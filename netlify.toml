@@ -1,0 +1,3 @@
+[build.environment]
+PIP_NO_BUILD_ISOLATION = "false"
+PYTHON_VERSION = "3.10"
