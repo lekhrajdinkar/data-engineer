@@ -20,16 +20,16 @@ nav:
 theme:
   name: material
   features:
-    - navigation.expand
+    - navigation.side
     - navigation.sections
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: indigo
+      primary: orange
       accent: indigo
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: indigo
+      primary: yellow
       accent: indigo
 
 repo_url: https://github.com/lekhrajdinkar/02-etl-pyspark
