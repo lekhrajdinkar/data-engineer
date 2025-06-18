@@ -1,9 +1,9 @@
-# references
-- https://chatgpt.com/c/674f855d-41b4-800d-a76f-39b5e7bff18c - setup Dockerfile
-- https://chatgpt.com/c/67548d97-6268-800d-a8af-b8ccf576e5f0 - Theory-1
-- https://chatgpt.com/c/6754cff4-b63c-800d-9e2f-caba7735697e - project
-- https://chatgpt.com/c/67554038-a4d4-800d-a0aa-d51f621943a5 - Spark UI
-- https://chatgpt.com/c/67578727-cefc-800d-9b0d-20eee5402296 - trandformation and action on df
+# References
+- [chatgpt - setup Dockerfile](https://chatgpt.com/c/674f855d-41b4-800d-a76f-39b5e7bff18c)
+- [chatgpt - theory](https://chatgpt.com/c/67548d97-6268-800d-a8af-b8ccf576e5f0)
+- [chatgpt - theory](https://chatgpt.com/c/6754cff4-b63c-800d-9e2f-caba7735697e)
+- [chatgpt - project](https://chatgpt.com/c/67554038-a4d4-800d-a0aa-d51f621943a5)
+- [chatgpt - trandformation and action on df](https://chatgpt.com/c/67578727-cefc-800d-9b0d-20eee5402296)
 - [readme.md](readme.md) :point_left:
 ---
 
@@ -11,10 +11,11 @@
 - **Python**:
   - 3.9.6 
   - 3.12
+
 - **Java 17**: 
   - not higher.
   - else, java.lang.UnsupportedOperationException: **getSubject** is supported only if a security manager is allowed.
-    ```
+```
     # check java installtion dir
     /usr/libexec/java_home -V
     
@@ -24,7 +25,8 @@
     
     export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home
     export PATH=$JAVA_HOME/bin:$PATH
-    ```
+```
+
 - **Spark**: 
   - https://www.apache.org/dyn/closer.lua/spark/spark-3.5.3/spark-3.5.3-bin-hadoop3.tgz
     ```
@@ -33,7 +35,8 @@
     ```
 - **hadoop**:
   - https://github.com/steveloughran/winutils ( for windows only )
-      ```
+  
+```
     === MAC : spark-3.5.3-bin-hadoop3  spark and hadoop , same ===
     
     export HADOOP_HOME=Users/lekhrajdinkar/Documents/spark-3.5.3-bin-hadoop3
@@ -45,7 +48,7 @@
     set HADOOP_HOME=C:\Users\Manisha\Documents\winutils-master\hadoop-3.0.0
     set PATH=%HADOOP_HOME%\bin;%PATH%
     set HADOOP_CONF_DIR=$HADOOP_HOME\etc\hadoop
-    ```
+```
 ---
 # start spark session
 ## spark-shell
@@ -76,6 +79,7 @@ scala>
 - **pip install pyspark**
 - pyspark 
 - pyspark --master local[*]
+
 ```
 pyspark --master local[*]
 
@@ -97,4 +101,4 @@ Using Python version 3.9.6 (default, Feb  3 2024 15:58:28)
 Spark context Web UI available at http://192.168.0.255:4041
 Spark context available as 'sc' (master = local[*], app id = local-1733605396364).
 SparkSession available as 'spark'.
->>> ```
+```
