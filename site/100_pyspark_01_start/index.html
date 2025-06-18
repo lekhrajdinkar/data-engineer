@@ -1,0 +1,1027 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation for ETL processes using PySpark">
+      
+      
+        <meta name="author" content="Your Name">
+      
+      
+      
+        <link rel="prev" href="../04_file_format/">
+      
+      
+        <link rel="next" href="../100_pyspark_02/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>100_pyspark_01_start - ETL PySpark Notes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#interview-topic" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="ETL PySpark Notes" class="md-header__button md-logo" aria-label="ETL PySpark Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ETL PySpark Notes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              100_pyspark_01_start
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/lekhrajdinkar/02-etl-pyspark" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="ETL PySpark Notes" class="md-nav__button md-logo" aria-label="ETL PySpark Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    ETL PySpark Notes
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/lekhrajdinkar/02-etl-pyspark" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../00_panda/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    00_panda
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01_setup_locally/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    01_setup_locally
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02_architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    02_architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03_ETL_1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    03_ETL_1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03_ETL_2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    03_ETL_2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04_file_format/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    04_file_format
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    100_pyspark_01_start
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    100_pyspark_01_start
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#0-create" class="md-nav__link">
+    <span class="md-ellipsis">
+      0 Create
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-select-delete" class="md-nav__link">
+    <span class="md-ellipsis">
+      1 select / delete
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-transformation-update" class="md-nav__link">
+    <span class="md-ellipsis">
+      2 transformation / update
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-action-groupby-agg-join-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      3 action: groupBy, agg, join, order
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-more" class="md-nav__link">
+    <span class="md-ellipsis">
+      5 more
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-performance-optimize-a-slow-pyspark-job" class="md-nav__link">
+    <span class="md-ellipsis">
+      10 performance : optimize a slow PySpark job
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10 performance : optimize a slow PySpark job">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cache" class="md-nav__link">
+    <span class="md-ellipsis">
+      cache
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dfdropduplicates" class="md-nav__link">
+    <span class="md-ellipsis">
+      df.dropDuplicates()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#partitioning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Partitioning
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#avoid-shuffles" class="md-nav__link">
+    <span class="md-ellipsis">
+      avoid shuffles.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#broadcast-variable-and-join" class="md-nav__link">
+    <span class="md-ellipsis">
+      broadcast variable and join
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tuning-executor-memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      tuning executor memory
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#file-format-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      File Format Optimization
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#99-scenarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      99 scenarios
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../100_pyspark_02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    100_pyspark_02
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#0-create" class="md-nav__link">
+    <span class="md-ellipsis">
+      0 Create
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-select-delete" class="md-nav__link">
+    <span class="md-ellipsis">
+      1 select / delete
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-transformation-update" class="md-nav__link">
+    <span class="md-ellipsis">
+      2 transformation / update
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-action-groupby-agg-join-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      3 action: groupBy, agg, join, order
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-more" class="md-nav__link">
+    <span class="md-ellipsis">
+      5 more
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-performance-optimize-a-slow-pyspark-job" class="md-nav__link">
+    <span class="md-ellipsis">
+      10 performance : optimize a slow PySpark job
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10 performance : optimize a slow PySpark job">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cache" class="md-nav__link">
+    <span class="md-ellipsis">
+      cache
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dfdropduplicates" class="md-nav__link">
+    <span class="md-ellipsis">
+      df.dropDuplicates()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#partitioning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Partitioning
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#avoid-shuffles" class="md-nav__link">
+    <span class="md-ellipsis">
+      avoid shuffles.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#broadcast-variable-and-join" class="md-nav__link">
+    <span class="md-ellipsis">
+      broadcast variable and join
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tuning-executor-memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      tuning executor memory
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#file-format-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      File Format Optimization
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#99-scenarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      99 scenarios
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="interview-topic">interview topic<a class="headerlink" href="#interview-topic" title="Permanent link">&para;</a></h1>
+<h2 id="0-create">0 Create<a class="headerlink" href="#0-create" title="Permanent link">&para;</a></h2>
+<ul>
+<li>data = [1,2,3,4,5]</li>
+<li>rdd = spark.parallelize(data)</li>
+<li>spark.createDataFrame(rdd, schema)</li>
+</ul>
+<h2 id="1-select-delete">1 select / delete<a class="headerlink" href="#1-select-delete" title="Permanent link">&para;</a></h2>
+<ul>
+<li>df.<strong>select</strong>("col-1") - chooses existing columns</li>
+</ul>
+<h2 id="2-transformation-update">2 transformation / update<a class="headerlink" href="#2-transformation-update" title="Permanent link">&para;</a></h2>
+<ul>
+<li>lazy operations that create a new RDD / df</li>
+<li>don't execute until an action is called</li>
+<li>Each transformation returns a new DataFrame</li>
+<li>chain transformations for better readability</li>
+<li>map()</li>
+<li>Applies a function/lambda to each <strong>row</strong> of the DataFrame</li>
+<li>Row-wise transformations,  One row at a time.</li>
+<li>mapPartition(): Applies a function/lambda to each <strong>partition</strong> (instead of each row)
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">lambda1</span><span class="p">(</span><span class="n">iterator</span><span class="p">):</span>
+  <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">iterator</span><span class="p">:</span>
+    <span class="k">yield</span> <span class="p">(</span><span class="n">row</span><span class="o">.</span><span class="n">number</span> <span class="o">*</span> <span class="mi">10</span><span class="p">,)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">rdd</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">rdd</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">lambda1</span><span class="p">)</span>
+
+<span class="n">df</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">age</span> <span class="o">&gt;</span> <span class="mi">30</span><span class="p">)</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="n">df</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">age</span> <span class="o">&gt;</span> <span class="mi">30</span><span class="p">)</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="n">df</span><span class="o">.</span><span class="n">withColumn</span><span class="p">(</span><span class="s2">&quot;age_plus_10&quot;</span><span class="p">,</span> <span class="n">col</span><span class="p">(</span><span class="s2">&quot;age&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">show</span><span class="p">()</span> <span class="c1"># adds/modifies a column</span>
+
+<span class="n">df</span><span class="o">.</span><span class="n">withColumnRenamed</span><span class="p">(</span><span class="s2">&quot;age&quot;</span><span class="p">,</span> <span class="s2">&quot;years&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1"># ==== handle NULL  ===</span>
+<span class="n">df</span><span class="o">.</span><span class="n">na</span><span class="o">.</span><span class="n">drop</span><span class="p">()</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>                       <span class="c1"># drop rows with any null</span>
+<span class="n">df</span><span class="o">.</span><span class="n">na</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;age&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>         <span class="c1"># drop rows with null in age</span>
+
+<span class="n">df</span><span class="o">.</span><span class="n">na</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>                      <span class="c1"># fill all nulls with 0</span>
+<span class="n">df</span><span class="o">.</span><span class="n">na</span><span class="o">.</span><span class="n">fill</span><span class="p">({</span><span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Unknown&quot;</span><span class="p">})</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>  <span class="c1"># column-specific</span>
+
+<span class="c1"># ==== handle duplicate  ===</span>
+<span class="n">df</span><span class="o">.</span><span class="n">dropDuplicates</span><span class="p">()</span> <span class="c1"># expensive</span>
+<span class="n">df</span><span class="o">.</span><span class="n">dropDuplicates</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;key_column&#39;</span><span class="p">])</span>  <span class="c1"># Specify only necessary columns</span>
+
+<span class="c1"># ==== Pivot ===</span>
+<span class="n">df</span><span class="o">.</span><span class="n">groupBy</span><span class="p">(</span><span class="s2">&quot;year&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">pivot</span><span class="p">(</span><span class="s2">&quot;quarter&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s2">&quot;revenue&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="n">df</span><span class="o">.</span><span class="n">groupBy</span><span class="p">(</span><span class="s2">&quot;year&quot;</span><span class="p">)</span> <span class="o">.</span><span class="n">pivot</span><span class="p">(</span><span class="s2">&quot;quarter&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="s2">&quot;revenue&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">alias</span><span class="p">(</span><span class="s2">&quot;revenue&quot;</span><span class="p">),</span><span class="nb">sum</span><span class="p">(</span><span class="s2">&quot;profit&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">alias</span><span class="p">(</span><span class="s2">&quot;profit&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">+----+-------+-------+-------+</span>
+<span class="sd">|year|quarter|revenue|profit |</span>
+<span class="sd">+----+-------+-------+-------+</span>
+<span class="sd">|2023|      1|    100|     20|</span>
+<span class="sd">|2023|      2|    150|     30|</span>
+<span class="sd">|2023|      3|    200|     40|</span>
+<span class="sd">|2023|      4|    120|     25|</span>
+<span class="sd">+----+-------+-------+-------+  </span>
+
+<span class="sd">+----+---+---+---+---+</span>
+<span class="sd">|year|  1|  2|  3|  4|</span>
+<span class="sd">+----+---+---+---+---+</span>
+<span class="sd">|2023|100|150|200|120|</span>
+<span class="sd">+----+---+---+---+---+</span>
+
+<span class="sd">+----+---------+---------+---------+---------+--------+--------+--------+--------+</span>
+<span class="sd">|year|1_revenue|1_profit |2_revenue|2_profit |3_revenue|3_profit|4_revenue|4_profit|</span>
+<span class="sd">+----+---------+---------+---------+---------+---------+--------+---------+--------+</span>
+<span class="sd">|2023|      100|       20|      150|       30|      200|      40|      120|      25|</span>
+<span class="sd">|2024|      180|       35|       90|       15|      210|      45|      130|      30|</span>
+<span class="sd">+----+---------+---------+---------+---------+---------+--------+---------+--------+</span>
+<span class="sd">&#39;&#39;&#39;</span>
+
+<span class="n">df</span><span class="o">.</span><span class="n">withColumn</span><span class="p">(</span><span class="s2">&quot;item&quot;</span><span class="p">,</span> <span class="n">explode</span><span class="p">(</span><span class="s2">&quot;items_array&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">show</span><span class="p">()</span> <span class="c1"># Expand arrays/maps</span>
+
+<span class="c1"># === Chain ===</span>
+
+<span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">age</span> <span class="o">&gt;</span> <span class="mi">25</span><span class="p">)</span>
+ <span class="o">.</span><span class="n">groupBy</span><span class="p">(</span><span class="s2">&quot;department&quot;</span><span class="p">)</span>
+ <span class="o">.</span><span class="n">agg</span><span class="p">(</span><span class="n">avg</span><span class="p">(</span><span class="s2">&quot;salary&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">alias</span><span class="p">(</span><span class="s2">&quot;avg_salary&quot;</span><span class="p">))</span>
+ <span class="o">.</span><span class="n">orderBy</span><span class="p">(</span><span class="s2">&quot;avg_salary&quot;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+ <span class="o">.</span><span class="n">show</span><span class="p">())</span>
+</code></pre></div></li>
+</ul>
+<h2 id="3-action-groupby-agg-join-order">3 action: groupBy, agg, join, order<a class="headerlink" href="#3-action-groupby-agg-join-order" title="Permanent link">&para;</a></h2>
+<ul>
+<li>agg === having in sql
+<div class="highlight"><pre><span></span><code><span class="n">df</span><span class="o">.</span><span class="n">groupBy</span><span class="p">(</span><span class="s2">&quot;department&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="n">df</span><span class="o">.</span><span class="n">groupBy</span><span class="p">(</span><span class="s2">&quot;department&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span>
+  <span class="n">avg</span><span class="p">(</span><span class="s2">&quot;salary&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">alias</span><span class="p">(</span><span class="s2">&quot;avg_salary&quot;</span><span class="p">),</span>
+  <span class="nb">max</span><span class="p">(</span><span class="s2">&quot;age&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">alias</span><span class="p">(</span><span class="s2">&quot;max_age&quot;</span><span class="p">)</span>
+  <span class="p">)</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="n">employees</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">departments</span><span class="p">,</span>
+               <span class="n">employees</span><span class="o">.</span><span class="n">dept_id</span> <span class="o">==</span> <span class="n">departments</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+               <span class="s2">&quot;inner&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="n">df</span><span class="o">.</span><span class="n">orderBy</span><span class="p">(</span><span class="s2">&quot;age&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>                  <span class="c1"># ascending</span>
+
+<span class="n">df</span><span class="o">.</span><span class="n">orderBy</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">age</span><span class="o">.</span><span class="n">desc</span><span class="p">())</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>          <span class="c1"># descending</span>
+
+<span class="n">df</span><span class="o">.</span><span class="n">orderBy</span><span class="p">([</span><span class="s2">&quot;age&quot;</span><span class="p">,</span> <span class="s2">&quot;name&quot;</span><span class="p">],</span> <span class="n">ascending</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>  <span class="c1"># mixed</span>
+</code></pre></div></li>
+</ul>
+<hr />
+<h2 id="5-more">5 more<a class="headerlink" href="#5-more" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+<hr />
+<h2 id="10-performance-optimize-a-slow-pyspark-job">10 performance : optimize a slow PySpark job<a class="headerlink" href="#10-performance-optimize-a-slow-pyspark-job" title="Permanent link">&para;</a></h2>
+<h3 id="cache">cache<a class="headerlink" href="#cache" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># CACHE :: Data reused multiple times + Small enough to fit in cluster memory</span>
+<span class="kn">from</span> <span class="nn">pyspark.storagelevel</span> <span class="kn">import</span> <span class="n">StorageLevel</span>
+<span class="n">df</span><span class="o">.</span><span class="n">persist</span><span class="p">(</span><span class="n">StorageLevel</span><span class="o">.</span><span class="n">MEMORY_AND_DISK</span><span class="p">)</span>
+
+<span class="n">df</span><span class="o">.</span><span class="n">cache</span><span class="p">()</span>  <span class="c1"># or df.persist(StorageLevel.MEMORY_ONLY)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">unpersist</span><span class="p">()</span> <span class="c1"># # Don&#39;t forget to unpersist!</span>
+</code></pre></div>
+<h3 id="dfdropduplicates">df.dropDuplicates()<a class="headerlink" href="#dfdropduplicates" title="Permanent link">&para;</a></h3>
+<h3 id="partitioning">Partitioning<a class="headerlink" href="#partitioning" title="Permanent link">&para;</a></h3>
+<ul>
+<li>repartition(200, "department_id") : shuffles data to increase/decrease partitions.</li>
+<li>coalesce(50) : reduces partitions without a full shuffle.</li>
+</ul>
+<h3 id="avoid-shuffles">avoid shuffles.<a class="headerlink" href="#avoid-shuffles" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Bad - causes shuffle</span>
+<span class="n">df</span><span class="o">.</span><span class="n">orderBy</span><span class="p">(</span><span class="s2">&quot;timestamp&quot;</span><span class="p">)</span>
+<span class="c1"># Better - use partitioning</span>
+<span class="n">df</span><span class="o">.</span><span class="n">repartition</span><span class="p">(</span><span class="s2">&quot;date_column&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">sortWithinPartitions</span><span class="p">(</span><span class="s2">&quot;timestamp&quot;</span><span class="p">)</span>
+
+<span class="c1"># Worst - multiple shuffles</span>
+<span class="n">df</span><span class="o">.</span><span class="n">groupBy</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span><span class="o">...</span><span class="p">)</span><span class="o">.</span><span class="n">groupBy</span><span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="c1"># Better - single aggregation</span>
+<span class="n">df</span><span class="o">.</span><span class="n">groupBy</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="broadcast-variable-and-join">broadcast variable and join <img alt="👈" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f448.svg" title=":point_left:" /><a class="headerlink" href="#broadcast-variable-and-join" title="Permanent link">&para;</a></h3>
+<ul>
+<li>a read-only variable cached on each worker to avoid shipping it multiple times </li>
+<li>used for small lookup table.
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">pyspark</span> <span class="kn">import</span> <span class="n">SparkContext</span>
+<span class="n">sc</span> <span class="o">=</span> <span class="n">SparkContext</span><span class="p">()</span>
+<span class="c1"># Small lookup dictionary</span>
+<span class="n">country_codes</span> <span class="o">=</span> <span class="p">{</span>    <span class="s2">&quot;US&quot;</span><span class="p">:</span> <span class="s2">&quot;United States&quot;</span><span class="p">,</span>    <span class="s2">&quot;IN&quot;</span><span class="p">:</span> <span class="s2">&quot;India&quot;</span><span class="p">,</span>    <span class="s2">&quot;UK&quot;</span><span class="p">:</span> <span class="s2">&quot;United Kingdom&quot;</span><span class="p">}</span>
+
+<span class="n">broadcast_codes</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">broadcast</span><span class="p">(</span><span class="n">country_codes</span><span class="p">)</span> <span class="c1"># Create broadcast variable</span>
+
+<span class="c1"># Use in RDD operations</span>
+<span class="n">rdd</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">parallelize</span><span class="p">([</span><span class="s2">&quot;US&quot;</span><span class="p">,</span> <span class="s2">&quot;IN&quot;</span><span class="p">,</span> <span class="s2">&quot;UK&quot;</span><span class="p">,</span> <span class="s2">&quot;IN&quot;</span><span class="p">,</span> <span class="s2">&quot;US&quot;</span><span class="p">])</span>
+<span class="n">full_names</span> <span class="o">=</span> <span class="n">rdd</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">broadcast_codes</span><span class="o">.</span><span class="n">value</span><span class="p">[</span><span class="n">x</span><span class="p">])</span>
+<span class="n">full_names</span><span class="o">.</span><span class="n">collect</span><span class="p">()</span>
+<span class="c1"># Returns: [&#39;United States&#39;, &#39;India&#39;, &#39;United Kingdom&#39;, &#39;India&#39;, &#39;United States&#39;]</span>
+</code></pre></div></li>
+<li><strong>Broadcast join</strong>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">pyspark.sql</span> <span class="kn">import</span> <span class="n">SparkSession</span>
+<span class="kn">from</span> <span class="nn">pyspark.sql.functions</span> <span class="kn">import</span> <span class="n">broadcast</span>
+
+<span class="n">spark</span> <span class="o">=</span> <span class="n">SparkSession</span><span class="o">.</span><span class="n">builder</span><span class="o">.</span><span class="n">getOrCreate</span><span class="p">()</span>
+
+<span class="c1"># Large fact table</span>
+<span class="n">transactions</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">createDataFrame</span><span class="p">([</span>
+  <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;US&quot;</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;IN&quot;</span><span class="p">,</span> <span class="mi">200</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;UK&quot;</span><span class="p">,</span> <span class="mi">300</span><span class="p">),</span>
+  <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="s2">&quot;US&quot;</span><span class="p">,</span> <span class="mi">150</span><span class="p">),</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="s2">&quot;IN&quot;</span><span class="p">,</span> <span class="mi">250</span><span class="p">)],</span> <span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">,</span> <span class="s2">&quot;country&quot;</span><span class="p">,</span> <span class="s2">&quot;amount&quot;</span><span class="p">])</span>
+
+<span class="c1"># Small dimension table</span>
+<span class="n">countries</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">createDataFrame</span><span class="p">([</span>
+  <span class="p">(</span><span class="s2">&quot;US&quot;</span><span class="p">,</span> <span class="s2">&quot;United States&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;IN&quot;</span><span class="p">,</span> <span class="s2">&quot;India&quot;</span><span class="p">),</span>
+  <span class="p">(</span><span class="s2">&quot;UK&quot;</span><span class="p">,</span> <span class="s2">&quot;United Kingdom&quot;</span><span class="p">)],</span> <span class="p">[</span><span class="s2">&quot;code&quot;</span><span class="p">,</span> <span class="s2">&quot;name&quot;</span><span class="p">])</span>
+
+<span class="c1"># Standard join (shuffle join)</span>
+<span class="n">transactions</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">countries</span><span class="p">,</span> <span class="n">transactions</span><span class="o">.</span><span class="n">country</span> <span class="o">==</span> <span class="n">countries</span><span class="o">.</span><span class="n">code</span><span class="p">)</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1"># Broadcast join (more efficient)</span>
+<span class="n">transactions</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">broadcast</span><span class="p">(</span><span class="n">countries</span><span class="p">),</span> <span class="n">transactions</span><span class="o">.</span><span class="n">country</span> <span class="o">==</span> <span class="n">countries</span><span class="o">.</span><span class="n">code</span><span class="p">)</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div></li>
+</ul>
+<h3 id="tuning-executor-memory">tuning executor memory<a class="headerlink" href="#tuning-executor-memory" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>spark-submit \
+  --executor-memory 8G \
+  --executor-cores 4 \
+  --num-executors 10 \
+  --conf spark.memory.fraction=0.8 \
+  --conf spark.memory.storageFraction=0.3 \
+  your_app.py
+</code></pre></div>
+<h3 id="file-format-optimization">File Format Optimization<a class="headerlink" href="#file-format-optimization" title="Permanent link">&para;</a></h3>
+<ul>
+<li>df.write.<strong>parquet</strong>("output.parquet")</li>
+<li>df.write.<strong>format</strong>("avro").save("output.avro")</li>
+<li>df.<strong>repartition(100)</strong>.write.parquet("output")  # 100 files -  <strong>Control file size</strong></li>
+</ul>
+<hr />
+<h2 id="99-scenarios">99 scenarios<a class="headerlink" href="#99-scenarios" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>handle missing values</strong></li>
+<li>df.na.fill() or df.na.drop()</li>
+<li><strong>Spark SQL</strong></li>
+<li>df.createOrReplaceTempView("table")</li>
+<li>spark.sql("SELECT * FROM table")</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "navigation.sections"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+    
+  </body>
+</html>
