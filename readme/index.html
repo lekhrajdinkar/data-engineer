@@ -13,10 +13,8 @@
       
       
       
-        <link rel="prev" href="../02_architecture/">
       
-      
-        <link rel="next" href="../03_ETL_2/">
+        <link rel="next" href="../00_panda/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -24,7 +22,7 @@
     
     
       
-        <title>03_ETL_1 - ETL PySpark Notes</title>
+        <title>Home - ETL PySpark Notes</title>
       
     
     
@@ -76,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#etl-things-to-do" class="md-skip">
+        <a href="#project-structure" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              03_ETL_1
+              Home
             
           </span>
         </div>
@@ -247,10 +245,32 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../readme/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -261,6 +281,35 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#spark-history-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      Spark History Server
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -388,8 +437,6 @@
       
   
   
-    
-  
   
   
     
@@ -402,11 +449,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
@@ -422,7 +471,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             ETL
@@ -433,30 +482,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    03_ETL_1
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../03_ETL_1/" class="md-nav__link">
         
   
   
@@ -467,120 +496,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#etl-things-to-do" class="md-nav__link">
-    <span class="md-ellipsis">
-      ETL - things to do:
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="ETL - things to do:">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#data-ingestion" class="md-nav__link">
-    <span class="md-ellipsis">
-      Data Ingestion
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#data-transformation-withwithout-schema-validation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Data Transformation (with/without schema validation)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#data-cleansing" class="md-nav__link">
-    <span class="md-ellipsis">
-      Data Cleansing
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#data-enrichment" class="md-nav__link">
-    <span class="md-ellipsis">
-      Data Enrichment
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#data-loading" class="md-nav__link">
-    <span class="md-ellipsis">
-      Data Loading
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#performance-optimization-focus-here-for-pyspark-sol" class="md-nav__link">
-    <span class="md-ellipsis">
-      Performance Optimization focus here for pyspark sol
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#fault-tolerance-focus-here-for-pyspark-sol" class="md-nav__link">
-    <span class="md-ellipsis">
-      fault tolerance focus here for pyspark sol
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#masking-encryption" class="md-nav__link">
-    <span class="md-ellipsis">
-      masking, encryption
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#more-awsk8s-takes-care" class="md-nav__link">
-    <span class="md-ellipsis">
-      more: aws+k8s takes care
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -754,6 +669,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -762,98 +679,11 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#etl-things-to-do" class="md-nav__link">
+  <a href="#spark-history-server" class="md-nav__link">
     <span class="md-ellipsis">
-      ETL - things to do:
+      Spark History Server
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="ETL - things to do:">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#data-ingestion" class="md-nav__link">
-    <span class="md-ellipsis">
-      Data Ingestion
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#data-transformation-withwithout-schema-validation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Data Transformation (with/without schema validation)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#data-cleansing" class="md-nav__link">
-    <span class="md-ellipsis">
-      Data Cleansing
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#data-enrichment" class="md-nav__link">
-    <span class="md-ellipsis">
-      Data Enrichment
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#data-loading" class="md-nav__link">
-    <span class="md-ellipsis">
-      Data Loading
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#performance-optimization-focus-here-for-pyspark-sol" class="md-nav__link">
-    <span class="md-ellipsis">
-      Performance Optimization focus here for pyspark sol
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#fault-tolerance-focus-here-for-pyspark-sol" class="md-nav__link">
-    <span class="md-ellipsis">
-      fault tolerance focus here for pyspark sol
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#masking-encryption" class="md-nav__link">
-    <span class="md-ellipsis">
-      masking, encryption
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#more-awsk8s-takes-care" class="md-nav__link">
-    <span class="md-ellipsis">
-      more: aws+k8s takes care
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -876,60 +706,103 @@
   
 
 
-  <h1>03_ETL_1</h1>
-
-<h2 id="etl-things-to-do">ETL - things to do:<a class="headerlink" href="#etl-things-to-do" title="Permanent link">&para;</a></h2>
-<h3 id="data-ingestion">Data <strong>Ingestion</strong><a class="headerlink" href="#data-ingestion" title="Permanent link">&para;</a></h3>
 <ul>
-<li>multiple sources : CSV, JSON, Parquet, databases, or APIs</li>
-<li>structured, semi-structured, or unstructured</li>
+<li><a href="">Notes</a></li>
+<li>https://chat.deepseek.com/a/chat/s/6ac524e6-d406-4a1a-a56a-858caa75275a</li>
 </ul>
-<h3 id="data-transformation-withwithout-schema-validation">Data <strong>Transformation</strong> (with/without schema validation)<a class="headerlink" href="#data-transformation-withwithout-schema-validation" title="Permanent link">&para;</a></h3>
+<hr />
+<h1 id="project-structure">project Structure<a class="headerlink" href="#project-structure" title="Permanent link">&para;</a></h1>
 <ul>
-<li>type casting</li>
-<li>Filtering</li>
-<li>aggregating</li>
-<li>complex business logic for derived columns and calculated new col</li>
-<li>standardize formatting : datatime, etc</li>
-</ul>
-<h3 id="data-cleansing">Data <strong>Cleansing</strong><a class="headerlink" href="#data-cleansing" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Handling missing, null --&gt; handled.</li>
-<li>inconsistent schema (corrupt data) --&gt; not handled, causing failures</li>
-<li>handle duplicates --&gt; handling it</li>
-</ul>
-<h3 id="data-enrichment">Data <strong>Enrichment</strong><a class="headerlink" href="#data-enrichment" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Joining datasets from multiple sources to create enriched views.</li>
-<li>Adding metadata or contextual information to datasets. (creating digest file.)</li>
-</ul>
-<h3 id="data-loading">Data <strong>Loading</strong><a class="headerlink" href="#data-loading" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Writing data in batches or streaming mode in RDB</li>
-<li>to warehouses : s3</li>
-</ul>
-<h3 id="performance-optimization-focus-here-for-pyspark-sol"><strong>Performance Optimization</strong> <img alt="👈" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f448.svg" title=":point_left:" /> focus here for pyspark sol<a class="headerlink" href="#performance-optimization-focus-here-for-pyspark-sol" title="Permanent link">&para;</a></h3>
-<ul>
-<li><code>Batch Processing</code> for large datasets</li>
-<li><code>parallel processing</code></li>
-<li><code>partitioning</code></li>
-<li><code>concurrent DB connections</code></li>
-<li><code>caching</code></li>
-</ul>
-<h3 id="fault-tolerance-focus-here-for-pyspark-sol"><strong>fault tolerance</strong> <img alt="👈" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f448.svg" title=":point_left:" /> focus here for pyspark sol<a class="headerlink" href="#fault-tolerance-focus-here-for-pyspark-sol" title="Permanent link">&para;</a></h3>
-<ul>
-<li><code>retry mechanism</code> for transient failures :<ul>
-<li>database connectivity</li>
-<li>file system unavailability</li>
+<li><strong>run</strong></li>
+<li>database : <a href="../docker-compose-postgres.yml">docker-compose-postgres.yml</a></li>
+<li><a href="../app_run.bat">app_run.bat</a> | <a href="../app_run.sh">app_run.sh</a></li>
+<li><a href="../Dockerfile">Dockerfile</a></li>
+<li><strong>lsof -i :8000</strong> : list all processes that are currently using port 8000</li>
+<li><strong>fastapi</strong> : http://127.0.0.1:8000/run_etl</li>
+<li><strong>sqlachely</strong> : session, engine, session.all/add_all( entities), s.commit()</li>
+<li>swagger <strong>doc</strong> : http://localhost:8000/docs <img alt="👈" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f448.svg" title=":point_left:" /></li>
+<li>project configs:</li>
+<li>etl config: <a href="../config">config</a></li>
+<li>env config: <a href="../env">env</a></li>
+<li>json file --&gt; json.load() --&gt; <strong>dictionary</strong>
+<div class="highlight"><pre><span></span><code>curl -X &#39;POST&#39; \
+  &#39;http://localhost:8000/run_etl/&#39; \
+  -H &#39;accept: application/json&#39; \
+  -H &#39;Content-Type: application/json&#39; \
+  -d &#39;{  &quot;etl_name&quot;: &quot;etl-2&quot; }&#39;
+</code></pre></div></li>
+<li>update path, here <a href="../env">env</a>
+<div class="highlight"><pre><span></span><code>  &quot;input_path&quot;: &quot;C:\\Users\\Manisha\\Documents\\GitHub\\02-etl-pyspark\\DIR_SOURCE\\etl-1-source.csv&quot;,
+  &quot;output_path&quot;: &quot;C:\\Users\\Manisha\\Documents\\GitHub\\02-etl-pyspark\\DIR_SOURCE\\etl-1-target&quot;,
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>02-etl-pyspark/
+│
+├── Notes
+├── DIR_SOURCE
+│   ├── etl-1-source.csv
+│   ├── etl-2-source.csv
+│   ├── ...
+├── DIR_TARGET
+├── config/
+│   ├── etl-1.json
+│   └── etl-2.json
+│   └── ...
+├── src/
+│   ├── module1
+│   ├── module2
+│   ├── ...
+│   ├── etlModule
+│   │   ├── validator.py
+│   │   ├── formatter.py
+│   │   ├── transformer.py
+│   │   └── __init__.py
+│   ├── main.py
+└── requirements.txt
+└── Dockerfile
+└── app_run.sh
+</code></pre></div></li>
+<li>DIR_SOURCE: The source data directory containing CSV files for ETL processing.</li>
+<li>DIR_TARGET: Target directory where transformed data will be stored (not listed with specific files, but inferred from the structure).</li>
+<li>config: Contains configuration files (likely JSON), such as etl-1.json, which could define processing rules or mappings for different ETL steps.</li>
+<li><strong>src</strong>: The main source code directory.</li>
+<li>module1</li>
+<li>module2, </li>
+<li>...</li>
+<li>Different functional modules or libraries.</li>
+<li><strong>etlModule</strong>: The core ETL logic, including:<ul>
+<li><strong>validator</strong>: Handles data validation.</li>
+<li><strong>formatter</strong>: Manages data formatting.</li>
+<li><strong>transformer</strong>: Contains transformation logic for the ETL process.</li>
 </ul>
 </li>
+<li><code>main.py</code>: The main entry point for running the ETL process.</li>
+<li>requirements.txt: Python dependencies needed for the project.</li>
+<li>Dockerfile: Used to containerize the application, likely for deployment or running in different environments.</li>
+<li><code>app_run.sh</code>: A shell script to automate the execution of the application.</li>
+<li>result</li>
 </ul>
-<h3 id="masking-encryption"><strong>masking, encryption</strong><a class="headerlink" href="#masking-encryption" title="Permanent link">&para;</a></h3>
-<h3 id="more-awsk8s-takes-care"><strong>more:</strong> <code>aws+k8s</code> takes care<a class="headerlink" href="#more-awsk8s-takes-care" title="Permanent link">&para;</a></h3>
+<p><img alt="img.png" src="../img.png" /></p>
+<hr />
+<h2 id="spark-history-server">Spark History Server<a class="headerlink" href="#spark-history-server" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Job Scheduling and Orchestration</li>
-<li>Monitoring and Logging</li>
-<li>Scalability</li>
+<li>may be need to need ENV VAR again <img alt="👈" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f448.svg" title=":point_left:" /></li>
+<li>Spark UI becomes unavailable after the Spark session stops because it is tied to the lifecycle of the session</li>
+<li>persist the Spark application event data and access it later for debugging or analysis.</li>
+<li>Configure Spark to log events to a director or s3:
+<div class="highlight"><pre><span></span><code># spark-defaults.conf
+
+spark.eventLog.enabled true
+
+spark.eventLog.dir hdfs://&lt;path-to-hdfs&gt; (or a local directory)
+
+spark.eventLog.dir s3://your-bucket-name/spark-logs/
+spark.hadoop.fs.s3a.access.key YOUR_ACCESS_KEY
+spark.hadoop.fs.s3a.secret.key YOUR_SECRET_KEY
+spark.hadoop.fs.s3a.impl org.apache.hadoop.fs.s3a.S3AFileSystem
+</code></pre></div></li>
+<li>start: <strong>./sbin/start-history-server.sh</strong></li>
+<li>spark.history.fs.logDirectory <above-path></li>
+<li>http://<hostname>:18080</li>
 </ul>
 
 
