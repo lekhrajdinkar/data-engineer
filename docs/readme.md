@@ -1,18 +1,18 @@
-- [Notes](docs)
+- [Notes]()
 - https://chat.deepseek.com/a/chat/s/6ac524e6-d406-4a1a-a56a-858caa75275a
 ---
 # project Structure
 - **run**
-  - database : [docker-compose-postgres.yml](docker-compose-postgres.yml)
-  - [app_run.bat](app_run.bat) | [app_run.sh](app_run.sh)
-  - [Dockerfile](Dockerfile)
+  - database : [docker-compose-postgres.yml](../docker-compose-postgres.yml)
+  - [app_run.bat](../app_run.bat) | [app_run.sh](../app_run.sh)
+  - [Dockerfile](../Dockerfile)
 - **lsof -i :8000** : list all processes that are currently using port 8000
 - **fastapi** : http://127.0.0.1:8000/run_etl
 - **sqlachely** : session, engine, session.all/add_all( entities), s.commit()
 - swagger **doc** : http://localhost:8000/docs :point_left:
 - project configs:
-  - etl config: [config](config)
-  - env config: [env](env)
+  - etl config: [config](../config)
+  - env config: [env](../env)
   - json file --> json.load() --> **dictionary**
 ```
 curl -X 'POST' \
@@ -22,7 +22,7 @@ curl -X 'POST' \
   -d '{  "etl_name": "etl-2" }'
 
 ```
-- update path, here [env](env)
+- update path, here [env](../env)
 ```
   "input_path": "C:\\Users\\Manisha\\Documents\\GitHub\\02-etl-pyspark\\DIR_SOURCE\\etl-1-source.csv",
   "output_path": "C:\\Users\\Manisha\\Documents\\GitHub\\02-etl-pyspark\\DIR_SOURCE\\etl-1-target",
@@ -72,7 +72,7 @@ curl -X 'POST' \
 - `app_run.sh`: A shell script to automate the execution of the application.
 - result
 
-![img.png](img.png)
+![img.png](../img.png)
 
 ---
 ## Spark History Server
