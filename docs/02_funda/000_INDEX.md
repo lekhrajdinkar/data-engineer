@@ -9,22 +9,22 @@
   - int, str, bool, float, complex(imaginary number)
   - inbuilt class : 
     - **array.array or list []** 
-      - Mutable
-      - array.array -> memory-efficient for large numeric data |  array.array('i', [1, 2, 3])  # 'i' means integer
-      - fruits = ["apple", "banana", "cherry"]; fruits[0] = "orange";
-      - [list1.py](../../src/pyBasicModule/2025/list1.py)
-      - :point_right: .remove("item1"), pop(), l1 += l2,  sort(), reverse(), copy()
+        - Mutable
+        - array.array -> memory-efficient for large numeric data |  array.array('i', [1, 2, 3])  # 'i' means integer
+        - fruits = ["apple", "banana", "cherry"]; fruits[0] = "orange";
+        - [list1.py](../../src/pyBasicModule/2025/list1.py)
+        - :point_right: .remove("item1"), pop(), l1 += l2,  sort(), reverse(), copy()
     - **tuple ()**
-      - Immutable
-      - fruits = ["apple", "banana", "cherry"]; fruits[0] = "orange"; :x:
-      - [tuple1.py](../../src/pyBasicModule/2025/tuple1.py) 
-      - :point_right: .pop(k1) or del dict1[k1], dict1[k1] or dict1.get(k1,"defaultv1"), .items(), .keys(), .values(), .copy(), update(dict2) or dict1 |= dict2
+        - Immutable
+        - fruits = ["apple", "banana", "cherry"]; fruits[0] = "orange"; :x:
     - **dict {}**
-      - K:V pair, obj literal in js, alternative for Map, mutable
-      - person = {"name": "Alice", "age": 30}
-      - person["age"] === person.age
-    - set, frozenset([]), 
-    - bytes, bytearray
+        - K:V pair, obj literal in js, alternative for Map, mutable
+        - person = {"name": "Alice", "age": 30}
+        - person["age"] === person.age
+        - :point_right: .pop(k1) or del dict1[k1], dict1[k1] or dict1.get(k1,"defaultv1"), .items(), .keys(), .values(), .copy(), update(dict2) or dict1 |= dict2
+        - [dict1.py](../../src/pyBasicModule/2025/dict1.py)
+    - **set, frozenset([])** 
+    - **bytes, bytearray**
 - **prog constructs**
   - if,elif,else
   - for i in range(3):
