@@ -19,6 +19,9 @@ nav:
       - home: 02_funda/01_kickoff.md
       - datatype: 02_funda/02_datatype.md
 
+extra_css:
+  - mkdocs.css
+
 theme:
   name: material
   features:

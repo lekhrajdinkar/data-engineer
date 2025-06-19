@@ -18,7 +18,7 @@
       - Immutable
       - fruits = ["apple", "banana", "cherry"]; fruits[0] = "orange"; :x:
       - [tuple1.py](../../src/pyBasicModule/2025/tuple1.py) 
-      - :point_right: .pop(k1) or del dict1[k1], dict1[k1] or dict1.get(k1,"defaultv1"), .items(), .keys(), .values(), .copy(), update(dict2) or dict1 |= dict1 
+      - :point_right: .pop(k1) or del dict1[k1], dict1[k1] or dict1.get(k1,"defaultv1"), .items(), .keys(), .values(), .copy(), update(dict2) or dict1 |= dict2
     - **dict {}**
       - K:V pair, obj literal in js, alternative for Map, mutable
       - person = {"name": "Alice", "age": 30}
@@ -90,9 +90,6 @@ if __name__ == "__main__":
 ---
 ### C.2 functional
 - double_lambda = lambda x: x * 2
-
----
-### Z. More
 
 ---
 ### Z. More
