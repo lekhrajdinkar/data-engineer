@@ -4,7 +4,7 @@ site_author: Lekhraj Dinkar
 
 # Navigation based on your Notes folder
 nav:
-  - PySpark:
+  - A. PySpark:
       - home: 01_pyspark/readme.md
       - 00_panda: 01_pyspark/00_panda.md
       - 01_setup_locally: 01_pyspark/01_setup_locally.md
@@ -14,10 +14,14 @@ nav:
       - 04_file_format: 01_pyspark/04_file_format.md
       - 100_pyspark_01_start: 01_pyspark/100_pyspark_01_start.md
       - 100_pyspark_02: 01_pyspark/100_pyspark_02.md
-  - python fundamental:
+
+  - B. python fundamental:
       - index: 02_funda/000_INDEX.md
       - home: 02_funda/01_kickoff.md
       - datatype: 02_funda/02_datatype.md
+
+  - c. Career:
+      - Interview : interview.md
 
 extra_css:
   - mkdocs.css
