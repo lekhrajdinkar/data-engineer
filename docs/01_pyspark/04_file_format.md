@@ -1,5 +1,5 @@
 # Columnar storage formats (for big data processing)
-- [parquet_demo.py](../src/demoModule/parquet_demo.py)
+- [parquet_demo.py](../../src/demoModule/parquet_demo.py)
 - **columnar** : all the values of a single column are stored together
   - Advantages:
     - Efficiency for Analytical Queries
