@@ -15,8 +15,8 @@ nav:
       - 100_pyspark_01_start: 01_pyspark/100_pyspark_01_start.md
       - 100_pyspark_02: 01_pyspark/100_pyspark_02.md
   - python fundamental:
-      - home: 02_funda/000_00_kickoff.md
-      - datatype: 02_funda/001_01_datatype.md
+      - home: 02_funda/01_kickoff.md
+      - datatype: 02_funda/02_datatype.md
 
 theme:
   name: material
