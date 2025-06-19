@@ -24,3 +24,8 @@ for index in range(0,len(list2)):
 
 print('{}'.format(None))
 
+print("This runs always")
+
+if __name__ == "__main__":
+    print("Running directly!")  # Runs only when this file is run directly
+
