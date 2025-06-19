@@ -1,21 +1,24 @@
-albums = [('Eminem', 2000, ['my mom', 'iam not afraid']),
-          ('Selena', 2010, ['heart', 'same old love', 'sad']),
-          ]# nested tuple
+#array of tuple
+albums_list = [('Eminem', 2000, ['my mom', 'iam not afraid']),
+               ('Selena', 2010, ['heart', 'same old love', 'sad']),
+               ]
 
 config_list = ['os', 'memory', 'system', 'model', 'year']
-config_dict = dict.fromkeys(config_list, ' '); print(config_dict) # make init dict.
-config_dict_init={
+config_dict = dict.fromkeys(config_list, 'dummyValue');
+print('config_dict',config_dict) # make init dict.
+
+config_dict_init = {
     'os': 'mac',
     'memory': '16GB',
     'system': '64-bit',
-    'os': 'Macintosh',
+    'year': 2025,
     'model': None
 }
 config_dict_init.popitem() #LIFO pop
 
 config_dict.update(config_dict_init); print(config_dict) # update init dict.
 
-# dicctionary
+# dictionary = JavaScript object literal
 project = {
     '1': 'fsr',
     '2' : 'tact'

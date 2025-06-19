@@ -71,7 +71,7 @@ a,b,c= numbers; print(a, b, c)
 print(a+b-c)
 
 
-print(data.albums)
+print(data.albums_list)
 
 
 

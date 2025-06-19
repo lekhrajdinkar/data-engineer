@@ -1,4 +1,4 @@
-from data import albums
+from data import albums_list
 
 # Tuple - seq type, immujtable
 l = ['ABC', 'DEF', 42] ; print(l)
@@ -33,9 +33,9 @@ for name, (d1, d2, d3, d4) in t:
 #           ('Selena', 2010, ['heart', 'same old love', 'sad']),
 #           ]# nested tuple
 
-print(albums[1][2][2]) # sad, nested indexuing
+print(albums_list[1][2][2]) # sad, nested indexuing
 
-for album  in albums :
+for album  in albums_list :
     artist, year, songs = album
     print ('\n\n',artist, year, songs)
     for song in songs:
