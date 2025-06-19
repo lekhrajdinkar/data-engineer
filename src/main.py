@@ -65,5 +65,6 @@ def main(etl_name):
         return {"status": "error", "message": str(e)}
 
 if __name__ == "__main__":
-    etl_name = sys.argv[1] # reading command line arg
-    main(etl_name)
+    None
+    #etl_name = sys.argv[1] # reading command line arg
+    #main(etl_name)

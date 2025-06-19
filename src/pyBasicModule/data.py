@@ -1,11 +1,12 @@
 #array of tuple
-albums_list = [('Eminem', 2000, ['my mom', 'iam not afraid']),
-               ('Selena', 2010, ['heart', 'same old love', 'sad']),
-               ]
+albums_list = [
+    ('Eminem', 2000, ['my mom', 'iam not afraid']),
+    ('Selena', 2010, ['heart', 'same old love', 'sad']),
+    ]
 
 config_list = ['os', 'memory', 'system', 'model', 'year']
 config_dict = dict.fromkeys(config_list, 'dummyValue');
-print('config_dict',config_dict) # make init dict.
+print('module data : config_dict ',config_dict) # make init dict.
 
 config_dict_init = {
     'os': 'mac',
@@ -16,7 +17,8 @@ config_dict_init = {
 }
 config_dict_init.popitem() #LIFO pop
 
-config_dict.update(config_dict_init); print(config_dict) # update init dict.
+config_dict.update(config_dict_init);
+print('module data : config_dict ',config_dict) # update init dict.
 
 # dictionary = JavaScript object literal
 project = {
@@ -27,7 +29,6 @@ project_tect_stack = {
     'fsr': ['java', 'angular', 'spring-boot', 'hibernate', 'rest-api'],
     'tact': ['java', 'jsp', 'thyme-leaf']
 }
-
 related_project = {
     'java': ['CSTAR'],
     'angular': ['CARS']

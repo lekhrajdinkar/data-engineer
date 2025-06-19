@@ -1,4 +1,4 @@
-from sqlalchemy.orm import DeclarativeBase, declarative_base, as_declarative
+# from sqlalchemy.orm import DeclarativeBase, declarative_base, as_declarative
 from sqlalchemy import create_engine, Column, Integer, String, Float, MetaData
 from src.databaseModule.entity.Base import Base
 
