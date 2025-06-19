@@ -52,3 +52,18 @@ sudo yum install python3
 - **python3 -m venv myvenv**
 - myvenv\scripts\**activate**
 - ![img_1.png](99_IMG/001/img_1.png)
+
+## 6. reserved keyword
+```
+and	as	assert
+break	class	continue
+def	del	elif
+else	except	False
+finally	for	from
+global	if	import
+in	is	lambda
+None	nonlocal	not
+or	pass	raise
+return	True	try
+while	with	yield
+```

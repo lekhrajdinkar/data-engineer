@@ -15,6 +15,7 @@ nav:
       - 100_pyspark_01_start: 01_pyspark/100_pyspark_01_start.md
       - 100_pyspark_02: 01_pyspark/100_pyspark_02.md
   - python fundamental:
+      - index: 02_funda/000_INDEX.md
       - home: 02_funda/01_kickoff.md
       - datatype: 02_funda/02_datatype.md
 
