@@ -121,12 +121,13 @@ if __name__ == "__main__":
 ---
 ## D. module (ext)
 ### 0. commonly used ??
-- math, cmath, complex
-- decimal
-- collection
+- math, cmath, decimal
+- collections
 - datetime, timedelta
 - BaseException, Exception
 - function, lambda, callable
+- threading, asyncio, concurrent
+- open, io, os, pathlib
 
 ### 1. collections
 - Thread-safe collections
