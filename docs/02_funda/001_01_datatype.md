@@ -45,29 +45,23 @@ fst = frozenset([1, 2, 3, 3])  # Immutable version of set.
 # can be mixed types
 tuple = (1, 2.5, 'three', False)
 ```
-
+---
 ### 3 Mapping Type
 ```python
 # Dictionary 
 dct = {'name': 'Alice', 'age': 25, 'city': 'New York'}
 dct['age'] = 26  # mutable
 ```
-
+---
 ### 4 more : boolean, byte, byteArray, None
 ```python
 # Immutable sequence of bytes (0-255).
-b = b'hello'
-# b[0] = 72  # Error - immutable
+b = b'hello' # b[0] = 72  # Error - immutable
+empty = None # Represents absence of a value.
+del b # delete a single object or multiple objects
 
-# Represents absence of a value.
-empty = None
-
-# delete a single object or multiple objects
-del var
-del var_a, var_b
 ```
 ---
-
 ## B Checking Data Types
 ```python
 print(type(10))        # <class 'int'>
