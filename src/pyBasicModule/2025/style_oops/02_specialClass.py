@@ -26,7 +26,7 @@ class MyList:
         return MyList(self.data + other.data)
 
     def __eq__(self, other):
-        return self.data == other.data
+        return
 
     def __repr__(self):
         return f"MyList({self.data})"
@@ -36,6 +36,11 @@ class MyList:
 
     def __hash__(self):
         return hash((self.username, self.email))
+
+    def __eq__(self, other):
+        if not isinstance(other, MyList):
+                return NotImplemented  ## NotImplemented
+        return self.data == other.data
 
 
 a = MyList([1, 2, 3])

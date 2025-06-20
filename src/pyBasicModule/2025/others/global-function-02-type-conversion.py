@@ -18,7 +18,7 @@ s = set(l)          # list to set
 print(l, type(l))   # [1, 2, 3] <class 'list'>
 print(s, type(s))   # {1, 2, 3} <class 'set'>
 
-# Type Checking
+# Type Checking - isinstance(T,obj1) / type(obj1) == "T"
 print(isinstance(l, list))   # True
 print(isinstance(s, dict))   # False
 print(type(10) == int)       # True

@@ -8,6 +8,7 @@
 - range, int, float, complex(imaginary number), **decimal**.Decimal
 - str (string, char), bool
 - NoneType is type, None : A singleton object representing “no value” or “null” :point_left:
+- Type Checking -> `isinstance(T,obj1)` or` type(obj1) == "T"`
 - **collection/s** - simpler inbuild + module:collections
     - **enumerate( list1 )** while looping need , Index + Value Together
     - **array.array or list []** 
@@ -33,10 +34,8 @@
     - **generics with collection**
         - type hinted in 3.9+ ??
         - Optional with type hints ??
-- **Special Python-only Types** : ??
-  - **Ellipsis**
-  - **NotImplemented**
-  - **NamedTuple, dataclass** : Lightweight data containers
+    - **Ellipsis** / numPy ??
+
   
 ### 2. Sequence types
 
@@ -93,6 +92,7 @@
 ### 5. special method
 - If want a custom class to act like a list/dict/etc., implement special methods :point_left:
 - [02_specialClass.py](../../src/pyBasicModule/2025/style_oops/02_specialClass.py)
+- **NotImplemented** : Used in special methods (__eq__, __add__, etc.) to signal the operation is not supported
 ```
 __getitem__(self, index)  | a[1]
 __setitem__(self, index)  | a[1] = 123
@@ -205,14 +205,18 @@ if __name__ == "__main__":
       - use next(f),
       - so Streams one value at a time
       - Use Case : want to stream data (e.g. files, DB rows) + work with large/infinite datasets + need lazy evaluation.
+- `yield from`  - Delegating to another generator (sync)
+  - def generator1: yield from range(3); yeild("done);
+- `generator` - **function** yeilds value/s :point_left: type:
+  - sync
+  - async (async for)
+  - [yeild+generator.py : section-4](../../src/pyBasicModule/2025/others/yeild%2Bgenerator.py)
 
 | Feature        | `return`                  | `yield`                       |
 | -------------- | ------------------------- | ----------------------------- |
 | Ends function? | Yes                       | No (pauses and resumes)       |
 | Use case       | One result only           | Sequence of results over time |
 | Memory         | Stores all values at once | Streams one value at a time   |
-
-- async for or yield from ??
 
 ### Tip-2 generator Expression vs Comprehension
 - **Comprehensions**. eg:
@@ -233,10 +237,14 @@ if __name__ == "__main__":
 | Need all values at once | ❌         | ✅    |
 | Memory critical apps    | ✅         | ❌    |
 
-### Tip-3
+### Tip-3 ??
 - Iteration/Streams vs Comprehensions ??
 - Mutability or performance comparison ??
 - **decorator** ??
+
+### Tip-4 ??
+- async
+- async with files, sockets, or APIs
 
 ---
 ## C. Programing style
@@ -281,13 +289,17 @@ if __name__ == "__main__":
 ---
 ## D. module (ext)
 ### 1. commonly used ??
-- math, cmath, decimal
-- collections
+- math, cmath, decimal, numPy
+- **collections** - NamedTuple, dataclass, etc
 - datetime, timedelta
+- dataclasses :  **@dataclass**
+    - Simplifies writing classes for storing data
+    - Auto-generates `__init__, __repr__, __eq__`, etc.
 - BaseException, Exception
 - function, lambda, callable
 - threading, asyncio, concurrent
 - open, io, os, pathlib
+- asyncio
 
 ### 2. collections ??
 - Thread-safe collections
