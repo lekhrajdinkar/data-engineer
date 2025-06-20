@@ -1,5 +1,5 @@
 ## Reference
-- https://chat.deepseek.com/a/chat/s/6ac524e6-d406-4a1a-a56a-858caa75275a
+- <a href="https://chat.deepseek.com/a/chat/s/6ac524e6-d406-4a1a-a56a-858caa75275a" target="_blank">ETL project ref (deepseek)</a>
 
 ---
 # project Structure

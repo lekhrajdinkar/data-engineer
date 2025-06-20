@@ -5,7 +5,7 @@ site_author: Lekhraj Dinkar
 # Navigation based on your Notes folder
 nav:
   - PySpark:
-      - index: 01_pyspark/00_index.md
+      - kickoff: 01_pyspark/index.md
       - 00_panda: 01_pyspark/00_panda.md
       - 01_setup_locally: 01_pyspark/01_setup_locally.md
       - 02_architecture: 01_pyspark/02_architecture.md
@@ -23,9 +23,6 @@ nav:
   - Career:
       - Interview : interview.md
 
-extra_css:
-  - mkdocs.css
-
 theme:
   font:
     text: Roboto
@@ -37,12 +34,15 @@ theme:
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: orange
-      accent: indigo
+      primary: blue grey
+      accent: deep orange
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: yellow
+      primary: indigo
       accent: indigo
+  custom_dir: .
+extra_css:
+  - mkdocs.css
 
 repo_url: https://github.com/lekhrajdinkar/02-etl-pyspark
 repo_name: GitHub
