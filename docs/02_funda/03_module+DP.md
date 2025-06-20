@@ -1,5 +1,5 @@
-# A. list of Library/modules
-## built-in library
+## A. list of Library/modules
+### built-in library
 
 | Category            | Library/Module                                                  | Description                                                                   |
 | ------------------- | --------------------------------------------------------------- | ----------------------------------------------------------------------------- |
@@ -16,7 +16,7 @@
 | Dataclasses         | `dataclasses`                                                   | `@dataclass` to auto-generate boilerplate methods                             |
 | Generics/Typing     | `typing`, `collections.abc`                                     | Type hinting, abstract base classes                                           |
 
-## 3rd party
+### 3rd party
 
 | Area                 | Library                                             | Description                                    |
 | -------------------- | --------------------------------------------------- | ---------------------------------------------- |
@@ -34,7 +34,7 @@
 | Logging & Monitoring | `loguru`, `structlog`, `sentry-sdk`                 | Structured logging and error monitoring        |
 
 ---
-## B. Design patterns (Java vs Python) 
+## B. Design patterns 🅿️ 
 ### 1. profile / performance
 - python -m timeit -s "lst = list(range(1000))" "sum(lst)"
 - python -m cProfile your_script.py

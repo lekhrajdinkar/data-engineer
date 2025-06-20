@@ -1,8 +1,6 @@
-# A. Procedural
-- pass
-
+## A. Procedural
 ---
-# B. OOPS
+## B. OOPS
 -  **package** is a directory containing an `__init__.py`
 - object creation : `__new__(T,V) + __init__`
 - **enum.Enum**
@@ -31,7 +29,7 @@
     - try, except MyError as e, finally
 
 ---
-# C. functional
+## C. functional
 
 | Type                          | Description          | Example         |
 | ----------------------------- | -------------------- | --------------- |

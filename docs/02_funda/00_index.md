@@ -34,8 +34,7 @@
     - **generics with collection**
         - type hinted in 3.9+ ❓
         - Optional with type hints ❓
-    - **Ellipsis** / numPy ❓
-
+    - **Ellipsis** 
   
 ### 2. Sequence types
 
@@ -79,18 +78,18 @@
     - for key, val in **dict1**.items():
     - List/set comprehension + generator expression
   
-### 4. modules
+### 4. modules 
 - .py files
 - bts, module is object. since everthing is object in py.
 - import module : no need to explicitly export like in TS
-- python3 **-m** module1.py : ❓
+- python3 **-m** module1 (not module.py) --> Run a module as a script, using the module’s full dotted name (like package.module), not a file path. ⬅️
 - common built-in modules :  os,  sys,  datetime,  json,  random,  re,  math
 - print(**dir**(math_ops))  # Lists all functions, classes, etc.  <<<
 - Check if module is run directly => if __name__ == "__main__": \ print("Running math_utils directly")
 - installing 3rd-party modules using pip3
 - 2 ways to run a module =>  python3 math_utils.py + import math_utils
 
-### 5. special method
+### 5. special method 🥳
 - If want a custom class to act like a list/dict/etc., implement special methods :point_left:
 - [02_specialClass.py](../../src/pyBasicModule/2025/style_oops/02_specialClass.py)
 - **NotImplemented** : Used in special methods (__eq__, __add__, etc.) to signal the operation is not supported
@@ -155,19 +154,17 @@ __bytes__(self) | bytes(obj1)
 ### 6. built-in global function
 - next(), iter()
 - print(), hash(), len(), dir(module1) 
-- ...
-- check next page: [02_global-function-object.md](02_global-function-object.md) 
+- [02_global-function.md](02_global-function.md)
 
 
 ### 7. imports / export
-- import modules prg:
-- fix cyclic import
-  - Move the import **inside a function** ⬅️
-  - Refactor shared code into a third module
-  - Use **dynamic** import --> **importlib** : 
-    - usecase-1: fixes cycle import 
-    - usecase-2: myModule-1 > got dynamic chnaged > need to dynamically reload. ⬅️
-    - usecase-3: Import a Function or Class Dynamically
+- **fix cyclic import**
+    - Move the import **inside a function** ⬅️
+    - Refactor shared code into a third module
+    - Use **dynamic** import --> **importlib** : 
+        - usecase-1: fixes cycle import 
+        - usecase-2: myModule-1 > got dynamic chnaged > need to dynamically reload. ⬅️
+        - usecase-3: Import a Function or Class Dynamically
 ```text
 my_app/
 │
@@ -202,7 +199,7 @@ if __name__ == "__main__":
 
 ---
 ## B. Tips
-### Tip-1
+### Tip-1 : yeild,kwarg,arg,etc
 - `*args` → captures extra positional arguments as a **tuple**
 - `**kwargs` → captures extra keyword arguments as a **dict**
 - `__name__`
@@ -215,17 +212,17 @@ if __name__ == "__main__":
     - function’s state is saved between calls.
     - produces a **generator object**.
     - yield helps a function stream multiple return values one at a time, instead of returning them all at once. :point_left:
-    - generator object === function with yeild ( stream of multiple return) 
-      - return and pause, 
-      - use next(f),
-      - so Streams one value at a time
-      - Use Case : want to stream data (e.g. files, DB rows) + work with large/infinite datasets + need lazy evaluation.
+    - generator === function with yeild ( stream of multiple return) 
+        - return and pause, 
+        - use next(f),
+        - so Streams one value at a time
+        - Use Case : want to stream data (e.g. files, DB rows) + work with large/infinite datasets + need lazy evaluation.
 - `yield from`  - Delegating to another generator (sync)
-  - def generator1: yield from range(3); yeild("done);
+    - def generator1: yield from range(3); yeild("done);
 - `generator` - **function** yeilds value/s :point_left: type:
-  - sync
-  - async (async for)
-  - [yeild+generator.py : section-4](../../src/pyBasicModule/2025/others/yeild%2Bgenerator.py)
+    - sync
+    - async (async for)
+    - [yeild+generator.py : section-4](../../src/pyBasicModule/2025/others/yeild%2Bgenerator.py)
 
 | Feature        | `return`                  | `yield`                       |
 | -------------- | ------------------------- | ----------------------------- |
@@ -233,7 +230,7 @@ if __name__ == "__main__":
 | Use case       | One result only           | Sequence of results over time |
 | Memory         | Stores all values at once | Streams one value at a time   |
 
-### Tip-2 generator Expression vs Comprehension
+### Tip-2 : generator + Comprehension
 - **Comprehensions**. eg:
     - even_set_squares = [x*x for x in range(10) if x % 2 == 0] # List comprehension
     - even_set = {x for x in range(10) if x % 2 == 0} # set comprehension
@@ -260,5 +257,3 @@ if __name__ == "__main__":
 ### Tip-4 ❓
 - async
 - async with files, sockets, or APIs
-
----
