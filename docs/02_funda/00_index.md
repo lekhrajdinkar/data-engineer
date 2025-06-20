@@ -13,7 +13,7 @@
 - **type, class, Enum, module**
 - range, int, float, complex(imaginary number), **decimal**.Decimal
 - str (string, char), bool
-- NoneType is type, None : A singleton object representing “no value” or “null” :point_left:
+- NoneType is type, None : A singleton object representing “no value” or “null” ⬅️
 - Type Checking -> `isinstance(T,obj1)` or` type(obj1) == "T"`
 - **collection/s** - simpler inbuild + module:collections
     - **enumerate( list1 )** while looping need , Index + Value Together
@@ -123,7 +123,7 @@
 
 
 ### 5. special method 🥳
-- If want a custom class to act like a list/dict/etc., implement special methods :point_left:
+- If want a custom class to act like a list/dict/etc., implement special methods ⬅️
 - [02_specialClass.py](../../src/pyBasicModule/year2025/style_oops/02_specialClass.py)
 - **NotImplemented** : Used in special methods (__eq__, __add__, etc.) to signal the operation is not supported
 ```
@@ -196,40 +196,44 @@ __bytes__(self) | bytes(obj1)
     - Refactor shared code into a third module
     - Use **dynamic** import --> **importlib** : 
         - usecase-1: fixes cycle import 
-        - usecase-2: myModule-1 > got dynamic chnaged > need to dynamically reload. ⬅️
+        - usecase-2: myModule-1 > got dynamic changed > need to dynamically reload. ⬅️
         - usecase-3: Import a Function or Class Dynamically
 ```text
-my_app/src
-│
-├── utils/
-│   ├── __init__.py
-│   ├── math_ops.py
-│   └── string_ops.py
-├── main.py
-
+src/
+└── pyBasicModule/
+    └── year2025/
+        ├── __init__.py
+        ├── main2025.py
+        └── datatype/
+            ├── __init__.py
+            └── main.py    ← this has printCurrentModule()
+explicitly set PYTHONONPATH ⬅️
 python3 -m src.main ⬅️
     Locates main module in the PYTHONPATH or current directory.
     Executes its __main__ block (if it has if __name__ == "__main__").
-    Runs it like a script, but resolves all imports as a module, 
+    Runs it like a script, but resolves all imports as a module
 ---
-# === dynamic import ===
+# === A. dynamic import ===
 import importlib
 math_module = importlib.import_module('math')
 
 module = importlib.import_module('random')
 get_random = getattr(module, 'randint') #everything is object 😊😊
 ---
+# === B dynamic import ===
 from . import math_ops           # same package, or shorthand --> import math_ops
 from ..utils import string_ops   # parent package
 from utils import math_ops
 from utils.math_ops import add
+
+# === C import ccgg === ⬅️
+cd src # from where you run matters, 
+from pyBasicModule.year2025.main2025 import xxx
 ---
 # == math_ops.py ==
 def add(a, b):
     return a + b
-
 print("This runs always")  # Runs always
-
 if __name__ == "__main__":
     print("Running directly!")  # Runs only when this file is run directly
 ```
@@ -248,7 +252,7 @@ if __name__ == "__main__":
     - yield returns a value without exiting the function.
     - function’s state is saved between calls.
     - produces a **generator object**.
-    - yield helps a function stream multiple return values one at a time, instead of returning them all at once. :point_left:
+    - yield helps a function stream multiple return values one at a time, instead of returning them all at once. ⬅️
     - generator === function with yeild ( stream of multiple return) 
         - return and pause, 
         - use next(f),
@@ -256,7 +260,7 @@ if __name__ == "__main__":
         - Use Case : want to stream data (e.g. files, DB rows) + work with large/infinite datasets + need lazy evaluation.
 - `yield from`  - Delegating to another generator (sync)
     - def generator1: yield from range(3); yeild("done);
-- `generator` - **function** yeilds value/s :point_left: type:
+- `generator` - **function** yeilds value/s ⬅️ type:
     - sync
     - async (async for)
     - [yeild+generator.py : section-4](../../src/pyBasicModule/year2025/others/yeild%2Bgenerator.py)

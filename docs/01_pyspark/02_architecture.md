@@ -89,7 +89,7 @@
 - think f --> entire **execution path** from the input-data to the final-result
 - When an action is invoked on df, Spark computes the full **Directed Acyclic Graph** (`DAG`)
 - DAG is divided into **stages**, based on transformations.
-- **stages are distributed to worker nodes as tasks**. :point_left:
+- **stages are distributed to worker nodes as tasks**. ⬅️
 - job-1 
   - stage-1 (task-1)
     - task-1.1 ( on partition-1)

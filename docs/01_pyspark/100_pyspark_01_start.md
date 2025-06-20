@@ -130,7 +130,7 @@ df.groupBy("a").agg(...).groupBy("b").agg(...)
 df.groupBy("a", "b").agg(...)
 ```
 
-### broadcast variable and join :point_left:
+### broadcast variable and join ⬅️
 - a read-only variable cached on each worker to avoid shipping it multiple times 
 - used for small lookup table.
 ```python

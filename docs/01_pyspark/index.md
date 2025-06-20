@@ -10,7 +10,7 @@
 - **lsof -i :8000** : list all processes that are currently using port 8000
 - **fastapi** : http://127.0.0.1:8000/run_etl
 - **sqlachely** : session, engine, session.all/add_all( entities), s.commit()
-- swagger **doc** : http://localhost:8000/docs :point_left:
+- swagger **doc** : http://localhost:8000/docs ⬅️
 - project configs:
   - etl config: [config](../../config)
   - env config: [env](../../env)
@@ -77,7 +77,7 @@ curl -X 'POST' \
 
 ---
 ## Spark History Server
-- may be need to need ENV VAR again :point_left:
+- may be need to need ENV VAR again ⬅️
 - Spark UI becomes unavailable after the Spark session stops because it is tied to the lifecycle of the session
 - persist the Spark application event data and access it later for debugging or analysis.
 - Configure Spark to log events to a director or s3:

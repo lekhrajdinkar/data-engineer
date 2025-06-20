@@ -55,3 +55,57 @@ th, td {
 th {
   background-color: #e3f2fd;
 }
+
+.md-main__inner {
+  max-width: 90%;
+}
+.md-sidebar--primary, .md-sidebar--secondary {
+  width: 400px;
+}
+
+
+/*
+🔷 Layout Containers
+| Selector                 | Description                           |
+| ------------------------ | ------------------------------------- |
+| `.md-container`          | Main container for the entire page    |
+| `.md-main`               | Container for main content + sidebars |
+| `.md-main__inner`        | Holds left nav, content, right TOC    |
+| `.md-sidebar--primary`   | Left navigation sidebar               |
+| `.md-sidebar--secondary` | Right table-of-contents sidebar       |
+| `.md-content`            | The content area in the center        |
+
+🟦 Header / Top Bar
+| Selector             | Description                     |
+| -------------------- | ------------------------------- |
+| `.md-header`         | The top sticky header           |
+| `.md-header__title`  | Site/project title text         |
+| `.md-header__button` | Buttons like menu, theme toggle |
+
+🟨 Navigation (Left Sidebar)
+| Selector         | Description              |
+| ---------------- | ------------------------ |
+| `.md-nav`        | Entire left nav area     |
+| `.md-nav__title` | Section headers in nav   |
+| `.md-nav__link`  | Each navigation link     |
+| `.md-nav__item`  | Nav item (can be nested) |
+
+🟩 Table of Contents (Right Sidebar)
+| Selector             | Description         |
+| -------------------- | ------------------- |
+| `.md-nav--secondary` | Container for TOC   |
+| `.md-nav__list`      | List of TOC entries |
+| `.md-nav__item`      | TOC entry           |
+
+🟥 Content Area
+| Selector                   | Description                   |
+| -------------------------- | ----------------------------- |
+| `.md-typeset`              | The rendered Markdown content |
+| `.md-typeset h1/h2/h3/...` | Headings                      |
+| `.md-typeset p`            | Paragraphs                    |
+| `.md-typeset code`         | Inline code                   |
+| `.md-typeset pre`          | Code blocks                   |
+| `.md-typeset table`        | Markdown tables               |
+| `.md-typeset img`          | Images                        |
+
+*/
