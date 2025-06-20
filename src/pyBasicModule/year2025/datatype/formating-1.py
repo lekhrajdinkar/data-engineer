@@ -4,6 +4,8 @@
 "{0}".format(value1)
 "{name}".format(name=value2)
 
+always returns a string, convert str to desired type ⬅️
+
 =================================================
 
 🔢 Integer Formatting

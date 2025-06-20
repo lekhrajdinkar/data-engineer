@@ -23,7 +23,7 @@
     - only **overriding** happens, since duck typing.
     - **overloading**  (no native support)
         - achieve same with *args, **kwargs ( to dict)
-        - with `@singledispatch` [02_oops.py | section-2](../../src/pyBasicModule/2025/style_oops/02_oops.py)
+        - with `@singledispatch` [02_oops.py | section-2](../../src/pyBasicModule/year2025/style_oops/02_oops.py)
         - fact: last defined method with the same name overrides previous ones
 - **error handling**:
     - try, except MyError as e, finally

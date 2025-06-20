@@ -1,6 +1,12 @@
 # py (3.10+)
-## A. basic - Datatypes, etc
+### 0. basic 
 - everything is object , Dynamically typed (duck type), **object** (base class)
+- **global object** -> has global function defined, etc
+- **package** (also object): 
+    - directory with `__init__.py`
+    - object has : `__path__    - __name__      __package__      __path__      __file__      __doc__`
+- we create custom module-1 (start with _ or letter)
+
 ### 1. datatype
 - ![img_2.png](99_IMG/001/img_2.png)
 - inbuilt class, lower case unlike java, use module for more types.
@@ -16,7 +22,7 @@
       - array.array -> memory-efficient for large numeric data |  array.array('i', [1, 2, 3])  # 'i' means integer
       - students = [Student("Alice", 22, 88),Student("Bob", 20, 95)]; students[0] = Student("Charlie", 23, 70); mutate
       - students.sort(**key**=lambda s: s.grade, **reverse**=True/False)
-      - [list1.py](../../src/pyBasicModule/2025/list1.py)
+      - [list1.py](../../src/pyBasicModule/year2025/list1.py)
       - :point_right: .remove("item1"), pop(), l1 += l2,  sort(), reverse(), copy()
     - **tuple ()**
         - Immutable, hetro
@@ -26,7 +32,7 @@
         - person = {"name": "Alice", "age": 30}
         - person["age"] === person.age
         - :point_right: .pop(k1) or del dict1[k1], dict1[k1] or dict1.get(k1,"defaultv1"), .items(), .keys(), .values(), .copy(), update(dict2) or dict1 |= dict2
-        - [dict1.py](../../src/pyBasicModule/2025/dict1.py)
+        - [dict1.py](../../src/pyBasicModule/year2025/dict1.py)
     - **set, frozenset([])** 
     - **bytes (mutable), bytearray (immutable), memoryview**
       - memoryview - View over bytes/bytearray without copying - better performance.
@@ -35,7 +41,9 @@
         - type hinted in 3.9+ 
         - Optional with type hints 
     - **Ellipsis** 
-- formatting: [formating-1.py](../../src/pyBasicModule/2025/datatype/formating-1.py) ➕ ➕
+- formatting: 
+    - [formating-1.py](../../src/pyBasicModule/year2025/datatype/formating-1.py) ➕ ➕
+    - always return str, cobert to desired type with glocal funcion.
 
 ### 2. Sequence types
 
@@ -116,7 +124,7 @@
 
 ### 5. special method 🥳
 - If want a custom class to act like a list/dict/etc., implement special methods :point_left:
-- [02_specialClass.py](../../src/pyBasicModule/2025/style_oops/02_specialClass.py)
+- [02_specialClass.py](../../src/pyBasicModule/year2025/style_oops/02_specialClass.py)
 - **NotImplemented** : Used in special methods (__eq__, __add__, etc.) to signal the operation is not supported
 ```
 __getitem__(self, index)  | a[1]
@@ -235,7 +243,7 @@ if __name__ == "__main__":
     - special built-in variable in every Python file (module-1.py)
     - `__main__`: if module ran directly
     - `module-1` : if module ran by being imported
--  `yield` | [yeild+generator.py](../../src/pyBasicModule/2025/style_functional/yeild%2Bgenerator.py)
+-  `yield` | [yeild+generator.py](../../src/pyBasicModule/year2025/style_functional/yeild%2Bgenerator.py)
     - f1_var = definition of f1(); next(f1_var)  //functional programing
     - yield returns a value without exiting the function.
     - function’s state is saved between calls.
@@ -251,7 +259,7 @@ if __name__ == "__main__":
 - `generator` - **function** yeilds value/s :point_left: type:
     - sync
     - async (async for)
-    - [yeild+generator.py : section-4](../../src/pyBasicModule/2025/others/yeild%2Bgenerator.py)
+    - [yeild+generator.py : section-4](../../src/pyBasicModule/year2025/others/yeild%2Bgenerator.py)
 
 | Feature        | `return`                  | `yield`                       |
 | -------------- | ------------------------- | ----------------------------- |
