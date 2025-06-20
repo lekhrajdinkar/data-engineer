@@ -41,19 +41,19 @@ always returns a string, convert str to desired type ⬅️
 | `"{:.2}".format("abcdef")` | `'ab'`         |
 """
 
+def formatingDemo1():
+    # 📚 List Formatting (via unpacking)
+    lst = [1, 2, 3]
+    print("List: {}, {}, {}".format(*lst))  # List: 1, 2, 3
 
-# 📚 List Formatting (via unpacking)
-lst = [1, 2, 3]
-print("List: {}, {}, {}".format(*lst))  # List: 1, 2, 3
+    print(", ".join("Item {}".format(x) for x in lst))  # Item 1, Item 2, Item 3
 
-print(", ".join("Item {}".format(x) for x in lst))  # Item 1, Item 2, Item 3
+    # 🔁 Numbered & Named Placeholders
+    print("{0} + {1} = {2}".format(2, 3, 5))  # 2 + 3 = 5
+    print("{name} is {age} years old".format(name="Bob", age=25))
 
-# 🔁 Numbered & Named Placeholders
-print("{0} + {1} = {2}".format(2, 3, 5))  # 2 + 3 = 5
-print("{name} is {age} years old".format(name="Bob", age=25))
-
-# 🗂️ Dict Formatting
-person = {"name": "Alice", "age": 30}
-print("Name: {name}, Age: {age}".format(**person))  # Name: Alice, Age: 30
+    # 🗂️ Dict Formatting
+    person = {"name": "Alice", "age": 30}
+    print("Name: {name}, Age: {age}".format(**person))  # Name: Alice, Age: 30
 
 
