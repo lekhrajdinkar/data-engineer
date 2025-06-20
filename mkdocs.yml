@@ -1,4 +1,4 @@
-site_name: ETL PySpark Notes
+site_name: Python Notes (Lekhraj Dinkar)
 site_description: Documentation for ETL processes using PySpark
 site_author: Lekhraj Dinkar
 
@@ -62,6 +62,10 @@ markdown_extensions:
 plugins:
   - search
   - markdownextradata
+  #- copyfiles
+
+#copyfiles:
+  #- deployment/manifest
 
 extra:
   social:

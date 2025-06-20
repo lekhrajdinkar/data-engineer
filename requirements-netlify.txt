@@ -4,3 +4,4 @@ pymdown-extensions
 mkdocs-awesome-pages-plugin
 mkdocs-redirects
 mkdocs-markdownextradata-plugin
+mkdocs-simple-hooks
