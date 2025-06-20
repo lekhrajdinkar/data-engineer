@@ -5,7 +5,7 @@ site_author: Lekhraj Dinkar
 # Navigation based on your Notes folder
 nav:
   - PySpark:
-      - kickoff: 01_pyspark/index.md
+      - index: 01_pyspark/index.md
       - 00_panda: 01_pyspark/00_panda.md
       - 01_setup_locally: 01_pyspark/01_setup_locally.md
       - 02_architecture: 01_pyspark/02_architecture.md
@@ -16,12 +16,14 @@ nav:
       - 100_pyspark_02: 01_pyspark/100_pyspark_02.md
 
   - python fundamental:
-      - kickoff: 02_funda/01_kickoff.md
-      - index: 02_funda/00_index.md
-      - global-function: 02_funda/02_global-function.md
+      - 01_kickoff: 02_funda/01_kickoff.md
+      - 00_index: 02_funda/00_index.md
+      - 02_global-function: 02_funda/02_global-function.md
+      - 03_module+DP: 02_funda/03_module+DP.md
+      - 04_programing-style: 02_funda/04_programing-style.md
 
   - Career:
-      - Interview : interview.md
+      - interview : interview.md
 
 theme:
   font:
