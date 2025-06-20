@@ -10,8 +10,6 @@ dict_with_immutable_value={
 cgc = None
 cgc_copy = None
 
-
-
 def update_immutable_feild(d: dict):
     d['fsr'] = 'Java8'
 

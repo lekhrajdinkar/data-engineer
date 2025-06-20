@@ -27,7 +27,9 @@
         - :point_right: .pop(k1) or del dict1[k1], dict1[k1] or dict1.get(k1,"defaultv1"), .items(), .keys(), .values(), .copy(), update(dict2) or dict1 |= dict2
         - [dict1.py](../../src/pyBasicModule/2025/dict1.py)
     - **set, frozenset([])** 
-    - **bytes, bytearray, memoryview**
+    - **bytes (mutable), bytearray (immutable), memoryview**
+      - memoryview - View over bytes/bytearray without copying - better performance.
+      - struct module - binary processing
     - **generics with collection**
         - type hinted in 3.9+ ??
         - Optional with type hints ??
@@ -52,7 +54,7 @@
   - ??
   - sum(), max(), any()
   
-### 3. prog constructs
+### 3. programming constructs
 - **logical Operator** : and or not
 - **bitwise** : or ` | and & | not ~ | XOR ^ | << | >>
 - **Identity and Membership Operators**
@@ -77,9 +79,6 @@
       - ...
     - for key, val in **dict1**.items():
     - List/set comprehension + generator expression
-- **util**: print(), hash(), len(), dir(module1) ??
-- yeild ??
-- async for or yield from ??
   
 ### 4. modules
 - .py files
@@ -152,7 +151,14 @@ __bytes__(self) | bytes(obj1)
 | `__hash__` | Hash for dict/set | `hash(obj)` |
 | `__bool__` | Truth value       | `if obj:`   |
 
-### 6. imports / export
+### 6. built-in global function
+- next(), iter()
+- print(), hash(), len(), dir(module1) 
+- ...
+- check next page: [02_global-function-object.md](02_global-function-object.md) 
+
+
+### 7. imports / export
 - import modules prg:
 ```text
 my_app/
@@ -188,6 +194,25 @@ if __name__ == "__main__":
     - special built-in variable in every Python file (module-1.py)
     - `__main__`: if module ran directly
     - `module-1` : if module ran by being imported
+-  `yield` | [yeild+generator.py](../../src/pyBasicModule/2025/style_functional/yeild%2Bgenerator.py)
+    - f1_var = definition of f1(); next(f1_var)  //functional programing
+    - yield returns a value without exiting the function.
+    - function’s state is saved between calls.
+    - produces a **generator object**.
+    - yield helps a function stream multiple return values one at a time, instead of returning them all at once. :point_left:
+    - generator object === function with yeild ( stream of multiple return) 
+      - return and pause, 
+      - use next(f),
+      - so Streams one value at a time
+      - Use Case : want to stream data (e.g. files, DB rows) + work with large/infinite datasets + need lazy evaluation.
+
+| Feature        | `return`                  | `yield`                       |
+| -------------- | ------------------------- | ----------------------------- |
+| Ends function? | Yes                       | No (pauses and resumes)       |
+| Use case       | One result only           | Sequence of results over time |
+| Memory         | Stores all values at once | Streams one value at a time   |
+
+- async for or yield from ??
 
 ### Tip-2 generator Expression vs Comprehension
 - **Comprehensions**. eg:
@@ -217,7 +242,8 @@ if __name__ == "__main__":
 ## C. Programing style
 ### C.1. Procedural
 ### C.2. OOPS
-- A **package** is a directory containing an `__init__.py`
+-  **package** is a directory containing an `__init__.py`
+- object creation : `__new__(T,V) + __init__`
 - **enum.Enum**
 - **classes**
     -  constructor: `def __init__(self):`
@@ -252,7 +278,6 @@ if __name__ == "__main__":
 
 - **functional Operation**
     - filter, map, any, all, sum ??
-
 ---
 ## D. module (ext)
 ### 1. commonly used ??

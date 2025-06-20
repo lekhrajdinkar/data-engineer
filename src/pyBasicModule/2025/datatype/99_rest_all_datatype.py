@@ -8,7 +8,8 @@ print(type({'a': 1}))  # <class 'dict'>
 print(type(True))      # <class 'bool'>
 print(type(None))      # <class 'NoneType'>
 
-# ==== section-1 : datatype Conversion - using call const, easy
+# ==== section-2 : datatype Conversion - using call const, easy
+# with global function, not constructor
 
 int(3.14)      # 3
 float(5)       # 5.0

@@ -7,7 +7,7 @@ import shelve
 # not that safe to use
 
 #prg-1
-with shelve.open('io/shelve') as fund:
+with shelve.open('modules/io/shelve') as fund:
     fund['AF'] = "TDF and CIT"
     fund['AFIS'] = "Insurance fund"
     fund['CAD'] = "canadian and European fund"
@@ -16,7 +16,7 @@ with shelve.open('io/shelve') as fund:
 print(fund)
 
 # Prg : Need to closed at the end manually...
-fund = shelve.open('io/shelve-2', writeback=True)
+fund = shelve.open('modules/io/shelve-2', writeback=True)
 
 # fund['AF'] = "TDF, CIT, CIT-TEMP"
 # fund['AFIS'] = "Insurance fund"
