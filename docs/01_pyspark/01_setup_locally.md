@@ -1,4 +1,4 @@
-# References
+## References
 - [chatgpt - setup Dockerfile](https://chatgpt.com/c/674f855d-41b4-800d-a76f-39b5e7bff18c)
 - [chatgpt - theory](https://chatgpt.com/c/67548d97-6268-800d-a8af-b8ccf576e5f0)
 - [chatgpt - theory](https://chatgpt.com/c/6754cff4-b63c-800d-9e2f-caba7735697e)
@@ -7,7 +7,7 @@
 - [readme.md](readme.md) :point_left:
 ---
 
-# install 
+## A. install 
 - **Python**:
   - 3.9.6 
   - 3.12
@@ -49,9 +49,11 @@
     set PATH=%HADOOP_HOME%\bin;%PATH%
     set HADOOP_CONF_DIR=$HADOOP_HOME\etc\hadoop
 ```
+
 ---
-# start spark session
-## spark-shell
+## B. start spark session
+### B.1 spark-shell
+
 ```
 spark-shell
 
@@ -75,7 +77,7 @@ Type :help for more information.
 scala> 
 ```
 
-## pyspark
+### B.2 pyspark
 - **pip install pyspark**
 - pyspark 
 - pyspark --master local[*]

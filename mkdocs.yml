@@ -4,8 +4,8 @@ site_author: Lekhraj Dinkar
 
 # Navigation based on your Notes folder
 nav:
-  - A. PySpark:
-      - home: 01_pyspark/readme.md
+  - PySpark:
+      - index: 01_pyspark/index.md
       - 00_panda: 01_pyspark/00_panda.md
       - 01_setup_locally: 01_pyspark/01_setup_locally.md
       - 02_architecture: 01_pyspark/02_architecture.md
@@ -15,20 +15,23 @@ nav:
       - 100_pyspark_01_start: 01_pyspark/100_pyspark_01_start.md
       - 100_pyspark_02: 01_pyspark/100_pyspark_02.md
 
-  - B. python fundamental:
+  - python fundamental:
       - kickoff: 02_funda/01_kickoff.md
-      - index: 02_funda/000_INDEX.md
+      - index: 02_funda/index.md
 
-  - c. Career:
+  - Career:
       - Interview : interview.md
 
 extra_css:
   - mkdocs.css
 
 theme:
+  font:
+    text: Roboto
+    code: Roboto Mono
   name: material
   features:
-    - navigation.side
+    - navigation.tabs
     - navigation.sections
   palette:
     - media: "(prefers-color-scheme: light)"
@@ -58,3 +61,10 @@ markdown_extensions:
 
 plugins:
   - search
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/lekhrajdinkar
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/lekhraj-dinkar-25872140/

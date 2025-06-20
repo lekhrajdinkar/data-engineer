@@ -9,6 +9,7 @@
 - str (string, char), bool
 - NoneType is type, None : A singleton object representing “no value” or “null” :point_left:
 - **collection/s** - simpler inbuild + module:collections
+    - **enumerate( list1 )** while looping need , Index + Value Together
     - **array.array or list []** 
       - Mutable, Mixed types allowed
       - array.array -> memory-efficient for large numeric data |  array.array('i', [1, 2, 3])  # 'i' means integer
@@ -49,13 +50,36 @@
 
 - **operation on sequence**
   - ??
+  - sum(), max(), any()
   
 ### 3. prog constructs
+- **logical Operator** : and or not
+- **bitwise** : or ` | and & | not ~ | XOR ^ | << | >>
+- **Identity and Membership Operators**
+
+  | Operator | Description     | Example      | Result       |
+  | -------- | --------------- | ------------ | ------------ |
+  | `is`     | Same object     | `a is b`     | `True/False` |
+  | `is not` | Not same object | `a is not b` | `True/False` |
+  | `in`     | Exists in     | `'a' in 'cat'`     | `True` |
+  | `not in` | Not exists in | `'z' not in 'cat'` | `True` |
+
 - if, elif, else
-- for i in range(3):
-- while x > 0:
-- comparison ?? -> as, in, is , is not , etc
-- util: print(), hash(), len(), dir(module1)??
+- **Ternary** : a if condition else b
+- **loops**: 
+    - for i in range(3) / [1, 2, 3] / {1, 2, 3} 
+    - while x > 0: 
+    - break | continue 
+    - warp with enumerate(list1)
+    - **itertools** Powerful Looping Utilities
+      - for i in itertools.`repeat`(5, 3):
+      - for i in itertools.`cycle`([1, 2]):
+      - ...
+    - for key, val in **dict1**.items():
+    - List/set comprehension + generator expression
+- **util**: print(), hash(), len(), dir(module1) ??
+- yeild ??
+- async for or yield from ??
   
 ### 4. modules
 - .py files
@@ -157,18 +181,38 @@ if __name__ == "__main__":
 
 ---
 ## B. Tips
+### Tip-1
 - `*args` → captures extra positional arguments as a **tuple**
 - `**kwargs` → captures extra keyword arguments as a **dict**
 - `__name__`
     - special built-in variable in every Python file (module-1.py)
     - `__main__`: if module ran directly
     - `module-1` : if module ran by being imported
-- **Comprehensions**
-    - squares = [x*x for x in range(5)] # List comprehension
+
+### Tip-2 generator Expression vs Comprehension
+- **Comprehensions**. eg:
+    - even_set_squares = [x*x for x in range(10) if x % 2 == 0] # List comprehension
     - even_set = {x for x in range(10) if x % 2 == 0} # set comprehension
+    - Eager Evaluation: Evaluates all items immediately.
+    - Stores all values in memory as a full list.
+- **generator expression** 
+    - like a list comprehension but produces items one at a time using lazy evaluation
+    - saves memory, consume less, and is faster for large data
+    - syntax: (expression for item in iterable if condition)
+    - (x*x for x in range(10) if x % 2 == 0)
+
+| Use Case                | Generator | List |
+| ----------------------- | --------- | ---- |
+| Large datasets          | ✅         | ❌    |
+| One-time iteration      | ✅         | ❌    |
+| Need all values at once | ❌         | ✅    |
+| Memory critical apps    | ✅         | ❌    |
+
+### Tip-3
 - Iteration/Streams vs Comprehensions ??
 - Mutability or performance comparison ??
 - **decorator** ??
+
 ---
 ## C. Programing style
 ### C.1. Procedural
@@ -220,15 +264,21 @@ if __name__ == "__main__":
 - threading, asyncio, concurrent
 - open, io, os, pathlib
 
-### 2. collections
+### 2. collections ??
 - Thread-safe collections
 - generics
 - collections.deque
 - queue.Queue, deque, heapq
 
-### 3. fastapi + httpx 
+### 3. fastapi + httpx  ??
 - uvicorn src.main:etlapp --reload
 - real-world APIs.
+- NumPy, Pandas, or parallel loops
+
+## E. profile / performance ??
+- python -m timeit -s "lst = list(range(1000))" "sum(lst)"
+- python -m cProfile your_script.py
 
 ## Z. more
 - Design patterns (Java vs Python) ??
+- 

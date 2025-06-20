@@ -1,6 +1,8 @@
-- https://chatgpt.com/c/6756481b-c08c-800d-9b78-2e024a506c16 - parquet and orc format
+## references
+- <a href="https://chatgpt.com/c/6756481b-c08c-800d-9b78-2e024a506c16" target="_blank">parquet and orc format</a>
+
 --- 
-# A. Spark::`Intro`
+# A. Spark::Intro
 - `polyglot` (Scala, Python [PySpark], Java, R, and SQL) + CLI
 - wide libraries for a variety of tasks.
 - 100 times faster than **MapReduce** for processing large amounts of data.
@@ -11,7 +13,7 @@
   - Powerful Caching
   - in-memory processing / real-time computation
 
-## **use case**:
+## use case:
 - for big data analytics,
 - machine learning on large datasets.
 - ETL (Extract, Transform, Load) pipelines
@@ -48,7 +50,6 @@
 +---------------------+      +-------------------------+
 
 ```
-
 
 ## 1. RDD
 - Resilient Distributed Dataset

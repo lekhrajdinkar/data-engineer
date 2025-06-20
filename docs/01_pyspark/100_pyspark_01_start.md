@@ -99,14 +99,9 @@ df.orderBy(df.age.desc()).show()          # descending
 
 df.orderBy(["age", "name"], ascending=[0, 1]).show()  # mixed
 ```
----
-## 5 more
-```python
-
-```
 
 ---
-## 10 performance : optimize a slow PySpark job
+## 98 performance : optimize a slow PySpark job
 ### cache
 ```python
 # CACHE :: Data reused multiple times + Small enough to fit in cluster memory
