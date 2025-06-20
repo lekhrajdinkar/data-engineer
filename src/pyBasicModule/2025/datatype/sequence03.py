@@ -1,4 +1,6 @@
 # ========== Sequence operation ===========
+# python -m src.pyBasicModule.2025.datatype.sequence03 🏃🏃‍♀️🏃‍♂️ RUN
+
 # List operations
 lst = [10, 20, 30, 40, 50]
 print(lst[2])              # Indexing → 30

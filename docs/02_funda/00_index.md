@@ -31,11 +31,12 @@
     - **bytes (mutable), bytearray (immutable), memoryview**
       - memoryview - View over bytes/bytearray without copying - better performance.
       - struct module - binary processing
-    - **generics with collection**
-        - type hinted in 3.9+ ❓
-        - Optional with type hints ❓
+    - **generics with collection** ❓
+        - type hinted in 3.9+ 
+        - Optional with type hints 
     - **Ellipsis** 
-  
+- formatting: [formating-1.py](../../src/pyBasicModule/2025/datatype/formating-1.py) ➕ ➕
+
 ### 2. Sequence types
 
 | Type         | Mutable | Ordered | Duplicates Allowed | Indexable |
@@ -49,8 +50,23 @@
 | `memoryview` | ✅ Yes\* | ✅ Yes   | ✅ Yes              | ✅ Yes     |
 
 - **operation on sequence**
-  - ❓
-  - sum(), max(), any()
+
+| **Operation**      | **Syntax**          | **Description**           | **Example (List)**    | **Example (String)**       |
+| ------------------ | ------------------- | ------------------------- | --------------------- | -------------------------- |
+| Indexing           | `s[i]`              | Get item at index         | `lst[1] → 20`         | `'abc'[1] → 'b'`           |
+| Slicing            | `s[start:end:step]` | Get subsequence           | `lst[1:3] → [20, 30]` | `'hello'[1:4] → 'ell'`     |
+| Length             | `len(s)`            | Number of elements        | `len(lst) → 5`        | `len('abc') → 3`           |
+| Membership test    | `x in s`            | Check if item exists      | `20 in lst → True`    | `'a' in 'abc' → True`      |
+| Concatenation      | `s + t`             | Combine sequences         | `lst + [60]`          | `'abc' + 'def'`            |
+| Repetition         | `s * n`             | Repeat sequence           | `lst * 2`             | `'ab' * 3 → 'ababab'`      |
+| Iteration          | `for x in s:`       | Iterate through sequence  | `for i in lst:`       | `for ch in 'abc':`         |
+| Min/Max            | `min(s)`, `max(s)`  | Smallest/largest item     | `min(lst)`            | `max('zxy')`               |
+| Sum (numeric only) | `sum(s)`            | Total of values           | `sum(lst)`            | –                          |
+| Index              | `s.index(x)`        | Find first index of value | `lst.index(20)`       | `'abc'.index('b')`         |
+| Count              | `s.count(x)`        | Count occurrences         | `lst.count(20)`       | `'banana'.count('a')`      |
+| Sorted             | `sorted(s)`         | Returns new sorted list   | `sorted(lst)`         | `sorted('cba')`            |
+| Reversed           | `reversed(s)`       | Returns reverse iterator  | `list(reversed(lst))` | `''.join(reversed('abc'))` |
+
   
 ### 3. programming constructs
 - **logical Operator** : and or not
@@ -88,6 +104,15 @@
 - Check if module is run directly => if __name__ == "__main__": \ print("Running math_utils directly")
 - installing 3rd-party modules using pip3
 - 2 ways to run a module =>  python3 math_utils.py + import math_utils
+- `PYTHONPATH` is an environment variable that tells Python where to look for modules/packages when importing.
+
+| Path                  | Meaning                                |
+| --------------------- | -------------------------------------- |
+| `''` or current dir   | The script’s directory (`.`)           |
+| Standard library dirs | `/usr/lib/python3.x` or similar        |
+| Site-packages         | `/usr/lib/python3.x/site-packages`     |
+| User-site packages    | `~/.local/lib/python3.x/site-packages` |
+
 
 ### 5. special method 🥳
 - If want a custom class to act like a list/dict/etc., implement special methods :point_left:
@@ -166,7 +191,7 @@ __bytes__(self) | bytes(obj1)
         - usecase-2: myModule-1 > got dynamic chnaged > need to dynamically reload. ⬅️
         - usecase-3: Import a Function or Class Dynamically
 ```text
-my_app/
+my_app/src
 │
 ├── utils/
 │   ├── __init__.py
@@ -174,6 +199,10 @@ my_app/
 │   └── string_ops.py
 ├── main.py
 
+python3 -m src.main ⬅️
+    Locates main module in the PYTHONPATH or current directory.
+    Executes its __main__ block (if it has if __name__ == "__main__").
+    Runs it like a script, but resolves all imports as a module, 
 ---
 # === dynamic import ===
 import importlib
