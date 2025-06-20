@@ -32,9 +32,9 @@
       - memoryview - View over bytes/bytearray without copying - better performance.
       - struct module - binary processing
     - **generics with collection**
-        - type hinted in 3.9+ ??
-        - Optional with type hints ??
-    - **Ellipsis** / numPy ??
+        - type hinted in 3.9+ ❓
+        - Optional with type hints ❓
+    - **Ellipsis** / numPy ❓
 
   
 ### 2. Sequence types
@@ -50,7 +50,7 @@
 | `memoryview` | ✅ Yes\* | ✅ Yes   | ✅ Yes              | ✅ Yes     |
 
 - **operation on sequence**
-  - ??
+  - ❓
   - sum(), max(), any()
   
 ### 3. programming constructs
@@ -81,8 +81,9 @@
   
 ### 4. modules
 - .py files
+- bts, module is object. since everthing is object in py.
 - import module : no need to explicitly export like in TS
-- python3 **-m** module1.py : ??
+- python3 **-m** module1.py : ❓
 - common built-in modules :  os,  sys,  datetime,  json,  random,  re,  math
 - print(**dir**(math_ops))  # Lists all functions, classes, etc.  <<<
 - Check if module is run directly => if __name__ == "__main__": \ print("Running math_utils directly")
@@ -160,6 +161,13 @@ __bytes__(self) | bytes(obj1)
 
 ### 7. imports / export
 - import modules prg:
+- fix cyclic import
+  - Move the import **inside a function** ⬅️
+  - Refactor shared code into a third module
+  - Use **dynamic** import --> **importlib** : 
+    - usecase-1: fixes cycle import 
+    - usecase-2: myModule-1 > got dynamic chnaged > need to dynamically reload. ⬅️
+    - usecase-3: Import a Function or Class Dynamically
 ```text
 my_app/
 │
@@ -169,6 +177,13 @@ my_app/
 │   └── string_ops.py
 ├── main.py
 
+---
+# === dynamic import ===
+import importlib
+math_module = importlib.import_module('math')
+
+module = importlib.import_module('random')
+get_random = getattr(module, 'randint') #everything is object 😊😊
 ---
 from . import math_ops           # same package, or shorthand --> import math_ops
 from ..utils import string_ops   # parent package
@@ -227,7 +242,7 @@ if __name__ == "__main__":
 - **generator expression** 
     - like a list comprehension but produces items one at a time using lazy evaluation
     - saves memory, consume less, and is faster for large data
-    - syntax: (expression for item in iterable if condition)
+    - syntax: **(expression for item in iterable if condition)**
     - (x*x for x in range(10) if x % 2 == 0)
 
 | Use Case                | Generator | List |
@@ -237,12 +252,12 @@ if __name__ == "__main__":
 | Need all values at once | ❌         | ✅    |
 | Memory critical apps    | ✅         | ❌    |
 
-### Tip-3 ??
-- Iteration/Streams vs Comprehensions ??
-- Mutability or performance comparison ??
-- **decorator** ??
+### Tip-3 ❓
+- Iteration/Streams vs Comprehensions ❓
+- Mutability or performance comparison ❓
+- **decorator** ❓
 
-### Tip-4 ??
+### Tip-4 ❓
 - async
 - async with files, sockets, or APIs
 
@@ -259,7 +274,10 @@ if __name__ == "__main__":
     - weak : private/protected/public : __ , _ ,  --> not enforced, Name mangling only
     - **instance variable** with self.xxxx
     - **static variable** -> var without self + `@staticmethod`
-    - `@classmethod` ??
+    - `@classmethod` 
+      - def my_class_method(cls, arg1, arg2):
+      - First parameter is **cls**, representing the class itself, like self represents the instance.
+      - MyClass.my_class_method() or obj.my_class_method()
     - create object without **new operator**, unlike java
     - `obj.__class__` -> Reference to class
 - **Abstraction** : abstract class using **abc module**
@@ -285,10 +303,10 @@ if __name__ == "__main__":
 | `classmethod`, `staticmethod` | Class/static methods |                 |
 
 - **functional Operation**
-    - filter, map, any, all, sum ??
+    - filter, map, any, all, sum ❓
 ---
 ## D. module (ext)
-### 1. commonly used ??
+### 1. commonly used ❓
 - math, cmath, decimal, numPy
 - **collections** - NamedTuple, dataclass, etc
 - datetime, timedelta
@@ -301,21 +319,21 @@ if __name__ == "__main__":
 - open, io, os, pathlib
 - asyncio
 
-### 2. collections ??
+### 2. collections ❓
 - Thread-safe collections
 - generics
 - collections.deque
 - queue.Queue, deque, heapq
 
-### 3. fastapi + httpx  ??
+### 3. fastapi + httpx  ❓
 - uvicorn src.main:etlapp --reload
 - real-world APIs.
 - NumPy, Pandas, or parallel loops
 
-## E. profile / performance ??
+## E. profile / performance ❓
 - python -m timeit -s "lst = list(range(1000))" "sum(lst)"
 - python -m cProfile your_script.py
 
 ## Z. more
-- Design patterns (Java vs Python) ??
+- Design patterns (Java vs Python) ❓
 - 
