@@ -1,7 +1,7 @@
 ## 1. learnings chat 
 - <img src="https://img.shields.io/badge/View-ChatGPT_Conversation-blue?logo=openai&logoColor=white" />
-    - <a href="https://chatgpt.com/c/68535fab-0494-800d-af09-a35817d88f6a" target="_blank">Python-1 (basic) </a>
-    - <a href="https://chat.deepseek.com/a/chat/s/065201f8-58cd-4064-ada2-c61075720515" target="_blank">Python-2 (API)</a>
+    - <a href="https://chatgpt.com/c/68536dbf-dd20-800d-9328-f38fcbdef71e" target="_blank">Python-2 (basic) </a>
+    - <a href="https://chatgpt.com/c/68535fab-0494-800d-af09-a35817d88f6a" target="_blank">Python-1 (API)</a>
 
 ---
 ## 2. Interview chat 

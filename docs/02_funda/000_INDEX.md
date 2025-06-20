@@ -1,11 +1,8 @@
-- py 2: [https://chatgpt.com/c/68536dbf-dd20-800d-9328-f38fcbdef71e](https://chatgpt.com/c/68536dbf-dd20-800d-9328-f38fcbdef71e)
-- py 1: [https://chatgpt.com/c/68535fab-0494-800d-af09-a35817d88f6a](https://chatgpt.com/c/68535fab-0494-800d-af09-a35817d88f6a)
-
----
 # py (3.10+)
 ## A. basic - Datatypes, etc
 - everything is object , Dynamically typed (duck type), **object** (base class)
 ### 1. datatype
+- ![img_2.png](99_IMG/001/img_2.png)
 - inbuilt class, lower case unlike java, use module for more types.
 - **type, class, Enum, module**
 - range, int, float, complex(imaginary number), **decimal**.Decimal
@@ -38,7 +35,7 @@
   - **NotImplemented**
   - **NamedTuple, dataclass** : Lightweight data containers
   
-### 2. Sequence
+### 2. Sequence types
 
 | Type         | Mutable | Ordered | Duplicates Allowed | Indexable |
 | ------------ | ------- | ------- | ------------------ | --------- |
@@ -57,9 +54,8 @@
 - if, elif, else
 - for i in range(3):
 - while x > 0:
-- in
-- comparison ?? -> is , is not == !=
-- util: print(), hash(), len(), ??
+- comparison ?? -> as, in, is , is not , etc
+- util: print(), hash(), len(), dir(module1)??
   
 ### 4. modules
 - .py files
@@ -71,9 +67,9 @@
 - installing 3rd-party modules using pip3
 - 2 ways to run a module =>  python3 math_utils.py + import math_utils
 
-### special method
+### 5. special method
 - If want a custom class to act like a list/dict/etc., implement special methods :point_left:
-- [02_specialClass.py](../../src/pyBasicModule/2025/02_specialClass.py)
+- [02_specialClass.py](../../src/pyBasicModule/2025/style_oops/02_specialClass.py)
 ```
 __getitem__(self, index)  | a[1]
 __setitem__(self, index)  | a[1] = 123
@@ -90,6 +86,8 @@ __bytes__(self) | bytes(obj1)
 ...
 ...
 ```
+
+- a and b are objects, check below:
 
 | Method   | Operation | Example  |
 | -------- | --------- | -------- |
@@ -130,6 +128,8 @@ __bytes__(self) | bytes(obj1)
 | `__hash__` | Hash for dict/set | `hash(obj)` |
 | `__bool__` | Truth value       | `if obj:`   |
 
+### 6. imports / export
+- import modules prg:
 ```text
 my_app/
 │
@@ -156,49 +156,43 @@ if __name__ == "__main__":
 ```
 
 ---
-## B. tips
-- print( *vargs)
-- *vargs , **kwargs
-- __name__
-  - special built-in variable in every Python file (module-1.py)
-  - `__main__`: if module ran directly
-  - `module-1` : if module ran by being imported
-- **Comprehensions**
-  - squares = [x*x for x in range(5)] # List comprehension
-  - even_set = {x for x in range(10) if x % 2 == 0} # set comprehension
-- Iteration/Streams vs Comprehensions ??
-- Mutability or performance comparison ??
+## B. Tips
 - `*args` → captures extra positional arguments as a **tuple**
 - `**kwargs` → captures extra keyword arguments as a **dict**
-- decorator ??
+- `__name__`
+    - special built-in variable in every Python file (module-1.py)
+    - `__main__`: if module ran directly
+    - `module-1` : if module ran by being imported
+- **Comprehensions**
+    - squares = [x*x for x in range(5)] # List comprehension
+    - even_set = {x for x in range(10) if x % 2 == 0} # set comprehension
+- Iteration/Streams vs Comprehensions ??
+- Mutability or performance comparison ??
+- **decorator** ??
 ---
-## C. programing style
-### C.1 procedural
-
-### C.2 oops
-- A **package** is a directory containing an __init__.py
+## C. Programing style
+### C.1. Procedural
+### C.2. OOPS
+- A **package** is a directory containing an `__init__.py`
 - **enum.Enum**
 - **classes**
-    -  def __init__(self):
+    -  constructor: `def __init__(self):`
     - no getters/setters, can access attributes directly
     - weak : private/protected/public : __ , _ ,  --> not enforced, Name mangling only
     - **instance variable** with self.xxxx
-    - **static variable** -> without self + `@staticmethod`
+    - **static variable** -> var without self + `@staticmethod`
     - `@classmethod` ??
     - create object without **new operator**, unlike java
     - `obj.__class__` -> Reference to class
-- **Abstraction** : abstract class using `abc module`
+- **Abstraction** : abstract class using **abc module**
     - no native interface
     - module:ABC + @abstractmethod
 - **Polymorphism** 
     - only **overriding** happens, since duck typing.
     - **overloading**  (no native support)
       - achieve same with *args, **kwargs ( to dict)
-      - with `@singledispatch` [02_oops.py | section-2](../../src/pyBasicModule/2025/02_oops.py)
+      - with `@singledispatch` [02_oops.py | section-2](../../src/pyBasicModule/2025/style_oops/02_oops.py)
       - fact: last defined method with the same name overrides previous ones
-- **special method**
-    - sfdsf
-
 - **error handling**: 
     - try, except MyError as e, finally
 
@@ -212,7 +206,9 @@ if __name__ == "__main__":
 | `coroutine`                   | For async/await      | `async def`     |
 | `classmethod`, `staticmethod` | Class/static methods |                 |
 
-- filter, map, any, all, sum ??
+- **functional Operation**
+    - filter, map, any, all, sum ??
+
 ---
 ## D. module (ext)
 ### 1. commonly used ??
