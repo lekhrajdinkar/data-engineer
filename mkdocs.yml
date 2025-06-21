@@ -23,8 +23,8 @@ nav:
       - 03_module+DP: 02_funda/03_module+DP.md
       - 04_programing-style: 02_funda/04_programing-style.md
 
-  - Career:
-      - interview : interview.md
+  - More:
+      - chats : chats.md
 
 theme:
   font:
