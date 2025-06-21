@@ -89,6 +89,7 @@
   | `not in` | Not exists in | `'z' not in 'cat'` | `True` |
 
 - if, elif, else
+- no native switch:  [custom-switch.py](../../src/pyBasicModule/year2025/others/custom-switch.py) 
 - **Ternary** : a if condition else b
 - **loops**: 
     - for i in range(3) / [1, 2, 3] / {1, 2, 3} 

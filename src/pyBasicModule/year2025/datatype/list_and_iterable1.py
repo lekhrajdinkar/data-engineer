@@ -112,9 +112,22 @@ def listDemo():
     # ❌ List comprehension stores all
     total = sum([x * x for x in range(1000000)])
 
-    [x*x for x in range(10) if x % 2 == 0]  # List comprehension : fast + consume memory
-    (x*x for x in range(10) if x % 2 == 0)  # Generator expression : slow + memory efficient
+
+def comprehension_demo():
+    squrare = [x*x for x in range(10) if x % 2 == 0]
+    # List comprehension : fast + consume memory
+    # <class 'list'>
+    print(f"comprehension :: [x*x for x in range(10) if x % 2 == 0]", squrare, type(squrare))
 
 
-    # =====================
+def generation_demo():
+    #<generator object generation_demo.<locals>.<genexpr> at 0x0000022B6A09C450> <class 'generator'>
+    square_gen = (x * x for x in range(10) if x % 2 == 0)  # Generator expression
+    print("generator :: (x*x for x in range(10) if x % 2 == 0)", square_gen, type(square_gen))
+    for item in square_gen:
+        print(item, type(item), f"ℹ️")
+
+
+
+
 

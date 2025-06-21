@@ -7,9 +7,9 @@ def dictDemo():
     }
 
     # 🔍 Accessing values
-    print(person["name"])            # Alice
-    print(person.get("age"))         # 30
-    print(person.get("gender", "N/A"))  # Default if key doesn't exist
+    print(f"🔍",person["name"])            # Alice
+    print(f"🔍",person.get("age"))         # 30
+    print(f"🔍 get default : ",person.get("gender", "N/A"))  # Default if key doesn't exist
 
     # ✍️ Updating values
     person["age"] = 31
@@ -23,15 +23,15 @@ def dictDemo():
 
     # ✅ Check if key exists
     if "name" in person:
-        print("Name exists")
+        print(f"✅","Name exists")
 
     # 🔁 Loop through keys and values
     for key, value in person.items():
-        print(f"{key}: {value}")
+        print(f"🔁 {key}: {value}")
 
     # 🔑 Get only keys or values
-    print(list(person.keys()))    # ['name', 'age']
-    print(list(person.values()))  # ['Alice', 31]
+    print(f"🔑 keys",list(person.keys()))    # ['name', 'age']
+    print(f"🔑 values",list(person.values()))  # ['Alice', 31]
 
     # 📦 Copy dictionary
     person_copy = person.copy()

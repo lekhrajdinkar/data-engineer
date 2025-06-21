@@ -1,4 +1,4 @@
-"""
+str = """
 ✅ Basic Syntax
 "{}".format(value)
 "{0}".format(value1)
@@ -45,15 +45,21 @@ def formatingDemo1():
     # 📚 List Formatting (via unpacking)
     lst = [1, 2, 3]
     print("List: {}, {}, {}".format(*lst))  # List: 1, 2, 3
+    print("List2: {}, {}, {}".format(11,2,3,55))
 
-    print(", ".join("Item {}".format(x) for x in lst))  # Item 1, Item 2, Item 3
+    print("JOINING :: ", ", ".join("Item {}".format(x) for x in lst))  # Item 1, Item 2, Item 3
 
     # 🔁 Numbered & Named Placeholders
-    print("{0} + {1} = {2}".format(2, 3, 5))  # 2 + 3 = 5
+    print("{0} + {1} = {2}".format(2, 33, 5))  # 2 + 3 = 5
     print("{name} is {age} years old".format(name="Bob", age=25))
 
     # 🗂️ Dict Formatting
     person = {"name": "Alice", "age": 30}
     print("Name: {name}, Age: {age}".format(**person))  # Name: Alice, Age: 30
 
+    #print(str)
+
+def p(*args):
+    for item in args:
+        print("{:>50}".format(item))
 
