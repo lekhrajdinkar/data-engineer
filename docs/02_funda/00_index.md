@@ -314,14 +314,24 @@ if __name__ == "__main__":
 - can omit () in tuple
 - when to use, which datatype
 - str1.isnumeric()
+- [::] is hardcoded vs **slice**(start,end,step) is  dynamic ⬅️
+- **global build in** - iterable
+    - l = map(func, iterable)
+    - l = filter(func, iterable) – Filter items matching condition
+    - sum | all | any([...]) --> for numeric
+- custom class (wrapped list) with __iter__() and __next__() for iterable objects : [dunder1.py](../../src/pyBasicModule/year2025/others/dunder1.py)
+- **shelve** [shelve1.py](../../src/pyBasicModule/year2021/modules/shelve1.py) === like dict [str|any] ⬅️
+- [1,2,3] * 2
+- [0] * 2
+- [[0] * 2] * 2    #2d Array
+- for a,b in **zip**(arr1,arr2) ⬅️
 
-
-
-### Tip-4 ❓
+### Tip-4
 - async
 - async with files, sockets, or APIs
 - decorator 
 - Mutability or performance comparison 
 
-### Tip-5
+### Tip-5 
 - [copy1.py](../../src/pyBasicModule/year2025/others/copy1.py)
+- time --> time.struct_time --> named tuple

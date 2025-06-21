@@ -192,5 +192,26 @@ def list_prg_1_indexinfWithRange():
 
 """
 
+# =============== Python Built-ins  =======
+
+# iter() :: manually iterating over a collection.
+def global_built_in():
+    nums = [10, 20, 30]
+    it = iter(nums)
+    print(next(it))  # 🔢 10
+    print(next(it))  # 🔢 20
+
+    print(sum([1, 2, 3], 10))  # 16 sum()
+
+    # ✅ all() – True if all elements are True
+    print(all([True, 1, "ok"]))       # True
+    print(all([True, 0, "ok"]))       # False
+
+    # ⚠️ any() – True if any
+    print(any([False, 0, "", "Hi"]))  # True
+    print(any([False, 0, ""]))        # False
+
+    # newSequence = map( lambda , sequence)
+
 
 

@@ -1,3 +1,4 @@
+## str
 | 🔢 | Method                | Description                              | Example                     | Output            |
 | -- | --------------------- | ---------------------------------------- | --------------------------- | ----------------- |
 | 1  | `str.upper()`         | Convert to uppercase                     | `"hi".upper()`              | `'HI'`            |
@@ -32,7 +33,7 @@
 | 30 | `f"{}"` (f-string)    | Modern formatting                        | `f"Hi {name}"`              | `'Hi Tim'`        |
 
 ---
-## 🧾 list
+## list
 
 | 🔢  | Method          | Description                      | Example              | Output           |
 | --- | --------------- | -------------------------------- | -------------------- | ---------------- |
@@ -95,7 +96,7 @@
 
 ---
 
-## Summary
+## Summary::collection
 
 | Data Type | Mutable | Ordered | Allows Duplicates | Key Characteristics                   |
 | --------- | ------- | ------- | ----------------- | ------------------------------------- |
@@ -103,3 +104,63 @@
 | `tuple`   | ❌       | ✅       | ✅                 | Immutable, used for fixed collections |
 | `set`     | ✅       | ❌       | ❌                 | Unique items, supports set math ops   |
 | `dict`    | ✅       | ✅(3.7+) | ❌ (keys)          | Key-value pairs, fast lookup          |
+
+---
+
+## datetime 
+
+| 📦 Function                   | 🧾 Syntax / Example                           | 🧠 Description                      |
+| ----------------------------- | --------------------------------------------- | ----------------------------------- |
+| `datetime.now()`              | `datetime.now()`                              | Get current local datetime          |
+| `date()`                      | `date(2025, 12, 25)`                          | Create a date object                |
+| `time()`                      | `time(9, 30, 0)`                              | Create a time object                |
+| `datetime.strftime(fmt)`      | `now.strftime("%Y-%m-%d")`                    | Format `datetime` to string         |
+| `datetime.strptime(str, fmt)` | `datetime.strptime("2024-11-05", "%Y-%m-%d")` | Parse string to `datetime` object   |
+| `timedelta()`                 | `timedelta(days=5, hours=2)`                  | Time difference object              |
+| `datetime + timedelta`        | `future = now + timedelta(days=1)`            | Add/subtract time                   |
+| `.date()` / `.time()`         | `now.date()`, `now.time()`                    | Extract date or time                |
+| `.year`, `.month`, `.day`     | `now.year`, `now.month`, `now.day`            | Access date components              |
+| `.weekday()` / `.strftime()`  | `now.weekday()` / `now.strftime("%A")`        | Get day of week (0=Mon) / full name |
+| `date1 - date2`               | `(d1 - d2).days`                              | Get difference in days              |
+
+---
+
+## time
+
+| 📦 Function             | 🧾 Syntax / Example                           | 🧠 Description                             |
+| ----------------------- | --------------------------------------------- | ------------------------------------------ |
+| `time.time()`           | `timestamp = time.time()`                     | Get current UNIX timestamp (float seconds) |
+| `time.localtime()`      | `time.localtime(time.time())`                 | Convert timestamp to local `struct_time`   |
+| `time.gmtime()`         | `time.gmtime(time.time())`                    | Convert to UTC `struct_time`               |
+| `time.strftime(fmt, t)` | `time.strftime("%Y-%m-%d", time.localtime())` | Format `struct_time` to string             |
+| `time.strptime(s, fmt)` | `time.strptime("2025-07-04", "%Y-%m-%d")`     | Parse string to `struct_time`              |
+| `time.sleep(seconds)`   | `time.sleep(2)`                               | Pause program execution                    |
+| `time.perf_counter()`   | `start = time.perf_counter()`                 | High-resolution timer for performance      |
+
+---
+
+##  calender
+
+| 📦 Function                    | 🧾 Example                         | 🧠 Description                                 |
+| ------------------------------ | ---------------------------------- | ---------------------------------------------- |
+| `calendar.calendar(year)`      | `calendar(2025)`                   | Returns multi-line string of year calendar     |
+| `calendar.month(year, month)`  | `month(2025, 7)`                   | Returns calendar for a month                   |
+| `calendar.weekheader(n)`       | `weekheader(3)`                    | Returns abbreviated weekday headers            |
+| `calendar.firstweekday()`      | `firstweekday()`                   | Gets current first weekday setting             |
+| `calendar.setfirstweekday(n)`  | `setfirstweekday(calendar.SUNDAY)` | Sets first day of week                         |
+| `calendar.isleap(year)`        | `isleap(2024)`                     | Returns `True` if leap year                    |
+| `calendar.leapdays(y1, y2)`    | `leapdays(2000, 2050)`             | Count of leap days between `y1` and `y2`       |
+| `calendar.weekday(y, m, d)`    | `weekday(2025, 7, 4)`              | Returns weekday index for a date               |
+| `calendar.monthcalendar(y, m)` | `monthcalendar(2025, 7)`           | Matrix of weeks with days (0 for padding days) |
+
+---
+
+## pytz
+
+| 📦 Function / Object     | 🧾 Example                                         | 🧠 Description                       |
+| ------------------------ | -------------------------------------------------- | ------------------------------------ |
+| `pytz.all_timezones`     | `pytz.all_timezones`                               | List of all available timezones      |
+| `pytz.timezone(name)`    | `pytz.timezone("Asia/Kolkata")`                    | Returns timezone object              |
+| `datetime.now(pytz.UTC)` | `datetime.now(pytz.UTC)`                           | Current UTC time (aware)             |
+| `tz.localize(naive_dt)`  | `tz.localize(datetime(2025,12,25,15,30))`          | Make a naive datetime timezone-aware |
+| `dt.astimezone(new_tz)`  | `aware_dt.astimezone(pytz.timezone("Asia/Tokyo"))` | Convert datetime to another timezone |

@@ -44,6 +44,9 @@
       <filter id="765ef4e0-8bc7-4d43-9b6a-72fafcf59fc3" name="Filter" temporary="false" custom-name="false" type="basic" join-type="AND" />
     </filter-actions>
   </component>
+  <component name="DBNavigator.Project.ExecutionManager">
+    <retain-sticky-names value="false" />
+  </component>
   <component name="DBNavigator.Project.FileConnectionMappingManager">
     <mapping file-url="file://$PROJECT_DIR$/src/AI/ddl.sql" connection-id="f87a6f07-0b6f-4e7e-9eb0-fabfff3f5b30" session-id="MAIN" current-schema="public" />
   </component>

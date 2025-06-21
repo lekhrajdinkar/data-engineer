@@ -3,7 +3,8 @@
 def listOperations():
     lst = [10, 20, 30, 40, 50]
     print(lst[2])              # Indexing → 30
-    print(lst[1:4])            # Slicing → [20, 30, 40]
+    print(lst[1:4])            # Slicing → [20, 30, 40] :: hardcoded slicing
+    print(lst[slice(1,4)])     # Slicing → [20, 30, 40] same as above but dynamic
     print(len(lst))            # Length → 5
     print(20 in lst)           # Membership → True
     print(lst + [60])          # Concatenation → [10, 20, 30, 40, 50, 60]

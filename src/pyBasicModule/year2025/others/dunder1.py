@@ -1,3 +1,6 @@
+def filter1(x):
+    return x
+
 class MyList:
     def __init__(self, items):
         self.data = list(items)  # store as a list internally
@@ -15,6 +18,9 @@ class MyList:
 
     def __iter__(self):
         return iter(self.data)
+
+    #def __next__(self):
+        #return filter(filter1, self.data)
 
     def __len__(self):
         return len(self.data)
