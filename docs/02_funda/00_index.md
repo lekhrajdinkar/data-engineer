@@ -244,7 +244,7 @@ if __name__ == "__main__":
 
 ---
 ## B. Tips
-### Tip-1 : yeild,kwarg,arg,etc
+### Tip-1 : yield,kwarg,arg,etc
 - `*args` → captures extra positional arguments as a **tuple**
 - `**kwargs` → captures extra keyword arguments as a **dict**
 - `__name__`
@@ -257,14 +257,14 @@ if __name__ == "__main__":
     - function’s state is saved between calls.
     - produces a **generator object**.
     - yield helps a function stream multiple return values one at a time, instead of returning them all at once. ⬅️
-    - generator === function with yeild ( stream of multiple return) 
+    - generator === function with yield ( stream of multiple return) 
         - return and pause, 
         - use next(f),
         - so Streams one value at a time
         - Use Case : want to stream data (e.g. files, DB rows) + work with large/infinite datasets + need lazy evaluation.
 - `yield from`  - Delegating to another generator (sync)
-    - def generator1: yield from range(3); yeild("done);
-- `generator` - **function** yeilds value/s ⬅️ type:
+    - def generator1: yield from range(3); yield("done);
+- `generator` - **function** yields value/s ⬅️ type:
     - sync
     - async (async for)
     - [yeild+generator.py : section-4](../../src/pyBasicModule/year2025/others/yeild+generator.py)
