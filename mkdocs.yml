@@ -22,6 +22,7 @@ nav:
       - 02_global-function: 02_funda/02_global-function.md
       - 03_module+DP: 02_funda/03_module+DP.md
       - 04_programing-style: 02_funda/04_programing-style.md
+      - 05_useful_function: 02_funda/05_useful_function.md
 
   - More:
       - chats : chats.md

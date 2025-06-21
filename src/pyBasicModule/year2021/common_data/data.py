@@ -38,3 +38,11 @@ t3 = 'nodeJs','10',2020
 dict1={ t1: 'value1', t3: 'value2' }
 
 
+menu = [
+    ["boba tea", 'moon cake', 'spam'],
+    ["boba tea", 'bun', 'casetella', 'spam'],
+    ['moon cake', 'bun', 'casetella'],
+    ["boba tea", 'moon cake', 'casetella'],
+]
+
+

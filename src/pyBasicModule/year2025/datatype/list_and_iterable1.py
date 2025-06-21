@@ -172,6 +172,15 @@ def read_file_by_line_generator_1(filename: str = "datatype/bigfile.txt") -> Gen
 def read_file_by_line_generator_2(filename: str ) -> Generator[str, None, None]:
     return (line for line in open(filename, "r"))
 
+def list_prg_1_indexinfWithRange():
+    list2 = ["item1","item2","item3","item4","item5"]
+    item_to_find = 'item4'
+    for index in range(0,len(list2)):
+        if list2[index] == item_to_find:
+            print(list2[index], ' found !!')
+            break
+        else:
+            print(list2[index], ' unmatched')
 
 """
 | Type                     | Returns New Collection? | Original Mutated? |

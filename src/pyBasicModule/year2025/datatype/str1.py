@@ -80,3 +80,72 @@ def str_all():
     # --- 15. Use case: detect palindrome ---
     s = "madam"
     print(f"{s} is palindrome? {s == s[::-1]}")
+
+def str_all_2():
+    print('='*10,"🔠 String Use Cases in Python\n" , '='*10)
+
+    # ✅ Creation
+    s1 = "Hello"
+    s2 = str("World")
+    s3 = """Multi
+    Line
+    String"""
+    print(f"📌 Created Strings:\n{s1} | {s2} | {s3}\n")
+
+    # ✅ Access & Slice
+    print(f"🔍 Access: s1[0] = {s1[0]}, s1[-1] = {s1[-1]}")
+    print(f"✂️ Slice: s2[1:4] = {s2[1:4]}\n")
+
+    # ✅ Update (strings are immutable → use reassignment)
+    s1 = s1.replace("H", "J")
+    print(f"🔁 Replace H with J → {s1}")
+
+    # ✅ Delete
+    del s2  # deletes reference
+    print("❌ Deleted s2 using `del s2`\n")
+
+    # ✅ Common Manipulations
+    s = " python  "
+    print(f"🔧 Strip: '{s.strip()}'")
+    print(f"🔠 Upper: {s.upper()}, Lower: {s.lower()}")
+    print(f"🎯 Find 'th': {s.find('th')}, Replace 'py'->'my': {s.replace('py', 'my')}")
+    print(f"🧩 Split: {s.split()}, Join: {'-'.join(['a','b','c'])}\n")
+
+    # ✅ Formatting
+    name = "Tim"
+    age = 30
+    print("🎨 Formatting:")
+    print("Hello, {}. You are {}.".format(name, age))
+    print(f"Hello, {name}. You are {age}.")  # f-string
+    print("Pi is {:.2f}".format(3.14159))  # float formatting
+    print()
+
+    # ✅ Check Types
+    print("🕵️ Checks:")
+    print("123".isdigit(), "abc".isalpha(), "abc123".isalnum(), "  ".isspace())
+    print("Title Case".istitle(), "lower".islower(), "UPPER".isupper())
+    print()
+
+    # ✅ Encoding & Decoding
+    encoded = "hello".encode("utf-8")
+    decoded = encoded.decode("utf-8")
+    print(f"🔐 Encoded: {encoded}, Decoded: {decoded}\n")
+
+    # ✅ Performance Tip (use join for concatenation in loops)
+    print("🚀 Performance Tip:")
+    words = ["Hello", "from", "Python"]
+    print(" ".join(words))  # faster than += in loop
+    print()
+
+    # ✅ Tricky & Advanced
+    print("🤯 Tricky:")
+    print("a" * 5)             # Repeat
+    print("abc" > "Abc")       # Lexical comparison
+    print("😊".encode())       # Unicode
+    print(f"Raw string: {r'C:\path\to\file'}")  # Raw string
+    print()
+
+    # ✅ f-string tricks
+    pi = 3.14159
+    print(f"🧪 f-string Pi (3 decimals): {pi:.3f}")
+    print(f"🧾 Aligned: |{'left':<10}|{'right':>10}|{'center':^10}|")

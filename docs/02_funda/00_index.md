@@ -105,6 +105,7 @@
       - ...
     - for key, val in **dict1**.items():
     - List/set comprehension + generator expression
+    - for index in range(len(meal)-1, -1, -1): # range with 3 arg, negative steps
   
 ### 4. modules 
 - .py files
@@ -312,6 +313,7 @@ if __name__ == "__main__":
 - negative and nested indexing
 - can omit () in tuple
 - when to use, which datatype
+- str1.isnumeric()
 
 
 

@@ -37,4 +37,9 @@ def strOperations_negative_indexing():
     print(s[-6])   # 'p'
     print(s[-3:])   # gets last 3 elements
 
+def seq_demo_1():
+    s = 'lekhraj'
+    print(*s)   # l e k h r a j
+    print(*s, sep=", ")   # l, e, k, h, r, a, j
+    print( [*s] ) # ['l', 'e', 'k', 'h', 'r', 'a', 'j']
 

@@ -11,7 +11,7 @@ d = {'k1': 1, 'k2':2}; s1 = set(dict.fromkeys(d)); print(s1)
 d = {1:1, 2:2}; s1 = set(dict.fromkeys(d)); print(s1)
 print(set(range(10)))
 s1 = {'fsr', 'cstar', 'tact', 32}
-s2 = {'fsr', 'tact', 'cstar', 'cstar', 32} # like set but without value part
+s2 = {'fsr', 'tact', 'cstar', 'cstar', 32} # like dict but without value part
 print(s1) # notice order are diff : {'tact', 'fsr', 'cstar'}
 # print(s1[0])  # TypeError: 'set' object is not subscriptable
 # s1 = { ['fsr'], ['tact']}; print(s1) #TypeError: unhashable type: 'list'
@@ -49,11 +49,7 @@ s1.update('X','Y','Z'); print(s1) # Also pass individual item
 l = ['XX','YY','ZZ']; print(*l) #unpack sequence
 s1.update(l); print(s1) # Also pass individual item
 
-# ===== IMP ======
-s = 'lekhraj' ;
-print(*s) ;  # l e k h r a j
-print(*s, sep=", ") ;  # l, e, k, h, r, a, j
-print( [*s] ) # ['l', 'e', 'k', 'h', 'r', 'a', 'j']
+
 
 
 # Exercise

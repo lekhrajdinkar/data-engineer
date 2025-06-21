@@ -1,6 +1,5 @@
-import data
-import print_color
-import copy
+from ..common_data import data,print_color
+from ..others import copy1
 
 project = data.project
 project_tect_stack = data.project_tect_stack
@@ -24,7 +23,7 @@ def add_project():
 
 # Exercise 1
 def deep_copy_dict(d: dict):
-    return copy.deepcopy(d)
+    return copy1.deepcopy(d)
 def shallow_copy_dict(d: dict):
     return d.copy()
 

@@ -15,6 +15,7 @@ def test_datatype1():
 
 def test_datatype2():
     str1.str_all()
+    str1.str_all_2()
     byte1.byteDemo()
 
 def test_collection():
