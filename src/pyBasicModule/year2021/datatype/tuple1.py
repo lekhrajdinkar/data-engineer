@@ -1,5 +1,4 @@
-# from src.pyBasicModule.year2021.commom_data.data import albums_list
-from common_data import data
+from src.pyBasicModule.year2021.commom_data import data
 
 albums_list = data.albums_list
 
