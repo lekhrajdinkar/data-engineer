@@ -24,7 +24,6 @@ def basic_json_usage():
         "skills": ["Python", "AWS", "Docker"],
         "active": True
     }
-
     # Serialize Python object/dict to JSON string
     json_str = json.dumps(data)
     print("📤 JSON String:", json_str, type(json_str), type(data))
@@ -43,7 +42,7 @@ def write_read_json_file():
     }
 
     path = Path("sample.json")
-
+    print(type(data))
     # Write JSON to file
     with open(path, 'w') as f:
         json.dump(data, f, indent=4)
@@ -52,7 +51,7 @@ def write_read_json_file():
     # Read JSON from file
     with open(path, 'r') as f:
         content = json.load(f)
-    print("📖 Read from file:", content)
+    print("📖 Read from file:", content, type(content))
 
     # Cleanup
     path.unlink()
@@ -94,7 +93,7 @@ def advanced_usage():
     print("📥 Custom Object Deserialized:", decoded)
 
 if __name__ == "__main__":
-    #basic_json_usage()
+    basic_json_usage()
     write_read_json_file()
     #pretty_and_sorted()
     #advanced_usage()

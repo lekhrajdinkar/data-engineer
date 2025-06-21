@@ -129,7 +129,7 @@
 
 ### 5. special/dunder method 🥳
 - If want a custom class to act like a list/dict/etc., implement special methods ⬅️
-- [02_specialClass.py](../../src/pyBasicModule/year2025/style_oops/02_specialClass.py)
+- [02_specialClass.py](../../src/pyBasicModule/year2025/others/02_specialClass.py)
 - **NotImplemented** : Used in special methods (__eq__, __add__, etc.) to signal the operation is not supported
 ```
 __getitem__(self, index)  | a[1]
@@ -322,3 +322,6 @@ if __name__ == "__main__":
 - async with files, sockets, or APIs
 - decorator 
 - Mutability or performance comparison 
+
+### Tip-5
+- [copy1.py](../../src/pyBasicModule/year2025/others/copy1.py)
