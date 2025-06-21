@@ -307,11 +307,16 @@ if __name__ == "__main__":
 | Need all values at once | ❌         | ✅    |
 | Memory critical apps    | ✅         | ❌    |
 
-### Tip-3 ❓
-- Iteration/Streams vs Comprehensions ❓
-- Mutability or performance comparison ❓
-- **decorator** ❓
+### Tip-3 : collection 
+- generator, Iteration/Streams vs Comprehensions
+- negative and nested indexing
+- can omit () in tuple
+- when to use, which datatype
+
+
 
 ### Tip-4 ❓
 - async
 - async with files, sockets, or APIs
+- decorator 
+- Mutability or performance comparison 

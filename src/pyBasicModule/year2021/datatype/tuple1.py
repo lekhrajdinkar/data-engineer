@@ -1,42 +1,44 @@
-from src.pyBasicModule.year2021.commom_data import data
+#from src.pyBasicModule.year2021.common_data import data
+from ..common_data import data
 
 albums_list = data.albums_list
 
 def demo_tuple_1():
-    # Tuple - seq type, immujtable
-    l = ['ABC', 'DEF', 42] ; print(l)
-    t = ('ABC', 'DEF', 42 ); print(t)
-    t = 'ABC', 'DEF', 42 ; print(t) # can omit parenthesis
+    l = ['ABC', 'DEF', 42] ; print('📃list',l)
+    t = ('ABC', 'DEF', 42 ); print('📃tuple',t)
+    t = 'ABC', 'DEF', 42 ; print('📃tuple, can omit parenthesis, while assignment ⬅️',t)
 
-    print('ABC', 'DEF', 42 ); print(('ABC', 'DEF', 42 )) # always use parenthesis while using tuple as method argument
-
-    # indexing is same t[0]
-    # t[0] = "ABCDE" # TypeError: 'tuple' object does not support item assignment
+    print('⛔regular print', 'ABC', 'DEF', 42 )
+    print('⛔print tuple - print((x,x,x))',('ABC', 'DEF', 42 )) # always use parenthesis while using tuple as method argument
 
     # unpacking
-    x,y,z = (10,20,30)
-    x,y,z = 10,20,300
-    x,y,z= t
-    x,y,z= "xyz" # can unpack any sequence type
+    x,y,z = (10,20,30); print(" ➕unpacked from tuple1 :",x,y,z)
+    x,y,z = 10,20,300 ; print(" ➕unpacked from tuple2: ",x,y,z)
+    x,y,z= t ; print(" ➕unpacked from tuple3: ",x,y,z)
+    x,y,z= "xyz" ; print(" ➕unpack from any sequence 😁, eg:array: ",x,y,z)
 
-    # l.append('11') ; x,y,z= l # can unpack any sequence type. Break therefore tuple are better for unpacking
-    print(x,y,z)
 
-    for i, value in enumerate(['a', 'b', 'c']): print(i,value, end=', ') # usage of unpacking, enumerate returns tuple.
-    for t in enumerate(['a', 'b', 'c']): print(t, end=', ')
-    for t in enumerate(['a', 'b', 'c']): i,v = t; print(i, v, end=', ')
+    for i, value in enumerate(['a', 'b', 'c']):
+        print(i,value, end=', ') # usage of unpacking, enumerate returns tuple.
+    for t in enumerate(['a', 'b', 'c']): # ⬅️
+        print(t, end=', ')
+    for t in enumerate(['a', 'b', 'c']):
+        i,v = t
+        print(i, v, end=', ')
 
     print('\n','-'*50)
     t = (('code1', '1234'), ('code2', '2121')) # nested tuple
-    for name, (d1, d2, d3, d4) in t:
-        print (name, d1,d2,d3,d4)
+    for name, (d1, d2, d3, d4) in t: # ⬅️
+        print (name, 'unpack part: ', d1,d2,d3,d4)
 
-    # ===============
-    # albums = [('Eminem', 2000, ['my mom', 'iam not afraid']),
-    #           ('Selena', 2010, ['heart', 'same old love', 'sad']),
-    #           ]# nested tuple
-
-    print(albums_list[1][2][2]) # sad, nested indexuing
+    # nested indexing ⬅️
+    ref = """
+    albums_list = [
+    ('Eminem', 2000, ['my mom', 'iam not afraid']),
+    ('Selena', 2010, ['heart', 'same old love', 'sad']),
+    ]
+    """
+    print('nested indexing: ',albums_list[1][2][2], end='🔚')
 
     for album  in albums_list :
         artist, year, songs = album
@@ -44,14 +46,13 @@ def demo_tuple_1():
         for song in songs:
             print(song, end='|')
 
-    # list to tuple conversion
-    (a,b,c) = t  = ['aa', 'bb','cc']
-    print(t)
-    print(a,b,c,c)
+    # list to tuple conversion vice versa ⬅️
+    l = ['aa', 'bb','cc']
+    t  = (a,b,c) =  l
+    print('tuple', t, type(t),  'list: ' , l, type(l))
 
-    #   tuple to list conversion
-    [a,b,c] = ('aa', 'bb','cc')
-    print(a,b,c,c)
+    l= [a,b,c] = ('aa', 'bb','cc')
+    print('list ', l, type(l))
 
 
 

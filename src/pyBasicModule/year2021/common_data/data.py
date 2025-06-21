@@ -5,8 +5,7 @@ albums_list = [
     ]
 
 config_list = ['os', 'memory', 'system', 'model', 'year']
-config_dict = dict.fromkeys(config_list, 'dummyValue');
-print('module data : config_dict ',config_dict) # make init dict.
+config_dict = dict.fromkeys(config_list, 'dummyValue')
 
 config_dict_init = {
     'os': 'mac',
@@ -15,10 +14,8 @@ config_dict_init = {
     'year': 2025,
     'model': None
 }
-config_dict_init.popitem() #LIFO pop
-
-config_dict.update(config_dict_init);
-print('module data : config_dict ',config_dict) # update init dict.
+config_dict_init.popitem()  # ⬅️
+config_dict.update(config_dict_init) # ⬅️
 
 # dictionary = JavaScript object literal
 project = {
@@ -34,10 +31,10 @@ related_project = {
     'angular': ['CARS']
 }
 
-# suitable keys for dict - immutable, and hashable
-t1 = 'java',10,2020;  t3 = 'nodeJs','10',2020
+# suitable keys for dict - immutable, and hashable ⬅️
+t1 = 'java',10,2020
 t2 = 'python',3,[2020, 2021]  # TypeError: unhashable type: 'list'
-dict1={t1: 'value1', t3: 'value2'}
-for k in dict1.keys():print(k[1])
+t3 = 'nodeJs','10',2020
+dict1={ t1: 'value1', t3: 'value2' }
 
 
