@@ -72,7 +72,7 @@ RUN echo spark.hadoop.fs.s3a.aws.credential.provider=com.amazonaws.auth.EC2Conat
 EXPOSE 80
 ADD ./ .
 
-RUN chmod +x ./app_run.sh
+RUN chmod +x ./app_etl_run.sh
 
 ENTRYPOINT ["app_run.sh"]
 CMD ["etl-1"]

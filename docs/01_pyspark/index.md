@@ -2,7 +2,7 @@
 - <a href="https://chat.deepseek.com/a/chat/s/6ac524e6-d406-4a1a-a56a-858caa75275a" target="_blank">ETL project ref (deepseek)</a>
 
 ---
-# project Structure
+# project-1::ETL - Structure
 - **run**
   - database : [docker-compose-postgres.yml](../../docker-compose-postgres.yml)
   - [app_run.bat](../../app_run.bat) | [app_run.sh](../../app_run.sh)

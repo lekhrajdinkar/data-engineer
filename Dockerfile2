@@ -12,7 +12,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 EXPOSE 80
 
-RUN chmod +x ./app_run.sh
+RUN chmod +x ./app_etl_run.sh
 
 ENTRYPOINT ["app_run.sh"]
 CMD ["etl-1"]
