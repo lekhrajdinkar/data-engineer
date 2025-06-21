@@ -7,6 +7,7 @@ from datatype import dict1, list_and_iterable1 as list1, byte1,formating1,sequen
 from others import custom_switch
 from datatype import str1
 
+
 def test_datatype1():
     datatype_main.typeDemo()
     datatype_main.printCurrentModule()
@@ -42,8 +43,6 @@ def test_file_reading():
     for line in gen:
          print(line)
 
-
-
 if (__name__ == "__main__"):
     print(f"hello {app_name}")
     #test_datatype1();
@@ -51,5 +50,11 @@ if (__name__ == "__main__"):
     #test_formatting();
     #test_custom_switch();
     #test_file_reading()
-    byte1.byteDemo()
+
+# === RUN more ====
+# cd C:\Users\Manisha\Documents\GitHub\idea\02-etl-pyspark\src\pyBasicModule\year2025
+# python -m module.os1
+
+
+
 

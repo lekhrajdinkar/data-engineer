@@ -45,7 +45,7 @@
         - Optional with type hints 
     - **Ellipsis** 
 - formatting: 
-    - [formating-1.py](../../src/pyBasicModule/year2025/datatype/formating-1.py) ➕ ➕
+    - [formating-1.py](../../src/pyBasicModule/year2025/datatype/formating-1.py) ➕ 
     - always return str, cobert to desired type with glocal funcion.
 
 ### 2. Sequence types
@@ -126,7 +126,7 @@
 | User-site packages    | `~/.local/lib/python3.x/site-packages` |
 
 
-### 5. special method 🥳
+### 5. special/dunder method 🥳
 - If want a custom class to act like a list/dict/etc., implement special methods ⬅️
 - [02_specialClass.py](../../src/pyBasicModule/year2025/style_oops/02_specialClass.py)
 - **NotImplemented** : Used in special methods (__eq__, __add__, etc.) to signal the operation is not supported
@@ -267,7 +267,7 @@ if __name__ == "__main__":
 - `generator` - **function** yeilds value/s ⬅️ type:
     - sync
     - async (async for)
-    - [yeild+generator.py : section-4](../../src/pyBasicModule/year2025/others/yeild%2Bgenerator.py)
+    - [yeild+generator.py : section-4](../../src/pyBasicModule/year2025/others/yeild+generator.py)
 
 | Feature        | `return`                  | `yield`                       |
 | -------------- | ------------------------- | ----------------------------- |

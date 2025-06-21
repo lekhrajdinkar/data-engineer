@@ -1,7 +1,7 @@
 site_name: Python Notes (Lekhraj Dinkar)
 site_description: Documentation for ETL processes using PySpark
 site_author: Lekhraj Dinkar
-#docs_dir: .
+docs_dir: docs
 
 # Navigation based on your Notes folder
 nav:
@@ -66,10 +66,7 @@ markdown_extensions:
 plugins:
   - search
   - markdownextradata
-  #- copyfiles
-
-#copyfiles:
-  #- deployment/manifest
+  - codeinclude
 
 extra:
   social:
