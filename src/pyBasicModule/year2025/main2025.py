@@ -53,7 +53,7 @@ if (__name__ == "__main__"):
 
 # === RUN more ====
 # cd C:\Users\Manisha\Documents\GitHub\idea\02-etl-pyspark\src\pyBasicModule\year2025
-# python -m module.os1
+# python -m module.file_io.os1
 
 
 

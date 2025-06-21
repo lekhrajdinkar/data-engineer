@@ -1,6 +1,18 @@
+"""
+| Category         | Common Use                               | Example Function                          |
+| ---------------- | ---------------------------------------- | ----------------------------------------- |
+| Basic            | Get working directory, list files        | `os.getcwd()`, `os.listdir()`             |
+| File Ops         | Create, rename, delete files/directories | `os.rename()`, `os.remove()`              |
+| Path Handling    | Join, split, absolute path               | `os.path.join()`, `os.path.abspath()`     |
+| Metadata         | Size, modification time                  | `os.path.getsize()`, `os.path.getmtime()` |
+| Environment Vars | Get/set env vars                         | `os.environ`, `os.getenv()`               |
+| System Commands  | Run shell commands                       | `os.system()`                             |
+| Advanced         | Walk directories                         | `os.walk()`                               |
+| Context Usage    | Temporary directory change               | custom `change_directory`                 |
+"""
+
 import os
 import time
-import shutil
 
 def basic_operations():
     print("Current Working Directory:", os.getcwd())
@@ -96,7 +108,8 @@ def change_directory(path):
 # python -m module.file_io.os1
 
 if __name__ == "__main__":
+    print("os1.py")
     #basic_operations()
     #file_and_dir_ops()
     #path_operations()
-    advanced_operations()
+    #advanced_operations()

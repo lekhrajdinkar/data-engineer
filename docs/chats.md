@@ -4,5 +4,5 @@
       - 🗨️ <a href="https://chatgpt.com/c/6854510f-b2d4-800d-afd2-c1a3dba598ec" target="_blank">Question list 1 </a>
 
 
-- https://chatgpt.com/c/685647fe-4340-800d-bfe6-adb6a3f60d42 - os
-- https://chatgpt.com/c/68563797-7870-800d-84ed-dda9745eb57c - collection
+- https://chatgpt.com/c/685647fe-4340-800d-bfe6-adb6a3f60d42 - m2
+- https://chatgpt.com/c/68563797-7870-800d-84ed-dda9745eb57c - m1
