@@ -35,7 +35,7 @@ if (__name__ == "__main__"):
     print(f"hello {app_name}")
     #test_datatype();
     #test_collection();
-    test_formatting();
-    test_custom_switch();
-
+    #test_formatting();
+    #test_custom_switch();
+    list1.comprehension_demo()
 

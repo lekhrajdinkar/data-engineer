@@ -119,15 +119,48 @@ def comprehension_demo():
     # <class 'list'>
     print(f"comprehension :: [x*x for x in range(10) if x % 2 == 0]", squrare, type(squrare))
 
+    print("✅ Dictionary Comprehension : Create a lookup dictionary for word lengths")
+    words = ["apple", "banana", "cherry"]; print(f" 🟢 source :: ",words);
+    word_lengths = {word: len(word) for word in words}
+    print("target :: ",word_lengths)  # {'apple': 5, 'banana': 6, 'cherry': 6}
+
+    print("🔸 Filter out items with zero quantity:")
+    inventory = {"apples": 10, "oranges": 0, "bananas": 5}; print(f" 🟢 source :: ", inventory)
+    available = {item: qty for item, qty in inventory.items() if qty > 0}
+    print("target :: ",available)  # {'apples': 10, 'bananas': 5}
+
+    print("🔸 Extract  names from email addresses")
+    emails = ["user1@gmail.com", "admin@yahoo.com", "test@outlook.com"]; print(f" 🟢 source :: ", emails)
+    domains = [email.split("@")[0] for email in emails]
+    print("target :: ",domains)  # ['gmail.com', 'yahoo.com', 'outlook.com']
+
+    print("✅ Set Comprehension: Remove duplicates  + lowercase")
+    words = ["Apple", "apple", "Banana", "BANANA"]; print(f" 🟢 source :: ", emails)
+    unique_words = {word.lower() for word in words}
+    print("target :: ",unique_words)  # {'apple', 'banana'}
+
+    matrix = [[1, 2], [3, 4], [5, 6]]; print(f" 🟢 source :: ", matrix)
+    flat = [num for row in matrix for num in row]
+    print("target :: ",flat)  # [1, 2, 3, 4, 5, 6]
+
 
 def generation_demo():
     #<generator object generation_demo.<locals>.<genexpr> at 0x0000022B6A09C450> <class 'generator'>
+    print("✅ Generator Comprehension")
     square_gen = (x * x for x in range(10) if x % 2 == 0)  # Generator expression
     print("generator :: (x*x for x in range(10) if x % 2 == 0)", square_gen, type(square_gen))
     for item in square_gen:
         print(item, type(item), f"ℹ️")
 
+"""
+| Type                     | Returns New Collection? | Original Mutated? |
+| ------------------------ | ----------------------- | ----------------- |
+| **List comprehension**   | ✅ Yes                   | ❌ No              |
+| **Dict comprehension**   | ✅ Yes                   | ❌ No              |
+| **Set comprehension**    | ✅ Yes                   | ❌ No              |
+| **Generator expression** | ✅ Lazy generator        | ❌ No              |
 
+"""
 
 
 
