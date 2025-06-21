@@ -12,6 +12,10 @@ def byteDemo():
     # b[0] = 90     # ❌ Error: 'bytes' object does not support item assignment
     print(type(b))
 
+    b1 = b'lekhraj';
+    for i in b1: print(f"🏃‍♂️byte:",i);
+    int_arr = [ ii for ii in b1]; print("int_arr : ",int_arr)
+
     ba = bytearray([65, 66, 67])
     print(ba)       # bytearray(b'ABC')
     ba[0] = 90
