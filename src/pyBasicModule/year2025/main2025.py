@@ -31,11 +31,18 @@ def test_formatting():
     formating1.formatingDemo1()
     formating1.p("sfdsfds","sfsdfds","mjhkmhj")
 
+def test_file_reading():
+    #gen = list1.read_file_by_line_generator_1()
+    gen = list1.read_file_by_line_generator_2("datatype/bigfile.txt")
+    for line in gen:
+         print(line)
+
 if (__name__ == "__main__"):
     print(f"hello {app_name}")
     #test_datatype();
     #test_collection();
     #test_formatting();
     #test_custom_switch();
-    list1.comprehension_demo()
+    test_file_reading()
+
 

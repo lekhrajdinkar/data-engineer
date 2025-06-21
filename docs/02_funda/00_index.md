@@ -5,7 +5,10 @@
 - **package** (also object): 
     - directory with `__init__.py`
     - object has : `__path__    - __name__      __package__      __path__      __file__      __doc__`
-- we create custom module-1 (start with _ or letter)
+- we create custom module-1, py file (start with _ or letter)
+- with obj1 (start and end context) ⬅️
+    - with **open**(file1, "r"):
+    - special methods : `__start__ , __end__`
 
 ### 1. datatype
 - ![img_2.png](99_IMG/001/img_2.png)
@@ -272,7 +275,18 @@ if __name__ == "__main__":
 | Use case       | One result only           | Sequence of results over time |
 | Memory         | Stores all values at once | Streams one value at a time   |
 
-### Tip-2 : generator + Comprehension
+### Tip-2 : generator + Comprehension (Streams processing)
+
+| Feature                  | Java Stream API                     | Python Equivalent                          |
+| ------------------------ | ----------------------------------- | ------------------------------------------ |
+| **Filtering**            | `.filter(x -> x > 0)`               | `[x for x in list if x > 0]`               |
+| **Mapping/Transforming** | `.map(x -> x * 2)`                  | `[x * 2 for x in list]`                    |
+| **Collect to List**      | `.collect(Collectors.toList())`     | Result is already a list                   |
+| **Lazy evaluation**      | Intermediate ops are lazy           | Use generator expressions (`(x for x...)`) |
+| **Parallel processing**  | `.parallelStream()`                 | Use multiprocessing/threading manually     |
+| **Chaining operations**  | `stream().filter().map().collect()` | Use nested comprehensions or `map/filter`  |
+
+
 - Returns New Collections ⬅️
 - eg: [list_and_iterable1.py](../../src/pyBasicModule/year2025/datatype/list_and_iterable1.py)
 - **Comprehensions**. eg:

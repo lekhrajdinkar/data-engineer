@@ -143,7 +143,9 @@ def comprehension_demo():
     flat = [num for row in matrix for num in row]
     print("target :: ",flat)  # [1, 2, 3, 4, 5, 6]
 
-
+#==================
+# GENERATOR
+#==================
 def generation_demo():
     #<generator object generation_demo.<locals>.<genexpr> at 0x0000022B6A09C450> <class 'generator'>
     print("✅ Generator Comprehension")
@@ -151,6 +153,25 @@ def generation_demo():
     print("generator :: (x*x for x in range(10) if x % 2 == 0)", square_gen, type(square_gen))
     for item in square_gen:
         print(item, type(item), f"ℹ️")
+
+from typing import Generator
+import os
+def read_file_by_line_generator_1(filename: str = "datatype/bigfile.txt") -> Generator[str, None, None]:
+    print(os.getcwd())
+    try:
+        with open(filename, "r") as file:
+            for line in file:
+                stripped = line.strip()
+                if stripped:  # Skip blank lines
+                    yield stripped
+    except FileNotFoundError:
+        print(f"File not found: {filename}")
+    except Exception as e:
+        print(f"An error occurred while reading the file: {e}")
+
+def read_file_by_line_generator_2(filename: str ) -> Generator[str, None, None]:
+    return (line for line in open(filename, "r"))
+
 
 """
 | Type                     | Returns New Collection? | Original Mutated? |
