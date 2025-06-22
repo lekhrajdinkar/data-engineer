@@ -21,7 +21,7 @@ print("⏳ Getting current timestamp")
 timestamp = time.time()
 print("Current timestamp:", timestamp)
 
-print("\n📅 Converting timestamp to struct_time")
+print("\n📅 Converting timestamp to struct_time") # named tuple
 local_time = time.localtime(timestamp)
 print("Local Time 🏠:", local_time)
 

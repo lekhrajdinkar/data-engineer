@@ -291,8 +291,9 @@ if __name__ == "__main__":
 - Returns New Collections ⬅️
 - eg: [list_and_iterable1.py](../../src/pyBasicModule/year2025/datatype/list_and_iterable1.py)
 - **Comprehensions**. eg:
-    - even_set_squares = [x*x for x in range(10) if x % 2 == 0] # List comprehension
-    - even_set = {x for x in range(10) if x % 2 == 0} # set comprehension
+    - even_set_squares = [x*x for x in range(10) if x % 2 == 0] # **List** comprehension
+    - even_set = {x for x in range(10) if x % 2 == 0} # **set** comprehension
+    - squares = {x: x * x for x in range(5)}  # **dict** comprehension
     - Eager Evaluation: Evaluates all items immediately.
     - Stores all values in memory as a full list.
 - **generator expression** 

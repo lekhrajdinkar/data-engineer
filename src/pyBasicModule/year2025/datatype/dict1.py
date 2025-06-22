@@ -45,3 +45,19 @@ def dictDemo():
 
     # 🧾 Final result
     print("Final:", person)
+
+def dict_comp_demo():
+    squares = {x: x * x for x in range(5)}
+    print("🟩 Squares:", squares)
+
+    original = {'a': 1, 'b': 2, 'c': 3}
+    inverted = {v: k for k, v in original.items()}
+    print("🔁 Inverted:", inverted)
+
+    filtered = {k: v for k, v in original.items() if v > 1}
+    print("🔎 Filtered:", filtered)
+
+
+if __name__ == '__main__':
+    dictDemo()
+    dict_comp_demo()

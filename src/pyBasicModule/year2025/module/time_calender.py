@@ -27,6 +27,8 @@ print(calendar.month(2025, 7))
 
 print("🔢 Week header:")
 print(calendar.weekheader(3))  # 3-char weekdays
+print(calendar.weekheader(1))  # 3-char weekdays
+print(calendar.weekheader(7))  # 3-char weekdays
 
 print("\n📍 First weekday (0=Monday, 6=Sunday):", calendar.firstweekday())
 

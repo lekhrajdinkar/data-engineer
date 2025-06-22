@@ -18,7 +18,7 @@ from datetime import datetime
 import pytz
 
 print("📍 List all time zones:")
-for tz in pytz.all_timezones[:5]:  # show only first 5
+for tz in pytz.all_timezones[:10]:  # show only first 5
     print("-", tz)
 
 print("\n🌐 Current UTC Time:")
