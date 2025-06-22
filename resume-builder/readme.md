@@ -1,0 +1,4 @@
+- https://wkhtmltopdf.org/downloads.html
+  - wkhtmltopdf-0.12.6-1.msvc.win64.exe
+- PATH: C:\Program Files\wkhtmltopdf\bin
+- Click OK and restart your terminal or IDE.
