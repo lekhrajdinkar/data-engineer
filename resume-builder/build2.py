@@ -1,19 +1,52 @@
+import os
 import yaml
-from jinja2 import Environment, FileSystemLoader
 import pdfkit
+from jinja2 import Environment, FileSystemLoader
 
-# Load YAML
-with open("resume.yaml") as f:
+# Constants
+OUTPUT_DIR = "output"
+TEMPLATE_FILE = "template.html"
+YAML_FILE = "resume.yaml"
+BASE_NAME = "resume"
+
+# Create output folder if not exists
+if not os.path.exists(OUTPUT_DIR):
+    os.makedirs(OUTPUT_DIR)
+
+# Find next version number
+def next_version():
+    existing_files = [f for f in os.listdir(OUTPUT_DIR) if f.startswith(BASE_NAME)]
+    versions = []
+    for f in existing_files:
+        parts = f.replace(".pdf", "").replace(".html", "").split("_v")
+        if len(parts) == 2 and parts[1].isdigit():
+            versions.append(int(parts[1]))
+    return max(versions, default=0) + 1
+
+version = next_version()
+html_file = f"{BASE_NAME}_v{version}.html"
+pdf_file = f"{BASE_NAME}_v{version}.pdf"
+
+css_path = os.path.abspath("styles.css").replace("\\", "/")
+css_url = f"file:///{css_path}"
+
+# Load YAML data
+with open(YAML_FILE, "r", encoding="utf-8") as f:
     data = yaml.safe_load(f)
 
-# Render HTML
+# Render HTML using Jinja2
 env = Environment(loader=FileSystemLoader('.'))
-template = env.get_template("template.html")
-html_content = template.render(data)
+template = env.get_template(TEMPLATE_FILE)
+rendered_html = template.render(data)
 
-# Save HTML and then convert to PDF
-with open("resume.html", "w", encoding="utf-8") as f:
-    f.write(html_content)
+# Save HTML
+html_path = os.path.join(OUTPUT_DIR, html_file)
+with open(html_path, "w", encoding="utf-8") as f:
+    f.write(rendered_html)
 
-pdfkit.from_file("resume.html", "resume.pdf")
-print("✅ resume.pdf generated successfully.")
+# Generate PDF using pdfkit
+pdf_path = os.path.join(OUTPUT_DIR, pdf_file)
+pdfkit.from_file(html_path, pdf_path)
+
+print(f"✅ HTML saved to: {html_path}")
+print(f"✅ PDF saved to: {pdf_path}")
