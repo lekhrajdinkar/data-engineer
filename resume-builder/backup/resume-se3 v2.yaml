@@ -1,9 +1,3 @@
-metadata:
-  version: 1.0
-  updated: 2025-06-21
-  language: en
-  format: resume-yaml-v2
-
 name: Lekhraj Dinkar
 location: Irvine, CA, USA
 contact:
@@ -12,35 +6,39 @@ contact:
   linkedin: https://www.linkedin.com/in/lekhraj-dinkar-25872140/
   github: https://github.com/lekhrajdinkar
 
-title: Solution Engineer | Technology Lead 
+title: Senior Solution Engineer | Cloud & Full-Stack Architect
 
 summary: >
-  Results-driven software professional with 10+ years of experience in the financial services sector, specializing in cloud-native solutions, microservices architecture, and full-stack web development. Proven expertise in designing scalable enterprise applications using AWS, container orchestration, CI/CD automation, and modern web frameworks. Strong background in driving digital transformation, technical leadership, and end-to-end solution delivery.
+  Results-driven software professional with 12+ years of experience in the financial services sector, specializing in cloud-native solutions, microservices architecture, and full-stack web development. Proven expertise in designing scalable enterprise applications using AWS, container orchestration, CI/CD automation, and modern web frameworks. Strong background in driving digital transformation, technical leadership, and end-to-end solution delivery.
 
 skills:
   cloud:
-    - AWS services IAM, KMS, S3, SQS, SNS, EventBridge, Lambda, VPC, ALB, API Gateway, Aurora, ECS, EKS, ECR, Route 53, ACM, dynamodb
-    - Infrastructure as Code with Hashicorp Terraform and HCP cloud, AWS Cloud development kit and CloudFormation stack
+    - AWS IAM, KMS, S3, SQS, SNS, EventBridge, Lambda, VPC, ALB, API Gateway, Aurora, ECS, EKS, ECR, Route 53, ACM
+    - Infrastructure as Code Terraform, AWS CDK, CloudFormation
   programming:
-    - Languages - Python, Java, Bash scripting.
-    - Paradigms - OOPS, Functional, Reactive Programming
+    - Languages Java 17/19, Python 3, Typescript, JavaScript, Bash
+    - Paradigms OOP, Functional, Reactive Programming
   backend:
-    - Frameworks - Spring Boot, Spring MVC, Spring Security, JPA, Hibernate, FastAPI
-    - API Standards - RESTful Services, OAuth2.0, JWT, SSL/TLS
-    - Architecture -  Microservices, Domain-Driven Design
-    - PySpark Pipelines,  Data Ingestion & Transformation
-    - Message Brokers: Confluent Kafka, RabbitMQ, IBM MQ
+    - Frameworks Spring Boot, Spring MVC, Spring Security, JPA, Hibernate, FastAPI
+    - API Standards RESTful Services, OAuth2.0, JWT, SSL/TLS
+    - Architecture Microservices, Domain-Driven Design
   frontend:
-    - Frameworks - Angular 17, Angular Material, Typescript/JavaScript  
-    - State Management - RxJS, Angular redux
-    - Styling - SCSS, HTML5
-  Relational database:
-    - PostgreSQL (Aurora Global), Oracle, Complex SQL queries.
+    - Frameworks Angular 17, Angular Material, NgPrime
+    - State Management RxJS, NgRx
+    - Styling SCSS, HTML5
+  database:
+    - PostgreSQL (Aurora Global), Oracle, SQL
+  etl:
+    - PySpark Pipelines, Spring Batch, Data Ingestion & Transformation
   devops:
-    - Containerization: Docker, Kubernetes (EKS), Helm
-    - CI/CD: Harness pipeline, AWS CodePipeline
+    - Containerization Docker, Kubernetes (EKS), Helm
+    - CI/CD: Harness, AWS CodePipeline
+  messaging:
+    - Message Brokers Confluent Kafka, RabbitMQ, IBM MQ
+  server:
+    - Application Servers WebLogic12c, Apache Tomcat
   process:
-    - Methodologies - Agile/Scrum, SDLC, Production Support, Release Management
+    - Methodologies Agile/Scrum, SDLC, Production Support, Release Management
 
 experience:
   - company: Capital Group Companies (Infosys Limited)
@@ -48,8 +46,8 @@ experience:
     location: Irvine, USA
     start: Feb 2022
     end: Present
-    project: MAPS - Multi Asset Portfolio System
-    description:
+    description: |
+      Project: MAPS - Multi Asset Portfolio System
       - Designed and led development of the outbound trading platform module for mutual fund and ETF transactions.
       - Architected and deployed cloud-native infrastructure using ECS Fargate, Lambda, API Gateway, EventBridge, and Aurora.
       - Automated infrastructure provisioning with AWS CDK and Terraform; implemented CI/CD pipelines via Harness and Docker.
@@ -62,8 +60,8 @@ experience:
     location: Irvine, USA
     start: Nov 2018
     end: Jan 2022
-    project: FSR & TACT Systems
-    description: 
+    description: |
+      Project: FSR & TACT Systems
       - Modernized legacy backend (Java 8 to Java 11, Struts2 to Spring Boot) and frontend (Flash to Angular 10).
       - Refactored and secured APIs using OAuth2 and SSL; optimized batch jobs and improved system throughput (3 hrs to 30 mins).
       - Developed Swift message simulators for test automation and system validation.
@@ -74,8 +72,8 @@ experience:
     location: Irvine, USA
     start: Mar 2017
     end: Oct 2018
-    project: OPAC - Order Processing and Compliance
-    description:
+    description: |
+      Project: OPAC - Order Processing and Compliance
       - Delivered business-critical features in coordination with stakeholders through Agile ceremonies.
       - Analyzed system gaps, proposed modernization strategies, and performed root cause analysis for production issues.
 
@@ -84,18 +82,17 @@ experience:
     location: Pune, India
     start: Feb 2014
     end: Feb 2017
-    project: COPS - CRMC Order Processing System
-    description: 
+    description: |
+      Project: COPS - CRMC Order Processing System
       - Developed and maintained backend modules and batch jobs; enhanced system reliability and throughput.
       - Achieved 85% reduction in nightly batch execution time; implemented asynchronous processing via JMS.
 
-  - company: Infosys Limited (EdgeVerve Systems)
+  - company: SBI - Finacle Migration (Infosys Limited)
     role: System Engineer
     location: Pune, India
     start: April 2013
     end: Jan 2014
-    project: SBI - Finacle Migration
-    description: 
+    description: |
       - Executed Finacle migration across 25 countries for SBI, transitioning from version 7.x to 11.x.
       - Developed UI forms and backend scripts using JavaScript and Shell scripting.
 
@@ -104,11 +101,9 @@ experience:
     location: Mysore, India
     start: Aug 2012
     end: Mar 2013
-    description:
-      - Completed foundational training on SDLC, Agile methodologies, and software engineering principles.
-      - Gained hands-on experience in Java programming, object-oriented design, and web technologies - HTML, CSS, javascript, JSP and Spring MVC framework
-      - RDBMS training with PL/SQL and database design principles.
-      - Acquired knowledge of Infosys Finacle banking product suite.
+    description: |
+      - Completed foundational training on SDLC, Java, web development (HTML, CSS, JS), and RDBMS.
+      - Gained hands-on experience with Finacle (Infosys banking solution).
 
 education:
   - degree: Bachelor of Technology in Computer Science and Engineering

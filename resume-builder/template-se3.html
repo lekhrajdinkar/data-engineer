@@ -13,13 +13,13 @@
 
 .container {
   display: flex;
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
 .sidebar {
   width: 30%;
-  background-color: #003366;
+  background-color: #506d19;
   color: white;
   padding: 30px 20px;
   min-height: 100vh;
@@ -93,11 +93,14 @@
         </div>
         <hr>
         <h2>Skills</h2>
-        <ul class="skills">
-            {% for skill in skills %}
-            <li>{{ skill }}</li>
+        {% for category, items in skills.items() %}
+          <h3 class="skill-subtitle">{{ category | capitalize }}</h3>
+          <ul class="skills">
+            {% for item in items %}
+              <li>{{ item }}</li>
             {% endfor %}
-        </ul>
+          </ul>
+        {% endfor %}
     </aside>
 
     <main class="content">
@@ -107,19 +110,22 @@
         </section>
 
         <section class="experience">
-            <h2>Experience</h2>
-            {% for job in experience %}
-            <div class="job">
-                <h3>{{ job.role }} – {{ job.company }}</h3>
-                <p class="meta">{{ job.location }} | {{ job.start }} – {{ job.end }}</p>
-                <ul>
-                    {% for line in job.description.strip().split('\n') %}
-                    <li>{{ line.strip() }}</li>
-                    {% endfor %}
-                </ul>
-            </div>
-            {% endfor %}
-        </section>
+        <h2>Experience</h2>
+        {% for job in experience %}
+          <div class="job">
+            <h3>{{ job.role }} – {{ job.company }}</h3>
+            <p class="meta">{{ job.location }} | {{ job.start }} – {{ job.end }}</p>
+            {% if job.project %}
+              <p class="project"><strong>Project:</strong> {{ job.project }}</p>
+            {% endif %}
+            <ul>
+              {% for line in job.description %}
+                <li>{{ line }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+        {% endfor %}
+      </section>
 
         <section class="education">
             <h2>Education</h2>
@@ -127,7 +133,7 @@
             <p><strong>{{ edu.degree }}</strong> – {{ edu.institute }}, {{ edu.location }} ({{ edu.year }})</p>
             {% endfor %}
         </section>
-
+        <!-- 
         <section class="certifications">
             <h2>Certifications</h2>
             <ul>
@@ -136,6 +142,7 @@
                 {% endfor %}
             </ul>
         </section>
+        -->
     </main>
 </div>
 </body>

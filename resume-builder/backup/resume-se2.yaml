@@ -1,0 +1,89 @@
+name: Lekhraj Dinkar
+location: Irvine, USA
+contact:
+  phone: "+1 (657) 501-2331"
+  email: Lekhrajdinkarus@gmail.com
+  linkedin: https://www.linkedin.com/in/lekhraj-dinkar-25872140/
+  github: https://github.com/lekhrajdinkar
+
+title: Solution Architect / Full-Stack Developer
+
+summary: >
+  Over 12 years of experience in financial services with a focus on customized IT solutions. Expertise in enterprise architecture and full stack web development utilizing AWS cloud technologies. Demonstrated technical and analytical skills with a track record of transforming complex challenges into effective business solutions.
+
+skills:
+  - AWS (IAM, KMS, S3, SQS, SNS, Lambda, EventBridge, VPC, ALB, API Gateway, Aurora, ECS, EKS, ECR)
+  - Java 17, Python, Typescript, Bash
+  - Spring (Core, MVC, Security, Boot, JPA), Maven
+  - Angular, RxJS, NgRX, Angular Material, HTML/CSS
+  - REST API with OAuth2.0, SSL
+  - PostgreSQL, Oracle, Sybase
+  - PySpark, Spring Batch
+  - Docker, Kubernetes (EKS)
+  - Terraform, AWS CDK, CloudFormation
+  - Kafka, RabbitMQ, IBM MQ
+  - Harness, AWS CodePipeline
+  - Agile, SDLC, CI/CD
+
+experience:
+  - company: Capital Group Companies (Infosys Limited)
+    role: Technology Lead - US
+    location: Irvine, USA
+    start: February 2022
+    end: Present
+    description: |
+      - Leading architecture and development of cloud-based trading system.
+      - Built outbound module using AWS (S3, SNS, Lambda, ECS, etc.), Aurora, and EKS.
+      - Implemented secure APIs (Okta OAuth2.0, OpenID), Angular 12 front-end, and ETL in PySpark.
+      - Used Terraform, CDK, Docker, Harness for infrastructure and CI/CD.
+
+  - company: Capital Group Companies (Infosys Limited)
+    role: Technology Analyst - US
+    location: Irvine, USA
+    start: November 2018
+    end: January 2022
+    description: |
+      - Migrated Java 8 apps to Java 11 with Spring Boot.
+      - Replaced Adobe Flash with Angular 10 frontend.
+      - Led API security transition to OAuth2 and SSL.
+      - Improved Swift messaging, app performance, and UI features.
+
+  - company: Capital Group Companies (Infosys Limited)
+    role: Senior System Engineer - US
+    location: Irvine, USA
+    start: March 2017
+    end: October 2018
+    description: |
+      - Full SDLC participation using Agile.
+      - Proposed technology upgrades and supported production debugging.
+
+  - company: Capital Group Companies (Infosys Limited)
+    role: Senior System Engineer
+    location: Pune, India
+    start: January 2014
+    end: February 2017
+    description: |
+      - Worked on Agile projects, environment setup, code merge, and deployment.
+      - Optimized nightly batch processing and integrated JMS communication.
+
+  - company: SBI - Finacle (Infosys Limited)
+    role: Trainee and System Engineer
+    location: Pune, India
+    start: August 2012
+    end: December 2013
+    description: |
+      - Participated in Finacle migration project for State Bank of India.
+      - Trained in Java, RDBMS, and Finacle system.
+
+education:
+  - degree: B.Tech in Computer Science and Engineering
+    institute: Maharaja Surajmal Institute of Technology, GGSIPU, New Delhi
+    year: 2012
+
+certifications:
+  - AWS Certified Developer Associate (Udemy - Stephane Maarek)
+  - AWS Certified Solutions Architect (Udemy - Stephane Maarek)
+  - Apache Kafka (Udemy)
+  - Kubernetes CKAD (Udemy)
+  - Angular - The Complete Guide (Udemy)
+  - JavaScript - The Complete Guide (Udemy)

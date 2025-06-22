@@ -28,9 +28,6 @@ version = next_version()
 html_file = f"{BASE_NAME}_v{version}.html"
 pdf_file = f"{BASE_NAME}_v{version}.pdf"
 
-css_path = os.path.abspath("styles.css").replace("\\", "/")
-css_url = f"file:///{css_path}"
-
 # Load YAML data
 with open(YAML_FILE, "r", encoding="utf-8") as f:
     data = yaml.safe_load(f)
@@ -47,7 +44,7 @@ with open(html_path, "w", encoding="utf-8") as f:
 
 # Generate PDF using pdfkit
 pdf_path = os.path.join(OUTPUT_DIR, pdf_file)
-pdfkit.from_file(html_path, pdf_path)
+#pdfkit.from_file(html_path, pdf_path)
 
 print(f"✅ HTML saved to: {html_path}")
 print(f"✅ PDF saved to: {pdf_path}")
