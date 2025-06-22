@@ -18,9 +18,7 @@ class MyList:
 
     def __iter__(self):
         return iter(self.data)
-
-    #def __next__(self):
-        #return filter(filter1, self.data)
+    #def __next__(self): pass
 
     def __len__(self):
         return len(self.data)

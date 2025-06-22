@@ -194,12 +194,15 @@ def list_prg_1_indexinfWithRange():
 
 # =============== Python Built-ins  =======
 
-# iter() :: manually iterating over a collection.
+
 def global_built_in():
+    import objgraph
+
+    # iter() :: manually iterating over a collection. ⬅️
     nums = [10, 20, 30]
     it = iter(nums)
-    print(next(it))  # 🔢 10
-    print(next(it))  # 🔢 20
+    print(next(it))  # 10
+    print(next(it))  # 20
 
     print(sum([1, 2, 3], 10))  # 16 sum()
 
@@ -211,7 +214,16 @@ def global_built_in():
     print(any([False, 0, "", "Hi"]))  # True
     print(any([False, 0, ""]))        # False
 
-    # newSequence = map( lambda , sequence)
+    # newSequence = map( lambda , iterable)
+    print(map(lambda x:x>20, nums))
 
+    # https://graphviz.org/download + set path : bin
+    print("🔍 Most common types:")
+    objgraph.show_most_common_types(limit=5)
+    print("\n Show backref graph of 'a'")
+    objgraph.show_backrefs([nums], filename='backrefs.png')
+
+if __name__ == '__main__':
+    global_built_in()
 
 

@@ -265,10 +265,12 @@ if __name__ == "__main__":
         - Use Case : want to stream data (e.g. files, DB rows) + work with large/infinite datasets + need lazy evaluation.
 - `yield from`  - Delegating to another generator (sync)
     - def generator1: yield from range(3); yield("done);
-- `generator` - **function** yields value/s ⬅️ type:
-    - sync
-    - async (async for)
+- `generator` 
+    - **function** yields value/s ⬅️ type:
+        - sync (for )
+        - async (async for)
     - [yeild+generator.py : section-4](../../src/pyBasicModule/year2025/others/yeild+generator.py)
+    - **generator expression** ((x*x for x in range(5)))
 
 | Feature        | `return`                  | `yield`                       |
 | -------------- | ------------------------- | ----------------------------- |
@@ -276,27 +278,18 @@ if __name__ == "__main__":
 | Use case       | One result only           | Sequence of results over time |
 | Memory         | Stores all values at once | Streams one value at a time   |
 
-### Tip-2 : generator + Comprehension (Streams processing)
-
-| Feature                  | Java Stream API                     | Python Equivalent                          |
-| ------------------------ | ----------------------------------- | ------------------------------------------ |
-| **Filtering**            | `.filter(x -> x > 0)`               | `[x for x in list if x > 0]`               |
-| **Mapping/Transforming** | `.map(x -> x * 2)`                  | `[x * 2 for x in list]`                    |
-| **Collect to List**      | `.collect(Collectors.toList())`     | Result is already a list                   |
-| **Lazy evaluation**      | Intermediate ops are lazy           | Use generator expressions (`(x for x...)`) |
-| **Parallel processing**  | `.parallelStream()`                 | Use multiprocessing/threading manually     |
-| **Chaining operations**  | `stream().filter().map().collect()` | Use nested comprehensions or `map/filter`  |
-
-
-- Returns New Collections ⬅️
+### Tip-2 : generator-Expression + Comprehension 
+- generator vs iterator ⬅️
+- All generators are iterators, not vice versa.
+- both Returns New Collections ⬅️
 - eg: [list_and_iterable1.py](../../src/pyBasicModule/year2025/datatype/list_and_iterable1.py)
-- **Comprehensions**. eg:
+- **Comprehensions**. [v] {v}, {kv}
     - even_set_squares = [x*x for x in range(10) if x % 2 == 0] # **List** comprehension
     - even_set = {x for x in range(10) if x % 2 == 0} # **set** comprehension
     - squares = {x: x * x for x in range(5)}  # **dict** comprehension
     - Eager Evaluation: Evaluates all items immediately.
     - Stores all values in memory as a full list.
-- **generator expression** 
+- **generator expression** ()
     - like a list comprehension but produces items one at a time using lazy evaluation
     - saves memory, consume less, and is faster for large data
     - syntax: **(expression for item in iterable if condition)**
@@ -308,6 +301,17 @@ if __name__ == "__main__":
 | One-time iteration      | ✅         | ❌    |
 | Need all values at once | ❌         | ✅    |
 | Memory critical apps    | ✅         | ❌    |
+
+
+| Feature                  | Java Stream API                     | Python Equivalent                          |
+| ------------------------ | ----------------------------------- | ------------------------------------------ |
+| **Filtering**            | `.filter(x -> x > 0)`               | `[x for x in list if x > 0]`               |
+| **Mapping/Transforming** | `.map(x -> x * 2)`                  | `[x * 2 for x in list]`                    |
+| **Collect to List**      | `.collect(Collectors.toList())`     | Result is already a list                   |
+| **Lazy evaluation**      | Intermediate ops are lazy           | Use generator expressions (`(x for x...)`) |
+| **Parallel processing**  | `.parallelStream()`                 | Use multiprocessing/threading manually     |
+| **Chaining operations**  | `stream().filter().map().collect()` | Use nested comprehensions or `map/filter`  |
+
 
 ### Tip-3 : collection 
 - generator, Iteration/Streams vs Comprehensions
@@ -326,6 +330,7 @@ if __name__ == "__main__":
 - [0] * 2
 - [[0] * 2] * 2    #2d Array
 - for a,b in **zip**(arr1,arr2) ⬅️
+- priority-Queue : heapq ⬅️
 
 ### Tip-4
 - async
@@ -336,3 +341,30 @@ if __name__ == "__main__":
 ### Tip-5 
 - [copy1.py](../../src/pyBasicModule/year2025/others/copy1.py)
 - time --> time.struct_time --> named tuple
+
+### Tip-6 :: memory mgt
+- automatic and built-in, 
+- reference count goes to 0, obj deleted
+- private heap for all object allocations.
+- Use `del, gc.collect()` for manual cleanup if needed.
+- __del__() === destroy in java
+- **pymalloc** manages small objects in arenas : int 1to 256, string === **interning**
+- cyclic garbage collector for a → b → a
+    - GC runs periodically to collect unused cyclic references 
+
+| 🔧 Tool/Module    | 🧠 Purpose                            |
+| ----------------- | ------------------------------------- |
+| `sys.getsizeof()` | Size in bytes of an object            |
+| `gc` module       | Control garbage collector             |
+| `tracemalloc`     | Track memory allocations              |
+| `objgraph`        | Visualize memory object relationships |
+
+| Intent         | Python | Java        |
+| -------------- | ------ | ----------- |
+| Check value    | `==`   | `.equals()` |
+| Check identity | `is`   | `==`        |
+
+### Tip-6 :: Threads
+- **GIL** global interpreter lock
+- import threading + [thread1.py](../../src/pyBasicModule/year2025/others/thread1.py)
+- 
