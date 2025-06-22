@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>{{ name }} - Resume</title>
    <style>
-       body {
+body {
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background: #f8f9fa;
@@ -19,15 +19,16 @@
 
 .sidebar {
   width: 30%;
-  background-color: #506d19;
-  color: white;
+  background-color: #f1f3ee;
+  /*color: white;*/
   padding: 30px 20px;
   min-height: 100vh;
   box-sizing: border-box;
+  border-left: 2px solid #ccc;
 }
 
 .sidebar a {
-  color: #a7e0ff;
+  color: #383e88;
   text-decoration: none;
 }
 
@@ -60,7 +61,7 @@
 }
 
 .content h2 {
-  color: #003366;
+  color: #093e72;
   border-bottom: 1px solid #ccc;
   padding-bottom: 5px;
 }
@@ -76,56 +77,84 @@
   margin-bottom: 10px;
 }
 
+@media print {
+  .page-break {
+    page-break-before: always;
+  }
+}
+
+.skill-subtitle {
+  border-top: 3px solid rgb(68, 123, 226);
+  padding-top: 5px;
+  color: rgb(68, 123, 226);
+}
+.skill--skills { color: rgb(68, 123, 226);}
+
+.timeline {
+  position: relative;
+  border-left: 1px solid #84a2c0;
+  margin-left: 20px;
+  padding-left: 20px;
+}
+
+.timeline-entry {  margin-bottom: 40px;}
+
+.timeline-block {  position: relative;  margin-bottom: 30px;}
+
+.timeline-marker {
+  position: absolute;
+  left: -26px;
+  top: 8px;
+  width: 8px;
+  height: 8px;
+  background: #c7d9ee;
+  border: 1px solid white;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px #004080;
+}
+
+.timeline-content { }
+
+.timeline .project {
+  font-style: italic;
+  color: #555;
+}
    </style>
+
 </head>
 <body>
 <div class="container">
-    <aside class="sidebar">
-        <h1>{{ name }}</h1>
-        <p class="title">{{ title }}</p>
-        <hr>
-        <div class="contact">
-            <p><strong>📍</strong> {{ location }}</p>
-            <p><strong>📞</strong> {{ contact.phone }}</p>
-            <p><strong>✉️</strong> <a href="mailto:{{ contact.email }}">{{ contact.email }}</a></p>
-            <p><strong>🔗</strong> <a href="{{ contact.linkedin }}">LinkedIn</a></p>
-            <p><strong>💻</strong> <a href="{{ contact.github }}">GitHub</a></p>
-        </div>
-        <hr>
-        <h2>Skills</h2>
-        {% for category, items in skills.items() %}
-          <h3 class="skill-subtitle">{{ category | capitalize }}</h3>
-          <ul class="skills">
-            {% for item in items %}
-              <li>{{ item }}</li>
-            {% endfor %}
-          </ul>
-        {% endfor %}
-    </aside>
+
+    
 
     <main class="content">
-        <section class="summary">
-            <h2>Summary</h2>
-            <p>{{ summary }}</p>
+        <div class="timeline">
+        <section class="summary timeline-entry">
+          <h2>Summary</h2>
+          <p>{{ summary }}</p>
         </section>
 
-        <section class="experience">
-        <h2>Experience</h2>
-        {% for job in experience %}
-          <div class="job">
-            <h3>{{ job.role }} – {{ job.company }}</h3>
-            <p class="meta">{{ job.location }} | {{ job.start }} – {{ job.end }}</p>
-            {% if job.project %}
-              <p class="project"><strong>Project:</strong> {{ job.project }}</p>
-            {% endif %}
-            <ul>
-              {% for line in job.description %}
-                <li>{{ line }}</li>
-              {% endfor %}
-            </ul>
-          </div>
-        {% endfor %}
-      </section>
+        <section class="experience timeline-entry">
+          <h2>Experience</h2>
+          {% for job in experience %}
+            <div class="job timeline-block">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <h3>{{ job.role }} – {{ job.company }}</h3>
+                <p class="meta">{{ job.location }} | {{ job.start }} – {{ job.end }}</p>
+                {% if job.project %}
+                  <p class="project"><strong>Project:</strong> {{ job.project }}</p>
+                {% endif %}
+                <ul>
+                  {% for line in job.description %}
+                    <li>{{ line }}</li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </div>
+          {% endfor %}
+        </section>
+      </div>
 
         <section class="education">
             <h2>Education</h2>
@@ -144,6 +173,30 @@
         </section>
         -->
     </main>
+
+    <aside class="sidebar">
+        <h1>{{ name }}</h1>
+        <p class="title">{{ title }}</p>
+        <hr>
+        <div class="contact">
+            <p><strong>📍</strong> {{ location }}</p>
+            <p><strong>📞</strong> {{ contact.phone }}</p>
+            <p><strong>✉️</strong> <a href="mailto:{{ contact.email }}">{{ contact.email }}</a></p>
+            <p><strong>🔗</strong> <a href="{{ contact.linkedin }}">LinkedIn</a></p>
+            <p><strong>💻</strong> <a href="{{ contact.github }}">GitHub</a></p>
+        </div>
+        <hr>
+        <h2 class="skill--skills">Skills</h2>
+        {% for category, items in skills.items() %}
+          <h4 class="skill-subtitle">{{ category | capitalize }}</h4>
+          <ul class="skills">
+            {% for item in items %}
+              <li>{{ item }}</li>
+            {% endfor %}
+          </ul>
+        {% endfor %}
+    </aside>
+
 </div>
 </body>
 </html>

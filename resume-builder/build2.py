@@ -4,6 +4,10 @@ import pdfkit
 from jinja2 import Environment, FileSystemLoader
 
 suffix=input('please provide suffix - se2 | se3 ')
+if suffix not in ['se2', 'se3']:
+    suffix = 'se3'
+    print(f"Invalid suffix provided. Defaulting to 'se3'.")
+
 # Constants
 OUTPUT_DIR = f"output/{suffix}"
 TEMPLATE_FILE = f"template-{suffix}.html"

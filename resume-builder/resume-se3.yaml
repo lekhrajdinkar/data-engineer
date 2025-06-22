@@ -3,6 +3,7 @@ metadata:
   updated: 2025-06-21
   language: en
   format: resume-yaml-v2
+#themeColor: blue
 
 name: Lekhraj Dinkar
 location: Irvine, CA, USA
@@ -15,32 +16,40 @@ contact:
 title: Solution Engineer | Technology Lead 
 
 summary: >
-  Results-driven software professional with 10+ years of experience in the financial services sector, specializing in cloud-native solutions, microservices architecture, and full-stack web development. Proven expertise in designing scalable enterprise applications using AWS, container orchestration, CI/CD automation, and modern web frameworks. Strong background in driving digital transformation, technical leadership, and end-to-end solution delivery.
+  Results-driven software professional with 12+ years of experience in the financial services sector, specializing in cloud-native solutions, microservices architecture, and full-stack web development. Proven expertise in designing scalable enterprise applications using AWS, container orchestration, CI/CD automation, and modern web frameworks. Strong background in driving digital transformation, technical leadership, and end-to-end solution delivery.
 
 skills:
-  cloud:
-    - AWS services IAM, KMS, S3, SQS, SNS, EventBridge, Lambda, VPC, ALB, API Gateway, Aurora, ECS, EKS, ECR, Route 53, ACM, dynamodb
-    - Infrastructure as Code with Hashicorp Terraform and HCP cloud, AWS Cloud development kit and CloudFormation stack
-  programming:
-    - Languages - Python, Java, Bash scripting.
-    - Paradigms - OOPS, Functional, Reactive Programming
-  backend:
-    - Frameworks - Spring Boot, Spring MVC, Spring Security, JPA, Hibernate, FastAPI
-    - API Standards - RESTful Services, OAuth2.0, JWT, SSL/TLS
-    - Architecture -  Microservices, Domain-Driven Design
-    - PySpark Pipelines,  Data Ingestion & Transformation
-    - Message Brokers: Confluent Kafka, RabbitMQ, IBM MQ
+  AWS Cloud:
+    - security services - IAM, KMS, ACM, secret manager
+    - Storage and Database - S3, Aurora postgresSQL, global serverless, dynamodb
+    - serverless microservice and event driver architecture with  SQS, SNS, EventBridge and Lambda
+    - networking with VPC, ALB, API Gateway, Route 53
+    - Container orhestration with ECS, EKS, ECR
+  Programming Languages:
+    - OOPS and Functional styling programming with - Python, Java, typescript
+    - Bash scripting
+    - PL/SQL
+  Deployment and Release:
+    - Containerization with Docker, Kubernetes with Helm charts
+    - Orchestration with AWS ECS, EKS
+    - Continious delivery pipeline with Harness and AWS CodePipeline 
+    - Infrastructure as Code IAC with Hashicorp Terraform and HCP cloud
+    - AWS Cloud development kit and CloudFormation stack 
+  Backend and middleware:
+    - Python packages - FastAPI, PySpark, Pandas, SQLAlchemy, boto3
+    - Frameworks - Spring boot web, spring JPA data, Spring Security, Hibernate
+    - RESTful Services secured with OAuth2.0, JWT, TLS cerytficates.
+    - Architecture -  Microservices, Domain-Driven Design, event-driver architecture
+    - ETL Pipelines - data Ingestion & Transformation with PySpark, Spring Batch
+    - Messaging Systems - Confluent Kafka, RabbitMQ, IBM MQ
+    - PostgreSQL (Aurora Global), Oracle, Complex SQL queries
   frontend:
-    - Frameworks - Angular 17, Angular Material, Typescript/JavaScript  
-    - State Management - RxJS, Angular redux
+    - Frameworks - Angular 17, Angular Material, reactive RxJS and Angular redux NgRx
     - Styling - SCSS, HTML5
-  Relational database:
-    - PostgreSQL (Aurora Global), Oracle, Complex SQL queries.
-  devops:
-    - Containerization: Docker, Kubernetes (EKS), Helm
-    - CI/CD: Harness pipeline, AWS CodePipeline
   process:
     - Methodologies - Agile/Scrum, SDLC, Production Support, Release Management
+    - Technical Documentation, Stakeholder Engagement, Team Collaboration
+    - Code Reviews, Mentoring, Technical Design Sessions
 
 experience:
   - company: Capital Group Companies (Infosys Limited)
@@ -50,8 +59,18 @@ experience:
     end: Present
     project: MAPS - Multi Asset Portfolio System
     description:
-      - Designed and led development of the outbound trading platform module for mutual fund and ETF transactions.
-      - Architected and deployed cloud-native infrastructure using ECS Fargate, Lambda, API Gateway, EventBridge, and Aurora.
+      - Designed and led development of the MAPS interface module for fond of fund target allocations.
+      - Containered and deployed microservices using AWS ECS Fargate, Lambda, API Gateway, S3, SQS, SNS, EventBridge, Route 53, VPC, IAM, KMS.
+      - Architected and deployed cloud-native infrastructure using ECS Fargate, SQS, SNS, Lambda, API Gateway, and Aurora.
+      - Automated infrastructure provisioning with AWS CDK and Terraform; implemented CI/CD pipelines using Harness and Docker.
+      - Developed secure REST APIs with Okta OAuth2.0 and OpenID Connect; integrated
+
+      - Implemented secure REST APIs with Okta OAuth2.0 and OpenID Connect; integrated with Angular 17 frontend.
+      - Developed backend services in Java 19 (Spring Boot) and Python 3 (FastAPI).
+      - Enabled data processing with PySpark and integrated messaging systems like RabbitMQ and Kafka.
+      - Enhanced observability with CloudWatch, Datadog, and xMatters; implemented identity federation with Okta.
+      - Led technical design sessions, code reviews, and mentored team members on best practices.
+      
       - Automated infrastructure provisioning with AWS CDK and Terraform; implemented CI/CD pipelines via Harness and Docker.
       - Built microservices with Spring Boot (Java 19) and FastAPI (Python 3); frontend with Angular and Redux.
       - Enabled seamless integration with Kafka, RabbitMQ, and PySpark for ETL workloads.
