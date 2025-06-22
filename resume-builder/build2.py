@@ -3,11 +3,12 @@ import yaml
 import pdfkit
 from jinja2 import Environment, FileSystemLoader
 
+suffix=input('please provide suffix - se2 | se3 ')
 # Constants
-OUTPUT_DIR = "output"
-TEMPLATE_FILE = "template.html"
-YAML_FILE = "resume.yaml"
-BASE_NAME = "resume"
+OUTPUT_DIR = f"output/{suffix}"
+TEMPLATE_FILE = f"template-{suffix}.html"
+YAML_FILE = f"resume-{suffix}.yaml"
+BASE_NAME = f"resume-{suffix}"
 
 # Create output folder if not exists
 if not os.path.exists(OUTPUT_DIR):

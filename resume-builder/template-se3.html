@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ name }} - Resume</title>
+   <style>
+       body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #f8f9fa;
+  color: #333;
+}
+
+.container {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sidebar {
+  width: 30%;
+  background-color: #003366;
+  color: white;
+  padding: 30px 20px;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.sidebar a {
+  color: #a7e0ff;
+  text-decoration: none;
+}
+
+.sidebar h1 {
+  font-size: 2em;
+  margin-bottom: 5px;
+}
+
+.sidebar .title {
+  font-style: italic;
+  font-size: 1em;
+  margin-bottom: 20px;
+}
+
+.sidebar hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 20px 0;
+}
+
+.skills {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.content {
+  width: 70%;
+  padding: 30px;
+  background-color: #fff;
+}
+
+.content h2 {
+  color: #003366;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+}
+
+.job h3 {
+  margin-bottom: 4px;
+  margin-top: 20px;
+}
+
+.meta {
+  font-size: 0.9em;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+   </style>
+</head>
+<body>
+<div class="container">
+    <aside class="sidebar">
+        <h1>{{ name }}</h1>
+        <p class="title">{{ title }}</p>
+        <hr>
+        <div class="contact">
+            <p><strong>📍</strong> {{ location }}</p>
+            <p><strong>📞</strong> {{ contact.phone }}</p>
+            <p><strong>✉️</strong> <a href="mailto:{{ contact.email }}">{{ contact.email }}</a></p>
+            <p><strong>🔗</strong> <a href="{{ contact.linkedin }}">LinkedIn</a></p>
+            <p><strong>💻</strong> <a href="{{ contact.github }}">GitHub</a></p>
+        </div>
+        <hr>
+        <h2>Skills</h2>
+        <ul class="skills">
+            {% for skill in skills %}
+            <li>{{ skill }}</li>
+            {% endfor %}
+        </ul>
+    </aside>
+
+    <main class="content">
+        <section class="summary">
+            <h2>Summary</h2>
+            <p>{{ summary }}</p>
+        </section>
+
+        <section class="experience">
+            <h2>Experience</h2>
+            {% for job in experience %}
+            <div class="job">
+                <h3>{{ job.role }} – {{ job.company }}</h3>
+                <p class="meta">{{ job.location }} | {{ job.start }} – {{ job.end }}</p>
+                <ul>
+                    {% for line in job.description.strip().split('\n') %}
+                    <li>{{ line.strip() }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endfor %}
+        </section>
+
+        <section class="education">
+            <h2>Education</h2>
+            {% for edu in education %}
+            <p><strong>{{ edu.degree }}</strong> – {{ edu.institute }}, {{ edu.location }} ({{ edu.year }})</p>
+            {% endfor %}
+        </section>
+
+        <section class="certifications">
+            <h2>Certifications</h2>
+            <ul>
+                {% for cert in certifications %}
+                <li>{{ cert }}</li>
+                {% endfor %}
+            </ul>
+        </section>
+    </main>
+</div>
+</body>
+</html>
