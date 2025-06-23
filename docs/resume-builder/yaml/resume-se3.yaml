@@ -29,8 +29,8 @@ skills:
     - networking with VPC, ALB, API Gateway, Route 53
     - Container orchestration with ECS, EKS and ECR
   Programming Languages:
-    - OOPS and Functional styling programming with - Python, Java, typescript
-    - Bash scripting
+    - OOPS and Functional styling programming with Python, Java, typescript
+    - Familiar with Bash
     - PL/SQL
   Deployment and Release:
     - Containerization with Docker, Kubernetes with Helm charts
@@ -94,7 +94,7 @@ experience:
       - Led development of MAPS inbound/outbound interfaces, JIRA creation, coding and unit testing. Mentoring the offshore team through design reviews, code reviews, and best practices.
 
   - company: Capital Group Companies (Infosys Limited)
-    role: Technology Analyst / Technology Lead
+    role: Technology Lead
     location: Pune, India
     start: Feb 2021
     end: Jan 2022
@@ -112,7 +112,7 @@ experience:
 
 
   - company: Capital Group Companies (Infosys Limited)
-    role: Technology Analyst / Technology Lead
+    role: Technology Analyst
     location: Irvine, USA
     start: March 2020
     end: Jan 2021
@@ -130,7 +130,7 @@ experience:
 
 
   - company: Capital Group Companies (Infosys Limited)
-    role: Technology Analyst / Technology Lead
+    role: Senior System Engineer | Technology Analyst
     location: Irvine, USA
     start: Nov 2018
     end: Feb 2020
@@ -199,7 +199,7 @@ experience:
       - Customized backend automation scripts using Finacle scripting language, similar to Unix 🔸shell scripting, for data processing and business workflows.
 
   - company: Infosys Limited
-    role: Software Engineering Trainee
+    role: System Trainee
     location: Mysore, India
     start: Aug 2012
     end: Mar 2013
@@ -217,7 +217,7 @@ education:
     year: 2008-2012
 
 certifications:
-  - AWS Certified Solutions Architect
+  - 📃 AWS Certified Solutions Architect
 
 Udemy learning certifications:
   - AWS SSA (Udemy)
