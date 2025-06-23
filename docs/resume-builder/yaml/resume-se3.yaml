@@ -15,8 +15,11 @@ contact:
 
 title: Solution Engineer | Technology Lead 
 
-summary: >
-  Results-driven software professional with 12+ years of experience in the financial services sector, specializing in cloud-native solutions, microservices architecture, and full-stack web development. Proven expertise in designing scalable enterprise applications using AWS, container orchestration, CI/CD automation, and modern web frameworks. Strong background in driving digital transformation, technical leadership, and end-to-end solution delivery.
+summary: |
+  Results-driven software professional with 12+ years of experience in the financial services sector, specializing in 
+  cloud-native solutions, microservices architecture, and full-stack web development. 
+  Proven expertise in designing scalable enterprise applications using AWS, container orchestration, CI/CD automation, and modern web frameworks. 
+  Strong background in driving digital transformation, technical leadership, and end-to-end solution delivery.
 
 skills:
   AWS Cloud:
@@ -24,7 +27,7 @@ skills:
     - Storage and Database - S3, Aurora postgresSQL, global serverless, dynamodb
     - serverless microservice and event driver architecture with  SQS, SNS, EventBridge and Lambda
     - networking with VPC, ALB, API Gateway, Route 53
-    - Container orhestration with ECS, EKS, ECR
+    - Container orchestration with ECS, EKS and ECR
   Programming Languages:
     - OOPS and Functional styling programming with - Python, Java, typescript
     - Bash scripting
@@ -35,7 +38,7 @@ skills:
     - Continious delivery pipeline with Harness and AWS CodePipeline 
     - Infrastructure as Code IAC with Hashicorp Terraform and HCP cloud
     - AWS Cloud development kit and CloudFormation stack 
-  Backend and middleware:
+  Backend and Middleware:
     - Python packages - FastAPI, PySpark, Pandas, SQLAlchemy, boto3
     - Frameworks - Spring boot web, spring JPA data, Spring Security, Hibernate
     - RESTful Services secured with OAuth2.0, JWT, TLS cerytficates.
@@ -43,10 +46,10 @@ skills:
     - ETL Pipelines - data Ingestion & Transformation with PySpark, Spring Batch
     - Messaging Systems - Confluent Kafka, RabbitMQ, IBM MQ
     - PostgreSQL (Aurora Global), Oracle, Complex SQL queries
-  frontend:
+  Frontend:
     - Frameworks - Angular 17, Angular Material, reactive RxJS and Angular redux NgRx
     - Styling - SCSS, HTML5
-  process:
+  Process:
     - Methodologies - Agile/Scrum, SDLC, Production Support, Release Management
     - Technical Documentation, Stakeholder Engagement, Team Collaboration
     - Code Reviews, Mentoring, Technical Design Sessions
@@ -57,46 +60,107 @@ experience:
     location: Irvine, USA
     start: Feb 2022
     end: Present
-    project: MAPS - Multi Asset Portfolio System
+    project: MAPS - Multi Asset Portfolio System (New Application with AWS solution)
     description:
-      - Designed and led development of the MAPS interface module for fond of fund target allocations.
-      - Containered and deployed microservices using AWS ECS Fargate, Lambda, API Gateway, S3, SQS, SNS, EventBridge, Route 53, VPC, IAM, KMS.
-      - Architected and deployed cloud-native infrastructure using ECS Fargate, SQS, SNS, Lambda, API Gateway, and Aurora.
-      - Automated infrastructure provisioning with AWS CDK and Terraform; implemented CI/CD pipelines using Harness and Docker.
-      - Developed secure REST APIs with Okta OAuth2.0 and OpenID Connect; integrated
+      - Designed the architecture for the MAPS application and led proof-of-concept (PoC) efforts to validate cloud-native solutions using AWS.
+      - Authored detailed architecture diagrams, comprehensive developer guides, and technical documentation in Confluence, including future-state proposals.
+      - Led development of MAPS inbound/outbound interfaces, coding and unit testing.
+      - Mentoring the offshore team through design reviews, code reviews, and best practices.
+      - Built microservices in 🔸Python (FastAPI, Uvicorn, SQLAlchemy, Boto3) and  🔸Java (Spring Boot, Hibernate, Jackson, AWS SDK).
+      - Developed a custom 🔸PySpark driver program and framework to orchestrate small-scale ETL pipelines consuming daily CSV feeds
+      - Containerized applications using Docker (with Chain-guard base images), aligning with enterprise security standards.
+      - Architected and deployed cloud-native infrastructure using 🔸AWS ECS Fargate, SQS, SNS, Lambda, API Gateway, and Aurora serverless global.
+      - Architected and deployed application on AWS services - ECS Fargate, SQS, SNS, Event-bridge, Lambda, API Gateway, and Aurora Serverless Global.
+      - Conducted PoC to deploy services on multi-tenant 🔸EKS clusters. 
+          Created terraform Configuration for Cluster provisioning, OIDC setup. Namespace isolation, IAM Roles for Service Accounts (IRSA). 
+          Ingress controllers, K8s Ingress object to define routing rules. Release with Helm charts for environment-specific deployments. 
+          Logs, custom metrics and traces forwarding to Datadog agent.  
+          Instrumentation with OpenTelemetry.
+          Supported future migration strategy for the organization's Helix Mothership initiative by aligning MAPS architecture with Helix standards.
+      - Designed and documented a regional disaster recovery plan, enabling seamless failover between primary and secondary AWS regions.
+      - Secured APIs using Okta 🔸OAuth2.0/OpenID Connect and managed TLS certificates with internal Py module Nomos and Venafi. Publishing cert to AWS ACM.
+      - Remediated 🔸vulnerabilities flagged in CI pipelines by Wiz and Snyk scans
+      - Creating technical JIRA and effort estimation. Attending daily scrum/standup call.
+      - Designed JSON payload/schemas for 🔸event-driven interfaces via AWS EventBridge, and defined API contracts for partner integrations.
+      - Created relational data models for inbound/outbound modules of MAPS.
+      - Developed Infrastructure as Code (IaC) using 🔸AWS CDK (CloudFormation stacks) and later on upgraded 🔸Terraform configuration to provision resources for AWS and 🔸Kafka resources (topics, replication, consumers-group-id, schema).
+      - Upgraded CI/CD pipelines using 🔸Harness SaaS to align with Helix Banzai delivery models.
+      - Built an Angular-based interface dashboard to monitor inbound/outbound processing and developed custom metrics exposed to Datadog
+      - Enhanced observability with CloudWatch dashboards, 🔸Datadog monitors, and xMatters alerts for proactive incident response.
+      - Collaborating with partner's migrations from RabbitMQ to Kafka and Mulesoft API to AWS ALB.
+      - Communicating with Application Platform team, Network team and Security team to set up OAuth client credential flow, MFT setup, Mulesoft API keys, etc.
+      - Supported production operations, including application monitoring, incident response, and release coordination.
+      - Supporting engineers for FSR application (another application in ADO umbrella) for any technical challenges.
 
-      - Implemented secure REST APIs with Okta OAuth2.0 and OpenID Connect; integrated with Angular 17 frontend.
-      - Developed backend services in Java 19 (Spring Boot) and Python 3 (FastAPI).
-      - Enabled data processing with PySpark and integrated messaging systems like RabbitMQ and Kafka.
-      - Enhanced observability with CloudWatch, Datadog, and xMatters; implemented identity federation with Okta.
-      - Led technical design sessions, code reviews, and mentored team members on best practices.
-      
-      - Automated infrastructure provisioning with AWS CDK and Terraform; implemented CI/CD pipelines via Harness and Docker.
-      - Built microservices with Spring Boot (Java 19) and FastAPI (Python 3); frontend with Angular and Redux.
-      - Enabled seamless integration with Kafka, RabbitMQ, and PySpark for ETL workloads.
-      - Implemented identity federation with Okta (OAuth2.0, OpenID Connect); enabled observability via CloudWatch, Datadog, and xMatters.
+  - company: Capital Group Companies (Infosys Limited)
+    role: Technology Analyst / Technology Lead
+    location: Pune, India
+    start: Feb 2021
+    end: Jan 2022
+    project: TACT - TargetDateFund Allocation and compliance Tool (Technical Upgrade)
+    description:
+      - Served as a senior offshore developer responsible for modernizing a legacy, performance-constrained enterprise application.
+      - Upgraded the tech stack - migrated from Java 7 to 🔸Java 11, leveraging 🔸Java Streams for functional and efficient data processing.
+      - Replaced the legacy Struts2 MVC framework with 🔸SpringBoot, enhancing modularity and maintainability.
+      - Upgraded 🔸Hibernate from v3 to v5; implemented JPA repositories with Spring Data and custom queries using native SQL and HQL.
+      - Configured transaction-scoped `EntityManager` with varying 🔸isolation levels (Read Committed, Repeatable Read) to ensure data integrity.
+      - Secured RESTful APIs with 🔸OAuth2 and SSL, aligning with enterprise security protocols.
+      - Optimized 🔸performance by tuning SQL, introducing caching for static content, batching API calls, and applying eager loading strategies.
+      - CI/CD pipeline by upgrading existing Bamboo build jobs and XLD deployment scripts.
+      - Participated actively in Agile ceremonies including daily stand-ups and sprint planning.
+
+
+  - company: Capital Group Companies (Infosys Limited)
+    role: Technology Analyst / Technology Lead
+    location: Irvine, USA
+    start: March 2020
+    end: Jan 2021
+    project: FSR - Fund Sale and Redemption (Angular Migration)
+    description:
+      - Modernized the legacy application UI by migrating from Adobe Flash to 🔸Angular 12 for a responsive and accessible user experience.
+      - Implemented state management using 🔸NgRx (Redux pattern) for scalable and maintainable frontend logic.
+      - Applied reactive programming principles to handle asynchronous backend API integration using 🔸RxJS observables.
+      - Developed reusable Angular components, services, and custom observables to support modular development.
+      - Built template-driven and 🔸reactive forms with custom directives and validation logic.
+      - Adopted 🔸Angular Material for consistent UI/UX and adherence to design standards.
+      - Containerized the Angular application using Docker and configured static hosting via NGINX.
+      - Contributed to CI/CD automation by creating Bamboo build plans and XLD deployment packages.
+      - Participated in Agile development practices including daily stand-ups, sprint planning, and retrospectives.
+
 
   - company: Capital Group Companies (Infosys Limited)
     role: Technology Analyst / Technology Lead
     location: Irvine, USA
     start: Nov 2018
-    end: Jan 2022
-    project: FSR & TACT Systems
-    description: 
-      - Modernized legacy backend (Java 8 to Java 11, Struts2 to Spring Boot) and frontend (Flash to Angular 10).
-      - Refactored and secured APIs using OAuth2 and SSL; optimized batch jobs and improved system throughput (3 hrs to 30 mins).
-      - Developed Swift message simulators for test automation and system validation.
-      - Led offshore team, conducted code reviews, and enhanced Angular-based UIs for performance and accessibility.
+    end: Feb 2020
+    project: TACT - TargetDateFund Allocation and compliance Tool (BAU)
+    description:
+      - Resolved severe performance bottlenecks by analyzing Java-based application with profiling tools, 🔸optimizing database interactions, and tuning connection pools—improving throughput from 🔸2 min to 1 sec.
+      - Implemented second-level allocation logic - After CIT fund allocation, computed new target allocation percentages for CIT-temp fund Allocation.
+      - Implemented CIAM Canadian funds with 🔸SWIFT-based communication (MT502, MT541/542, MT202/210, MT515, MT509).
+      - Established secure messaging infrastructure using IBM MQ with two-way SSL and collaborated with API platform teams for integration.
+      - Planned development activities, estimated effort, and maintained tracking using JIRA.
+      - Developed a Java Swing-based 🔸simulator tool to generate inbound SWIFT messages for integration, testing and fast forward development.
+      - Created a monitoring dashboard (JSP) to visualize message traffic, including arrival times, publication latency, and pending message.
+      - Supported production deployments, incident response
+      - Participated in release planning and coordination with client stakeholders and downstream systems.
+      - Also Migrated authentication flow from legacy CyberArk/LDAP-based access to OAuth2.0 via Okta Identity Provider.
 
   - company: Capital Group Companies (Infosys Limited)
     role: Senior System Engineer
     location: Irvine, USA
     start: Mar 2017
     end: Oct 2018
-    project: OPAC - Order Processing and Compliance
+    project: OPAC - Order Processing and Compliance (BAU)
     description:
-      - Delivered business-critical features in coordination with stakeholders through Agile ceremonies.
-      - Analyzed system gaps, proposed modernization strategies, and performed root cause analysis for production issues.
+      - Performed coding, unit testing, and peer code reviews to deliver high-quality features for java based application.
+      - Participated in Agile ceremonies at the client location including sprint planning, daily stand-ups, and retrospectives.
+      - Collaborated closely with Business System Analysts (BSAs) and clients to gather and refine business requirements.
+      - Assessed existing systems and proposed enhancements aligned with modern technologies and performance improvements.
+      - Researched and evaluated appropriate technologies to ensure alignment with project goals and enterprise standards.
+      - Provided production support by replicating and debugging issues in development environments.
+      - Conducted root cause analysis on post-implementation issues and implemented timely, effective fixes.
+
 
   - company: Capital Group Companies (Infosys Limited)
     role: Senior System Engineer / System Engineer
@@ -104,19 +168,34 @@ experience:
     start: Feb 2014
     end: Feb 2017
     project: COPS - CRMC Order Processing System
-    description: 
-      - Developed and maintained backend modules and batch jobs; enhanced system reliability and throughput.
-      - Achieved 85% reduction in nightly batch execution time; implemented asynchronous processing via JMS.
+    description:
+      - Developed 🔸REST-ful APIs using Java Spring MVC to replicate equity orders from parent to child accounts. (Vehicle-Axioma)
+      - Performed API testing using 🔸Postman and SmartBear tools for functionality and reliability.
+      - Contributed to the Cirrus cloud migration initiative (client’s internal cloud infrastructure).
+      - Built secure service integrations to retrieve secrets from 🔸CyberArk safes and vaults.
+      - Migrated version control systems from Perforce to 🔸Bitbucket for better collaboration and integration.
+      - Transitioned build and deployment processes to Atlassian 🔸Bamboo build pipeline and 🔸XLDeploy for improved CI/CD automation.
+      - Utilized 🔸Flyway for database versioning and migration management.
+      - Conducted a proof-of-concept (POC) for 🔸JMS-based asynchronous messaging to integrate with the upstream OIS system.
+      - Optimized batch job performance—reduced processing time from 45 minutes to 7 minutes by minimizing redundant database calls and eliminating unnecessary logic.
+      - Java profiling with tools - 🔸Jhat, 🔸Jvisual and 🔸MAT (memory Analyzer tool).  Resolve java OutofMemory Error without increasing heap.
+      - created separate cache server
+      - Actively participated in Agile ceremonies including sprint planning, daily stand-ups, and retrospectives.
+      - Engaged in design reviews and peer code reviews to ensure quality and alignment with architectural standards.
+      - Diagnosed and resolved production issues by replicating bugs in development environments and performing root cause analysis.
 
-  - company: Infosys Limited (EdgeVerve Systems)
+
+  - company: Infosys Limited
     role: System Engineer
     location: Pune, India
     start: April 2013
     end: Jan 2014
-    project: SBI - Finacle Migration
-    description: 
-      - Executed Finacle migration across 25 countries for SBI, transitioning from version 7.x to 11.x.
-      - Developed UI forms and backend scripts using JavaScript and Shell scripting.
+    project: Finacle Migration - State Bank of India
+    description:
+      - Contributed to Infosys 🔸Finacle, a core banking solution platform, as part of the global SBI migration program.
+      - Executed Finacle version upgrade from 7.x to 11.x across 25 international branches of the State Bank of India (SBI).
+      - Developed interactive menu-driven forms using 🔸HTML and 🔸JavaScript for enhanced user experience.
+      - Customized backend automation scripts using Finacle scripting language, similar to Unix 🔸shell scripting, for data processing and business workflows.
 
   - company: Infosys Limited
     role: Software Engineering Trainee
@@ -124,10 +203,11 @@ experience:
     start: Aug 2012
     end: Mar 2013
     description:
-      - Completed foundational training on SDLC, Agile methodologies, and software engineering principles.
-      - Gained hands-on experience in Java programming, object-oriented design, and web technologies - HTML, CSS, javascript, JSP and Spring MVC framework
-      - RDBMS training with PL/SQL and database design principles.
-      - Acquired knowledge of Infosys Finacle banking product suite.
+      - Completed foundational training on software development lifecycle (SDLC), Agile practices, and core software engineering principles.
+      - Gained hands-on experience with 🔸Java programming and object-oriented design
+      - Created web project with technologies including HTML, CSS, JavaScript, 🔸JSP, and the 🔸Spring MVC framework.
+      - Received RDBMS training focused on 🔸PL/SQL, query optimization, and database design fundamentals.
+      - Acquired functional and architectural understanding of the Infosys Finacle banking product suite.
 
 education:
   - degree: Bachelor of Technology in Computer Science and Engineering
