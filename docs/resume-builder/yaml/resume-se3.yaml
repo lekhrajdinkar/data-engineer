@@ -60,7 +60,7 @@ experience:
     location: Irvine, USA
     start: Feb 2022
     end: Present
-    project: MAPS - Multi Asset Portfolio System (New Application with AWS solution)
+    project: MAPS - Multi Asset Portfolio System (AWS solution)
     description:
       - Designed the architecture for the MAPS application's interface module. 
       - Led proof-of-concept (PoC) efforts to validate cloud-native solutions using AWS. 
@@ -134,7 +134,7 @@ experience:
     location: Irvine, USA
     start: Nov 2018
     end: Feb 2020
-    project: TACT - TargetDateFund Allocation and compliance Tool (BAU)
+    project: TACT - TargetDateFund Allocation and compliance Tool (Development + BAU)
     description:
       - Resolved severe performance bottlenecks by analyzing Java-based application with profiling tools, 🔸optimizing database interactions, and tuning connection pools—improving throughput from 🔸2 min to 1 sec.
       - Implemented second-level allocation logic - After CIT fund allocation, computed new target allocation percentages for CIT-temp fund Allocation.
@@ -168,7 +168,7 @@ experience:
     location: Pune, India
     start: Feb 2014
     end: Feb 2017
-    project: COPS - CRMC Order Processing System
+    project: COPS - CRMC Order Processing System (Development)
     description:
       - Developed 🔸REST-ful APIs using Java Spring MVC to replicate equity orders from parent to child accounts. (Vehicle-Axioma)
       - Performed API testing using 🔸Postman and SmartBear tools for functionality and reliability.
@@ -191,7 +191,7 @@ experience:
     location: Pune, India
     start: April 2013
     end: Jan 2014
-    project: Finacle Migration - State Bank of India
+    project: Finacle - State Bank of India (Version Migration)
     description:
       - Contributed to Infosys 🔸Finacle, a core banking solution platform, as part of the global SBI migration program.
       - Executed Finacle version upgrade from 7.x to 11.x across 25 international branches of the State Bank of India (SBI).
