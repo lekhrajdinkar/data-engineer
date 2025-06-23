@@ -127,51 +127,44 @@ body {
 
     <main class="content">
         <section class="summary timeline-entry">
-          <h2>Summary</h2>
-          <p>{{ summary }}</p>
+            <h2>Summary</h2>
+            <p>{{ summary }}</p>
         </section>
-        
+
         <div class="timeline">
+
+
+            <section class="experience timeline-entry">
+                <h2>Experience</h2>
+                {% for job in experience %}
+                <div class="job timeline-block">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>{{ job.role }} – {{ job.company }}</h3>
+                        <p class="meta">{{ job.location }} | {{ job.start }} – {{ job.end }}</p>
+                        {% if job.project %}
+                        <p class="project"><strong>Project:</strong> {{ job.project }}</p>
+                        {% endif %}
+                        <ul>
+                            {% for line in job.description %}
+                            <li>{{ line }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+                {% endfor %}
+            </section>
+
+            <section class="education">
+              <h2>Education</h2>
+              {% for edu in education %}
+              <p><strong>{{ edu.degree }}</strong> – {{ edu.institute }}, {{ edu.location }} ({{ edu.year }})</p>
+              {% endfor %}
+           </section>
+        </div>
+
         
 
-        <section class="experience timeline-entry">
-          <h2>Experience</h2>
-          {% for job in experience %}
-            <div class="job timeline-block">
-              <div class="timeline-marker"></div>
-              <div class="timeline-content">
-                <h3>{{ job.role }} – {{ job.company }}</h3>
-                <p class="meta">{{ job.location }} | {{ job.start }} – {{ job.end }}</p>
-                {% if job.project %}
-                  <p class="project"><strong>Project:</strong> {{ job.project }}</p>
-                {% endif %}
-                <ul>
-                  {% for line in job.description %}
-                    <li>{{ line }}</li>
-                  {% endfor %}
-                </ul>
-              </div>
-            </div>
-          {% endfor %}
-        </section>
-      </div>
-
-        <section class="education">
-            <h2>Education</h2>
-            {% for edu in education %}
-            <p><strong>{{ edu.degree }}</strong> – {{ edu.institute }}, {{ edu.location }} ({{ edu.year }})</p>
-            {% endfor %}
-        </section>
-        <!-- 
-        <section class="certifications">
-            <h2>Certifications</h2>
-            <ul>
-                {% for cert in certifications %}
-                <li>{{ cert }}</li>
-                {% endfor %}
-            </ul>
-        </section>
-        -->
     </main>
 
     <aside class="sidebar">
@@ -188,13 +181,24 @@ body {
         <hr>
         <h2 class="skill--skills">Skills</h2>
         {% for category, items in skills.items() %}
-          <h4 class="skill-subtitle">{{ category | capitalize }}</h4>
-          <ul class="skills">
+        <h4 class="skill-subtitle">{{ category | capitalize }}</h4>
+        <ul class="skills">
             {% for item in items %}
-              <li>{{ item }}</li>
+            <li>{{ item }}</li>
             {% endfor %}
-          </ul>
+        </ul>
         {% endfor %}
+
+        
+        <section class="skill--skills">
+            <h2>Certifications</h2>
+            <ul>
+                {% for cert in certifications %}
+                <li>{{ cert }}</li>
+                {% endfor %}
+            </ul>
+        </section>
+        
     </aside>
 
 </div>

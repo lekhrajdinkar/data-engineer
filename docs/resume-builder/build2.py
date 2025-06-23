@@ -66,5 +66,5 @@ with open(html_path, "w", encoding="utf-8") as f:
 pdf_path = os.path.join(OUTPUT_DIR, pdf_file)
 print(f"✅ HTML saved to: {html_path}")
 
-pdfkit.from_file(html_path, pdf_path)
+#pdfkit.from_file(html_path, pdf_path)
 print(f"✅ PDF saved to: {pdf_path}")

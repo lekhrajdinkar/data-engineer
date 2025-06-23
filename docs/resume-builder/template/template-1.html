@@ -7,8 +7,8 @@
         body {
           margin: 0;
           font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-          background: #f8f9fa;
-          color: #333;
+          color: #312c2c;
+          
         }
 
         .container {
@@ -19,7 +19,7 @@
 
         .sidebar {
           width: 30%;
-          background-color: #f1f3ee;
+          background-color: #ece8f0;
           /*color: white;*/
           padding: 30px 20px;
           min-height: 100vh;
@@ -28,7 +28,7 @@
         }
 
         .sidebar a {
-          color: #383e88;
+          color: #974ba1;
           text-decoration: none;
         }
 
@@ -45,7 +45,7 @@
 
         .sidebar hr {
           border: none;
-          border-top: 1px solid #ccc;
+          border-top: 1px solid #cbcdce;
           margin: 20px 0;
         }
 
@@ -56,12 +56,12 @@
 
         .content {
           width: 70%;
-          padding: 30px;
+          padding: 20px;
           background-color: #fff;
         }
 
         .content h2 {
-          color: #093e72;
+          color: #974ba1;
           border-bottom: 1px solid #ccc;
           padding-bottom: 5px;
         }
@@ -84,15 +84,15 @@
         }
 
         .skill-subtitle {
-          border-top: 3px solid rgb(68, 123, 226);
+          border-top: 3px solid #974ba1;
           padding-top: 5px;
-          color: rgb(68, 123, 226);
+          color: #974ba1;
         }
-        .skill--skills { color: rgb(68, 123, 226);}
+        .skill--skills { color: #974ba1;}
 
         .timeline {
           position: relative;
-          border-left: 1px solid #84a2c0;
+          border-left: 1px solid #a35eb3;
           margin-left: 20px;
           padding-left: 20px;
         }
@@ -107,17 +107,15 @@
           top: 8px;
           width: 8px;
           height: 8px;
-          background: #c7d9ee;
+          background: #a379bb;
           border: 1px solid white;
           border-radius: 50%;
-          box-shadow: 0 0 0 2px #004080;
+          box-shadow: 0 0 0 2px #974ba1;
         }
-
-        .timeline-content { }
 
         .timeline .project {
           font-style: italic;
-          color: #555;
+          color: #974ba1;
         }
     </style>
 
@@ -154,24 +152,17 @@
                 </div>
                 {% endfor %}
             </section>
+
+            <section class="education">
+              <h2>Education</h2>
+              {% for edu in education %}
+              <p><strong>{{ edu.degree }}</strong> – {{ edu.institute }}, {{ edu.location }} ({{ edu.year }})</p>
+              {% endfor %}
+           </section>
         </div>
 
-        <section class="education">
-            <h2>Education</h2>
-            {% for edu in education %}
-            <p><strong>{{ edu.degree }}</strong> – {{ edu.institute }}, {{ edu.location }} ({{ edu.year }})</p>
-            {% endfor %}
-        </section>
-        <!--
-        <section class="certifications">
-            <h2>Certifications</h2>
-            <ul>
-                {% for cert in certifications %}
-                <li>{{ cert }}</li>
-                {% endfor %}
-            </ul>
-        </section>
-        -->
+        
+
     </main>
 
     <aside class="sidebar">
@@ -195,6 +186,17 @@
             {% endfor %}
         </ul>
         {% endfor %}
+
+        
+        <section class="skill--skills">
+            <h2>Certifications</h2>
+            <ul>
+                {% for cert in certifications %}
+                <li>{{ cert }}</li>
+                {% endfor %}
+            </ul>
+        </section>
+        
     </aside>
 
 </div>
