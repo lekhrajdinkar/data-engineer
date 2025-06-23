@@ -27,7 +27,7 @@ nav:
   - More:
       - chats : chats.md
       - resume1: resume-builder/output/resume-from-tpl-2-profile-se3/resume-from-tpl-2-profile-se3_vlatest.html
-      - resume2: resume-builder/output/resume-from-tpl-2-profile-se3/resume-from-tpl-1-profile-se3_vlatest.html
+      - resume2: resume-builder/output/resume-from-tpl-1-profile-se3/resume-from-tpl-1-profile-se3_vlatest.html
 
 theme:
   font:
