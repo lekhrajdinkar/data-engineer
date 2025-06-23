@@ -1,8 +1,11 @@
 # netstat -ano | findstr :8000
 # taskkill /PID xxxx /F
-from fastapi import FastAPI, Header, Query, Path, Body, Request
+from fastapi import FastAPI, Header, Query, Path, Body, Request, Depends, HTTPException
 from fastapi.responses import JSONResponse
 from typing import Optional
+from fastapi.security import  OAuth2PasswordRequestForm
+from src.webModule.util.jwt_token_generator import create_access_token, ACCESS_TOKEN_EXPIRE_MINUTES, verify_token
+from datetime import  timedelta
 
 app = FastAPI(
     title="Python API doc",
@@ -14,6 +17,15 @@ app = FastAPI(
     }
 )
 
+@app.post("/token")
+async def login(form_data: OAuth2PasswordRequestForm = Depends()):
+    if form_data.username == "admin" and form_data.password == "admin":
+        access_token = create_access_token(
+            data={"sub": form_data.username},
+            expires_delta=timedelta(minutes=ACCESS_TOKEN_EXPIRE_MINUTES)
+        )
+        return {"access_token": access_token, "token_type": "bearer"}
+    raise HTTPException(status_code=400, detail="Incorrect username or password")
 
 # --- Step 1: Host Simple API ---
 @app.get("/")
@@ -47,7 +59,8 @@ async def handle_params(
         q2: Optional[int] = Query(None, description="Query string parameter (optional int)"),
         h1: Optional[str] = Header(..., description="header (required str)"),
         h2: Optional[int] = Header(None, description="header (optional int)"),
-        payload: dict = Body(..., description="Request body as a dictionary")
+        payload: dict = Body(..., description="Request body as a dictionary"),
+        token_payload: dict = Depends(verify_token)
 ):
     all_header = dict(request.headers)
     all_qp = dict(request.query_params)
