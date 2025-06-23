@@ -10,6 +10,9 @@
 ## package / module
 - 🗨️ <a href="https://chatgpt.com/c/685647fe-4340-800d-bfe6-adb6a3f60d42" target="_blank">m1:collections,etc</a>
 - 🗨️ <a href="https://chatgpt.com/c/68535fab-0494-800d-af09-a35817d88f6a" target="_blank">m2:file,json,os,pathlib,etc</a>
-- 🗨️ <a href="https://chatgpt.com/c/68563797-7870-800d-84ed-dda9745eb57c" target="_blank">web:fastapi,flask,django</a>
+
+## web
+- 🗨️ <a href="https://chatgpt.com/c/68535fab-0494-800d-af09-a35817d88f6a" target="_blank">web1</a>
+- 🗨️ <a href="https://chatgpt.com/c/68591a85-d678-800d-9f7f-ec93a102eb9a" target="_blank">web2 (microservices)</a>
 
 

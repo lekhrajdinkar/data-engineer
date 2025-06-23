@@ -44,6 +44,10 @@
         - type hinted in 3.9+ 
         - Optional with type hints 
     - **Ellipsis** 
+        - print(type(...)) # < class 'ellipsis' > [ellipsis1.py](../../src/pyBasicModule/year2025/datatype/ellipsis1.py)
+        - so in short, its just special constant value ... 
+        - and it developer creativity to write custom logic around it
+        - used in NumPy , fastApi
 - formatting: 
     - [formating-1.py](../../src/pyBasicModule/year2025/datatype/formating-1.py) ➕ 
     - always return str, cobert to desired type with glocal funcion.
