@@ -119,6 +119,22 @@ body {
   font-style: italic;
   color: #555;
 }
+
+.profile-pic {
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.profile-pic img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  padding: 2px;
+  background: #004080;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
    </style>
 
 </head>
@@ -168,6 +184,9 @@ body {
     </main>
 
     <aside class="sidebar">
+        <div class="profile-pic">
+            <img src="profile.jpg" alt="{{ name }}" />
+        </div>
         <h1>{{ name }}</h1>
         <p class="title">{{ title }}</p>
         <hr>
@@ -178,6 +197,7 @@ body {
             <p><strong>🔗</strong> <a href="{{ contact.linkedin }}">LinkedIn</a></p>
             <p><strong>💻</strong> <a href="{{ contact.github }}">GitHub</a></p>
         </div>
+
         <hr>
         <h2 class="skill--skills">Skills</h2>
         {% for category, items in skills.items() %}
@@ -199,6 +219,8 @@ body {
            </ul>
        </section>
        -->
+
+
    </aside>
 
 </div>

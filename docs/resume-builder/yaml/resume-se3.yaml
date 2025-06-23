@@ -88,7 +88,7 @@ experience:
       - Built an Angular-based interface dashboard to monitor inbound/outbound processing.
       - Enhanced observability with CloudWatch dashboards, 🔸Datadog monitors+dashboard and xMatters.
       - Collaborating migration with partner's for 🔸RabbitMQ -> Kafka and MulesoftAPI -> AWS ALB.
-      - Communicating with Platform Engineering, Network team, AWS cloud support team and Security team deal integration challenges.
+      - Communicating with Platform Engineering, Network team, AWS cloud support team and Security team to deal integration challenges.
       - Supported production operations including application monitoring, incident response, and release coordination.
       - Supporting engineers for FSR application (another application in ADO umbrella) for any technical challenges.
       - Led development of MAPS inbound/outbound interfaces, JIRA creation, coding and unit testing. Mentoring the offshore team through design reviews, code reviews, and best practices.
