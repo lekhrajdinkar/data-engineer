@@ -1,21 +1,36 @@
 # netstat -ano | findstr :8000
 # taskkill /PID xxxx /F
+
 from fastapi import FastAPI, Header, Query, Path, Body, Request, Depends, HTTPException
-from fastapi.responses import JSONResponse
 from typing import Optional
-from fastapi.security import  OAuth2PasswordRequestForm
-from src.webModule.controller.jwt_token_generator import create_access_token, ACCESS_TOKEN_EXPIRE_MINUTES
-from datetime import  timedelta
+from src.commonModule.init_srv import load_env_config
 from src.webModule.controller.okta_oauth import verify_okta_token, request_token
+from fastapi import FastAPI, Request, Depends
+from fastapi.responses import JSONResponse
+from fastapi_limiter import FastAPILimiter
+from fastapi_limiter.depends import RateLimiter
+from contextlib import asynccontextmanager
+import redis.asyncio as redis
+
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    app_config = load_env_config();
+    print("appconfig", app_config)
+    redis_url = f"redis://{app_config['redis']['cloud']['url']}"
+    redis_client = redis.from_url(redis_url, encoding="utf-8", decode_responses=True)
+    await FastAPILimiter.init(redis_client)
+    app.state.redis = redis_client
+    yield
+    await redis_client.close()
+
 
 app = FastAPI(
+    lifespan=lifespan,
     title="Python API doc",
     description="API for python POC",
     version="1.0.0",
-    contact={
-        "name": "Lekhraj Dinkar",
-        "email": "LekhrajDinkarus@gmail.com",
-    }
+    contact={"name": "Lekhraj Dinkar", "email": "LekhrajDinkarus@gmail.com"}
 )
 
 # --- Step 1: Path, Query, Header, and Body Parameters ---
@@ -25,8 +40,10 @@ item_id is a path parameter extracted from the URL path (e.g., /items/{item_id})
 Path(...) means this parameter is required.
 Body(...) required
 """  # 5 requests per minute per IP
+
+
 @app.post("/items/{item_id}")
-async def handle_params(
+async def full_pack_api(
         request: Request,
         item_id: int = Path(..., description="The ID of the item (required)"),
         q1: Optional[str] = Query(..., description="Query string parameter (required str)"),
@@ -47,12 +64,13 @@ async def handle_params(
     return {
         "item_id": item_id,
         "query_param_1": q1, "query_param_2": q2,
-        "header_1": h1,  "header_2": h2,
+        "header_1": h1, "header_2": h2,
         "payload": payload,
         "all_header": all_header,
         "all_qp": all_qp,
-        "user_info" : user_info
+        "user_info": user_info
     }
+
 
 # --- Step 2: Custom JSON Response ---
 @app.get("/custom-response")
@@ -65,6 +83,7 @@ async def custom_response():
         "X-My-Header": "CustomHeaderValue"
     }
     return JSONResponse(status_code=202, content=data, headers=headers)
+
 
 # --- Step 3:  okta token ---
 @app.post("/okta/request-token")
@@ -84,6 +103,7 @@ app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
 
 apply : @limiter.limit("5/minute")  # 5 requests per minute per IP
 """
+
 
 # --- Step 4.2 : rate limiting and caching ---
 """
@@ -116,29 +136,7 @@ AWS Elasticsearch redis (no boto3), ⬅️
 
 """
 
-# ✅ Connect to ElastiCache Redis on startup
 
-from fastapi import FastAPI, Request, Depends
-from fastapi.responses import JSONResponse
-from fastapi_limiter import FastAPILimiter
-from fastapi_limiter.depends import RateLimiter
-from contextlib import asynccontextmanager
-import aioredis
-redis = None  # global reference
-
-@asynccontextmanager
-async def lifespan(app: FastAPI):
-    global redis
-    redis = await aioredis.from_url(
-        "redis://localhost:6379",  # Use ElastiCache endpoint in prod
-        encoding="utf-8",
-        decode_responses=True
-    )
-    await FastAPILimiter.init(redis)
-    app.state.redis = redis
-    print("🔌 Redis connected")
-    yield
-    await redis.close()
-    print("🔌 Redis closed")
-
-app = FastAPI(lifespan=lifespan)
+@app.get("/rate-limited-api", dependencies=[Depends(RateLimiter(times=3, seconds=60))])
+async def rateLimitedApi():
+    return {"message": "You can call this API 3 times per minute"}

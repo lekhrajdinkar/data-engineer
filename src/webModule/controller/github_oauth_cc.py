@@ -1,5 +1,5 @@
 import httpx
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter
 from src.commonModule.init_srv import load_env_config
 
 router = APIRouter()

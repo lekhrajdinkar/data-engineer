@@ -18,6 +18,17 @@
       "GITHUB_CLIENT_ID":"Ov23lil5yQRaFLoEzvu9",
       "GITHUB_CLIENT_SECRET":"b9cd5a1192bc6d7aa75fbec2642bc3f6dc613309"
     }
+  },
+  "redis": {
+    "local": {
+      "url": "default:xxxx@127.0.0.1:6379"
+    },
+    "cloud": {
+      "url": "default:lzak120eu3EI24NzGoSJaq2CfVH6O0PP@redis-13441.c278.us-east-1-4.ec2.redns.redis-cloud.com:13441",
+      "dashboard": "https://app.redislabs.com/#/databases",
+      "subscription": "https://app.redislabs.com/#/subscriptions/subscription/2804615/bdb"
+    }
   }
+
 
 }

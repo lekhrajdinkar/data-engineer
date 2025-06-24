@@ -27,7 +27,6 @@ objgraph
 uvicorn==0.32.1
 fastapi==0.111.0
 aiofiles==23.2.1
-slowapi==0.1.8
 fastapi-cache2==0.2.2
 python-multipart==0.0.9
 python-jose[cryptography]==3.3.0
@@ -39,6 +38,6 @@ python-dotenv
 
 # === rate limiteing + caching
 #slowapi
-aioredis
 fastapi-limiter
 redis
+redis[asyncio]
