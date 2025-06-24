@@ -1,6 +1,5 @@
 - https://fastapi.tiangolo.com/tutorial/
 
-
 ## 1. Django vs flask vs fastapi
 
 | Feature            | **Django**                                  | **FastAPI**                                    |
@@ -31,7 +30,7 @@ async def read_data():
 - FastAPI can continue serving other requests while waiting for other to finish
 - Also, frontend itself is written to handle asynchronous calls properly, with promise, observable 😁
 
-## 3. POC 
+## 3. POC
 ### objetive/s
 - security: `fastapi.security`, `PyJWT`
     - with OAuth + jwt 
@@ -68,6 +67,7 @@ async def read_data():
 | Data validation                         | ✅ `Pydantic`                                                                         |
 
 ### POC Steps
+- 👉🏻 program::[web2.py](../../src/webModule/controller/web2.py)
 ```
 Step 1: Host Simple API
 🔸 Create root endpoint / returning a welcome message.
@@ -106,5 +106,43 @@ Step 12: Dockerize the App
 🔸 Add Dockerfile and docker-compose for deployment.
 
 ```
+```
+✅ DONE
+Host API ✅
+Custom JSON Response ✅
+Handle Path/Query/Header/Body params ✅
+Swagger docs ✅
+Rate limiting with Redis ✅
+OAuth2 token flow (client credentials) ✅
+Cache API response in Redis ✅
+
+File download API with progress tracking
+Error handling & custom exception classes
+Logging (e.g., request logs, error logs)
+Unit tests (Pytest + FastAPI’s TestClient)
+API versioning
+Dockerize the project
+Deploy to AWS (ECS/EKS, API Gateway, Lambda)
+```
+
+### caching :: redis
+- key => (e.g., appname:env:item:{item_id}
+
+![img.png](img.png)
+
+### Rate limiting (app level)
+- pip install `fastapi-limiter`  `redis`  `redis[asyncio]`
+- FastAPILimiter.init(redis_client)
+
+```
+Code : 429
+Error: Too Many Requests
+Response body
+Download
+{
+  "detail": "Too Many Requests"
+}
+```
+![img.png](../02_funda/99_IMG/002/img.png)
 
 

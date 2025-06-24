@@ -18,6 +18,7 @@ async def lifespan(app: FastAPI):
     app_config = load_env_config();
     print("appconfig", app_config)
     redis_url = f"redis://{app_config['redis']['cloud']['url']}"
+
     redis_client = redis.from_url(redis_url, encoding="utf-8", decode_responses=True)
     await FastAPILimiter.init(redis_client)
     app.state.redis = redis_client
@@ -40,6 +41,19 @@ item_id is a path parameter extracted from the URL path (e.g., /items/{item_id})
 Path(...) means this parameter is required.
 Body(...) required
 """  # 5 requests per minute per IP
+
+
+@app.get("/data-from-redis-cache/{item_id}")
+async def get_data(item_id: int, request: Request):
+    redis = request.app.state.redis
+    key = f"item:{item_id}"
+    cached = await redis.get(key)
+    if cached:
+        return {"source": "cache", "item_id": item_id, "data": cached}
+
+    data = f"value-for-item-{item_id}"
+    await redis.set(key, data, ex=30)
+    return {"source": "fresh", "item_id": item_id, "data": data}
 
 
 @app.post("/items/{item_id}")
