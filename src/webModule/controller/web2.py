@@ -7,9 +7,9 @@ from fastapi.security import  OAuth2PasswordRequestForm
 from src.webModule.controller.jwt_token_generator import create_access_token, ACCESS_TOKEN_EXPIRE_MINUTES
 from datetime import  timedelta
 
-from src.webModule.controller.okta_oauth import verify_okta_token, get_okta_token, request_token
+from src.webModule.controller.okta_oauth import verify_okta_token, request_token
 
-# Ov23lil5yQRaFLoEzvu9 | b9cd5a1192bc6d7aa75fbec2642bc3f6dc613309
+
 
 app = FastAPI(
     title="Python API doc",
@@ -20,8 +20,6 @@ app = FastAPI(
         "email": "LekhrajDinkarus@gmail.com",
     }
 )
-
-
 
 # Step 5: OAuth2 Password Flow + JWT
 @app.post("/token")

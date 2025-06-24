@@ -1,9 +1,12 @@
 import httpx
 from fastapi import APIRouter, HTTPException
-from .github_oauth import GITHUB_CLIENT_ID, GITHUB_CLIENT_SECRET
+from src.commonModule.init_srv import load_env_config
 
 router = APIRouter()
 
+app_config = load_env_config()['oauth']['gh']
+GITHUB_CLIENT_ID=app_config['GITHUB_CLIENT_ID']
+GITHUB_CLIENT_SECRET=app_config['GITHUB_CLIENT_SECRET']
 
 @router.post("/github-token")
 async def github_token():

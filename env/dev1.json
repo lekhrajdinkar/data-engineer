@@ -5,6 +5,19 @@
     "user": "postgres",
     "password": "primary_pass",
     "database": "postgres"
+  },
+  "oauth": {
+    "okta": {
+      "OKTA_CLIENT_ID":"0oapap799lZO3byvU5d7",
+      "OKTA_CLIENT_SECRET":"61zPt6p1qHeoMexO5DMNDKgpuIeR9D325wZ8504BoNVrm6INL_Yd3GFJniNU6u4d",
+      "OKTA_TOKEN_URL":"https://dev-06456873.okta.com/oauth2/default/v1/token",
+      "OKTA_INTROSPECT_URL":"https://dev-06456873.okta.com/oauth2/default/v1/introspect",
+      "OKTA_SCOPE":"fastapiweb2"
+    },
+    "gh": {
+      "GITHUB_CLIENT_ID":"Ov23lil5yQRaFLoEzvu9",
+      "GITHUB_CLIENT_SECRET":"b9cd5a1192bc6d7aa75fbec2642bc3f6dc613309"
+    }
   }
 
 }

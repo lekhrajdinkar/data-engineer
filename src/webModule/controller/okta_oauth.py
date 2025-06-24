@@ -1,9 +1,10 @@
 import httpx, base64
 from fastapi import HTTPException
-from dotenv import load_dotenv
-import os
+from src.commonModule.init_srv import load_env_config
 
 """
+from dotenv import load_dotenv
+import os
 load_dotenv()
 OKTA_CLIENT_ID = os.getenv("OKTA_CLIENT_ID")
 OKTA_CLIENT_SECRET = os.getenv("OKTA_CLIENT_SECRET")
@@ -12,13 +13,14 @@ OKTA_INTROSPECT_URL = os.getenv("OKTA_INTROSPECT_URL")
 OKTA_SCOPE = os.getenv("OKTA_SCOPE")
 """
 
-OKTA_CLIENT_ID="0oapap799lZO3byvU5d7"
-OKTA_CLIENT_SECRET="61zPt6p1qHeoMexO5DMNDKgpuIeR9D325wZ8504BoNVrm6INL_Yd3GFJniNU6u4d"
-OKTA_TOKEN_URL="https://dev-06456873.okta.com/oauth2/default/v1/token"
-OKTA_INTROSPECT_URL="https://dev-06456873.okta.com/oauth2/default/v1/introspect"
-OKTA_SCOPE="fastapiweb2"
+app_config = load_env_config()['oauth']['gh']
+OKTA_CLIENT_ID=app_config['OKTA_CLIENT_ID']
+OKTA_CLIENT_SECRET=app_config['OKTA_CLIENT_SECRET']
+OKTA_TOKEN_URL=app_config['OKTA_TOKEN_URL']
+OKTA_INTROSPECT_URL=app_config['OKTA_INTROSPECT_URL']
+OKTA_SCOPE=app_config['OKTA_SCOPE']
 
-
+# not in use
 async def get_okta_token():
     auth = base64.b64encode(f"{OKTA_CLIENT_ID}:{OKTA_CLIENT_SECRET}".encode()).decode()
     headers = {

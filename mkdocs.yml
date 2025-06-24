@@ -6,7 +6,7 @@ docs_dir: docs
 # Navigation based on your Notes folder
 nav:
   - Home: index.md
-  - About me: resume-builder/output/resume-from-tpl-1-profile-se3/resume-from-tpl-1-profile-se3_vlatest.md
+  - About me: resume-builder/output/resume-from-tpl-2-profile-se3/resume-from-tpl-2-profile-se3_vlatest.md
   - PySpark:
       - index: 01_pyspark/index.md
       - 00_panda: 01_pyspark/00_panda.md
@@ -25,6 +25,8 @@ nav:
       - 03_module+DP: 02_funda/03_module+DP.md
       - 04_programing-style: 02_funda/04_programing-style.md
       - 05_useful_function: 02_funda/05_useful_function.md
+
+  - web : 03_web/index.md
 
   - More: chats.md
   #- resume1: resume-builder/output/resume-from-tpl-2-profile-se3/resume-from-tpl-2-profile-se3_vlatest.html
