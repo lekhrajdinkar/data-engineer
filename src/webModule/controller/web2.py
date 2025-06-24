@@ -4,12 +4,10 @@ from fastapi import FastAPI, Header, Query, Path, Body, Request, Depends, HTTPEx
 from fastapi.responses import JSONResponse
 from typing import Optional
 from fastapi.security import  OAuth2PasswordRequestForm
-from src.webModule.util.jwt_token_generator import create_access_token, ACCESS_TOKEN_EXPIRE_MINUTES, verify_token
+from src.webModule.controller.jwt_token_generator import create_access_token, ACCESS_TOKEN_EXPIRE_MINUTES
 from datetime import  timedelta
 
-import os
-from authlib.integrations.starlette_client import OAuth
-from starlette.config import Config
+from src.webModule.controller.okta_oauth import verify_okta_token, get_okta_token, request_token
 
 # Ov23lil5yQRaFLoEzvu9 | b9cd5a1192bc6d7aa75fbec2642bc3f6dc613309
 
@@ -37,9 +35,8 @@ async def login(form_data: OAuth2PasswordRequestForm = Depends()):
     raise HTTPException(status_code=400, detail="Incorrect username or password")
 
 # --- Step 1: Host Simple API ---
-@app.get("/")
-async def root():
-    return {"message": "Welcome to FastAPI!"}
+# @app.get("/")
+# async def root():  return {"message": "Welcome to FastAPI!"}
 
 # --- Step 2: Custom JSON Response ---
 @app.get("/custom-response")
@@ -69,10 +66,15 @@ async def handle_params(
         h1: Optional[str] = Header(..., description="header (required str)"),
         h2: Optional[int] = Header(None, description="header (optional int)"),
         payload: dict = Body(None, description="Request body as a dictionary"),
-        token_payload: dict = Depends(verify_token)
+        #token_payload: dict = Depends(verify_token),
+        #gh_app: dict = Depends(verify_github_token)
+        authorization: str = Header(...)
 ):
     all_header = dict(request.headers)
     all_qp = dict(request.query_params)
+
+    token = authorization.removeprefix("Bearer ").strip()
+    user_info = await verify_okta_token(token)
 
     return {
         "item_id": item_id,
@@ -80,5 +82,10 @@ async def handle_params(
         "header_1": h1,  "header_2": h2,
         "payload": payload,
         "all_header": all_header,
-        "all_qp": all_qp
+        "all_qp": all_qp,
+        "user_info" : user_info
     }
+
+@app.post("/okta/request-token")
+async def okta_request_token():
+    return request_token()

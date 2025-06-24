@@ -54,4 +54,12 @@ Client calls POST /github-token → gets access_token.
 Client calls POST /items/123 with header: Authorization: Bearer <that_token>
 FastAPI sends token to GitHub API (GET /app) to verify → ensures validity as an app.
 
+| Flow                      | Supported? | Notes                                                                     |
+| ------------------------- | ---------- | ------------------------------------------------------------------------- |
+| **Authorization Code**    | ✅ Yes      | Used for user login via browser (interactive)                             |
+| **Client Credentials**    | ❌ No       | **Not supported** — GitHub has no concept of machine-to-machine auth      |
+| **Personal Access Token** | ✅ Yes      | Manual token generation from GitHub settings                              |
+| **GitHub App JWT**        | ✅ Yes      | Used by GitHub Apps, uses **private key + JWT** to get installation token |
+
+
 """

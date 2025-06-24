@@ -1,10 +1,53 @@
 {
   "openapi": "3.1.0",
   "info": {
-    "title": "Simple API",
-    "version": "0.1.0"
+    "title": "Python API doc",
+    "description": "API for python POC",
+    "contact": {
+      "name": "Lekhraj Dinkar",
+      "email": "LekhrajDinkarus@gmail.com"
+    },
+    "version": "1.0.0"
   },
   "paths": {
+    "/token": {
+      "post": {
+        "summary": "Login",
+        "operationId": "login_token_post",
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "#/components/schemas/Body_login_token_post"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/": {
       "get": {
         "summary": "Root",
@@ -128,10 +171,18 @@
               "title": "H2"
             },
             "description": "header (optional int)"
+          },
+          {
+            "name": "authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Authorization"
+            }
           }
         ],
         "requestBody": {
-          "required": true,
           "content": {
             "application/json": {
               "schema": {
@@ -165,10 +216,85 @@
           }
         }
       }
+    },
+    "/okta/request-token": {
+      "post": {
+        "summary": "Okta Request Token",
+        "operationId": "okta_request_token_okta_request_token_post",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+
+                }
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
     "schemas": {
+      "Body_login_token_post": {
+        "properties": {
+          "grant_type": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "password"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Grant Type"
+          },
+          "username": {
+            "type": "string",
+            "title": "Username"
+          },
+          "password": {
+            "type": "string",
+            "title": "Password"
+          },
+          "scope": {
+            "type": "string",
+            "title": "Scope",
+            "default": ""
+          },
+          "client_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Client Id"
+          },
+          "client_secret": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Client Secret"
+          }
+        },
+        "type": "object",
+        "required": [
+          "username",
+          "password"
+        ],
+        "title": "Body_login_token_post"
+      },
       "HTTPValidationError": {
         "properties": {
           "detail": {
