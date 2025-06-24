@@ -5,6 +5,8 @@ docs_dir: docs
 
 # Navigation based on your Notes folder
 nav:
+  - Home: index.md
+  - About me: resume-builder/output/resume-from-tpl-1-profile-se3/resume-from-tpl-1-profile-se3_vlatest.md
   - PySpark:
       - index: 01_pyspark/index.md
       - 00_panda: 01_pyspark/00_panda.md
@@ -24,28 +26,29 @@ nav:
       - 04_programing-style: 02_funda/04_programing-style.md
       - 05_useful_function: 02_funda/05_useful_function.md
 
-  - More:
-      - chats : chats.md
-      - resume1: resume-builder/output/resume-from-tpl-2-profile-se3/resume-from-tpl-2-profile-se3_vlatest.html
-      - resume2: resume-builder/output/resume-from-tpl-1-profile-se3/resume-from-tpl-1-profile-se3_vlatest.html
+  - More: chats.md
+  #- resume1: resume-builder/output/resume-from-tpl-2-profile-se3/resume-from-tpl-2-profile-se3_vlatest.html
+  #- resume2: resume-builder/output/resume-from-tpl-1-profile-se3/resume-from-tpl-1-profile-se3_vlatest.html
 
 theme:
-  font:
-    text: Roboto
-    code: Roboto Mono
   name: material
   features:
-    - navigation.tabs
+    - navigation.tracking          # Enables breadcrumbs
+    - navigation.tabs              # Optional: if using tabs layout
+    - navigation.top               # Scroll-to-top button
     - navigation.sections
+    - navigation.expand
+    - navigation.indexes
+    - navigation.footer            # Enables next/previous at bottom
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
       primary: blue grey
-      accent: deep orange
+      accent: pink
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: indigo
-      accent: indigo
+      primary: blue grey
+      accent: pink
   custom_dir: .
 extra_css:
   - mkdocs.css

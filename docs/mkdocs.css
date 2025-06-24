@@ -1,26 +1,3 @@
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #fcf7f9;
-  background: radial-gradient(circle,rgba(252, 247, 249, 1) 0%, rgba(224, 242, 255, 1) 100%);
-  color: #333;
-}
-
-/* Style headers */
-h1, h2, h3, h4 {
-  /*color: #6F8EA8;*/
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 4px;
-}
-
-h1 {
-  font-size: 2em;
-  border-bottom: 2px solid #ddd;
-}
-
-h2 {
-  font-size: 1.5em;
-}
-
 
 /* Code blocks */
 code {
@@ -41,23 +18,14 @@ blockquote {
 }
 
 /* Tables */
-table {
-  border-collapse: collapse;
-  width: 100%;
-}
-table, th, td {
-  border: 1px solid #ccc;
-}
-th, td {
-  padding: 8px;
-  text-align: left;
-}
-th {
-  background-color: #e3f2fd;
-}
+table {  border-collapse: collapse;  width: 100%;}
+table, th, td {  border: 1px solid #ccc;}
+th, td {  padding: 8px;  text-align: left;}
+th {  background-color: #e3f2fd;}
 
-
-
+.md-grid {
+  max-width: 1400px; /* default is 960px */
+}
 /*
 🔷 Layout Containers
 | Selector                 | Description                           |
