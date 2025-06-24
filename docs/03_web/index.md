@@ -31,7 +31,7 @@ async def read_data():
 - Also, frontend itself is written to handle asynchronous calls properly, with promise, observable 😁
 
 ## 3. POC
-### objetive/s
+### 3.1. objective/s
 - security: `fastapi.security`, `PyJWT`
     - with OAuth + jwt 
     - API Key authentication
@@ -66,7 +66,7 @@ async def read_data():
 | File download with progress             | ✅ Stream response with chunked transfer encoding `StreamingResponse` from Starlette  |
 | Data validation                         | ✅ `Pydantic`                                                                         |
 
-### POC Steps
+### 3.2. POC Steps
 - 👉🏻 program::[web2.py](../../src/webModule/controller/web2.py)
 ```
 Step 1: Host Simple API
@@ -125,12 +125,12 @@ Dockerize the project
 Deploy to AWS (ECS/EKS, API Gateway, Lambda)
 ```
 
-### caching :: redis
+### 3.3. caching :: redis
 - key => (e.g., appname:env:item:{item_id}
 
-![img.png](img.png)
+![img.png](../02_funda/99_IMG/002/img2.png)
 
-### Rate limiting (app level)
+### 3.4. Rate limiting (app level)
 - pip install `fastapi-limiter`  `redis`  `redis[asyncio]`
 - FastAPILimiter.init(redis_client)
 
