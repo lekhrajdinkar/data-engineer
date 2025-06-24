@@ -7,6 +7,12 @@ from fastapi.security import  OAuth2PasswordRequestForm
 from src.webModule.util.jwt_token_generator import create_access_token, ACCESS_TOKEN_EXPIRE_MINUTES, verify_token
 from datetime import  timedelta
 
+import os
+from authlib.integrations.starlette_client import OAuth
+from starlette.config import Config
+
+# Ov23lil5yQRaFLoEzvu9 | b9cd5a1192bc6d7aa75fbec2642bc3f6dc613309
+
 app = FastAPI(
     title="Python API doc",
     description="API for python POC",
@@ -17,6 +23,9 @@ app = FastAPI(
     }
 )
 
+
+
+# Step 5: OAuth2 Password Flow + JWT
 @app.post("/token")
 async def login(form_data: OAuth2PasswordRequestForm = Depends()):
     if form_data.username == "admin" and form_data.password == "admin":
@@ -59,7 +68,7 @@ async def handle_params(
         q2: Optional[int] = Query(None, description="Query string parameter (optional int)"),
         h1: Optional[str] = Header(..., description="header (required str)"),
         h2: Optional[int] = Header(None, description="header (optional int)"),
-        payload: dict = Body(..., description="Request body as a dictionary"),
+        payload: dict = Body(None, description="Request body as a dictionary"),
         token_payload: dict = Depends(verify_token)
 ):
     all_header = dict(request.headers)
