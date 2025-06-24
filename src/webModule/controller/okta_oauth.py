@@ -13,7 +13,7 @@ OKTA_INTROSPECT_URL = os.getenv("OKTA_INTROSPECT_URL")
 OKTA_SCOPE = os.getenv("OKTA_SCOPE")
 """
 
-app_config = load_env_config()['oauth']['gh']
+app_config = load_env_config()['oauth']['okta']
 OKTA_CLIENT_ID=app_config['OKTA_CLIENT_ID']
 OKTA_CLIENT_SECRET=app_config['OKTA_CLIENT_SECRET']
 OKTA_TOKEN_URL=app_config['OKTA_TOKEN_URL']
@@ -21,11 +21,12 @@ OKTA_INTROSPECT_URL=app_config['OKTA_INTROSPECT_URL']
 OKTA_SCOPE=app_config['OKTA_SCOPE']
 
 # not in use
-async def get_okta_token():
+async def get_okta_token_async():
     auth = base64.b64encode(f"{OKTA_CLIENT_ID}:{OKTA_CLIENT_SECRET}".encode()).decode()
     headers = {
         "Authorization": f"Basic {auth}",
-        "Content-Type": "application/x-www-form-urlencoded"
+        "Content-Type": "application/x-www-form-urlencoded",
+        "Accept": "application/json"
     }
     data = {
         "grant_type": "client_credentials",

@@ -36,3 +36,9 @@ passlib[bcrypt]==1.7.4
 # =====Oauth (github) ====
 authlib
 python-dotenv
+
+# === rate limiteing + caching
+#slowapi
+aioredis
+fastapi-limiter
+redis

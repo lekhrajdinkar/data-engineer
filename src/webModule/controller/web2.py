@@ -6,10 +6,7 @@ from typing import Optional
 from fastapi.security import  OAuth2PasswordRequestForm
 from src.webModule.controller.jwt_token_generator import create_access_token, ACCESS_TOKEN_EXPIRE_MINUTES
 from datetime import  timedelta
-
 from src.webModule.controller.okta_oauth import verify_okta_token, request_token
-
-
 
 app = FastAPI(
     title="Python API doc",
@@ -21,40 +18,13 @@ app = FastAPI(
     }
 )
 
-# Step 5: OAuth2 Password Flow + JWT
-@app.post("/token")
-async def login(form_data: OAuth2PasswordRequestForm = Depends()):
-    if form_data.username == "admin" and form_data.password == "admin":
-        access_token = create_access_token(
-            data={"sub": form_data.username},
-            expires_delta=timedelta(minutes=ACCESS_TOKEN_EXPIRE_MINUTES)
-        )
-        return {"access_token": access_token, "token_type": "bearer"}
-    raise HTTPException(status_code=400, detail="Incorrect username or password")
-
-# --- Step 1: Host Simple API ---
-# @app.get("/")
-# async def root():  return {"message": "Welcome to FastAPI!"}
-
-# --- Step 2: Custom JSON Response ---
-@app.get("/custom-response")
-async def custom_response():
-    data = {
-        "status": "Accepted",
-        "note": "This is a custom response."
-    }
-    headers = {
-        "X-My-Header": "CustomHeaderValue"
-    }
-    return JSONResponse(status_code=202, content=data, headers=headers)
-
-# --- Step 3: Path, Query, Header, and Body Parameters ---
+# --- Step 1: Path, Query, Header, and Body Parameters ---
 """
 item_id is a path parameter extracted from the URL path (e.g., /items/{item_id}).
 ... vs None ==== mandatory vs optional
 Path(...) means this parameter is required.
 Body(...) required
-"""
+"""  # 5 requests per minute per IP
 @app.post("/items/{item_id}")
 async def handle_params(
         request: Request,
@@ -84,6 +54,91 @@ async def handle_params(
         "user_info" : user_info
     }
 
+# --- Step 2: Custom JSON Response ---
+@app.get("/custom-response")
+async def custom_response():
+    data = {
+        "status": "Accepted",
+        "note": "This is a custom response."
+    }
+    headers = {
+        "X-My-Header": "CustomHeaderValue"
+    }
+    return JSONResponse(status_code=202, content=data, headers=headers)
+
+# --- Step 3:  okta token ---
 @app.post("/okta/request-token")
 async def okta_request_token():
     return request_token()
+
+
+# --- Step 4.1 : rate limiting --- slowapi :: Good for development/testing
+"""
+from slowapi import Limiter, _rate_limit_exceeded_handler
+from slowapi.errors import RateLimitExceeded
+from slowapi.util import get_remote_address
+
+limiter = Limiter(key_func=get_remote_address)
+app.state.limiter = limiter
+app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
+
+apply : @limiter.limit("5/minute")  # 5 requests per minute per IP
+"""
+
+# --- Step 4.2 : rate limiting and caching ---
+"""
+✅ 1. API Gateway (Recommended)
+✅ 2. AWS WAF (Web Application Firewall)
+✅ 3. Redis-based Limiting (in FastAPI)
+if  behind ALB/NLB and want "app-level throttling"
+Use fastapi-limiter with Elasticache Redis
+It works well in microservices if rate limits differ per endpoint/user/token
+
+| Layer                         | Rate Limiting Role                       |
+| ----------------------------  | ---------------------------------------- |
+| **AWS WAF**                   | Edge protection against DDoS/brute force |
+| **API Gateway + AWS redis**    | General per-IP throttle, protect entry   |
+| **FastAPI App**               | Per-user or per-scope custom limits      |
+
+AWS Elasticsearch redis (no boto3), ⬅️
+- Caching API responses 🫙
+- Session storage 🫙
+- Rate limiting 🚫
+- run locally : 
+    docker run --name redis-local -p 6379:6379 -d redis
+    docker run -d --name redisinsight -p 8001:8001 redislabs/redisinsight:latest  (UI)
+
+| Library           | Description                               |
+| ----------------- | ----------------------------------------- |
+| `redis`           | Synchronous Python Redis client           |
+| `aioredis`        | Async Redis client (used in FastAPI apps) |
+| `fastapi-limiter` | Built on `aioredis` for rate limiting     |
+
+"""
+
+# ✅ Connect to ElastiCache Redis on startup
+
+from fastapi import FastAPI, Request, Depends
+from fastapi.responses import JSONResponse
+from fastapi_limiter import FastAPILimiter
+from fastapi_limiter.depends import RateLimiter
+from contextlib import asynccontextmanager
+import aioredis
+redis = None  # global reference
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    global redis
+    redis = await aioredis.from_url(
+        "redis://localhost:6379",  # Use ElastiCache endpoint in prod
+        encoding="utf-8",
+        decode_responses=True
+    )
+    await FastAPILimiter.init(redis)
+    app.state.redis = redis
+    print("🔌 Redis connected")
+    yield
+    await redis.close()
+    print("🔌 Redis closed")
+
+app = FastAPI(lifespan=lifespan)

@@ -9,6 +9,8 @@
 - with obj1 (start and end context) ⬅️
     - with **open**(file1, "r"):
     - special methods : `__start__ , __end__`
+- **global** / **nonlocal** : keyword used inside a function to declare that a variable refers to the global (module-level) variable, allowing you to modify it.
+    - [glocal+nonlocal.py](../../src/pyBasicModule/year2025/others/glocal%2Bnonlocal.py)
 
 ### 1. datatype
 - ![img_2.png](99_IMG/001/img_2.png)
@@ -248,8 +250,8 @@ if __name__ == "__main__":
 ```
 
 ---
-## B. Tips
-### Tip-1 : yield,kwarg,arg,etc
+## B. Randon Topic
+### Topic1 : yield,kwarg,arg,etc
 - `*args` → captures extra positional arguments as a **tuple**
 - `**kwargs` → captures extra keyword arguments as a **dict**
 - `__name__`
@@ -262,7 +264,7 @@ if __name__ == "__main__":
     - function’s state is saved between calls.
     - produces a **generator object**.
     - yield helps a function stream multiple return values one at a time, instead of returning them all at once. ⬅️
-    - generator === function with yield ( stream of multiple return) 
+    - generator === function with yield ( stream of mulTopicle return) 
         - return and pause, 
         - use next(f),
         - so Streams one value at a time
@@ -282,7 +284,7 @@ if __name__ == "__main__":
 | Use case       | One result only           | Sequence of results over time |
 | Memory         | Stores all values at once | Streams one value at a time   |
 
-### Tip-2 : generator-Expression + Comprehension 
+### Topic-2 : generator-Expression + Comprehension 
 - generator vs iterator ⬅️
 - All generators are iterators, not vice versa.
 - both Returns New Collections ⬅️
@@ -317,7 +319,7 @@ if __name__ == "__main__":
 | **Chaining operations**  | `stream().filter().map().collect()` | Use nested comprehensions or `map/filter`  |
 
 
-### Tip-3 : collection 
+### Topic3 : collection 
 - generator, Iteration/Streams vs Comprehensions
 - negative and nested indexing
 - can omit () in tuple
@@ -336,17 +338,15 @@ if __name__ == "__main__":
 - for a,b in **zip**(arr1,arr2) ⬅️
 - priority-Queue : heapq ⬅️
 
-### Tip-4
-- async
-- async with files, sockets, or APIs
+### Topic-4 :: decorator ❓
 - decorator 
-- Mutability or performance comparison 
+- Mutability or performance comparison
 
-### Tip-5 
+### Topic-5 :: deepcopy
 - [copy1.py](../../src/pyBasicModule/year2025/others/copy1.py)
 - time --> time.struct_time --> named tuple
 
-### Tip-6 :: memory mgt
+### Topic-6 :: memory mgt
 - automatic and built-in, 
 - reference count goes to 0, obj deleted
 - private heap for all object allocations.
@@ -368,7 +368,55 @@ if __name__ == "__main__":
 | Check value    | `==`   | `.equals()` |
 | Check identity | `is`   | `==`        |
 
-### Tip-6 :: Threads
+### Topic-6 :: Threads
 - **GIL** global interpreter lock
 - import threading + [thread1.py](../../src/pyBasicModule/year2025/others/thread1.py)
-- 
+
+### Topic-7 :: Async
+- library : asyncio (has **eventloop**)
+- `async` and `await` === same like in JS
+- Python’s keywords for asynchronous programming,
+- enabling you to write code that runs concurrently without blocking.
+- basically, Avoid blocking the main thread.
+- `async def abc():` defines a **coroutine function** + return **coroutine objects**, not direct results.
+- `result = await abc()` : 
+    - await pauses the coroutine, until the awaited task completes, allowing other tasks to run in the meantime.
+    - Once finished, await extracts the actual returned value from that coroutine object.
+    - await "unwraps" the coroutine object into its direct result.
+- purpose : To handle I/O-bound operations efficiently (e.g., network calls, file I/O).
+
+| Keyword         | Purpose                                           |
+| --------------- | ------------------------------------------------- |
+| `async def`     | Defines a coroutine function                      |
+| `await`         | Waits for a coroutine or awaitable (non-blocking) |
+| `asyncio.run()` | Runs the event loop and the main coroutine        |
+
+- vs Js
+
+| Feature                | Python (`async`/`await`)                                | JavaScript (`Promise` + `async`/`await`)             |
+| ---------------------- | ------------------------------------------------------- | ---------------------------------------------------- |
+| Async function returns | Coroutine object                                        | Promise                                              |
+| `await`                | Waits for coroutine to complete, returns resolved value | Waits for Promise to resolve, returns resolved value |
+| Event loop             | `asyncio` event loop manages coroutines                 | JavaScript event loop manages promises               |
+| Syntax                 | `async def func(): ... await ...`                       | `async function func() { await ... }`                |
+
+- **Eventloop** ⬅️
+    - It lets Python run many tasks "at once" **without using threads**, 
+    - by running bits of one task, then another, and so on.
+
+```
+🔁 The event loop:
+    Picks up one coroutine.
+    Runs it until it hits an await (e.g., I/O or sleep).
+    Switches to another coroutine that’s ready to run.
+    Repeats until all tasks are done.
+```
+
+| Function                 | Description                              |
+| ------------------------ | ---------------------------------------- |
+| `asyncio.run(coro)`      | Starts event loop and runs coroutine     |
+| `asyncio.create_task()`  | Schedules a coroutine to run in parallel |
+| `await asyncio.sleep(n)` | Non-blocking delay                       |
+| `asyncio.gather()`       | Run multiple coroutines concurrently     |
+
+
