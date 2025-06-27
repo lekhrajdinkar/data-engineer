@@ -41,3 +41,6 @@ python-dotenv
 fastapi-limiter
 redis
 redis[asyncio]
+
+# === genAI
+tensorflow
