@@ -7,6 +7,19 @@ docs_dir: docs
 nav:
   - Home: index.md
   - About me: resume-builder/output/resume-from-tpl-1-profile-se3/resume-from-tpl-1-profile-se3_vlatest.md
+  - GenAI:
+      - index: 00_gen_ai/00_index.md
+  - PY funda:
+      - 01_kickoff: 02_funda/01_kickoff.md
+      - 00_lang_funda: 02_funda/00_index.md
+      - 02_global-function: 02_funda/02_global-function.md
+      - 03_module+DP: 02_funda/03_module+DP.md
+      - 04_programing-style: 02_funda/04_programing-style.md
+      - 05_useful_function: 02_funda/05_useful_function.md
+      - 99_More 🗨️: chats.md
+
+  - Web : 03_web/index.md
+
   - PySpark:
       - index: 01_pyspark/index.md
       - 00_panda: 01_pyspark/00_panda.md
@@ -18,17 +31,6 @@ nav:
       - 100_pyspark_01_start: 01_pyspark/100_pyspark_01_start.md
       - 100_pyspark_02: 01_pyspark/100_pyspark_02.md
 
-  - python fundamental:
-      - 01_kickoff: 02_funda/01_kickoff.md
-      - 00_index: 02_funda/00_index.md
-      - 02_global-function: 02_funda/02_global-function.md
-      - 03_module+DP: 02_funda/03_module+DP.md
-      - 04_programing-style: 02_funda/04_programing-style.md
-      - 05_useful_function: 02_funda/05_useful_function.md
-
-  - web : 03_web/index.md
-
-  - More: chats.md
   #- resume1: resume-builder/output/resume-from-tpl-2-profile-se3/resume-from-tpl-2-profile-se3_vlatest.html
   #- resume2: resume-builder/output/resume-from-tpl-1-profile-se3/resume-from-tpl-1-profile-se3_vlatest.html
 
