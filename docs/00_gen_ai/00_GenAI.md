@@ -2,18 +2,48 @@
 - [gen ai 1](https://chatgpt.com/c/685dfae8-a808-800d-bc8c-4d992926601d) 🗨️
 - [gen ai 2](https://chatgpt.com/c/685e3233-8420-800d-a08a-2cd8b933dad6) 🗨️
 
+```
+- Artificial Intelligence
+  ├── Machine Learning
+  │   └── Deep Learning
+  │       └── Generative AI
+``` 
+
 --- 
 
 ## Intro
+- **Inference** is the process of using a trained model to make predictions or generate outputs based
 - create new content such as text, images, audio, code, or video.
 - AI "generates" new data that is similar to the **data it was trained on**.
-- Most 
+- **Specialized AI datacenters**
+    - requires massive compute, typically across thousands of GPUs over weeks/months. NVIDIA A100  H100.
+    - supercomputers with 10,000–25,000 GPUs, interconnected by high-speed NVLink
+    - Training data is stored in fast, distributed SSD/NVMe storage. Needs hundreds of TBs to petabytes.
+    - Infiniband : 400 Gbps
+- example 
 ```
-Text: ChatGPT generating human-like conversations, essays, or emails.
-Images: DALL·E creating images from text descriptions.
-Audio: AI generating music or voice from a script.
-Code: GitHub Copilot generating programming code suggestions.
+Text    : ChatGPT generating human-like conversations, essays, or emails.
+Images  : DALL·E creating images from text descriptions.
+Audio   : AI generating music or voice from a script.
+Code    : GitHub Copilot generating programming code suggestions.
 ```
+| Term       | Full Form               | What It Means                                                                     | Examples                                              |
+| ---------- | ----------------------- | --------------------------------------------------------------------------------- | ----------------------------------------------------- |
+| **AI**     | Artificial Intelligence | The broad field of building machines that mimic human intelligence                | Chatbots, self-driving cars, recommendation systems   |
+| **ML**     | Machine Learning        | A subset of AI where machines learn from data without being explicitly programmed | Spam detection, fraud detection, image classification |
+| **DL**     | Deep Learning           | A subset of ML using deep neural networks for complex tasks                       | Face recognition, speech-to-text, GPT models          |
+| **Gen AI** | Generative AI           | A type of AI (often using DL) that generates new content (text, image, etc.)      | ChatGPT, DALL·E, GitHub Copilot, Sora                 |
+
+
+## FM vs LLM
+| **Aspect**        | **Foundation Model**                                                                     | **LLM (Large Language Model)**                                                        |
+| ----------------- | ---------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| **Definition**    | A large, general-purpose model trained on diverse data that can be adapted to many tasks | A type of foundation model specialized in understanding and generating human language |
+| **Domain**        | Multimodal: text, images, audio, video, code, etc.                                       | Primarily text (some LLMs now include code & basic image understanding)               |
+| **Use Cases**     | Chatbots, image generation, code generation, audio transcription, robotics               | Text generation, summarization, translation, Q\&A                                     |
+| **Training Data** | Diverse: images, video, text, code, audio, etc.                                          | Mostly large-scale text and code                                                      |
+
+
 ## key technology
 - **Foundation Model** FM
 - **Large Language Models** (LLMs): 

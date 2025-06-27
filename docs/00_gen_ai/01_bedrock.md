@@ -1,6 +1,10 @@
 ## Intro
+- interface to multiple foundation models
+    - https://us-east-2.console.aws.amazon.com/bedrock/home?region=us-east-2#/model-catalog/serverless/amazon.nova-premier-v1:0 
+    - https://us-east-2.console.aws.amazon.com/bedrock/home?region=us-east-2#/model-catalog/serverless/amazon.nova-micro-v1:0
+    - ...
 - Build Generative AI (Gen-AI) applications on AWS
-- Fully-managed service
+- Fully-managed service : don’t need to manage GPU infra, **use models via simple API calls** + `boto3`
 - provides access to multiple FM from different providers ⬅️
 - **Unified APIs**
 - **Provisioned throughput** : 
@@ -22,6 +26,7 @@
 ## Transfer Learning >> Fine tune
 
 - will change the **weights** in layers (neural network)
+- All models can be fine-tuned
 
 | Step                | Transfer Learning          | Fine-Tuning                     |
 | ------------------- | -------------------------- | ------------------------------- |
@@ -39,9 +44,7 @@
     - takes more time but usually gets better accuracy
 
 ### fine tune
-- All models can be fine-tuned
 - Adapt a **copy of FM** with our own Training data ( format +  keep in S3)
-
 - further trained on a particular field/domain by ML engineers
 - Adapt general knowledge to our use case (e.g., legal , financial, medical data, etc)
 - it will eat up Provisioned throughput $$
@@ -51,12 +54,35 @@ Full                : Update all model weights (requires lots of compute)
 Parameter-efficient : Update only small parts (like LoRA, adapters) to save cost and time
 Prompt              : Learn soft prompts without changing model weights
 ```
-- **Fine tune::instruction based**
-    - Start with a large pre-trained model
-    - **label** ( [ {`prompt:` `response:`}])
-    - **unlabel** ( [{`input:`}] ) === domain-adaptation fine-tuning
-    - **Single/mutli turn Messaging**  --> conversation ( { `system:`, `messages:` [ { `role`:User/assistant, `content:` }, {}, ...] } )
-        - chatbots
+- **strategies**
+```
+== Supervised Instruction Fine-Tuning ==
+Labeled data :
+[
+  {
+    "prompt": "How do you boil an egg?",
+    "response": "Place the egg in boiling water for 9–12 minutes."
+  }
+]
+
+== Domain Adaptation Fine-Tuning ==
+unlabeled domain-specific data :
+[
+  { "input": "Medical record of a patient with Type 2 diabetes..." }
+]
+
+== Conversation and Multi-Turn Messaging ==
+To handle chat-style applications - Customer support bots, etc
+{
+  "system": "You are a helpful assistant.",
+  "messages": [
+    { "role": "user", "content": "What's the weather in LA?" },
+    { "role": "assistant", "content": "It’s sunny and 75°F in Los Angeles today." },
+    { "role": "user", "content": "What about tomorrow?" }
+  ]
+}
+
+```
 
 ### Re-train
 

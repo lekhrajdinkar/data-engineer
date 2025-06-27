@@ -27,12 +27,11 @@ nav:
       - ETL_02: 01_pyspark/03_ETL_2.md
       - file_format: 01_pyspark/04_file_format.md
       - pyspark_01: 01_pyspark/100_pyspark_01_start.md
-      #- 100_pyspark_02: 01_pyspark/100_pyspark_02.md
 
   - GenAI:
       - index: 00_gen_ai/00_GenAI.md
-  #- resume1: resume-builder/output/resume-from-tpl-2-profile-se3/resume-from-tpl-2-profile-se3_vlatest.html
-  #- resume2: resume-builder/output/resume-from-tpl-1-profile-se3/resume-from-tpl-1-profile-se3_vlatest.html
+      - AWS:
+          - bedrock: 00_gen_ai/01_bedrock.md
 
 theme:
   name: material
