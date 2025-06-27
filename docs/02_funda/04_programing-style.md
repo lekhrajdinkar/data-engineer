@@ -1,6 +1,3 @@
-## A. Procedural
----
-## B. OOPS
 -  **package** is a directory containing an `__init__.py`
 - object creation : `__new__(T,V) + __init__`
 - **enum.Enum**
@@ -28,17 +25,5 @@
 - **error handling**:
     - try, except MyError as e, finally
 
----
-## C. functional
 
-| Type                          | Description          | Example         |
-| ----------------------------- | -------------------- | --------------- |
-| `function`                    | Function object      | `def f(): pass` |
-| `lambda`                      | Anonymous function   | `lambda x: x*2` |
-| `generator`                   | Lazy sequence        | `yield`         |
-| `coroutine`                   | For async/await      | `async def`     |
-| `classmethod`, `staticmethod` | Class/static methods |                 |
-
-- **functional Operation**
-    - filter, map, any, all, sum ❓
 

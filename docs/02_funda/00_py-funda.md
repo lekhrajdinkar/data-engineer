@@ -419,3 +419,14 @@ if __name__ == "__main__":
 | `await asyncio.sleep(n)` | Non-blocking delay                       |
 | `asyncio.gather()`       | Run multiple coroutines concurrently     |
 
+### topic 8 :: functional
+
+| Type                          | Description          | Example         |
+| ----------------------------- | -------------------- | --------------- |
+| `function`                    | Function object      | `def f(): pass` |
+| `lambda`                      | Anonymous function   | `lambda x: x*2` |
+| `generator`                   | Lazy sequence        | `yield`         |
+| `coroutine`                   | For async/await      | `async def`     |
+| `classmethod`, `staticmethod` | Class/static methods |                 |
+
+- filter, map, any, all, sum

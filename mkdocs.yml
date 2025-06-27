@@ -1,36 +1,36 @@
-site_name: Python Notes (Lekhraj Dinkar)
-site_description: Documentation for ETL processes using PySpark
+site_name: Modern system by LekhrajDinkar
+site_description: Modern system by LekhrajDinkar
 site_author: Lekhraj Dinkar
 docs_dir: docs
 
 # Navigation based on your Notes folder
 nav:
-  - Home: index.md
-  - About me: resume-builder/output/resume-from-tpl-1-profile-se3/resume-from-tpl-1-profile-se3_vlatest.md
-  - GenAI:
-      - index: 00_gen_ai/00_index.md
-  - PY funda:
-      - 01_kickoff: 02_funda/01_kickoff.md
-      - 00_lang_funda: 02_funda/00_index.md
-      - 02_global-function: 02_funda/02_global-function.md
-      - 03_module+DP: 02_funda/03_module+DP.md
-      - 04_programing-style: 02_funda/04_programing-style.md
-      - 05_useful_function: 02_funda/05_useful_function.md
-      - 99_More 🗨️: chats.md
-
+  - Home:
+    - Other site: index.md
+    - About me: resume-builder/output/resume-from-tpl-1-profile-se3/resume-from-tpl-1-profile-se3_vlatest.md
   - Web : 03_web/index.md
+  - Python:
+      - kickoff: 02_funda/01_kickoff.md
+      - lang_funda: 02_funda/00_py-funda.md
+      - global-function: 02_funda/02_global-function.md
+      - modules: 02_funda/03_module+DP.md
+      - OOPS: 02_funda/04_programing-style.md
+      - useful_function: 02_funda/05_useful_function.md
+      - More 🗨️: chats.md
 
   - PySpark:
       - index: 01_pyspark/index.md
-      - 00_panda: 01_pyspark/00_panda.md
-      - 01_setup_locally: 01_pyspark/01_setup_locally.md
-      - 02_architecture: 01_pyspark/02_architecture.md
-      - 03_ETL_1: 01_pyspark/03_ETL_1.md
-      - 03_ETL_2: 01_pyspark/03_ETL_2.md
-      - 04_file_format: 01_pyspark/04_file_format.md
-      - 100_pyspark_01_start: 01_pyspark/100_pyspark_01_start.md
-      - 100_pyspark_02: 01_pyspark/100_pyspark_02.md
+      - pandas: 01_pyspark/00_panda.md
+      - setup_locally: 01_pyspark/01_setup_locally.md
+      - architecture: 01_pyspark/02_architecture.md
+      - ETL_01: 01_pyspark/03_ETL_1.md
+      - ETL_02: 01_pyspark/03_ETL_2.md
+      - file_format: 01_pyspark/04_file_format.md
+      - pyspark_01: 01_pyspark/100_pyspark_01_start.md
+      #- 100_pyspark_02: 01_pyspark/100_pyspark_02.md
 
+  - GenAI:
+      - index: 00_gen_ai/00_GenAI.md
   #- resume1: resume-builder/output/resume-from-tpl-2-profile-se3/resume-from-tpl-2-profile-se3_vlatest.html
   #- resume2: resume-builder/output/resume-from-tpl-1-profile-se3/resume-from-tpl-1-profile-se3_vlatest.html
 
