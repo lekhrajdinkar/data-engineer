@@ -1,4 +1,4 @@
-# NOT WORKING
+# NOT WORKING :  The provided model identifier is invalid.
 
 import boto3
 import json
