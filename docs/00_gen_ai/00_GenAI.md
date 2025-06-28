@@ -224,15 +224,42 @@ Think of it this way 🧠
 ---
 ## F. Core :: AI / ML 🔵
 - Training-data >> **ML alog** >> Model
+### Transformer architecture ⬅️
+- helps FM foundation model to integrate idea from existing ML/DL model (mentioned above)
 ### training Data
 - Structure data - csv,rdbms, timeseries data, etc
-- un-Structure data - image(pixel),object, coments etc | have specific type of ML alog to deal with these.
+- un-Structure data - image(pixel),object, comments etc | have specific type of ML alog to deal with these.
 - label Data - input+label | added by human/auto, use to define mapping x1 --> o1 | **supervised leaning**
 - un-label Data - input | model itself tries to find pattern -inheritance,relationship, etc | **un-supervised leaning** 
 
-### ML learning type:
+### ML algo : working type:
+- **supervised** (label by humans)
 ![img_1.png](../99_img/genai/02/img_1.png)
+- **unsupervised** : ML algo discover inherent patterns, structures,  or relationships within the **input data**
+    - **clustering** : eg: create customer group based on buying pattern + market analysis
+    - **Anomaly** : bank transaction, figure out unique/unrare txn for fraud detection
+- **semi-supervised**
+    - mix of both
+    - since labeling expensive. can label all data.
+- **self-supervised**  (auto-labelling)
+    -  first create multiple Pretask
+    - solve this pretask
+    - creates suedo label
+    - complex
+    - chatGPT, BERT uses this.
+- **RLHF** 🟠
+    - **reinforcement learning** (self learn by ML model)
+        - agent, env, action, reward() fn
+        - **agent** learns by performing **actions** in **env** to maximize **award**
+        - used in gaming, car driving self, finance  for strategic decision ,etc
+    - **reinforcement learning** ( reward fn --> replace with human reward )
+         - Model1 learns by response/human ⬅️
+         - eg: used alot in LLM model, sometime chatGPT gives answer1 or answer2 ? ask to pick one.
+         - this goes in **reward-model** ⬅️
+         - reward-model will be used to give reward in future
+         - so can say reward from ML model, but indirectly from human response
 
+![img.png](../02_funda/99_IMG/002/rlhf.png)
 
 ### DL :: **neural network**
 - tiny Nodes, connected together
@@ -273,7 +300,16 @@ Think of it this way 🧠
   - **LSTM** Long Short-Term Memory
 
 - **ResNet (Residual Network)** – Neural Network (CNN) used for image recognition tasks, object detection, facial recognition
-  
+
+- **temperature**
+
+| **Temperature Value** | **Effect on Output**                                            |
+| --------------------- | --------------------------------------------------------------- |
+| `0.0`                 | Very **deterministic**, always picks the most likely next word. |
+| `~0.7`                | **Balanced** output — some randomness, still coherent.          |
+| `1.0`                 | **Creative**, more diverse outputs, may take risks.             |
+| `>1.0`                | **Highly random**, can become incoherent or off-topic.          |
+
 ---
 ## G. GenAI tools and frameworks 📚
 - being IT professional, ⬅️ 
