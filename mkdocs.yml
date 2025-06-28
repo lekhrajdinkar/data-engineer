@@ -29,7 +29,9 @@ nav:
       - pyspark_01: 01_pyspark/100_pyspark_01_start.md
 
   - GenAI:
-      - index: 00_gen_ai/00_GenAI.md
+      - Home:
+          - home: 00_gen_ai/00_GenAI.md
+          - start: 00_gen_ai/00_start.md
       - AWS:
           - 01_bedrock: 00_gen_ai/01_bedrock.md
           - 02_Amazon_Q: 00_gen_ai/02_Amazon_Q.md
