@@ -3,6 +3,7 @@
 - [gen ai 2](https://chatgpt.com/c/685e3233-8420-800d-a08a-2cd8b933dad6) 🗨️
 - 🟠 Udemy :: https://www.udemy.com/course/aws-ai-practitioner-certified/learn/lecture/44901525?start=15#overview
 - 🟠 AWS training : https://skillbuilder.aws/learning-plan/G8ENMJ5QBE/aws-artificial-intelligence-practitioner-learning-plan/SU2A1EJM1A (8)
+
     ```
     --- 8 sections ---
     Fundamentals of AI and ML
@@ -71,8 +72,10 @@
 --- 
 ## B. Intro :: genAI
 - **Inference** is the process of using  FM to make predictions or generate **new** outputs
+- AWS : run Small Language Model (SLM) on the edge device
 - genAI generates new data/content (ext, images, audio, code, or video) that is similar to the **data it was trained on**.
 - rely on DL model and ML model 
+- ![img_2.png](../99_img/genai/03/img_2.png)
 ```
 == AI::NLP ==
     Text    : ChatGPT generating human-like conversations, essays, or emails.
@@ -122,8 +125,8 @@ Code    : GitHub Copilot generating programming code suggestions.
 - **Reverse diffusion** :the noisy image is gradually introduced to denoising until a new image is generated
 
 ### Other generative models
-- GANs
-- VAEs
+- GANs 
+- VAEs (inspired from Diffusion model)
 
 ---
 ## D. FM :: life cycle ✅
@@ -175,7 +178,6 @@ use it (inference) - batch + realtime
   | **Fine-Tuning**       | Start from a pre-trained model and train some or all layers | You want to **adapt** a model to your domain          |
 
 ### E.1 Fine-tuning
-
 ### E.2 Transfer learning
 
 ```
@@ -210,16 +212,61 @@ Think of it this way 🧠
 
 
 ### E.4 Prompt Engineering
-- **Prompts** --> instructions for foundation models, to enhance the output of FM for our needs
+- **Prompts** --> instructions for FM, foundation models, to enhance the output as per business/our needs
 - prompt Engineering : developing, designing, and optimizing prompts
 
-### E.5 RAG
-- [udemy demo 1](https://www.udemy.com/course/aws-ai-practitioner-certified/learn/lecture/44886393#overview)
+### E.5 RAG + embedded Model
+- [udemy demo 1](https://www.udemy.com/course/aws-ai-practitioner-certified/learn/lecture/44886393#overview) - custom model created, pdf loaded in S3, etc
 - [udemy demo 2](https://www.udemy.com/course/aws-ai-practitioner-certified/learn/lecture/44901525#overview)
 - embed and index internal documents (PDFs, FAQs, docs).
-- Store them in a **vector database** (e.g., Amazon OpenSearch, Pinecone, Redis with KNN).
+- Store them in a **vector database** (e.g., Amazon OpenSearch, Pinecone, Redis with KNN). bedrocks takes care
 - app retrieves relevant chunks from vector DB and includes them in the model prompt.
-- s3 > embedding Model > vector DB
+- s3 > **embedding Model** > vector DB
+
+---
+
+## E. Evaluation
+### Model Fit:  
+- **how well captures the patterns**
+- model gives good predictions for training data but not for the new data
+
+```
+Describes how well your model captures the patterns in training data.
+
+    ✳️Underfitting    : 
+        Model is too simple 
+        misses patterns
+    
+    ✳️Overfitting     : 
+        Model is too complex
+        memorizes noise.
+        model gives good predictions for training databut not for the new data
+        
+    ✳️balanced fit    : Balances bias and variance, performs well on both train and test data
+```
+
+![img_1.png](../99_img/genai/03/img_1.png)
+
+### Bias and Variance
+- **bias** : Difference between **value** - predicted vs actual 
+    - high === more error
+    - fix:
+- **Variance** : How much the **performance** of a model on changes of similar training datasSet. 
+    - high === sensitive
+    - eg: worked well/overfited in dev, but underfit/prod in prod data.
+    - fix:
+
+| Concept      | Description                                                                         | Ideal?                   |
+| ------------ | ----------------------------------------------------------------------------------- | ------------------------ |
+| **Bias**     | Error from wrong assumptions. E.g., too simple model can't learn the true pattern.  | ❌ Low bias is better     |
+| **Variance** | Error from too much **sensitivity** to training data (model changes a lot on new data). | ❌ Low variance is better |
+| Goal         | Trade-off: find balance → low bias + low variance = **generalized model**           | ✅ Yes                    |
+
+### Confusion Matrix ❓
+- soon 
+
+### Regression Matrix ❓
+- soon
 
 ---
 ## F. Core :: AI / ML 🔵
@@ -232,34 +279,37 @@ Think of it this way 🧠
 - label Data - input+label | added by human/auto, use to define mapping x1 --> o1 | **supervised leaning**
 - un-label Data - input | model itself tries to find pattern -inheritance,relationship, etc | **un-supervised leaning** 
 
-### ML algo : working type:
+### ML algo : learning types
 - **supervised** (label by humans)
 ![img_1.png](../99_img/genai/02/img_1.png)
-- **unsupervised** : ML algo discover inherent patterns, structures,  or relationships within the **input data**
+- ✳️**unsupervised** : ML algo discover inherent patterns, structures,  or relationships within the **input data**
     - **clustering** : eg: create customer group based on buying pattern + market analysis
+    - **Rule Learning Technique** : eg rule-1: keep frequently buy item items together
     - **Anomaly** : bank transaction, figure out unique/unrare txn for fraud detection
-- **semi-supervised**
+- ✳️**semi-supervised**
     - mix of both
-    - since labeling expensive. can label all data.
-- **self-supervised**  (auto-labelling)
-    -  first create multiple Pretask
-    - solve this pretask
-    - creates suedo label
-    - complex
+    - since labeling expensive. cannot label all data.
+- ✳️**self-supervised**  (auto-labelling)
+    -  first create multiple Pre-task
+    - solve this pre-task
+    - creates pseudo labels for tuning
+    - complex process.
     - chatGPT, BERT uses this.
-- **RLHF** 🟠
-    - **reinforcement learning** (self learn by ML model)
-        - agent, env, action, reward() fn
-        - **agent** learns by performing **actions** in **env** to maximize **award**
-        - used in gaming, car driving self, finance  for strategic decision ,etc
-    - **reinforcement learning** ( reward fn --> replace with human reward )
-         - Model1 learns by response/human ⬅️
-         - eg: used alot in LLM model, sometime chatGPT gives answer1 or answer2 ? ask to pick one.
-         - this goes in **reward-model** ⬅️
-         - reward-model will be used to give reward in future
-         - so can say reward from ML model, but indirectly from human response
-
-![img.png](../02_funda/99_IMG/002/rlhf.png)
+- ✳️**RL / reinforcement learning** 
+    - self learn by ML model
+    - **agent, env, action, reward() fn**
+    - **agent** learns by performing **actions** in **env** to maximize **award**
+    - used in gaming/chess, car driving self, finance  for strategic decision ,etc
+    - https://www.youtube.com/@aiwarehouse
+    - ![img.png](../99_img/genai/03/img.png)
+- ✳️**RLHF / reinforcement learning by human feedback** 
+    - reward fn in RL --> replace with human rewards
+    - Model1 learns by response/human feedbacks ⬅️
+    - eg: used alot in LLM model, sometime chatGPT gives answer1 or answer2 ? ask to pick one.
+    - human feedback goes in **reward-model** ⬅️
+    - and this reward-model will be used to give reward in future
+    - so  indirectly rewarded from human response
+    - ![img.png](../02_funda/99_IMG/002/rlhf.png)
 
 ### DL :: **neural network**
 - tiny Nodes, connected together
@@ -310,15 +360,65 @@ Think of it this way 🧠
 | `1.0`                 | **Creative**, more diverse outputs, may take risks.             |
 | `>1.0`                | **Highly random**, can become incoherent or off-topic.          |
 
+- **Hyperparameter** ⬅️
+    - Settings that define the model structure and learning algorithm and process
+    - use: SageMaker Automatic Model Tuning (AMT)
+    - **learning rate** : how fast weight being updated
+    - **batch size** : no og training item. 1000 in one go, or 50, 50, 50,,,
+    - **number of epochs** : iterations
+    - **regularization** : to adjust over/under fitting
 ---
-## G. GenAI tools and frameworks 📚
+## G. genAI Project
+![img_3.png](../99_img/genai/03/img_3.png)
+```
+🔸Define business goals
+• Stakeholders define the value, budget and success criteria
+• Defining KPI (Key Performance Indicators) is critical
+
+🔸ML problem framing
+• Convert the business problem and into a ML problem
+• Determine if ML is appropriate ⬅️
+• Data scientist, data engineers and ML architects, (SME) collaborate
+
+🔸 Data processing
+• Convert the data into a usable format ⬅️
+• Data collection and integration (make it centrally accessible) ⬅️
+• Data preprocessing and data visualization (understandable format)
+• Feature engineering: create, transform and extract variables from data
+
+🔸Model development
+• Model training, tuning, and evaluation
+• Iterative process
+• Additional feature engineering and tune model "hyperparameters"
+
+ 🔸Retrain
+• Look at data and features to improve the model
+• Adjust the model training hyperparameters
+
+🔸Deployment
+• If results are good, the model is deployed and ready to make inferences
+• Select a deployment model (real-time, serverless, asynchronous, batch, on-premises…, bedrock)
+
+🔸Monitoring
+• Deploy a system to check the desired level of performance
+• Early detection and mitigation
+• Debug issues and understand the model’s behavior
+
+🔸Iterations
+• Model is continuously improved and refined as new data become available
+• Requirements may change
+• Iteration is important to keep the model accurate and relevant over time
+```
+
+---
+## H. GenAI tools and frameworks 📚
 - being IT professional, ⬅️ 
     - we will build and deploy an application that uses those models via API calls. 
     - do Prompt Engineering,  Instruction Templates, high-quality prompts
     - Format inputs/outputs (e.g., system, user, assistant message structures)
     - RAG
     - build chatbot ui, calling Model API
-- streamlit UI
+- **streamlit UI**
 - **Jupyter Notebooks** for experimentation
 - `diffusers`  
 - `TensorFlow` 

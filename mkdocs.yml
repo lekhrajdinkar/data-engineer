@@ -3,6 +3,9 @@ site_description: Modern system by LekhrajDinkar
 site_author: Lekhraj Dinkar
 docs_dir: docs
 
+extra_javascript:
+  - mkdocs.js
+
 # Navigation based on your Notes folder
 nav:
   - Home:
@@ -30,8 +33,8 @@ nav:
 
   - GenAI:
       - Home:
-          - home: 00_gen_ai/00_GenAI.md
-          - start: 00_gen_ai/00_start.md
+          - Start: 00_gen_ai/00_start.md
+          - genAI: 00_gen_ai/00_GenAI.md
       - AWS:
           - 01_bedrock: 00_gen_ai/01_bedrock.md
           - 02_Amazon_Q: 00_gen_ai/02_Amazon_Q.md

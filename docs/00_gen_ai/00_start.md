@@ -1,3 +1,36 @@
+| Problem Type                           | Use...           |
+| -------------------------------------- | ---------------- |
+| Fixed rules, business logic            | Code/Service/API |
+| Prediction, classification, generation | AI/ML Model      |
+
+## ✅ When to Use Service/API
+```
+Problem has clear rules, business logic, or deterministic behavior
+
+Input → predictable processing → output
+
+Examples:
+    Validate email, calculate tax, apply discount rules
+    CRUD operations
+    REST APIs for form submission or user management
+    Use standard coding + services (Java/Python API, Lambda, etc.)
+```
+
+## ✅ When to Use an AI/ML Model
+```
+Problem involves uncertainty, prediction, or pattern recognition
+No clear rules — you need the model to “learn” from data
+
+Examples:
+    Predict customer churn or product demand
+    Extract insights from documents (NLP/IDP)
+    Analyze sentiment, classify images, recommend products
+    Strategic tasks like content generation or forecasting
+    Use ML/AI models (SageMaker, Bedrock, Comprehend, etc.)
+```
+
+
+---
 ## Conversation-1 
 ```
 So now what I understood so there are lots of Machine learning models already exists 
@@ -30,7 +63,7 @@ Also tell me The Python library which I can use to connect with those models.
 | ✅ Retrieval Models                      | BM25, Dense Passage Retrieval (DPR), FAISS, ColBERT | RAG & semantic search                   | Used in Bedrock RAG, LangChain                 | `faiss`, `chromadb`, `sentence-transformers`         |
 
 
-## Key Python Libraries to Work with These Models
+### Key Python Libraries to Work with These Models
 | **Library**                      | **Use Case**                                              |
 | -------------------------------- | --------------------------------------------------------- |
 | `transformers` (HuggingFace)     | NLP, LLMs, vision-language, BERT/GPT/etc.                 |
