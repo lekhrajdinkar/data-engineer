@@ -21,20 +21,34 @@
 - AI Artificial Intelligence
   ├── ML Machine Learning
   │   └── DL Deep Learning (Neural n/w, stacker layer)
-  │       └── GenAI Generative AI
+  │       └── GenAI Generative AI (CSE)
 
 ``` 
-### NLP (AI model)
+### IDP (Intelligent doc processing)
+### NLP (ML model)
 - text classification
 - sentiment analysis
 - machine translation 
 - language generation.
 
-### Computer vision (AI model)
+### Computer vision (ML model)
 - makes it possible for computers to interpret and understand digital images and videos.
 - image classification
 - object detection
 - image segmentation
+
+### Wavenet model
+- model to generate raw audio waveform, used in Speech Synthesis
+
+### KNN Model
+- model use for classification  in supervised learning
+- eg: learn pattern and figure out spam email.
+
+### GAN
+- (Generative Adversarial Network) 
+- models used to generate **synthetic data** 
+- such as images, videos or sounds that resemble the training data. 
+- Helpful for data augmentation
 
 ### traditional DL Model
 - collect > prep > label > train > model-1 (**static**)
@@ -43,8 +57,10 @@
 - collect > prep > label > train > FM (humungous) > adapt to perform multiple task (**dynamic**) ⬅️
     - How ? here we go **FM** comes 
 
+---
 ### FM ⬅️
 - models that are pretrained on **internet-scale data** --> FM
+- Multi-purpose models backed by neural network/s
 - FMs can also serve as the starting point for developing more **specialized models**
 - **Specialized AI datacenters**
   - requires massive compute, typically across thousands of GPUs over weeks/months. NVIDIA A100  H100.
@@ -73,8 +89,11 @@ Code    : GitHub Copilot generating programming code suggestions.
 
 ---
 ## C. genAI Models
-### LLM
-- LLM vs FM
+### LLM (BERT,GPT,etc)
+- large language model.
+- eg: google **BERT**, ChatGPT (generative Pretrained **Transformer**)
+- BERT are similar to GPY but read in both direction.
+- transformer Model : helps to process by sentence, not by word
 
 | **Aspect**        | **Foundation Model**                                                                     | **LLM (Large Language Model)**                                                        |
 | ----------------- | ---------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
@@ -87,6 +106,7 @@ Code    : GitHub Copilot generating programming code suggestions.
   - AI model trained on massive amounts of text to understand
   - and generate human-like language.
   - Can answer questions, summarize, translate, write code, and more.
+  - tokens (words/phrase) + embedding(number for token) + vector(define relaton b/w words/token)
 - **Diffusion Model**s / GANs:
   - Used for generating images and videos.
 
@@ -126,6 +146,7 @@ use it (inference) - batch + realtime
 - transfer learning(new layer) |  🔺fine tune (some layer) |  re-train (all layer)::rare/$$
 
  >> evaluate again  ( metrics and benchmarks)
+  Training vs. Validation vs. Test Set
 
 ⭕ Deploy FM :: 
 - base(already hosted)
@@ -198,10 +219,21 @@ Think of it this way 🧠
 - embed and index internal documents (PDFs, FAQs, docs).
 - Store them in a **vector database** (e.g., Amazon OpenSearch, Pinecone, Redis with KNN).
 - app retrieves relevant chunks from vector DB and includes them in the model prompt.
+- s3 > embedding Model > vector DB
 
 ---
-## F. Core Architecture
-### Transformers
+## F. Core :: AI / ML 🔵
+- Training-data >> **ML alog** >> Model
+### training Data
+- Structure data - csv,rdbms, timeseries data, etc
+- un-Structure data - image(pixel),object, coments etc | have specific type of ML alog to deal with these.
+- label Data - input+label | added by human/auto, use to define mapping x1 --> o1 | **supervised leaning**
+- un-label Data - input | model itself tries to find pattern -inheritance,relationship, etc | **un-supervised leaning** 
+
+### ML learning type:
+![img_1.png](../99_img/genai/02/img_1.png)
+
+
 ### DL :: **neural network**
 - tiny Nodes, connected together
 - node talking and identify patterns
@@ -235,18 +267,13 @@ Think of it this way 🧠
     - control how input data is transformed as it passes through the network
     - Training adjusts these weights to minimize errors and improve predictions.
 
-### **Recurrent Neural Networks** (RNNs)
-- used for sequence data like time series, text, or speech.
-- **GRU** Gated Recurrent Unit
-- **LSTM** Long Short-Term Memory
-  
-  | Feature    | LSTM                           | GRU                        |
-  | ---------- | ------------------------------ | -------------------------- |
-  | Gates      | 3 (input, forget, output)      | 2 (update, reset)          |
-  | Memory     | Hidden + cell state            | Single state (hidden only) |
-  | Complexity | Higher                         | Lower (faster training)    |
-  | Accuracy   | Slightly better for long tasks | Often comparable           |
+- **Recurrent Neural Networks** (RNNs)
+  - neural network to learn from  sequence data like time series, text, or speech and predict
+  - **GRU** Gated Recurrent Unit
+  - **LSTM** Long Short-Term Memory
 
+- **ResNet (Residual Network)** – Neural Network (CNN) used for image recognition tasks, object detection, facial recognition
+  
 ---
 ## G. GenAI tools and frameworks 📚
 - being IT professional, ⬅️ 
