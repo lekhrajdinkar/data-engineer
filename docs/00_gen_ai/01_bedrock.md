@@ -1,4 +1,4 @@
-## 0. Intro
+## Intro
 - interface to multiple foundation models
     - https://us-east-2.console.aws.amazon.com/bedrock/home?region=us-east-2#/model-catalog/serverless/amazon.nova-premier-v1:0 
     - https://us-east-2.console.aws.amazon.com/bedrock/home?region=us-east-2#/model-catalog/serverless/amazon.nova-micro-v1:0
@@ -23,37 +23,37 @@
 - **RAG** (Retrieval-Augmented Generation, knowledge base)
 - **LLM Agents**
 
-## 1. Transfer Learning >> Fine tune
+---
+## Model Lifecycle in Bedrock
+- base model as a read-only template that AWS keeps stable
+- When you customize it, AWS makes a copy for your account, like creating a fork of the model
 
-- will change the **weights** in layers (neural network)
-- All models can be fine-tuned
+| Phase                  | Description                                                                                    |
+| ---------------------- | ---------------------------------------------------------------------------------------------- |
+| **Base Model**         | Hosted by AWS (e.g., Titan, Claude, Jurassic, Mistral) — immutable and shared                  |
+| **Fine-Tuned Version** | Your private copy with added training or instructions — only visible to you                    |
+| **Inference Endpoint** | You call *your* version of the model via API; others don’t see or use it                       |
+| **Billing**            | You’re billed for fine-tuning, storage, and inference time separately from the base model cost |
 
-| Step                | Transfer Learning          | Fine-Tuning                     |
-| ------------------- | -------------------------- | ------------------------------- |
-| Reuse early layers? | Yes, frozen (no training)  | Yes, but some layers retrained  |
-| Train new layers?   | Only new classifier layers | Classifier + some old layers    |
-| Speed               | Faster                     | Slower                          |
-| Accuracy            | Good for limited data      | Better for task-specific tuning |
 
-### **Transfer Learning**
-- reusing a pre-trained model to adapt it to a **new related task**
-- widely used in NLP and image model
-- eg: new layer added for new feature, then train only last layer.
-- **fine-tune** is subtype
-    - Instead of only training the last layer, you also adjust some earlier layers
-    - takes more time but usually gets better accuracy
-
-### fine tune
-- Adapt a **copy of FM** with our own Training data ( format +  keep in S3)
+---
+## Optimized FM :: Fine tune
+- bedrock hosts the large foundation model, readOnly, and shared across customers.
+   - makes a reference to the base model + delta layers(created with tuning) 
+- Adapt a **copy of FM** with our own Training data ( formatted +  keep in S3)
 - further trained on a particular field/domain by ML engineers
-- Adapt general knowledge to our use case (e.g., legal , financial, medical data, etc)
-- it will eat up Provisioned throughput $$
+- it will eat up Provisioned throughput $$ while tuning/training.
+- creates a lightweight, **private version** of the model without duplicating the global model (immutable/frozen) ⬅️
+   - called adapters, LoRA layers, or delta weights
+   - These new parameters plug into the base model at runtime
+
 - **types**
 ```
 Full                : Update all model weights (requires lots of compute)
 Parameter-efficient : Update only small parts (like LoRA, adapters) to save cost and time
 Prompt              : Learn soft prompts without changing model weights
 ```
+
 - **strategies**
 ```
 == Supervised Instruction Fine-Tuning ==
@@ -86,18 +86,6 @@ To handle chat-style applications - Customer support bots, etc
 
 ```
 
-### Re-train
-
-| Aspect                   | Fine-Tuning                                                                             | Retraining                                                                    |
-| ------------------------ | --------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| **Definition**           | Start with a pre-trained model and train it further on a smaller, task-specific dataset | Train a model from scratch or large dataset, often from random initialization |
-| **Data Size**            | Usually small, task/domain-specific dataset                                             | Large dataset covering broad/general knowledge or new data                    |
-| **Compute Cost**         | Lower, fewer epochs, updates only part/all weights                                      | Higher, requires full training from scratch                                   |
-| **Time**                 | Faster to complete                                                                      | Time-consuming, longer training cycles                                        |
-| **Use Case**             | Customize a model for specific task/domain                                              | Build a new model or significantly update with fresh data                     |
-| **Model Starting Point** | Uses weights from an existing pre-trained model                                         | Starts with random or previous checkpoint (sometimes old model)               |
-| **Flexibility**          | Good for domain adaptation or task-specific tweaks                                      | Suitable for major updates or completely new models                           |
-| **Performance**          | Often better with limited data, leverages learned knowledge                             | Can be better if you have massive new data and resources                      |
 
 ## 2. Evaluate Model
 - evaluation metrics
