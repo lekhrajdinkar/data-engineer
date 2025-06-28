@@ -1,4 +1,4 @@
-## Intro
+## 0. Intro
 - interface to multiple foundation models
     - https://us-east-2.console.aws.amazon.com/bedrock/home?region=us-east-2#/model-catalog/serverless/amazon.nova-premier-v1:0 
     - https://us-east-2.console.aws.amazon.com/bedrock/home?region=us-east-2#/model-catalog/serverless/amazon.nova-micro-v1:0
@@ -23,7 +23,7 @@
 - **RAG** (Retrieval-Augmented Generation, knowledge base)
 - **LLM Agents**
 
-## Transfer Learning >> Fine tune
+## 1. Transfer Learning >> Fine tune
 
 - will change the **weights** in layers (neural network)
 - All models can be fine-tuned
@@ -65,13 +65,15 @@ Labeled data :
   }
 ]
 
-== Domain Adaptation Fine-Tuning ==
+== Domain Adaptation Fine-Tuning / continued pre-training ==
 unlabeled domain-specific data :
+need ML engineer
+$$
 [
   { "input": "Medical record of a patient with Type 2 diabetes..." }
 ]
 
-== Conversation and Multi-Turn Messaging ==
+== Conversation and single/Multi-Turn Messaging ==
 To handle chat-style applications - Customer support bots, etc
 {
   "system": "You are a helpful assistant.",
@@ -96,4 +98,27 @@ To handle chat-style applications - Customer support bots, etc
 | **Model Starting Point** | Uses weights from an existing pre-trained model                                         | Starts with random or previous checkpoint (sometimes old model)               |
 | **Flexibility**          | Good for domain adaptation or task-specific tweaks                                      | Suitable for major updates or completely new models                           |
 | **Performance**          | Often better with limited data, leverages learned knowledge                             | Can be better if you have massive new data and resources                      |
+
+## 2. Evaluate Model
+- evaluation metrics
+- ways - manual or by another Model
+- reference : benchmark
+- compare model response with benchmark response
+- seen on Console, will explore more later
+
+## 3. RAG and Knowledge
+- real-time data is needed to be fed into the FM , **outside of its training data**
+- Bedrock takes care of creating **Vector Embeddings** (dynamoDB, aurora, RDS, ElasticSearch, Neptune)
+- **Source** : s3, saleforce, confluence, website, sharpoint, etc
+- ![img_1.png](../99_img/genai/01/img_1.png)
+- ![img.png](../99_img/genai/01/img.png)
+
+## 4. gaurdrail
+
+## 5. Agents
+
+## 6. More
+### CW integration
+### pricing
+
 
