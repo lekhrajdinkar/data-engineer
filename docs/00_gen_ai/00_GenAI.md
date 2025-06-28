@@ -108,7 +108,7 @@ Code    : GitHub Copilot generating programming code suggestions.
 ---
 ## D. FM :: life cycle ✅
 ```
-⭕ pre-ptarining
+⭕ pre-training
 - Data collect : website, book, etc
 - Data prep : struture/unstructure(image,etc) + labels, map() + unlabel(input), inheritance pattern, relationship
 - Data train with ML alog == 🔺initial pre-training
@@ -193,12 +193,14 @@ Think of it this way 🧠
 - prompt Engineering : developing, designing, and optimizing prompts
 
 ### E.5 RAG
+- [udemy demo 1](https://www.udemy.com/course/aws-ai-practitioner-certified/learn/lecture/44886393#overview)
+- [udemy demo 2](https://www.udemy.com/course/aws-ai-practitioner-certified/learn/lecture/44901525#overview)
 - embed and index internal documents (PDFs, FAQs, docs).
-- Store them in a vector database (e.g., Amazon OpenSearch, Pinecone, Redis with KNN).
+- Store them in a **vector database** (e.g., Amazon OpenSearch, Pinecone, Redis with KNN).
 - app retrieves relevant chunks from vector DB and includes them in the model prompt.
 
 ---
-## C. Core Architecture
+## F. Core Architecture
 ### Transformers
 ### DL :: **neural network**
 - tiny Nodes, connected together
@@ -246,7 +248,7 @@ Think of it this way 🧠
   | Accuracy   | Slightly better for long tasks | Often comparable           |
 
 ---
-## D. GenAI tools and frameworks
+## G. GenAI tools and frameworks 📚
 - being IT professional, ⬅️ 
     - we will build and deploy an application that uses those models via API calls. 
     - do Prompt Engineering,  Instruction Templates, high-quality prompts
@@ -265,28 +267,14 @@ Think of it this way 🧠
         - Document Q&A system (e.g., chat with PDF, DB, storage)
         - Chatbot with memory
         - Enterprise search engine (RAG pattern)
+        - Connect your GenAI app to a document set
+        - Build a chatbot + FastAPI
+        - Try Hugging Face demos
   
 ### more
 - **Jupyter Notebooks** for experimentation
 - Model fine-tuning (LoRA, PEFT)
 
-### Cloud and MLops
-- AWS Bedrock, SageMaker
-- GPU-backed compute
-- CI/CD pipelines for ML (MLOps)
-- Prompt engineering
-
----
-## E. More ➕
-- Vector databases (e.g., FAISS, Pinecone, Weaviate)
-- Observability, latency, rate limiting
-- Cost optimization and caching
-
----
-## Z. Learn by Doing
-- Build a chatbot with OpenAI + FastAPI
-- Try Hugging Face demos
-- Connect your GenAI app to a company’s document set
 
 
 

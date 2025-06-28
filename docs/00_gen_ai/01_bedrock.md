@@ -1,28 +1,25 @@
 ## Intro
-- interface to multiple foundation models
-    - https://us-east-2.console.aws.amazon.com/bedrock/home?region=us-east-2#/model-catalog/serverless/amazon.nova-premier-v1:0 
-    - https://us-east-2.console.aws.amazon.com/bedrock/home?region=us-east-2#/model-catalog/serverless/amazon.nova-micro-v1:0
+- interface to multiple foundation models, eg
+    - [amazon.nova-premier-v1:0 ](https://us-east-2.console.aws.amazon.com/bedrock/home?region=us-east-2#/model-catalog/serverless/amazon.nova-premier-v1:0 )
+    - [amazon.nova-micro-v1:0](https://us-east-2.console.aws.amazon.com/bedrock/home?region=us-east-2#/model-catalog/serverless/amazon.nova-micro-v1:0)
     - ...
-- Build Generative AI (Gen-AI) applications on AWS
-- Fully-managed service : don’t need to manage GPU infra, **use models via simple API calls** + `boto3`
-- provides access to multiple FM from different providers ⬅️
-- **Unified APIs**
-- **Provisioned throughput** : 
-    - reserve a certain capacity of compute 
-    - and requests for your Foundation Model (FMs) inference
-    - guaranteeing performance and availability.
-    - Instead of paying per request (on-demand), pre-allocate throughput capacity.
-    - pay for the reserved throughput whether fully used or not
-    - Helps avoid throttling and latency spikes.
-- Leverage a wide array of foundation models.
     - amazon : **titan** , nova
     - meta: llama
     - Anthropic: claude
     - Mistral
-    - choose one : by text,visual,multi, performance, token, level of customization, capabilties, pricing(by token),etc
-- **RAG** (Retrieval-Augmented Generation, knowledge base)
-- **LLM Agents**
-
+    - **choose one** : by text,visual,multi, performance, token, level of customization, capabilties, pricing(by token),etc
+- Build Generative AI (Gen-AI) applications on AWS
+- Fully-managed service , don’t need to manage GPU infra, **use models via simple API calls** + `boto3`
+- provides access to multiple FM from different providers ⬅️
+- **Unified APIs**
+- Buy **Provisioned throughput** for custom model 
+    - reserve a certain capacity of compute 
+    - requests for our Foundation Model (FMs) inference
+    - guaranteeing performance and availability.
+    - Instead of paying per request (on-demand), pre-allocate throughput capacity.
+    - pay for the reserved throughput whether fully used or not
+    - Helps avoid throttling and latency spikes.
+  
 ---
 ## Model Lifecycle in Bedrock
 - base model as a read-only template that AWS keeps stable
@@ -37,7 +34,7 @@
 
 
 ---
-## Optimized FM :: Fine tune
+## 1. Customize/Optimized/Fine tune
 - bedrock hosts the large foundation model, readOnly, and shared across customers.
    - makes a reference to the base model + delta layers(created with tuning) 
 - Adapt a **copy of FM** with our own Training data ( formatted +  keep in S3)
@@ -86,7 +83,6 @@ To handle chat-style applications - Customer support bots, etc
 
 ```
 
-
 ## 2. Evaluate Model
 - evaluation metrics
 - ways - manual or by another Model
@@ -101,12 +97,12 @@ To handle chat-style applications - Customer support bots, etc
 - ![img_1.png](../99_img/genai/01/img_1.png)
 - ![img.png](../99_img/genai/01/img.png)
 
-## 4. gaurdrail
+## 4. guardrail
 
-## 5. Agents
+## 5. LLM Agents
 
-## 6. More
-### CW integration
-### pricing
+## 6. CW integration
+
+## 7. pricing
 
 
