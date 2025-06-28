@@ -1,4 +1,6 @@
 - https://fastapi.tiangolo.com/tutorial/
+- Content-Disposition: inline/attachment
+- `aiohttp`, `request` are commonly used as an asynchronous HTTP client
 
 ## 1. Django vs flask vs fastapi
 

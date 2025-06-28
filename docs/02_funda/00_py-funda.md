@@ -374,6 +374,16 @@ if __name__ == "__main__":
 
 ### Topic-7 :: Async
 - library : asyncio (has **eventloop**)
+- async with - `( __aenter__() , __aexit__() )` ⬅️
+- with - `( __enter__() , __exit__() )`
+
+  | Feature          | `with`                  | `async with`                      |
+  | ---------------- | ----------------------- | --------------------------------- |
+  | Type             | Synchronous             | Asynchronous                      |
+  | Used with        | Files, locks, etc.      | Async resources (e.g., HTTP, DB)  |
+  | Requires `await` | ❌ No                    | ✅ Yes (must be in an `async def`) |
+  | Under the hood   | `__enter__`, `__exit__` | `__aenter__`, `__aexit__`         |
+
 - `async` and `await` === same like in JS
 - Python’s keywords for asynchronous programming,
 - enabling you to write code that runs concurrently without blocking.
