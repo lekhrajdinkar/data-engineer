@@ -12,7 +12,6 @@ from fastapi_limiter.depends import RateLimiter
 from contextlib import asynccontextmanager
 import redis.asyncio as redis
 
-
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     app_config = load_env_config();
@@ -154,3 +153,43 @@ AWS Elasticsearch redis (no boto3), ⬅️
 @app.get("/rate-limited-api", dependencies=[Depends(RateLimiter(times=3, seconds=60))])
 async def rateLimitedApi():
     return {"message": "You can call this API 3 times per minute"}
+
+
+# =========== file upload / downloads
+# FileResponse, UploadFile
+from fastapi.responses import FileResponse
+import os
+from fastapi import  File, UploadFile, Form
+
+@app.get("/download")
+def download_file():
+    """
+    FileResponse handles setting proper headers like Content-Disposition for downloading.
+    media_type="application/octet-stream" tells the browser to download it instead of displaying.
+    filename= controls what name the user sees when saving the file.
+    """
+    file_path = "src/webModule/controller/openapi.json"  # Make sure this file exists
+    if os.path.exists(file_path):
+        return FileResponse(
+            path=file_path,
+            filename="openapi_2.json",
+            media_type="application/octet-stream"
+        )
+    return {"error": "File not found"}
+
+@app.post("/upload")
+async def upload_file(
+        file: UploadFile = File(...),
+        description: str = Form(...)
+):
+    """
+    UploadFile = File(...): Tells FastAPI to expect a file part in a multipart request.
+    description: str = Form(...): Extracts regular form field from the same request.
+    """
+    content = await file.read()
+    return {
+        "filename": file.filename,
+        "content_type": file.content_type,
+        "description": description,
+        "size": len(content)
+    }

@@ -430,3 +430,6 @@ if __name__ == "__main__":
 | `classmethod`, `staticmethod` | Class/static methods |                 |
 
 - filter, map, any, all, sum
+
+### Topic-9 :: exception
+- traceback

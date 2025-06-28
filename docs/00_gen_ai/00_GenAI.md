@@ -282,8 +282,8 @@ Think of it this way 🧠
     - Format inputs/outputs (e.g., system, user, assistant message structures)
     - RAG
     - build chatbot ui, calling Model API
-    
-### Python-based
+- streamlit UI
+- **Jupyter Notebooks** for experimentation
 - `diffusers`  
 - `TensorFlow` 
 - `pytorch`
@@ -298,9 +298,9 @@ Think of it this way 🧠
         - Build a chatbot + FastAPI
         - Try Hugging Face demos
   
-### more
-- **Jupyter Notebooks** for experimentation
-- Model fine-tuning (LoRA, PEFT)
+
+
+
 
 
 
