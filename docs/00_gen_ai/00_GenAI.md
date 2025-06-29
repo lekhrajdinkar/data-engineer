@@ -4,7 +4,7 @@
 - 🟠 Udemy :: https://www.udemy.com/course/aws-ai-practitioner-certified/learn/lecture/44901525?start=15#overview
 - 🟠 AWS training : https://skillbuilder.aws/learning-plan/G8ENMJ5QBE/aws-artificial-intelligence-practitioner-learning-plan/SU2A1EJM1A (8)
 
-    ```
+```
     --- 8 sections ---
     Fundamentals of AI and ML
     Exploring AI :: Use Cases and Applications
@@ -15,7 +15,8 @@
     Optimizing FM
     Security, Compliance, and Governance for AI Solutions
     Essentials of Prompt Engineering
-    ```
+```
+
 ---  
 ## A. Intro :: AI
 ```
