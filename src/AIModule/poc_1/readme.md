@@ -1,3 +1,7 @@
+## Overview
+![overview.png](overview.png)
+
+---
 ## Project details
 ```
 ✅ Project Overview: Investor Education Chatbot
