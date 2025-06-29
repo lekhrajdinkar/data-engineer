@@ -30,14 +30,13 @@ Examples:
 ```
 
 ---
-
-## reference
-- [gen ai 1](https://chatgpt.com/c/685dfae8-a808-800d-bc8c-4d992926601d) 🗨️
-- [gen ai 2](https://chatgpt.com/c/685e3233-8420-800d-a08a-2cd8b933dad6) 🗨️
-- 🟠 Udemy :: https://www.udemy.com/course/aws-ai-practitioner-certified/learn/lecture/44901525?start=15#overview
-- slides : https://courses.datacumulus.com/downloads/certified-ai-practitioner-9u8/
-- demo: https://aistylist.awsplayer.com/
-- 🟠 AWS training : https://skillbuilder.aws/learning-plan/G8ENMJ5QBE/aws-artificial-intelligence-practitioner-learning-plan/SU2A1EJM1A (8)
+## Reference/s
+- [🗨️ chapgpt - gen ai 1](https://chatgpt.com/c/685dfae8-a808-800d-bc8c-4d992926601d) 
+- [🗨️ chapgpt - gen ai 2](https://chatgpt.com/c/685e3233-8420-800d-a08a-2cd8b933dad6)
+- [🟠 Udemy - practitioner cert ](https://www.udemy.com/course/aws-ai-practitioner-certified/learn/lecture/44901525?start=15#overview)
+    - [🔸slides](https://courses.datacumulus.com/downloads/certified-ai-practitioner-9u8/)
+- [AWS demo - agents](https://aistylist.awsplayer.com/)
+- [🟠 AWS training plan on gen AI - 8 courses](https://skillbuilder.aws/learning-plan/G8ENMJ5QBE/aws-artificial-intelligence-practitioner-learning-plan/SU2A1EJM1A)
 
 ```
     --- 8 sections ---

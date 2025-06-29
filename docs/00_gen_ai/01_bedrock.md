@@ -1,3 +1,5 @@
+- [Amazon Bedrock Getting Started](https://skillbuilder.aws/learn/63KTRM86DQ/amazon-bedrock-getting-started/SC2Y3HMAUE)
+
 ## Intro
 - interface to multiple foundation models, eg
     - [amazon.nova-premier-v1:0 ](https://us-east-2.console.aws.amazon.com/bedrock/home?region=us-east-2#/model-catalog/serverless/amazon.nova-premier-v1:0 )
@@ -121,6 +123,7 @@ aws console:
 
 ---
 ## 5. Agents
+- [https://aistylist.awsplayer.com/](https://aistylist.awsplayer.com/)
 - Agents are configured to perform **specific pre-defined action groups**
 - perform tasks in the **correct order** and ensure information is **passed** correctly between tasks
 - **Integrate** with other systems, services, databases, RAG and API to exchange data

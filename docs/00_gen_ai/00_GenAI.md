@@ -38,10 +38,10 @@
 - Multi-purpose models backed by neural network/s
 - FMs can also serve as the starting point for developing more **specialized models**
 - **Specialized AI datacenters**
-  - requires massive compute, typically across thousands of GPUs over weeks/months. NVIDIA A100  H100.
-  - supercomputers with 10,000–25,000 GPUs, interconnected by high-speed NVLink
-  - Training data is stored in fast, distributed SSD/NVMe storage. Needs hundreds of TBs to petabytes.
-  - Infiniband : 400 Gbps
+    - requires massive compute, typically across thousands of GPUs over weeks/months. NVIDIA A100  H100.
+    - supercomputers with 10,000–25,000 GPUs, interconnected by high-speed NVLink
+    - Training data is stored in fast, distributed SSD/NVMe storage. Needs hundreds of TBs to petabytes.
+    - Infiniband : 400 Gbps
   
 --- 
 ## B. Intro :: genAI
@@ -50,23 +50,10 @@
 - genAI generates new data/content (ext, images, audio, code, or video) that is similar to the **data it was trained on**.
 - rely on DL model and ML model 
 - ![img_2.png](../99_img/genai/03/img_2.png)
-```
-== AI::NLP ==
-    Text    : ChatGPT generating human-like conversations, essays, or emails.
-    
-== AI::Computer Vision ==
-    Images  : DALL·E creating images from text descriptions.
-    Audio   : AI generating music or voice from a script.
-
-Code    : GitHub Copilot generating programming code suggestions.
-
-== Diffusion Model ==
-- for image generation
-```
 
 ---
 ## C. genAI Models
-### LLM (BERT,GPT,etc)
+### LLM (BERT, GPT, etc)
 - large language model.
 - eg: google **BERT**, ChatGPT (generative Pretrained **Transformer**)
 - BERT are similar to GPY but read in both direction.
