@@ -1,5 +1,5 @@
+## Project details
 ```
-
 ✅ Project Overview: Investor Education Chatbot
 
 Goal:
@@ -46,4 +46,7 @@ C:\Users\Manisha\Documents\GitHub\idea\02-etl-pyspark\
 | Logging / Metrics    | CloudWatch / local logs              |
 
 
-
+---
+## run project 
+- **API** :: uvicorn src.AIModule.poc_1.app:app --reload
+- **UI** :: streamlit run src/AIModule/poc_1/ui_streamlit.py

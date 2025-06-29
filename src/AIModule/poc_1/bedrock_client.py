@@ -2,7 +2,7 @@ import boto3
 from src.AIModule.poc_1.prompt_template import education_prompt
 import json
 
-def call_claude(question):
+def call_claude(question) -> str:
     prompt = education_prompt.format(question=question)
 
     client = boto3.client('bedrock-runtime', region_name='us-east-1')
@@ -16,4 +16,8 @@ def call_claude(question):
         contentType="application/json"
     )
 
-    return json.loads(response['body'].read())["completion"]
+    response_body = response["body"].read()
+    print('response_body', response_body)
+    completion = json.loads(response_body)["completion"]
+    print('completion',completion)
+    return completion.strip()
