@@ -2,6 +2,8 @@
 - [gen ai 1](https://chatgpt.com/c/685dfae8-a808-800d-bc8c-4d992926601d) 🗨️
 - [gen ai 2](https://chatgpt.com/c/685e3233-8420-800d-a08a-2cd8b933dad6) 🗨️
 - 🟠 Udemy :: https://www.udemy.com/course/aws-ai-practitioner-certified/learn/lecture/44901525?start=15#overview
+- slides : https://courses.datacumulus.com/downloads/certified-ai-practitioner-9u8/
+- demo: https://aistylist.awsplayer.com/
 - 🟠 AWS training : https://skillbuilder.aws/learning-plan/G8ENMJ5QBE/aws-artificial-intelligence-practitioner-learning-plan/SU2A1EJM1A (8)
 
 ```
@@ -26,6 +28,15 @@
   │       └── GenAI Generative AI (CSE)
 
 ``` 
+
+| Term       | Full Form               | What It Means                                                                     | Examples                                              |
+| ---------- | ----------------------- | --------------------------------------------------------------------------------- | ----------------------------------------------------- |
+| **AI**     | Artificial Intelligence | The broad field of building machines that mimic human intelligence                | Chatbots, self-driving cars, recommendation systems   |
+| **ML**     | Machine Learning        | A subset of AI where machines learn from data without being explicitly programmed | Spam detection, fraud detection, image classification |
+| **DL**     | Deep Learning           | A subset of ML using deep neural networks for complex tasks                       | Face recognition, speech-to-text, GPT models          |
+| **Gen AI** | Generative AI           | A type of AI (often using DL) that generates new content (text, image, etc.)      | ChatGPT, DALL·E, GitHub Copilot, Sora                 |
+
+
 ### IDP (Intelligent doc processing)
 ### NLP (ML model)
 - text classification
@@ -163,13 +174,6 @@ use it (inference) - batch + realtime
 - feedback is collected from users, domain experts, or other stakeholders
 ```
 
-| Term       | Full Form               | What It Means                                                                     | Examples                                              |
-| ---------- | ----------------------- | --------------------------------------------------------------------------------- | ----------------------------------------------------- |
-| **AI**     | Artificial Intelligence | The broad field of building machines that mimic human intelligence                | Chatbots, self-driving cars, recommendation systems   |
-| **ML**     | Machine Learning        | A subset of AI where machines learn from data without being explicitly programmed | Spam detection, fraud detection, image classification |
-| **DL**     | Deep Learning           | A subset of ML using deep neural networks for complex tasks                       | Face recognition, speech-to-text, GPT models          |
-| **Gen AI** | Generative AI           | A type of AI (often using DL) that generates new content (text, image, etc.)      | ChatGPT, DALL·E, GitHub Copilot, Sora                 |
-
 ## E. FM :: optimize ways
 
   | Method                | What It Does                                                | When to Use                                           |
@@ -271,14 +275,14 @@ Describes how well your model captures the patterns in training data.
 
 ---
 ## F. Core :: AI / ML 🔵
-- Training-data >> **ML alog** >> Model
+- Training-data >> [ Model(ML algo) + hyperparameter ] >> trained-model
 ### Transformer architecture ⬅️
 - helps FM foundation model to integrate idea from existing ML/DL model (mentioned above)
-### training Data
-- Structure data - csv,rdbms, timeseries data, etc
-- un-Structure data - image(pixel),object, comments etc | have specific type of ML alog to deal with these.
-- label Data - input+label | added by human/auto, use to define mapping x1 --> o1 | **supervised leaning**
-- un-label Data - input | model itself tries to find pattern -inheritance,relationship, etc | **un-supervised leaning** 
+### Training Data
+- **Structure data** - csv,rdbms, timeseries data, etc
+- **un-Structure data** - image(pixel),object, comments etc | have specific type of ML alog to deal with these.
+- **label Data** - input+label | added by human/auto, use to define mapping x1 --> o1 | **supervised leaning**
+- **un-label Data** - input | model itself tries to find pattern -inheritance,relationship, etc | **un-supervised leaning** 
 
 ### ML algo : learning types
 - **supervised** (label by humans)
@@ -368,6 +372,14 @@ Describes how well your model captures the patterns in training data.
     - **batch size** : no og training item. 1000 in one go, or 50, 50, 50,,,
     - **number of epochs** : iterations
     - **regularization** : to adjust over/under fitting
+
+- **tokenization** / embedding model / create vectors
+- capturing semantic relationship
+
+![img.png](../99_img/genai/01/01/img.png)
+
+![img_1.png](../99_img/genai/01/01/img_1.png)
+
 ---
 ## G. genAI Project
 ![img_3.png](../99_img/genai/03/img_3.png)

@@ -80,29 +80,79 @@ To handle chat-style applications - Customer support bots, etc
     { "role": "user", "content": "What about tomorrow?" }
   ]
 }
-
 ```
 
+---
 ## 2. Evaluate Model
 - evaluation metrics
 - ways - manual or by another Model
 - reference : benchmark
 - compare model response with benchmark response
-- seen on Console, will explore more later
+- explore more later ❓
 
-## 3. RAG and Knowledge
+---
+## 3. RAG and KnowledgeBase
 - real-time data is needed to be fed into the FM , **outside of its training data**
 - Bedrock takes care of creating **Vector Embeddings** (dynamoDB, aurora, RDS, ElasticSearch, Neptune)
 - **Source** : s3, saleforce, confluence, website, sharpoint, etc
+- on console : knowledge base
 - ![img_1.png](../99_img/genai/01/img_1.png)
 - ![img.png](../99_img/genai/01/img.png)
 
-## 4. guardrail
+---
+## 4. guardrails
+- Control the interaction between users and FM
+- Filter undesirable and harmful content
+- Remove PII
+- Enhanced privacy
+- Reduce hallucinations
+- Ability to create multiple Guardrails and monitor and analyze user inputs that can violate the Guardrails
 
-## 5. LLM Agents
+```
+aws console:
+  Provide guardrail details
+    Configure content filters
+    Add denied topics
+    Add word filters
+    Add sensitive information filters
+    Add contextual grounding check
+  Review and create
+```
 
+---
+## 5. Agents
+- Agents are configured to perform **specific pre-defined action groups**
+- perform tasks in the **correct order** and ensure information is **passed** correctly between tasks
+- **Integrate** with other systems, services, databases, RAG and API to exchange data
+- can trace/debug agent actions
+- hands on (pending...)❓
+
+![img_2.png](../99_img/genai/01/01/img_2.png)
+
+![img_3.png](../99_img/genai/01/01/img_3.png)
+
+---
 ## 6. CW integration
+- Enable **model invocation logging** : s3 + CW
+- create metrics
+- check inbuilt metric
 
+---
 ## 7. pricing
 
+- **On-Demand** – great for unpredictable workloads, no long-term commitment
+- **Batch** – provides up to `50% discounts`
+- **Provisioned Throughput** – (usually) not a cost-saving measure, great to **reserve capacity**
+- Temperature, Top K, Top P – no impact on pricing ⬅️
+- **Model size** – usually a smaller model will be cheaper (varies based on providers)
+- **Number of Input and Output Tokens** – main driver of cost
+
+![img_4.png](../99_img/genai/01/01/img_4.png)
+
+---
+## Amazon Q
+### Amazon Q business
+
+### Amazon Q developer
+- install IDE plugin, like github copilot
 
