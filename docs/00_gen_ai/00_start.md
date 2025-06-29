@@ -29,6 +29,45 @@ Examples:
     Use ML/AI models (SageMaker, Bedrock, Comprehend, etc.)
 ```
 
+---
+
+## reference
+- [gen ai 1](https://chatgpt.com/c/685dfae8-a808-800d-bc8c-4d992926601d) 🗨️
+- [gen ai 2](https://chatgpt.com/c/685e3233-8420-800d-a08a-2cd8b933dad6) 🗨️
+- 🟠 Udemy :: https://www.udemy.com/course/aws-ai-practitioner-certified/learn/lecture/44901525?start=15#overview
+- slides : https://courses.datacumulus.com/downloads/certified-ai-practitioner-9u8/
+- demo: https://aistylist.awsplayer.com/
+- 🟠 AWS training : https://skillbuilder.aws/learning-plan/G8ENMJ5QBE/aws-artificial-intelligence-practitioner-learning-plan/SU2A1EJM1A (8)
+
+```
+    --- 8 sections ---
+    Fundamentals of AI and ML
+    Exploring AI :: Use Cases and Applications
+    Responsible AI Practices
+    Developing ML Solutions
+  
+    Developing GenAI Solutions
+    Optimizing FM
+    Security, Compliance, and Governance for AI Solutions
+    Essentials of Prompt Engineering
+```
+
+---
+
+```
+- AI Artificial Intelligence
+  ├── ML Machine Learning
+  │   └── DL Deep Learning (Neural n/w, stacker layer)
+  │       └── GenAI Generative AI (CSE)
+
+``` 
+
+| Term       | Full Form               | What It Means                                                                     | Examples                                              |
+| ---------- | ----------------------- | --------------------------------------------------------------------------------- | ----------------------------------------------------- |
+| **AI**     | Artificial Intelligence | The broad field of building machines that mimic human intelligence                | Chatbots, self-driving cars, recommendation systems   |
+| **ML**     | Machine Learning        | A subset of AI where machines learn from data without being explicitly programmed | Spam detection, fraud detection, image classification |
+| **DL**     | Deep Learning           | A subset of ML using deep neural networks for complex tasks                       | Face recognition, speech-to-text, GPT models          |
+| **Gen AI** | Generative AI           | A type of AI (often using DL) that generates new content (text, image, etc.)      | ChatGPT, DALL·E, GitHub Copilot, Sora                 |
 
 ---
 ## Conversation-1 
@@ -37,14 +76,15 @@ So now what I understood so there are lots of Machine learning models already ex
     like IDP, Natural Language Processing, WaveNet, LLM, GAN And so many 
     help me list on all other models which I missed and most popular ones.
      
-And  foundational model which are designed to adapt  change and are more creative to generate new content
-and under the hood relying on other models which were already built in past one or two decades.
+And  foundational model which are designed to adapt  
+change and are more creative to generate new content
+and under the hood relying on other models which were 
+already built in past one or two decades.
 
 So list down all the models On which foundational models relied on and 
 Also tell me The Python library which I can use to connect with those models.
  
- for example :
- There is a langchain Library to connect with LLM Model, so similarly do for rest
+for example : There is a langchain Library to connect with LLM Model, so similarly do for rest
 ```
 ###  Popular ML/DL Models That Shaped Foundational Models
 | **Model Type**                          | **Model Name / Concept**                            | **Purpose / Use Case**                  | **Foundation Model Dependency**                | **Python Library**                                   |
