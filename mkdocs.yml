@@ -37,6 +37,7 @@ nav:
           - genAI: 00_gen_ai/00_GenAI.md
       - AWS:
           - 01_bedrock: 00_gen_ai/01_bedrock.md
+          - 02_sageMaker: 00_gen_ai/02_sageMaker.md
           - 03_prompt_engineering: 00_gen_ai/03_prompt_enginerring.md
           - 04_AI_ML: 00_gen_ai/04_AI_ML.md
           - 05_AI_challenges: 00_gen_ai/05_AI_challenges.md
