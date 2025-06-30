@@ -41,6 +41,10 @@ nav:
           - 03_prompt_engineering: 00_gen_ai/03_prompt_enginerring.md
           - 04_AI_ML: 00_gen_ai/04_AI_ML.md
           - 05_AI_challenges: 00_gen_ai/05_AI_challenges.md
+      - POCs:
+          - poc_1 chatbot: 00_gen_ai/poc/poc_1_cb.md
+          - poc_2 RAG: 00_gen_ai/poc/poc_2_rag.md
+          - poc_3 SLM local: 00_gen_ai/poc/poc_3_sml_local.md
 
 theme:
   name: material
@@ -57,11 +61,8 @@ theme:
       scheme: default
       primary: blue grey
       accent: pink
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
-      primary: blue grey
-      accent: pink
   custom_dir: .
+
 extra_css:
   - mkdocs.css
 
