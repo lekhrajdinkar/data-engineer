@@ -13,10 +13,7 @@
       "OKTA_INTROSPECT_URL":"https://dev-06456873.okta.com/oauth2/default/v1/introspect",
       "OKTA_SCOPE":"fastapiweb2"
     },
-    "gh": {
-      "GITHUB_CLIENT_ID":"Ov23lil5yQRaFLoEzvu9",
-      "GITHUB_CLIENT_SECRET":"b9cd5a1192bc6d7aa75fbec2642bc3f6dc613309"
-    }
+    "gh": { }
   },
   "redis": {
     "local": {

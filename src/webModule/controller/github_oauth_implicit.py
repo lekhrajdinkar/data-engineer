@@ -2,15 +2,16 @@
 
 from fastapi import Request
 from fastapi.responses import JSONResponse
-import os
 from authlib.integrations.starlette_client import OAuth
 from starlette.config import Config
 from .web2 import app
-from src.commonModule.init_srv import load_env_config
+from dotenv import load_dotenv
+import os
+load_dotenv()
 
-app_config = load_env_config()['oauth']['okta']
-GITHUB_CLIENT_ID=app_config['GITHUB_CLIENT_ID']
-GITHUB_CLIENT_SECRET=app_config['GITHUB_CLIENT_SECRET']
+#app_config = load_env_config()['oauth']['okta']
+GITHUB_CLIENT_ID=os.getenv("GITHUB_CLIENT_ID")
+GITHUB_CLIENT_SECRET=os.getenv("GITHUB_CLIENT_SECRET")
 
 config: Config = Config(environ={
     "GITHUB_CLIENT_ID": os.getenv("GITHUB_CLIENT_ID", GITHUB_CLIENT_ID),
