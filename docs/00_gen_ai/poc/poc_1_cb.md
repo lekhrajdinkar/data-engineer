@@ -1,6 +1,7 @@
 ## Deployment
 - [https://share.streamlit.io/](https://share.streamlit.io/)
 - [https://genai-lekhrajdinkar.streamlit.app](https://genai-lekhrajdinkar.streamlit.app) 🟢
+- [reference chatgpt 🗨️](https://chatgpt.com/c/6860f614-7b60-800d-beef-5727d0610801) 
 
 ---
 ## POC/Project details
