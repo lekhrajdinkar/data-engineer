@@ -10,18 +10,18 @@
 d = {'k1': 1, 'k2':2}; s1 = set(dict.fromkeys(d)); print(s1)
 d = {1:1, 2:2}; s1 = set(dict.fromkeys(d)); print(s1)
 print(set(range(10)))
-s1 = {'fsr', 'cstar', 'tact', 32}
-s2 = {'fsr', 'tact', 'cstar', 'cstar', 32} # like dict but without value part
-print(s1) # notice order are diff : {'tact', 'fsr', 'cstar'}
+s1 = {'app1', 'app3', 'app2', 32}
+s2 = {'app1', 'app2', 'app3', 'app3', 32} # like dict but without value part
+print(s1) # notice order are diff : {'app2', 'app1', 'app3'}
 # print(s1[0])  # TypeError: 'set' object is not subscriptable
-# s1 = { ['fsr'], ['tact']}; print(s1) #TypeError: unhashable type: 'list'
+# s1 = { ['app1'], ['app2']}; print(s1) #TypeError: unhashable type: 'list'
 print( s1 == s2) # t
 
 
 # B. operations : Add, remove
 s1.add('cars'); print(s1) # not append
-s1.remove('fsr');print(s1); # s1.remove('fsr-1');print(s1)
-s1.discard('fsr-1') ;print(s1) # no error if fsr-1 does not exist
+s1.remove('app1');print(s1); # s1.remove('app1-1');print(s1)
+s1.discard('app1-1') ;print(s1) # no error if app1-1 does not exist
 s1.pop() ;print(s1.pop()) # randomly remove any item an return item too, diff behv from dict.
 
 even = set(range(0,10,2)); odd = set(range(1,10,2)); even1 = set(range(0,8,2));
@@ -72,7 +72,7 @@ s.add('32'); s.add(32); print(s)
 # Exerceis  : use case of superset and subset
 skills_for_job = {'python', 'ng'}
 candidates = {
-    'anna' : {'altyrex', 'excel', 'ng'},
+    'manisha' : {'altyrex', 'excel', 'ng'},
     'lek': {'java', 'python', 'ng'}
 }
 

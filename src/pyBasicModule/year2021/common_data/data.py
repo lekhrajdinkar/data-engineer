@@ -19,12 +19,12 @@ config_dict.update(config_dict_init) # ⬅️
 
 # dictionary = JavaScript object literal
 project = {
-    '1': 'fsr',
-    '2' : 'tact'
+    '1': 'app1',
+    '2' : 'app2'
 }
 project_tect_stack = {
-    'fsr': ['java', 'angular', 'spring-boot', 'hibernate', 'rest-api'],
-    'tact': ['java', 'jsp', 'thyme-leaf']
+    'app1': ['java', 'angular', 'spring-boot', 'hibernate', 'rest-api'],
+    'app2': ['java', 'jsp', 'thyme-leaf']
 }
 related_project = {
     'java': ['CSTAR'],

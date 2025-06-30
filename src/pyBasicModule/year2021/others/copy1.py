@@ -1,20 +1,20 @@
 dict_with_mutable_value={
-    'fsr': ['java', 'angular'],
-    'tact': ['python', 'react']
+    'app1': ['java', 'angular'],
+    'app2': ['python', 'react']
 }
 dict_with_immutable_value={
-    'fsr': 'java',
-    'tact': 'python'
+    'app1': 'java',
+    'app2': 'python'
 }
 
 cgc = None
 cgc_copy = None
 
 def update_immutable_feild(d: dict):
-    d['fsr'] = 'Java8'
+    d['app1'] = 'Java8'
 
 def update_mutable_feild(d: dict):
-    d['fsr'].append('oracle')
+    d['app1'].append('oracle')
 
 def update_and_print(mode: str, d: dict, dc: dict):
     if mode == 'm':

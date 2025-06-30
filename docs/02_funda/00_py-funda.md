@@ -237,7 +237,7 @@ from ..utils import string_ops   # parent package
 from utils import math_ops
 from utils.math_ops import add
 
-# === C import ccgg === ⬅️
+# === C import ggcc === ⬅️
 cd src # from where you run matters, 
 from pyBasicModule.year2025.main2025 import xxx
 ---

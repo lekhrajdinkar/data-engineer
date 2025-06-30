@@ -11,19 +11,22 @@ from fastapi_limiter import FastAPILimiter
 from fastapi_limiter.depends import RateLimiter
 from contextlib import asynccontextmanager
 import redis.asyncio as redis
+from dotenv import load_dotenv
+import os
+load_dotenv()
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    app_config = load_env_config();
-    print("appconfig", app_config)
-    redis_url = f"redis://{app_config['redis']['cloud']['url']}"
-
+    #app_config = load_env_config();
+    #print("appconfig", app_config)
+    redis_url = os.getenv('REDIS_CLOUD_URL')
+    redis_url = f"redis://{redis_url}"
+    print("redis_url", redis_url)
     redis_client = redis.from_url(redis_url, encoding="utf-8", decode_responses=True)
     await FastAPILimiter.init(redis_client)
     app.state.redis = redis_client
     yield
     await redis_client.close()
-
 
 app = FastAPI(
     lifespan=lifespan,

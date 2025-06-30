@@ -25,7 +25,7 @@
   - **Kubernetes**
   - **Standalone**: Spark’s own cluster manager (Local mode)
     - this is what used in local project
-    - ccgg etl project
+    - ggcc etl project
 
 ## fault tolerance
 - Automatic recovery mechanisms 

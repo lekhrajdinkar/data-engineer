@@ -142,7 +142,7 @@ print(nums == my_digits_unsorted) #false
 nums_ref = nums; print(id(nums), id(nums_ref), nums is nums_ref)
 
 print( '\nCopy list', '-' * 50)
-l = ["fsr", "tact", "cstar"]
+l = ["app1", "app2", "app3"]
 l[2] = "C-star"; print(l)
 l[:2] = ["ACS"]; print(l);
 l[:] = ["ACS"]; print(l)

@@ -116,3 +116,12 @@ for example : There is a langchain Library to connect with LLM Model, so similar
 | `ESPnet`, `torchaudio`           | Speech/audio models                                       |
 | `layoutparser`, `paddleocr`      | Document layout and OCR for IDP                           |
 | `stable-baselines3`, `Ray RLlib` | Reinforcement learning (e.g., RLHF)                       |
+
+---
+## project/POC idea
+- [fine tune Haiku model](https://chatgpt.com/c/68621d61-7174-800d-87b4-487c189953d3)
+- RAG
+- chatbot
+- run SLM locally
+- llm agent
+- ...
