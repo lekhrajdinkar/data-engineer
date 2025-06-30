@@ -1,6 +1,6 @@
 ## Deployment
-- https://share.streamlit.io/
-- https://genai-lekhrajdinkar.streamlit.app 🟢
+- [https://share.streamlit.io/](https://share.streamlit.io/)
+- [https://genai-lekhrajdinkar.streamlit.app](https://genai-lekhrajdinkar.streamlit.app) 🟢
 
 ---
 ## POC/Project details
@@ -39,9 +39,9 @@ C:\Users\lekhrajdinkar\Documents\GitHub\idea\02-etl-pyspark\
 ```
 
 ## FM Model :: anthropic.claude-3-sonnet
-- https://us-east-1.console.aws.amazon.com/bedrock/home?region=us-east-1#/model-catalog/serverless/anthropic.claude-3-sonnet-20240229-v1:0
-- https://us-east-1.console.aws.amazon.com/bedrock/home?region=us-east-1#/model-catalog/serverless/anthropic.claude-3-5-sonnet-20240620-v1:0
-- https://us-east-1.console.aws.amazon.com/bedrock/home?region=us-east-1#/model-catalog/serverless/anthropic.claude-3-5-sonnet-20241022-v2:0
+- [anthropic.claude-3-sonnet-20240229-v1:0](https://us-east-1.console.aws.amazon.com/bedrock/home?region=us-east-1#/model-catalog/serverless/anthropic.claude-3-sonnet-20240229-v1:0)
+- [anthropic.claude-3-5-sonnet-20240620-v1:0](https://us-east-1.console.aws.amazon.com/bedrock/home?region=us-east-1#/model-catalog/serverless/anthropic.claude-3-5-sonnet-20240620-v1:0)
+- [anthropic.claude-3-5-sonnet-20241022-v2:0](https://us-east-1.console.aws.amazon.com/bedrock/home?region=us-east-1#/model-catalog/serverless/anthropic.claude-3-5-sonnet-20241022-v2:0)
 
 
 | Layer                | Tool                                 |
@@ -85,4 +85,4 @@ C:\Users\lekhrajdinkar\Documents\GitHub\idea\02-etl-pyspark\
 
 ---
 ## Overview
-![overview.png](../../99_img/genai/01/poc_1_cb.png)
+![overview.png](../../99_img/genai/01/poc1.png)

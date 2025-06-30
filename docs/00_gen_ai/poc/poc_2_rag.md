@@ -1,3 +1,6 @@
+## Infra
+- [terraform workspace : genai-poc-2-rag](https://app.terraform.io/app/lekhrajdinkar-org/workspaces/genai-poc-2-rag)
+
 ## project structure
 ```
 src/AIModule/poc_2_rag/
@@ -22,5 +25,4 @@ Embeds using Bedrock (co.embed.multilingual-v1)
 Stores:
   S3 :: Original file
   DynamoDB :: Chunk metadata
-
 ```

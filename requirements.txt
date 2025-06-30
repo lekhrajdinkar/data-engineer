@@ -45,3 +45,4 @@ redis[asyncio]
 # === genAI
 tensorflow
 streamlit
+uuid
