@@ -1,5 +1,7 @@
-## Infra
+## Infra : s3, dynamo, IAM role
 - [terraform workspace : genai-poc-2-rag](https://app.terraform.io/app/lekhrajdinkar-org/workspaces/genai-poc-2-rag)
+- **terraform apply**
+- [run HCP](https://app.terraform.io/app/lekhrajdinkar-org/genai-poc-2-rag/runs/run-TyiNbuDn4Veg3hrj)
 
 ## project structure
 ```
@@ -26,3 +28,9 @@ Stores:
   S3 :: Original file
   DynamoDB :: Chunk metadata
 ```
+
+---
+## Screenshot
+
+![img.png](img.png)
+

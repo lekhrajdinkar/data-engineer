@@ -1,0 +1,1 @@
+python -m src.AIModule.poc_2_rag.rag_ingest

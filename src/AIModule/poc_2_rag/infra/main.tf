@@ -9,10 +9,12 @@ terraform {
 
 provider "aws" {
   region = "us-east-1"
+  shared_credentials_files = ["./credentials"]
+  profile                  = "genai"
 }
 
 resource "aws_s3_bucket" "rag_bucket" {
-  bucket = "genai-rag-demo-bucket"
+  bucket = "genai-rag-demo-lekhrajdinkar-bucket"
   force_destroy = true
 }
 

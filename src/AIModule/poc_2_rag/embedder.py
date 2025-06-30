@@ -8,15 +8,20 @@ REGION = "us-east-1"
 bedrock = boto3.client("bedrock-runtime", region_name=REGION)
 
 def embed_text(texts: list[str]) -> list[list[float]]:
-    print("texts to embed",texts)
-    body = json.dumps({"inputText": texts[0]})
-    print("body  for embedded model, json dumps ", body)
-    response = bedrock.invoke_model(
-        modelId=MODEL_ID,
-        body=body,
-        contentType="application/json",
-        accept="application/json"
-    )
-    result = json.loads(response["body"].read())
-    print("embed_text :: result :: ", result)
-    return result["embedding"]
+    embeddings = []
+    for text in texts:
+        body = json.dumps({
+            "inputText": text
+        })
+
+        response = bedrock.invoke_model(
+            modelId=MODEL_ID,
+            body=body,
+            contentType="application/json",
+            accept="application/json"
+        )
+        result = json.loads(response["body"].read())
+        embeddings.append(result["embedding"])
+
+    return embeddings
+

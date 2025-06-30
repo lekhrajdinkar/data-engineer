@@ -16,13 +16,13 @@ def ingest_documents():
             doc_id = str(uuid.uuid4())
             chunks = chunk_text(content)
             embeddings = embed_text(chunks)
-            print(f'\nchunks :: {chunks} \n embeddings :: {embeddings}')
+            #print(f'\nchunks :: {chunks} \n embeddings :: {embeddings}')
 
             for i, (text, vector) in enumerate(zip(chunks, embeddings)):
                 print(f'\ndoc_id : {doc_id} \ni : {i} \ntext : {text} \nvector : {vector} \nfilename : {filename}')
-                #save_chunk(doc_id, i, text, vector, filename)
+                save_chunk(doc_id, i, text, vector, filename)
 
-            #upload_file(path, filename)
+            upload_file(path, filename)
             print(f"✅ Ingested {filename} as {doc_id}")
 
 def chunk_text(text: str, max_tokens=200) -> list[str]:
