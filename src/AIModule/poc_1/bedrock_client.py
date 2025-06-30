@@ -16,15 +16,16 @@ def call_claude(question: str, max_tokens: int = 400, temperature: float = 0.7) 
          }
     ]
 
+    body = {
+        "anthropic_version": MODEL_VERSION,
+        "messages": messages,
+        "max_tokens": max_tokens,
+        "temperature": temperature
+    }
     client = boto3.client("bedrock-runtime", region_name=region)
     response = client.invoke_model(
-        modelId="anthropic.claude-3-sonnet-20240229-v1:0",
-        body=json.dumps({
-            "anthropic_version": "bedrock-2023-05-31",
-            "messages": messages,
-            "max_tokens": max_tokens,
-            "temperature": temperature
-        }),
+        modelId=MODEL_ID,
+        body=json.dumps(body),
         contentType="application/json",
         accept="application/json"
     )

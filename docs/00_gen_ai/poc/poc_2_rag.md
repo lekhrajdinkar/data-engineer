@@ -5,6 +5,9 @@
     - [bedrock_rag_execution_role](https://us-east-1.console.aws.amazon.com/iam/home?region=us-east-1#/roles/details/bedrock_rag_execution_role?section=permissions) 
     - [genai-rag-demo-lekhrajdinkar-bucket](https://us-east-1.console.aws.amazon.com/s3/buckets/genai-rag-demo-lekhrajdinkar-bucket?region=us-east-1&bucketType=general)
     - [DynamoDB table - rag_chunks](https://us-east-1.console.aws.amazon.com/dynamodbv2/home?region=us-east-1#table?name=rag_chunks)
+
+## run
+- python -m src.AIModule.poc_2_rag.rag_ingest (ONCE) -> to store chunks in dynomaoDB from S3 files
 - **streamlit run .\src\AIModule\poc_2_rag\ui_streamlit.py** 🏃🏻‍♂️
 
 ## project structure
@@ -55,4 +58,6 @@ src/AIModule/poc_2_rag/
 ![img.png](../../99_img/genai/02/poc2/img.png)
 
 ![img_1.png](../../99_img/genai/02/poc2/img_1.png)
+
+![img.png](../../99_img/genai/02/img11.png)
 
