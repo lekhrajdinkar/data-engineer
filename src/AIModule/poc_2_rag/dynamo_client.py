@@ -8,11 +8,14 @@ ddb = boto3.resource("dynamodb", region_name=REGION)
 table = ddb.Table(TABLE_NAME)
 
 def save_chunk(doc_id, chunk_id, text, embedding, source):
-    item = {
-        "PK": f"DOC#{doc_id}",
-        "SK": f"CHUNK#{chunk_id}",
-        "text": text,
-        "embedding": [Decimal(str(x)) for x in embedding],
-        "source": source
-    }
-    table.put_item(Item=item)
+    try:
+        item = {
+            "PK": f"DOC#{doc_id}",
+            "SK": f"CHUNK#{chunk_id}",
+            "text": text,
+            "embedding": [Decimal(str(x)) for x in embedding],
+            "source": source
+        }
+        table.put_item(Item=item)
+    except Exception as e:
+        print(f"❌ Error saving to DynamoDB: {e}")
