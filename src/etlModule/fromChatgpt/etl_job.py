@@ -15,7 +15,7 @@ class UserETL:
         self.db_properties = {
             "user": "your_username",
             "password": "your_password",
-            "driver": "org.postgresql.Driver"-
+            "driver": "org.postgresql.Driver"
         }
 
         logging.basicConfig(level=logging.INFO)
