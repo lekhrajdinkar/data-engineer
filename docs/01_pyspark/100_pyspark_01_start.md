@@ -1,13 +1,28 @@
-# interview topic
-## 0 Create 
+## learning areas
+```
+SparkSession, RDDs, DataFrames
+Transformations & Actions
+Joins, Aggregations, Window Functions
+Handling JSON, CSV, Parquet
+Spark SQL
+UDFs (User-Defined Functions)
+Streaming (Structured Streaming)
+MLlib (Machine Learning)
+Performance tuning
+Deployment & Scaling
+```
+
+---
+## interview topic
+### 0 Create 
 - data = [1,2,3,4,5]
 - rdd = spark.parallelize(data)
 - spark.createDataFrame(rdd, schema)
   
-## 1 select / delete
+### 1 select / delete
 - df.**select**("col-1") - chooses existing columns
 
-## 2 transformation / update 
+### 2 transformation / update 
 - lazy operations that create a new RDD / df
   - don't execute until an action is called
 - Each transformation returns a new DataFrame
@@ -20,6 +35,7 @@
 def lambda1(iterator):
   for row in iterator:
     yield (row.number * 10,)
+      
 df.rdd.map(lambda x: x * 2)
 df.rdd.map(lambda1)
 
@@ -79,7 +95,7 @@ df.withColumn("item", explode("items_array")).show() # Expand arrays/maps
  .show())
 ```
 
-## 3 action: groupBy, agg, join, order
+### 3 action: groupBy, agg, join, order
 - agg === having in sql
 ```python
 df.groupBy("department").count().show()
@@ -101,8 +117,8 @@ df.orderBy(["age", "name"], ascending=[0, 1]).show()  # mixed
 ```
 
 ---
-## 98 performance : optimize a slow PySpark job
-### cache
+### 98 performance : optimize a slow PySpark job
+#### cache
 ```python
 # CACHE :: Data reused multiple times + Small enough to fit in cluster memory
 from pyspark.storagelevel import StorageLevel
@@ -111,13 +127,13 @@ df.persist(StorageLevel.MEMORY_AND_DISK)
 df.cache()  # or df.persist(StorageLevel.MEMORY_ONLY)
 df.unpersist() # # Don't forget to unpersist!
 ```
-### df.dropDuplicates()
+#### df.dropDuplicates()
 
-### Partitioning
+#### Partitioning
 - repartition(200, "department_id") : shuffles data to increase/decrease partitions.
 - coalesce(50) : reduces partitions without a full shuffle.
 
-### avoid shuffles.
+#### avoid shuffles.
 ```python
 # Bad - causes shuffle
 df.orderBy("timestamp")
@@ -130,7 +146,7 @@ df.groupBy("a").agg(...).groupBy("b").agg(...)
 df.groupBy("a", "b").agg(...)
 ```
 
-### broadcast variable and join ⬅️
+#### broadcast variable and join ⬅️
 - a read-only variable cached on each worker to avoid shipping it multiple times 
 - used for small lookup table.
 ```python
@@ -171,7 +187,7 @@ transactions.join(countries, transactions.country == countries.code).show()
 transactions.join(broadcast(countries), transactions.country == countries.code).show()
 ```
 
-### tuning executor memory
+#### tuning executor memory
 ```
 spark-submit \
   --executor-memory 8G \
@@ -181,12 +197,12 @@ spark-submit \
   --conf spark.memory.storageFraction=0.3 \
   your_app.py
 ```
-### File Format Optimization
+#### File Format Optimization
 - df.write.**parquet**("output.parquet")
 - df.write.**format**("avro").save("output.avro")
 - df.**repartition(100)**.write.parquet("output")  # 100 files -  **Control file size**
 ---
-## 99 scenarios
+### 99 scenarios
 - **handle missing values**
   - df.na.fill() or df.na.drop()
 - **Spark SQL**

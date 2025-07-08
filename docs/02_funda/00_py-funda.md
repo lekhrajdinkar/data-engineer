@@ -285,6 +285,7 @@ if __name__ == "__main__":
 | Memory         | Stores all values at once | Streams one value at a time   |
 
 ### Topic-2 : generator-Expression + Comprehension 
+- concise ways to create **new** collections like lists, sets, or dictionaries
 - generator vs iterator ⬅️
 - All generators are iterators, not vice versa.
 - both Returns New Collections ⬅️
