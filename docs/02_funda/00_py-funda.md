@@ -11,6 +11,7 @@
     - special methods : `__start__ , __end__`
 - **global** / **nonlocal** : keyword used inside a function to declare that a variable refers to the global (module-level) variable, allowing you to modify it.
     - [glocal+nonlocal.py](../../src/pyBasicModule/year2025/others/glocal%2Bnonlocal.py)
+- **ternary** : a if condition else b
 
 ### 1. datatype
 - ![img_2.png](99_IMG/001/img_2.png)
