@@ -1,13 +1,13 @@
 https://leetcode.com/studyplan/top-interview-150/
 
 ```python
-"""
-✅ 1. nums1[:] = nums1_new + nums2
-Modifies the existing nums1 list in-place
 
-❌ 2. nums1 = nums1_new + nums2
-Rebinds nums1 to a new list
-"""
+✅ nums1[:] = nums1_new + nums2
+#Modifies the existing nums1 list in-place
+
+❌ nums1 = nums1_new + nums2
+#Rebinds nums1 to a new list
+
 
 nums1[:] = nums1_new + nums2
 
@@ -16,4 +16,7 @@ nums1[:] = nums1_new + nums2
 my_list = ['a', 'b', 'c', 'd']
 i = 3
 print(my_list[i:i+1])  # Output: ['d']
+
+list(str) ❌ => TypeError: 'type' object is not iterable
+str.strip().split() ✔️ # do this
 ```
