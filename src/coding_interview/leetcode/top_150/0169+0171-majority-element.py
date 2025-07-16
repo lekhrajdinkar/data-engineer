@@ -47,3 +47,5 @@ class Solution:
 
 print(Solution().titleToNumber("BA"))
 
+
+

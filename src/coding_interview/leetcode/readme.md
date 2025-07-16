@@ -19,4 +19,7 @@ print(my_list[i:i+1])  # Output: ['d']
 
 list(str) ❌ => TypeError: 'type' object is not iterable
 str.strip().split() ✔️ # do this
+
+c.isalnum()
+filtered = "".join(c for c in s if c.isalnum())
 ```

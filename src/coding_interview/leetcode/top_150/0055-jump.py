@@ -90,3 +90,16 @@ class Solution28:
         return -1
 
 print('#28 ',Solution28().strStr('leetcode','code'))
+
+
+# 125 https://leetcode.com/problems/valid-palindrome/?envType=study-plan-v2&envId=top-interview-150
+class Solution125:
+    def isPalindrome(self, s: str) -> bool:
+        if s == " ": return True
+
+        filtered = "".join(c for c in s if c.isalnum())
+        reversed = filtered[::-1]
+        print(s,filtered,reversed)
+        return filtered.lower() == reversed.lower()
+
+print('#125 ',Solution125().isPalindrome("A man, a plan, a canal: Panama"))
