@@ -1,6 +1,9 @@
 ## tips
 
 ```python
+list(self.data.keys())[r] #dict 
+# Because dict.keys() returns a view object, not a list. 
+
 chr((ord(c) - ord('a') + k) % 26 + ord('a'))
 
 rows = [sorted(list(row_str)) for row_str in grid]
