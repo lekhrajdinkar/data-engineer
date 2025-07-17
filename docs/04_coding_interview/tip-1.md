@@ -1,6 +1,19 @@
-https://leetcode.com/studyplan/top-interview-150/
+## tips
 
 ```python
+chr((ord(c) - ord('a') + k) % 26 + ord('a'))
+
+rows = [sorted(list(row_str)) for row_str in grid]
+
+for cols in zip(*sorted_grid):
+
+elif char in bracket_map:           #✅ Recommended
+elif char in bracket_map.keys():    #⚠️ Works, but unnecessary
+
+if not stack:
+# "If the stack is empty"
+
+del A[0:2]
 
 ✅ nums1[:] = nums1_new + nums2
 #Modifies the existing nums1 list in-place
