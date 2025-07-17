@@ -1,5 +1,3 @@
-
-
 #
 # Complete the 'lonelyinteger' function below.
 #
@@ -9,13 +7,12 @@
 
 def lonelyinteger(a):
     tracker :dict = {}
-    for i in a:
-        tracker[i] = 1 if i not in tracker else tracker[i]+1
-    print(tracker)
+    for  i in set(a):
+        tracker[i] = a.count(i)
 
-    for key in tracker.keys():
-        if tracker[key] == 1:
-            return key
+    print(tracker)
+    min_item = min(tracker.items(), key=lambda x: x[1])
+    return min_item[0]
 
 if __name__ == '__main__':
     result = lonelyinteger(list([1,1,2,2,3]))

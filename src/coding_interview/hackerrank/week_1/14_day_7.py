@@ -82,6 +82,30 @@ def noPrefix(words):
 noPrefix(['aab', 'defgab', 'abcde', 'aabcde', 'bbbbbbbbbb', 'jabjjjad'])
 
 
-# =============== week-1 | Day 5 | problem 2 =============
+# =============== week-1 | Day 5 | problem 2 ============= ✔️
 
 # https://www.hackerrank.com/challenges/one-week-preparation-kit-tree-huffman-decoding/problem
+
+def decodeHuff(root, s):
+    result = ''
+    print('encode code', s)
+
+    def traverse(node, i):
+        isleaf = node.data and  node.data != '  '
+        print(f"isleaf:{isleaf} ( {node.data} ) | s[{i}]: {s[i]}")
+        if isleaf:
+            nonlocal result
+            result += node.data
+            print('yes, result: ', result)
+        else:
+            print(f"No, moving to next | s[{i}]: {s[i]}")
+            i+=1
+            if s[i] == 0:
+                traverse(node.left,i)
+            if s[i] == 1:
+                traverse(node.right,i)
+
+    traverse(root,0)
+
+    print(result)
+    return result
