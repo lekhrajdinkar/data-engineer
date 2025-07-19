@@ -150,3 +150,18 @@ for f in folders:
             level[c] = level[c] + [f]
         print(level)
 """
+
+## https://leetcode.com/problems/longest-palindromic-substring/description/
+class Solution4:
+    def longestPalindrome(self, s: str) -> str:
+        print("--- longestPalindrome ---")
+        t = {}
+        n = len(s)
+        for  i in range(n):
+            for j in range(i,n):
+                substr = s[i:j+1]
+                if substr==substr[::-1]:
+                    t[substr] = len(substr)
+        print(t)
+        return max(t.keys(), key=t.get)
+print(Solution4().longestPalindrome("babad"))
