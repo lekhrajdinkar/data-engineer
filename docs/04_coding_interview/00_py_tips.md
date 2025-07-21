@@ -1,5 +1,3 @@
-## tips
-### week-1
 ```python
 list(self.data.keys())[r] #dict 
 # Because dict.keys() returns a view object, not a list. 
@@ -38,15 +36,14 @@ str.strip().split() ✔️ # do this
 
 c.isalnum()
 filtered = "".join(c for c in s if c.isalnum())
-```
 
-### week-2
-```python
-# find for string
-# index for list + handle error
+# find vs index
+"".find('a') # for string
+list1.index(i1tem1) # for list + handle error
 
-
+"".join(array of str)
 
 ```
+
 
 

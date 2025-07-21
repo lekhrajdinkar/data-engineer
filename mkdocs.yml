@@ -45,9 +45,11 @@ nav:
           - poc_1 chatbot: 00_gen_ai/poc/poc_1_cb.md
           - poc_2 RAG: 00_gen_ai/poc/poc_2_rag.md
           - poc_3 SLM local: 00_gen_ai/poc/poc_3_sml_local.md
-  - Coding int:
-      - DSA start: 04_coding_interview/DSA.md
-      - tip-1: 04_coding_interview/tip-1.md
+  - Coding Int:
+      - DSA-01-start: 04_coding_interview/01_01_data-structure+algo.md
+      - Tips:
+        - python-1: 04_coding_interview/00_py_tips.md
+        - sql-1: 04_coding_interview/00_postgres_tips.md
 
 theme:
   name: material
