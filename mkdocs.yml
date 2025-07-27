@@ -31,21 +31,22 @@ nav:
       - file_format: 01_pyspark/04_file_format.md
       - pyspark_01: 01_pyspark/100_pyspark_01_start.md
 
-  - GenAI:
+  - 🤖GenAI:
       - Home:
-          - Start: 00_gen_ai/00_start.md
-          - genAI: 00_gen_ai/00_GenAI.md
+          - Start: 00_gen_ai/00_temp/00_start.md
+          - genAI: 00_gen_ai/00_temp/00_GenAI.md
+          - AI_ML: 00_gen_ai/00_temp/04_AI_ML.md
+          - AI_challenges: 00_gen_ai/00_temp/05_AI_challenges.md
+          - prompt_engineering: 00_gen_ai/00_temp/03_prompt_enginerring.md
       - AWS:
-          - 01_bedrock: 00_gen_ai/01_bedrock.md
-          - 02_sageMaker: 00_gen_ai/02_sageMaker.md
-          - 03_prompt_engineering: 00_gen_ai/03_prompt_enginerring.md
-          - 04_AI_ML: 00_gen_ai/04_AI_ML.md
-          - 05_AI_challenges: 00_gen_ai/05_AI_challenges.md
+          - 01_bedrock: 00_gen_ai/01_aws/01_bedrock.md
+          - 02_sageMaker: 00_gen_ai/01_aws/02_sageMaker.md
       - POCs:
           - poc_1 chatbot: 00_gen_ai/poc/poc_1_cb.md
           - poc_2 RAG: 00_gen_ai/poc/poc_2_rag.md
           - poc_3 SLM local: 00_gen_ai/poc/poc_3_sml_local.md
-  - Coding Int:
+
+  - 🧑🏻‍💻Coding Int:
       - DSA-01-start: 04_coding_interview/01_01_data-structure+algo.md
       - Tips:
         - python-1: 04_coding_interview/00_py_tips.md
