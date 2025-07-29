@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lekhraj Dinkar - Resume</title>
+   <style>
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #f8f9fa;
+  color: #333;
+}
+
+.container {
+  display: flex;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.sidebar {
+  width: 30%;
+  background-color: #f1f3ee;
+  /*color: white;*/
+  padding: 30px 20px;
+  min-height: 100vh;
+  box-sizing: border-box;
+  border-left: 2px solid #ccc;
+}
+
+.sidebar a {
+  color: #383e88;
+  text-decoration: none;
+}
+
+.sidebar h1 {
+  font-size: 2em;
+  margin-bottom: 5px;
+}
+
+.sidebar .title {
+  font-style: italic;
+  font-size: 1em;
+  margin-bottom: 20px;
+}
+
+.sidebar hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 20px 0;
+}
+
+.skills {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.content {
+  width: 70%;
+  padding: 30px;
+  background-color: #fff;
+}
+
+.content h2 {
+  color: #093e72;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+}
+
+.job h3 {
+  margin-bottom: 4px;
+  margin-top: 20px;
+}
+
+.meta {
+  font-size: 0.9em;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+@media print {
+  .page-break {
+    page-break-before: always;
+  }
+}
+
+.skill-subtitle {
+  border-top: 3px solid rgb(68, 123, 226);
+  padding-top: 5px;
+  color: rgb(68, 123, 226);
+}
+.skill--skills { color: rgb(68, 123, 226);}
+
+.timeline {
+  position: relative;
+  border-left: 1px solid #84a2c0;
+  margin-left: 20px;
+  padding-left: 20px;
+}
+
+.timeline-entry {  margin-bottom: 40px;}
+
+.timeline-block {  position: relative;  margin-bottom: 30px;}
+
+.timeline-marker {
+  position: absolute;
+  left: -26px;
+  top: 8px;
+  width: 8px;
+  height: 8px;
+  background: #c7d9ee;
+  border: 1px solid white;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px #004080;
+}
+
+.timeline-content { }
+
+.timeline .project {
+  font-style: italic;
+  color: #555;
+}
+
+.profile-pic {
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.profile-pic img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  padding: 2px;
+  background: #004080;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+   </style>
+
+</head>
+<body>
+<div class="container">
+
+    <main class="content">
+        <section class="summary timeline-entry">
+            <h2>Summary</h2>
+            <p>12+ years of experience in the financial services sector. Specializing in 
+system design and cloud-native solutions, microservices architecture, and full-stack Modern web development. 
+Proven expertise in designing scalable and reliable enterprise applications using AWS, container orchestration, CI/CD automation, event driven architecture with multiple message broker
+Strong background in driving digital transformation, technical leadership, and end-to-end solution delivery. 
+Learning Agentic AI architectures.
+</p>
+        </section>
+
+        <div class="timeline">
+
+
+            <section class="experience timeline-entry">
+                <h2>Experience</h2>
+                
+                <div class="job timeline-block">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Solution and DevOps Engineer – Capital Group Companies (Infosys Limited)</h3>
+                        <p class="meta">Irvine, USA | Feb 2022 – Present</p>
+                        
+                        <p class="project"><strong>Project:</strong> MAPS - Multi Asset Portfolio System</p>
+                        
+                        <ul>
+                            
+                            <li>Led proof-of-concept (PoC) efforts to validate cloud-native solutions using AWS. Authored detailed architecture diagrams, developer guides, and technical documentation in Confluence, including future-state proposals.</li>
+                            
+                            <li>Secured APIs with 🔸OAuth2.0/OpenID-Connect (provider - Okta) and JWT</li>
+                            
+                            <li>Generated TLS certification by Venafi and imported to AWS ACM. Setup OAuth2.0 integration with Grant types - client-Credential-flow and Authorization-flow</li>
+                            
+                            <li>Continuous Remediating 🔸vulnerabilities flagged in CI pipelines by Wiz and Snyk scans on code and images.</li>
+                            
+                            <li>Containerized applications using Docker (with Chain-guard base images), aligning with enterprise security standards.</li>
+                            
+                            <li>Architected the containerized application with🔸AWS ECS/EKS, ALB with ACM and Aurora serverless global.</li>
+                            
+                            <li>Developed Infrastructure as Code 🔸AWS CDK CloudFormation stacks and later on upgraded 🔸Terraform to provision resources for AWS.</li>
+                            
+                            <li>Upgraded CI/CD pipelines using 🔸Harness SaaS to align with Organisation's Helix Banzai delivery models.</li>
+                            
+                            <li>Also utilized Terraform module provided by platform team for seamless provisioning🔸Kafka topic with Oauth2.0 security.</li>
+                            
+                            <li>Designed Restful API Json contracts, event payload schema, message schema (RabbitMQ queue and Kafka topics), for integrations partner applications - Comet, OIS, IDH, Horizon and SACA.</li>
+                            
+                            <li>CD pipeline to deploy services on multi-tenant AWS EKS clusters, with Helm charts for environment-specific deployments.</li>
+                            
+                            <li>Good understanding on kubernetes- IAM Roles for Service Accounts (IRSA), Ingress controllers, K8s Ingress to define routing rules amd more need to for CKAD certification.</li>
+                            
+                            <li>Enhanced observability with OTEL, CloudWatch dashboards, 🔸Datadog monitors, dashboard and xMatters. Also Built an Angular-based interface dashboard to monitor inbound/outbound processing.</li>
+                            
+                            <li>Prepared DR execution Plan for seamless failover between primary and secondary AWS regions with Route53. Familiar with DNS and R53's routing strategies and health checks.</li>
+                            
+                            <li>Designed relational data models for inbound/outbound modules of MAPS.</li>
+                            
+                            <li>Communicating with Platform Engineering, Network team, AWS cloud support team and Security team to deal integration challenges.</li>
+                            
+                            <li>Built Restful microservices in 🔸Python (FastAPI, Uvicorn, SQLAlchemy, Boto3) and 🔸Java (Spring Boot, Hibernate, Jackson, AWS SDK). API documentation with OpenAPI Swagger</li>
+                            
+                            <li>Architected 🔸event-driven-microservices with AWS lambda, SQS, SNS, Lambda, API Gateway and Event-bridge. Designed JSON event payload.</li>
+                            
+                            <li>Developed and orchestrated small-scale ETL pipelines consuming daily CSV feeds with PySpark</li>
+                            
+                            <li>Led development, JIRA creation, coding and unit testing. Mentoring the offshore team through design reviews, code reviews, and best practices.</li>
+                            
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="job timeline-block">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Technology Lead – Capital Group Companies (Infosys Limited)</h3>
+                        <p class="meta">Pune, India | Feb 2021 – Jan 2022</p>
+                        
+                        <p class="project"><strong>Project:</strong> TACT - TargetDateFund Allocation and compliance Tool (Technical Upgrade)</p>
+                        
+                        <ul>
+                            
+                            <li>Served as a senior offshore developer responsible for modernizing a legacy, performance-constrained enterprise application.</li>
+                            
+                            <li>Upgraded the tech stack - migrated from Java 7 to 🔸Java 11, leveraging 🔸Java Streams for functional and efficient data processing.</li>
+                            
+                            <li>Replaced the legacy Struts2 MVC framework with 🔸SpringBoot, enhancing modularity and maintainability.</li>
+                            
+                            <li>Upgraded 🔸Hibernate from v3 to v5; implemented JPA repositories with Spring Data and custom queries using native SQL and HQL.</li>
+                            
+                            <li>Configured transaction-scoped `EntityManager` with varying 🔸isolation levels (Read Committed, Repeatable Read) to ensure data integrity.</li>
+                            
+                            <li>Secured RESTful APIs with 🔸OAuth2 and SSL, aligning with enterprise security protocols.</li>
+                            
+                            <li>Optimized 🔸performance by tuning SQL, introducing caching for static content, batching API calls, and applying eager loading strategies.</li>
+                            
+                            <li>CI/CD pipeline by upgrading existing Bamboo build jobs and XLD deployment scripts.</li>
+                            
+                            <li>Participated actively in Agile ceremonies including daily stand-ups and sprint planning.</li>
+                            
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="job timeline-block">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Technology Analyst – Capital Group Companies (Infosys Limited)</h3>
+                        <p class="meta">Irvine, USA | March 2020 – Jan 2021</p>
+                        
+                        <p class="project"><strong>Project:</strong> FSR - Fund Sale and Redemption (Angular Migration)</p>
+                        
+                        <ul>
+                            
+                            <li>Modernized the legacy application UI by migrating from Adobe Flash to 🔸Angular 12 for a responsive and accessible user experience.</li>
+                            
+                            <li>Implemented state management using 🔸NgRx (Redux pattern) for scalable and maintainable frontend logic.</li>
+                            
+                            <li>Applied reactive programming principles to handle asynchronous backend API integration using 🔸RxJS observables.</li>
+                            
+                            <li>Developed reusable Angular components, services, and custom observables to support modular development.</li>
+                            
+                            <li>Built template-driven and 🔸reactive forms with custom directives and validation logic.</li>
+                            
+                            <li>Adopted 🔸Angular Material for consistent UI/UX and adherence to design standards.</li>
+                            
+                            <li>Containerized the Angular application using Docker and configured static hosting via NGINX.</li>
+                            
+                            <li>Contributed to CI/CD automation by creating Bamboo build plans and XLD deployment packages.</li>
+                            
+                            <li>Participated in Agile development practices including daily stand-ups, sprint planning, and retrospectives.</li>
+                            
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="job timeline-block">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Senior System Engineer | Technology Analyst – Capital Group Companies (Infosys Limited)</h3>
+                        <p class="meta">Irvine, USA | Nov 2018 – Feb 2020</p>
+                        
+                        <p class="project"><strong>Project:</strong> TACT - TargetDateFund Allocation and compliance Tool (Development + BAU)</p>
+                        
+                        <ul>
+                            
+                            <li>Resolved severe performance bottlenecks by analyzing Java-based application with profiling tools, 🔸optimizing database interactions, and tuning connection pools—improving throughput from 🔸2 min to 1 sec.</li>
+                            
+                            <li>Implemented second-level allocation logic - After CIT fund allocation, computed new target allocation percentages for CIT-temp fund Allocation.</li>
+                            
+                            <li>Implemented CIAM Canadian funds with 🔸SWIFT-based communication (MT502, MT541/542, MT202/210, MT515, MT509).</li>
+                            
+                            <li>Established secure messaging infrastructure using IBM MQ with two-way SSL and collaborated with API platform teams for integration.</li>
+                            
+                            <li>Planned development activities, estimated effort, and maintained tracking using JIRA.</li>
+                            
+                            <li>Developed a Java Swing-based 🔸simulator tool to generate inbound SWIFT messages for integration, testing and fast forward development.</li>
+                            
+                            <li>Created a monitoring dashboard (JSP) to visualize message traffic, including arrival times, publication latency, and pending message.</li>
+                            
+                            <li>Supported production deployments, incident response</li>
+                            
+                            <li>Participated in release planning and coordination with client stakeholders and downstream systems.</li>
+                            
+                            <li>Also Migrated authentication flow from legacy CyberArk/LDAP-based access to OAuth2.0 via Okta Identity Provider.</li>
+                            
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="job timeline-block">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Senior System Engineer – Capital Group Companies (Infosys Limited)</h3>
+                        <p class="meta">Irvine, USA | Mar 2017 – Oct 2018</p>
+                        
+                        <p class="project"><strong>Project:</strong> OPAC - Order Processing and Compliance (BAU + Development)</p>
+                        
+                        <ul>
+                            
+                            <li>Contributed to the Cirrus cloud migration initiative (client’s internal cloud infrastructure).</li>
+                            
+                            <li>Migrated version control systems from legacy Perforce to new🔸Bitbucket.</li>
+                            
+                            <li>Transitioned build and deployment processes to Atlassian 🔸Bamboo build pipeline and 🔸XLDeploy for improved CI/CD automation.</li>
+                            
+                            <li>Utilized 🔸Flyway for database versioning and migration management.</li>
+                            
+                            <li>Built secure service integrations to retrieve secrets from 🔸CyberArk safes and vaults.</li>
+                            
+                            <li>Performed coding, unit testing, and peer code reviews to deliver high-quality features for java based application.</li>
+                            
+                            <li>Participated in Agile ceremonies at the client location including sprint planning, daily stand-ups, and retrospectives.</li>
+                            
+                            <li>Collaborated closely with Business System Analysts (BSAs) and business user to gather and create development plan, design, technical Jira.</li>
+                            
+                            <li>proposed enhancements aligned with modern technologies and performance improvements.</li>
+                            
+                            <li>Production support, replicating and debugging issues in lower environments, root cause analysis, patch effective fixes and perform datamod.</li>
+                            
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="job timeline-block">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Senior System Engineer / System Engineer – Capital Group Companies (Infosys Limited)</h3>
+                        <p class="meta">Pune, India | Feb 2014 – Feb 2017</p>
+                        
+                        <p class="project"><strong>Project:</strong> COPS - CRMC Order Processing System (Development)</p>
+                        
+                        <ul>
+                            
+                            <li>Developed 🔸REST-ful APIs using Java Spring MVC to replicate equity orders from parent to child accounts. (Vehicle-Axioma)</li>
+                            
+                            <li>Performed API testing using 🔸Postman and SmartBear tools for functionality and reliability.</li>
+                            
+                            <li>Conducted a proof-of-concept (POC) for 🔸JMS-based asynchronous messaging to integrate with the upstream OIS system.</li>
+                            
+                            <li>Optimized batch job performance—reduced processing time from 45 minutes to 7 minutes by minimizing redundant database calls and eliminating unnecessary logic.</li>
+                            
+                            <li>Java profiling with tools - 🔸Jhat, 🔸Jvisual and 🔸MAT (memory Analyzer tool).  Resolve java OutofMemory Error without increasing heap.</li>
+                            
+                            <li>created separate cache server</li>
+                            
+                            <li>Actively participated in Agile ceremonies including sprint planning, daily stand-ups, and retrospectives.</li>
+                            
+                            <li>Engaged in design reviews and peer code reviews to ensure quality and alignment with architectural standards.</li>
+                            
+                            <li>Diagnosed and resolved production issues by replicating bugs in development environments and performing root cause analysis.</li>
+                            
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="job timeline-block">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>System Engineer – Infosys Limited</h3>
+                        <p class="meta">Pune, India | April 2013 – Jan 2014</p>
+                        
+                        <p class="project"><strong>Project:</strong> Finacle - State Bank of India (Version Migration)</p>
+                        
+                        <ul>
+                            
+                            <li>Contributed to Infosys 🔸Finacle, a core banking solution platform, as part of the global SBI migration program.</li>
+                            
+                            <li>Executed Finacle version upgrade from 7.x to 11.x across 25 international branches of the State Bank of India (SBI).</li>
+                            
+                            <li>Developed interactive menu-driven forms using 🔸HTML and 🔸JavaScript for enhanced user experience.</li>
+                            
+                            <li>Customized backend automation scripts using Finacle scripting language, similar to Unix 🔸shell scripting, for data processing and business workflows.</li>
+                            
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="job timeline-block">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>System Trainee – Infosys Limited</h3>
+                        <p class="meta">Mysore, India | Aug 2012 – Mar 2013</p>
+                        
+                        <ul>
+                            
+                            <li>Completed foundational training on software development lifecycle (SDLC), Agile practices, and core software engineering principles.</li>
+                            
+                            <li>Gained hands-on experience with 🔸Java programming and object-oriented design</li>
+                            
+                            <li>Created web project with technologies including HTML, CSS, JavaScript, 🔸JSP, and the 🔸Spring MVC framework.</li>
+                            
+                            <li>Received RDBMS training focused on 🔸PL/SQL, query optimization, and database design fundamentals.</li>
+                            
+                            <li>Acquired functional and architectural understanding of the Infosys Finacle banking product suite.</li>
+                            
+                        </ul>
+                    </div>
+                </div>
+                
+            </section>
+
+            <section class="education">
+              <h2>Education</h2>
+              
+              <p><strong>Bachelor of Technology in Computer Science and Engineering</strong> – Maharaja Surajmal Institute of Technology, GGSIPU, New Delhi, India (2008-2012)</p>
+              
+           </section>
+        </div>
+
+        
+
+    </main>
+
+    <aside class="sidebar">
+       <!-- <div class="profile-pic">
+            <img src="profile.jpg" alt="Lekhraj Dinkar" />
+        </div>-->
+        <h1>Lekhraj Dinkar</h1>
+        <p class="title">Solution and DevOps Engineer</p>
+        <hr>
+        <div class="contact">
+            <p><strong>📍</strong> Irvine(CA), 92618, USA</p>
+            <p><strong>📞</strong> +1 (469) 493 5272</p>
+            <p><strong>✉️</strong> <a href="mailto:Lekhrajdinkarus@gmail.com">Lekhrajdinkarus@gmail.com</a></p>
+            <p><strong>🔗</strong> <a href="https://www.linkedin.com/in/lekhraj-dinkar-25872140/">LinkedIn</a></p>
+            <p><strong>💻</strong> <a href="https://github.com/lekhrajdinkar">GitHub</a></p>
+        </div>
+
+        <hr>
+        <h2 class="skill--skills">Skills</h2>
+        
+        <h4 class="skill-subtitle">Aws cloud</h4>
+        <ul class="skills">
+            
+            <li>security services - IAM, KMS, ACM, secret manager</li>
+            
+            <li>Storage and Database - S3, Aurora postgresSQL, global serverless, dynamodb</li>
+            
+            <li>serverless microservice and event driver architecture with  SQS, SNS, EventBridge and Lambda</li>
+            
+            <li>networking with VPC, ALB, API Gateway, Route 53</li>
+            
+            <li>Container orchestration with ECS, EKS and ECR</li>
+            
+        </ul>
+        
+        <h4 class="skill-subtitle">Programming languages</h4>
+        <ul class="skills">
+            
+            <li>OOPS and Functional styling programming with Python, Java, typescript</li>
+            
+            <li>Familiar with Bash</li>
+            
+            <li>PL/SQL</li>
+            
+        </ul>
+        
+        <h4 class="skill-subtitle">Deployment and release</h4>
+        <ul class="skills">
+            
+            <li>Containerization with Docker, Kubernetes with Helm charts</li>
+            
+            <li>Orchestration with AWS ECS, EKS</li>
+            
+            <li>CD pipeline with Harness and AWS CodePipeline</li>
+            
+            <li>Infrastructure as Code IAC with Hashicorp Terraform and HCP cloud</li>
+            
+        </ul>
+        
+        <h4 class="skill-subtitle">Backend and middleware</h4>
+        <ul class="skills">
+            
+            <li>Python - FastAPI, PySpark, Pandas, SQLAlchemy, boto3</li>
+            
+            <li>Frameworks - Spring boot web, spring JPA data, Spring Security, Hibernate</li>
+            
+            <li>RESTful Services secured with OAuth2.0, JWT, TLS certificates.</li>
+            
+            <li>Architecture -  Microservices, Domain-Driven Design, event-driver architecture</li>
+            
+            <li>ETL Pipelines - Data Ingestion & Transformation with PySpark</li>
+            
+            <li>Messaging Systems - Confluent Kafka, RabbitMQ, IBM MQ</li>
+            
+            <li>PostgreSQL (Aurora Global), Complex SQL queries, DynamoDB</li>
+            
+        </ul>
+        
+        <h4 class="skill-subtitle">Frontend</h4>
+        <ul class="skills">
+            
+            <li>Frameworks - Angular 17, Angular Material, reactive RxJS and Angular redux NgRx</li>
+            
+            <li>Styling - SCSS, HTML5</li>
+            
+        </ul>
+        
+        <h4 class="skill-subtitle">Process</h4>
+        <ul class="skills">
+            
+            <li>Methodologies - Agile/Scrum, SDLC, Production Support, Release Management</li>
+            
+            <li>Technical Documentation, Stakeholder Engagement, Team Collaboration</li>
+            
+            <li>Code Reviews, Mentoring, Technical Design Sessions</li>
+            
+        </ul>
+        
+
+        <!--
+       <section class="skill--skills">
+           <h2>Certifications</h2>
+           <ul>
+               
+               <li>📃 AWS Certified Solutions Architect</li>
+               
+           </ul>
+       </section>
+       -->
+
+
+   </aside>
+
+</div>
+</body>
+</html>
