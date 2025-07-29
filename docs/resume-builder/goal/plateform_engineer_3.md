@@ -1,6 +1,4 @@
 # Platform-Engineer-III
-- https://capgroup.wd1.myworkdayjobs.com/en-US/capitalgroupcareers/job/Irvine/Platform-Engineer-III_JR5248/apply/autofillWithResume?jobFamilyGroup=d003e6d28e091011fe8da2e495870000
-
 
 ## ✔️summary
 ```
