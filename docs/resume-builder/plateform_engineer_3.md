@@ -2,7 +2,7 @@
 - https://capgroup.wd1.myworkdayjobs.com/en-US/capitalgroupcareers/job/Irvine/Platform-Engineer-III_JR5248/apply/autofillWithResume?jobFamilyGroup=d003e6d28e091011fe8da2e495870000
 
 
-## summary
+## ✔️summary
 ```
 As one of our Senior Platform Engineers, you will enable delivery capabilities through engineering best practices. 
 You’ll execute phases of complex distributed messaging streaming platform , real-time services and operational lifecycles. 
@@ -13,7 +13,7 @@ You have an agile mindset that will drive application optimization through DevOp
 - continuous integration and automated deployment.
 ```
 
-## looking for
+## ✔️looking for
 - You have a bachelor’s degree in computer science, Engineering or a related technical field
 - You have at least 5 years of experience in platform architecture and/or systems engineering with public and private cloud
 - You have strong experience as a Full stack development with OpenAPI, Swagger, REST APIs to develop “Platform/Developer productivity utilities” with Java/SpringBoot, Python, REACT , angular and any database like PostgreSQL.
@@ -28,7 +28,7 @@ You have an agile mindset that will drive application optimization through DevOp
 - Understanding of TLS certificate chains and the TLS security framework.
 - You are experienced in Agile/SCRUM methodologies with a focus on product delivery.
 
-## tags
+## ✔️tags
 ```
 AWS ACM
 AWS ELB / ALB
@@ -65,7 +65,7 @@ Harness CD pipeline
 
 ---
 
-## ✅ High-Level Topics & Subtopics
+## ✔️Study::High-Level Topics & Subtopics
 ### 1. Platform Architecture & Systems Engineering
 - **Cloud Fundamentals (AWS & Private Cloud)**
     - Networking (VPC, Route53, ELB/ALB)
@@ -130,24 +130,10 @@ Harness CD pipeline
 - Jira/Confluence
 - Dev Productivity Metrics
 
----
-
-## 📊 Study Progress Dashboard
-
-| **Topic**                 | **Subtopic**                   | **Learning Method**     | **Status**     | **Notes / Links**          | **Target Date** |
-|--------------------------|--------------------------------|--------------------------|----------------|-----------------------------|-----------------|
-| AWS                      | Route53, ELB/ALB, IAM           | AWS Skill Builder        | Not Started    |                             | Aug 2           |
-| Kubernetes               | Stateful, Helm, Secrets         | KodeKloud, Civo Labs     | In Progress    |                             | Aug 5           |
-| Java/Spring Boot         | REST, Swagger, OAuth            | Udemy / JetBrains        | In Progress    | Project in GitHub           | Aug 7           |
-| Python                   | FastAPI, Microservices          | FastAPI Docs, Build      | Not Started    |                             | Aug 9           |
-| Terraform                | IaC, AWS Provider               | Terraform Registry       | Not Started    |                             | Aug 10          |
-| Kafka (Confluent Cloud)  | Streams, ksqlDB, Schema Reg.    | Confluent Academy        | Not Started    |                             | Aug 12          |
-| Observability            | OTEL, Datadog, Grafana          | Datadog Academy          | Not Started    |                             | Aug 13          |
-| CI/CD                    | GitOps, Harness, Testing        | Harness Docs             | In Progress    | Pipeline in lab environment | Aug 15          |
-| Secure Coding Practices  | OWASP, JWT, TLS                 | OWASP Top 10, Articles   | Not Started    |                             | Aug 17          |
 
 ---
 
+## ✔️Mind map
 ```
 Platform Engineer 3
 ├── Platform Architecture
@@ -177,6 +163,8 @@ Platform Engineer 3
     └── SCRUM
 ```
 
+---
+
 ## LinkedIn Recommendations (to explore further)
 - Search or follow these:
 - Chris Aniszczyk – CNCF / Platform Engineering
@@ -184,3 +172,19 @@ Platform Engineer 3
 - Kelsey Hightower – Kubernetes + Platform Evangelism
 - Emily Freeman – DevOps & Platform Engineering Strategy
 - Ben Sigelman – OpenTelemetry & Observability Thought Leader
+
+---
+
+## 📊 Study::Progress Dashboard
+
+| **Topic**                 | **Subtopic**                   | **Learning Method**     | **Status**     | **Notes / Links**          | **Target Date** |
+|--------------------------|--------------------------------|--------------------------|----------------|-----------------------------|----------------|
+| AWS                      | Route53, ELB/ALB, IAM           | AWS Skill Builder        | Not Started    |                             |          |
+| Kubernetes               | Stateful, Helm, Secrets         | KodeKloud, Civo Labs     | Not Started    |                             |           |
+| Java/Spring Boot         | REST, Swagger, OAuth            | Udemy / JetBrains        | Not Started   |           |          |
+| Python                   | FastAPI, Microservices          | FastAPI Docs, Build      | Not Started    |                             |          |
+| Terraform                | IaC, AWS Provider               | Terraform Registry       | Not Started    |                             |          |
+| Kafka (Confluent Cloud)  | Streams, ksqlDB, Schema Reg.    | Confluent Academy        | Not Started    |                             |        |
+| Observability            | OTEL, Datadog, Grafana          | Datadog Academy          | Not Started    |                             |         |
+| CI/CD                    | GitOps, Harness, Testing        | Harness Docs             | In Progress    |  |         |
+| Secure Coding Practices  | OWASP, JWT, TLS                 | OWASP Top 10, Articles   | Not Started    |                             |        |
