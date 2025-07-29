@@ -12,7 +12,7 @@ if template1 not in [*all_templates]:  yaml1 = all_templates[0]; print(f"Invalid
 
 all_yaml = [f.replace(".yaml", "").split('-')[1] for f in os.listdir(YAML_DIR) if f.startswith(f"resume")]
 print("yaml options - ", *all_yaml)
-yaml1=input("choose yaml [default : se3] : ") or 'se3'
+yaml1=input("choose yaml [default : pe3] : ") or 'pe3'
 if yaml1 not in [*all_yaml]:  yaml1 = all_yaml[0]; print(f"Invalid yaml option provided. Defaulting to {yaml1}.")
 
 

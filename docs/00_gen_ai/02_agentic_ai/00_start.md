@@ -19,5 +19,7 @@
     - claude Sonat
     - [https://docs.anthropic.com/en/docs/claude-code/sdk ](https://docs.anthropic.com/en/docs/claude-code/sdk)
 - **llamaIndex**
-    - [https://www.llamaindex.ai/]([https://kode.wiki/4lFwf5p](https://kode.wiki/4lFwf5p))
+    - [https://www.llamaindex.ai/](https://www.llamaindex.ai/)
 
+## More
+- https://ai.google.dev/gemini-api/docs
