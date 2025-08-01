@@ -102,15 +102,37 @@ nav:
           - byteMonk ☑️:
               - byteMonk_reference: 10_System_Design/SD_99_Examples/byteMonk/00_byteMonk_reference.md
                 
-  - 🧑🏻‍💻Coding Int:
-        - DSA:
+
+
+  - Interview:
+      - 🧑🏻‍💻Coding Int:
+          - DSA:
               - start: 11_coding_interview/ds+algo/00_ds+algo-start.md
-        - Tips:
+          - Tips:
               - python_tips: 11_coding_interview/tips/01_01_py_tips.md
               - sql_tips: 11_coding_interview/tips/02_01_postgres_tips.md
               - code_patterns: 11_coding_interview/tips/00_01_code_patterns.md
               - code_best_practice: 11_coding_interview/tips/00_03_code_best_practice.md
-
+      - behaviour:
+          - behaviour 1 (Teamwork) : 99_more/02_interview_behaviour/01_01_teamwork.md
+          - behaviour 2 (leadership) : 99_more/02_interview_behaviour/01_02_leadership.md
+          - behaviour 3 (Resilience) : 99_more/02_interview_behaviour/01_03_Resilient.md
+          - behaviour 4 (skills) : 99_more/02_interview_behaviour/01_04_tech_skills.md
+          - behaviour 5 (more) : 99_more/02_interview_behaviour/01_05_behavioural_more.md
+      - general coding :
+          - best practice: 99_more/02_interview_behaviour/coding-int/01_code_patterns.md
+          - coding patterns: 99_more/02_interview_behaviour/coding-int/00_03_code_best_practice.md
+      - Revision/s :
+          - revision 2024 - 1 : 99_more/01_revision/revision_01_2024.md
+          - revision 2025 - 1 : 99_more/01_revision/revision_02_2025.md
+      - Brain dump :
+          - 2025 (app-6): 99_more/02_interview_behaviour/brain-dump/2025.md
+          - 2022-24 app-6): 99_more/02_interview_behaviour/brain-dump/2022-2024.md
+          - 2019-21 (app-4/5): 99_more/02_interview_behaviour/brain-dump/2019-2021.md
+          - 2017-18 (app-1/2/3:on-shore): 99_more/02_interview_behaviour/brain-dump/2017-2018.md
+          - 2012-16 (app-1/2/3:off-shore) : 99_more/02_interview_behaviour/brain-dump/2012-2016.md
+      - Learnings dumps:
+          - 2025: 99_more/02_interview_behaviour/learning-dumps/learning_2025.md
 
 theme:
   name: material
