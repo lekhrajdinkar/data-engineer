@@ -100,7 +100,7 @@ nav:
               - 101 rate limiting: 10_System_Design/SD_99_Examples/byte-byte-go/101_rate-limiter.md
               - 110 notification system: 10_System_Design/SD_99_Examples/byte-byte-go/110_notification-system.md
           - byteMonk ☑️:
-              - 201 paypal: 10_System_Design/SD_99_Examples/byteMonk/01_paypal.md
+              - byteMonk_reference: 10_System_Design/SD_99_Examples/byteMonk/00_byteMonk_reference.md
                 
   - 🧑🏻‍💻Coding Int:
         - DSA:
