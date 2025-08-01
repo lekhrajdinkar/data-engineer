@@ -1,6 +1,8 @@
 # PayPal Clone - Payment System
 
-Welcome to the PayPal Clone payment system documentation. This project is a proof-of-concept implementation of a scalable, distributed payment processing system built with microservices architecture.
+- Welcome to the PayPal Clone payment system documentation. 
+- This project is a proof-of-concept implementation of a scalable, distributed payment processing system built with microservices architecture.
+- `@ByteByteGo` http://youtube.com/post/UgkxGvw1HtCKogJZlgGcDQk09gRn4-9WzMN4?feature=shared
 
 ## 🚀 Project Overview
 
