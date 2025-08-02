@@ -6,6 +6,3 @@
 - 🗨️ <a href="https://chatgpt.com/c/6860073b-f944-800d-840d-293a4e339ddc" target="_blank">py more lib :: explanation</a>
 - 🗨️ <a href="https://chatgpt.com/c/68535fab-0494-800d-af09-a35817d88f6a" target="_blank">web1</a>
 - 🗨️ <a href="https://chatgpt.com/c/68591a85-d678-800d-9f7f-ec93a102eb9a" target="_blank">web2 (microservices)</a>
-
-
-

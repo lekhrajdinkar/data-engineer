@@ -16,8 +16,8 @@ yaml1=input("choose yaml [default : pe3] : ") or 'pe3'
 if yaml1 not in [*all_yaml]:  yaml1 = all_yaml[0]; print(f"Invalid yaml option provided. Defaulting to {yaml1}.")
 
 
-TEMPLATE_FILE = f"template/template-{template1}.html"
-YAML_FILE = f"yaml/resume-{yaml1}.yaml"
+TEMPLATE_FILE = f"../99_more/03-resume/template/template-{template1}.html"
+YAML_FILE = f"../99_more/03-resume/yaml/resume-{yaml1}.yaml"
 BASE_NAME = f"resume-from-tpl-{template1}-profile-{yaml1}"
 OUTPUT_DIR = f"output/{BASE_NAME}"
 

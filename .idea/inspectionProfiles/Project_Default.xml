@@ -19,5 +19,29 @@
         </list>
       </option>
     </inspection_tool>
+    <inspection_tool class="VulnerableLibrariesLocal" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="isIgnoringEnabled" value="true" />
+      <option name="ignoredModules">
+        <list>
+          <option value="02-etl-pyspark" />
+          <option value="02-etl-pyspark" />
+          <option value="02-etl-pyspark" />
+        </list>
+      </option>
+      <option name="ignoredPackages">
+        <list>
+          <option value="null:python-multipart:0.0.9" />
+          <option value="null:urllib3:2.0.7" />
+          <option value="null:requests:2.31.0" />
+        </list>
+      </option>
+      <option name="ignoredReasons">
+        <list>
+          <option value="Not exploitable" />
+          <option value="Not exploitable" />
+          <option value="Not exploitable" />
+        </list>
+      </option>
+    </inspection_tool>
   </profile>
 </component>

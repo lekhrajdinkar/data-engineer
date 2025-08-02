@@ -1,4 +1,4 @@
-- ## C. Resume (New) ✅
+- ## A. Resume (New) ✅
 - https://wkhtmltopdf.org/downloads.html
   - wkhtmltopdf-0.12.6-1.msvc.win64.exe
 - PATH: C:\Program Files\wkhtmltopdf\bin
@@ -43,7 +43,6 @@ https://www.udemy.com/certificate/UC-ff2f4ad9-17f3-4630-945f-8c348ecf2db7/
   - https://www.canva.com/design/DAGoz-fJeaU/ihb3143JTAelUj6xOErfXQ/edit?referrer=pdf-maker-landing-page :point_left:
   - https://www.canva.com/design/DAGoz-fJeaU/74X71hoM6I7scVlp_bDnRg/view?utm_content=DAGoz-fJeaU&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h3465913660
   - https://milkov.tech/assets/psd.pdf
-
 
 ---
 

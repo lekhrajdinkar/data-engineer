@@ -1,6 +1,6 @@
 # Platform-Engineer-III
 - https://chatgpt.com/c/688931ba-09e0-800d-8ac6-5b210c77d4df
-- took paper notes. pls check
+- took paper notes (black book back). pls check
 
 ## ✔️summary
 ```
@@ -142,7 +142,6 @@ Harness CD pipeline
 - SCRUM (Daily, Retro, Grooming)
 - Jira/Confluence
 - Dev Productivity Metrics
-
 
 ---
 
