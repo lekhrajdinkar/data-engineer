@@ -77,6 +77,100 @@ Solutions Engineer III
     └─ Clear Documentation
 ```
 
+
+```mermaid
+mindmap
+  root((SDLC Principles & Trends - 2025))
+
+    Core_Phases
+      Planning
+        Requirements_Gathering
+        Feasibility_Study
+      Analysis
+        Stakeholder_Interviews
+        Requirements_Specification
+      Design
+        High-Level_Design
+        Low-Level_Design
+        UI/UX_Design
+      Implementation
+        Coding
+        Version_Control
+        Code_Reviews
+      Testing
+        Unit_Testing
+        Integration_Testing
+        System_Testing
+        Acceptance_Testing
+      Deployment
+        Release_Strategies
+        Rollback_Plans
+      Maintenance
+        Bug_Fixes
+        Enhancements
+        Monitoring
+
+    Popular_Models
+      Waterfall
+      V-Model
+      Iterative
+      Agile
+        Scrum
+        Kanban
+        Lean
+        XP
+        DevOps
+        Scrumban
+      Spiral
+      Big_Bang
+
+    Key_Trends_&_Changes
+      Agile_Dominance
+        Agile_Manifesto
+        Continuous_Feedback
+      DevOps_Integration
+        CI/CD_Pipelines
+        Automation
+        Infrastructure_as_Code
+      Cloud-Native_Software
+        Microservices
+        Serverless
+        Containerization
+        Cloud_Deployment
+      Security_Shift_Left
+        DevSecOps
+        Early_Security_Testing
+      Compliance_and_Privacy
+        GDPR
+        SOC2
+        ISO_27001
+      AI/ML_Integration
+        Automated_Testing
+        Analytics
+      Remote_Teams
+        Async_Development
+        Collaboration_Tools
+
+    Best_Practices
+      Continuous_Learning
+      Automation_Testing
+      Regular_Code_Reviews
+      Shift_Left_Testing
+      Monitoring_and_Logging
+      Feedback_Loops
+      Documentation
+      Cross-Functional_Collaboration
+      Emphasis_on_User_Experience
+      Security_by_Design
+
+    Useful_References
+      Agile_Alliance
+      DevOps_Handbook
+      OWASP
+      Cloud_Architectures
+      State_of_DevOps_Report
+
+```
 ---
 ## 3. Prepare for the Interview ✅
 

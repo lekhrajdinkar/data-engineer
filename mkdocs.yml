@@ -101,27 +101,32 @@ nav:
               - 110 notification system: 10_System_Design/SD_99_Examples/byte-byte-go/110_notification-system.md
           - byteMonk ☑️:
               - byteMonk_reference: 10_System_Design/SD_99_Examples/byteMonk/00_byteMonk_reference.md
-                
-
 
   - Interview:
-      - 🧑🏻‍💻Coding Int:
+      - CSE:
+          - principle:
+              - My SDLC: 99_more/00_cse/principles/01_my-sdlc-task.md
+              - Agile: 99_more/00_cse/principles/02_agile.md
+              - Kanban: 99_more/00_cse/principles/03_kanban.md
+          - coding:
+              - coding_best_practice: 99_more/00_cse/coding/03_coding_best_practice.md
+              - coding_patterns: 99_more/00_cse/coding/03_coding_patterns.md
+              - code_review: 99_more/00_cse/coding/03_code_review.md
+          - work_history:
+              - 2025-07 app6: 99_more/00_cse/work_history/2025/sdlc-july-2025.md
+
+      - Leetcode:
           - DSA:
               - start: 11_coding_interview/ds+algo/00_ds+algo-start.md
           - Tips:
               - python_tips: 11_coding_interview/tips/01_01_py_tips.md
               - sql_tips: 11_coding_interview/tips/02_01_postgres_tips.md
-              - code_patterns: 11_coding_interview/tips/00_01_code_patterns.md
-              - code_best_practice: 11_coding_interview/tips/00_03_code_best_practice.md
       - behaviour:
           - behaviour 1 (Teamwork) : 99_more/02_interview_behaviour/01_01_teamwork.md
           - behaviour 2 (leadership) : 99_more/02_interview_behaviour/01_02_leadership.md
           - behaviour 3 (Resilience) : 99_more/02_interview_behaviour/01_03_Resilient.md
           - behaviour 4 (skills) : 99_more/02_interview_behaviour/01_04_tech_skills.md
           - behaviour 5 (more) : 99_more/02_interview_behaviour/01_05_behavioural_more.md
-      - general coding :
-          - best practice: 99_more/02_interview_behaviour/coding-int/01_code_patterns.md
-          - coding patterns: 99_more/02_interview_behaviour/coding-int/00_03_code_best_practice.md
       - Revision/s :
           - revision 2024 - 1 : 99_more/01_revision/revision_01_2024.md
           - revision 2025 - 1 : 99_more/01_revision/revision_02_2025.md
