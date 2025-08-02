@@ -1,7 +1,4 @@
-<img src="https://r2cdn.perplexity.ai/pplx-full-logo-primary-dark%402x.png" class="logo" width="120"/>
-
-## 1. Summary \& Categorization
-
+# Solution Engineer III / IV
 ### **A. Technical Expertise**
 
 - Programming: Python, C\#, scripting (at least one language)
@@ -35,8 +32,8 @@
 - Vendor management: Technical oversight and integration of external solutions
 
 
-## 2. Mind Map (Text-Based)
-
+## 2. Mind Map
+- Text-Based
 ```
 Solutions Engineer III
 │
@@ -77,7 +74,8 @@ Solutions Engineer III
     └─ Clear Documentation
 ```
 
-
+## Mind Map: SDLC Principles & Trends - 2025
+- This mind map captures the core principles, popular models, key trends, and best practices in Software Development Life Cycle (SDLC) as of 2025. 
 ```mermaid
 mindmap
   root((SDLC Principles & Trends - 2025))

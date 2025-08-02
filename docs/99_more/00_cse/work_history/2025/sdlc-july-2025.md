@@ -1,12 +1,12 @@
-## Mind Map: SDLC Stages (Agile) :: July 2025 work
+# Mind Map: SDLC Stages (Agile) :: July 2025 work
 
 ### 1. **Requirement Analysis**
 
 - Business Query
     - Clarified T+2 / T+3 logic
     - Investigated failed SNS alert \& SMTP filter impact
-- New VPC Request
-    - Requested network capacity with engine team
+- New AWS VPC created for QA environment. 
+- Helping engine team: max 5 per region, non-overlapping cidr-range 🔸
 
 
 ### 2. **Design**
@@ -20,11 +20,12 @@
     - Planned certificate management approach
 - SSL on Kafka
     - Discussed SSL strategy on container vs local setup
+    - offshore missed updating Dockerfile for SSL setup 🔸
 
 
 ### 3. **Development**
 
-- Prod API
+- Prod API (future state) ➕
     - Managed API calls with different scopes (`execute`, `read`, `datamod`)
     - RBAC role configuration \& manual response sending
 - Mock API for QA
@@ -76,7 +77,7 @@
     - Supported email alert plan changes due to security filters
 
 
-### Summary:
+### Summary 👈🏻
 
 - **Cross-functional collaboration:** Worked closely with app teams, offshore test, engineering, and security teams.
 - **Hands-on technical fixes:** Debugging prod issues, Kafka onboarding, API \& ETL support.

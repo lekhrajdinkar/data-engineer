@@ -104,6 +104,9 @@ nav:
 
   - Interview:
       - CSE:
+          - Goals:
+              - SSE level 3/4: 99_more/03-resume/goal/solution_engineer_3.md
+              - PE level 3/4: 99_more/03-resume/goal/platform_engineer_3.md
           - principle:
               - My SDLC: 99_more/00_cse/principles/01_my-sdlc-task.md
               - Agile: 99_more/00_cse/principles/02_agile.md
@@ -113,7 +116,8 @@ nav:
               - coding_patterns: 99_more/00_cse/coding/03_coding_patterns.md
               - code_review: 99_more/00_cse/coding/03_code_review.md
           - work_history:
-              - 2025-07 app6: 99_more/00_cse/work_history/2025/sdlc-july-2025.md
+              - 2025:
+                - july app6: 99_more/00_cse/work_history/2025/sdlc-july-2025.md
 
       - Leetcode:
           - DSA:
@@ -163,17 +167,26 @@ repo_url: https://github.com/lekhrajdinkar/02-etl-pyspark
 repo_name: GitHub
 edit_uri: edit/main/Notes/
 
+# Extensions
 markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - admonition
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
+  - attr_list
+  - md_in_html
+  - tables
   - toc:
       permalink: true
-  - pymdownx.superfences
-  - pymdownx.emoji:
-      emoji_generator: !!python/name:pymdownx.emoji.to_svg
-  - pymdownx.betterem
-  - pymdownx.caret
-  - pymdownx.mark
-  - pymdownx.tilde
 
 plugins:
   - search
