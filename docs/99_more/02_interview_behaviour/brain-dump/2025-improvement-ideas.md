@@ -1,7 +1,7 @@
-# Improvement :point_left:
-## A. performance :green_circle:
+# Improvement 👈🏻
+## A. performance 🟢
 ### achieved
-- TACT / COPS
+- app-5 / COPS
   - legacy  app performance - inner sql, database connection pool
   - bulk review and approve - UI enhancement + spinner (prevent multiple click)
   - enums
@@ -9,7 +9,7 @@
 - cache static data + refresh api
 
 ---
-## B. monitoring :green_circle:
+## B. monitoring 🟢
 ### achieved
 - built dashboard in angular + s3 URI + s3 metadata on dynamoDB
 ### proposal
@@ -18,7 +18,7 @@
 - x-ray, dd(otel)
 
 ---
-## C. **CORE app** :green_circle:
+## C. **CORE app** 🟢
 ### achieved
 - **maps**
     - inbound ETL poc
@@ -31,13 +31,13 @@
       - design JSON contract and RDBMS for outbound
       - design event-payload json - allocation (1), re-balance(1), generic(M) trade/s
       - bucket_mapping_id -- driver of all event, metric and dimension
-- **fsr**
+- **app-4**
     - jwt token validation + method based authorization @pre/postAuth + helped to understand Auth/implicit flow
     - suggest **implicit flow with pkce**
     - batch job 15 sec IAM token
     - disagree with UI arch : forced old them to redux, observability over Js-promises, etc
-- **tact** :  
-    - built screen for TACt fto swift message. no angular Vanilla JS + simulator to fast-forward development
+- **app-5** :  
+    - built screen for app-5 fto swift message. no angular Vanilla JS + simulator to fast-forward development
 - **refactor**
     - eg: swift for AF vs AFIS
     - SB property load, avoid inner class
@@ -55,11 +55,11 @@
     - custom controller (DemonSet) > read yml > spin up other job
 - solution-2 : **autosys**
     - s3:file-drop > lambda > webhook::harness pipeline
-- **fsr autosys** :parking: check pod solution
+- **app-4 autosys** :parking: check pod solution
 - **custom-metric** to create event Dashboard: eb-event json payload, add tags
 
 ---
-## D. AWS :green_circle:
+## D. AWS 🟢
 ### achieved
 - vpce
 - sqs extended queue 256
@@ -80,30 +80,17 @@
 
 ---  
 ## E. more
-- Always checking what going on : **etacs, fsr, path** tech/helix upgrade
+- Always checking what going on : **app-e-tacs, app-4, app-path** tech/helix upgrade
     - found etac k8s - logs temp > not forwarded to dd
-    - fsr goes to splunk
+    - app-4 goes to splunk
 - Infosys training : share-code.jar
 - OPAC/FAC days:
     - georgey - decrypt password util
     - **footNotes Deletion** tools CSV to delete script (cascaded and complex joins, 7 tables)
 
+  
 
----
-# learnings / poc :point_left:
-- **okta :: Oauth2.0**
-    - https://dev-16206041.okta.com/
-    - aws org :: SSO + SAML with okta ... in progress
-- **terraform**, easy to understand, persnel project done
-    - https://portal.cloud.hashicorp.com/services/boundary/clusters/list?project_id=ef55c361-4762-4358-9aff-65cd03c360f2 
-    - https://app.terraform.io/app/lekhrajdinkar-org/workspaces
-- **harness CD pipeline** 
-    - **delegates** setup on minikube
-    - deploy to personal k8s cluster minikube/EKS
-    - preparing for CKAD, did training, completing online labs
-    - https://app.harness.io/ng/account/e0wDKKO_S46x3M75TWv0iw/all/orgs/default/projects/mapsoutboundapi/pipelines
 
-![img.png](img.png)
 
 
 

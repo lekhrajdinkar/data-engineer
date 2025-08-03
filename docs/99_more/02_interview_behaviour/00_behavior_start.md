@@ -1,5 +1,7 @@
+# Behavior index page (start)
 ## AI help
-- https://gemini.google.com/gem/career-guide/0dca77d3a4084241 (must see)
+- [https://gemini.google.com/gem/career-guide/0dca77d3a4084241](https://gemini.google.com/gem/career-guide/0dca77d3a4084241)
+- [https://www.perplexity.ai/spaces/301-behavior-interview-sse-m.upYYuzQKmg0sGWCSR_ow](https://www.perplexity.ai/spaces/301-behavior-interview-sse-m.upYYuzQKmg0sGWCSR_ow)
 
 ## categories
 - problem-solving 
