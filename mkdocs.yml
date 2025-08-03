@@ -91,11 +91,11 @@ nav:
 
       - ✅Systems:
           - System-1(app-6) ☑️:
-              - B2B model: 10_System_Design/SD_99_Examples/system-2/00_PROJ-1_B2B.md
-              - Design Patterns: 10_System_Design/SD_99_Examples/system-2/01-PROJ-1_Design-patterns.md
-              - Disaster Recovery: 10_System_Design/SD_99_Examples/system-2/02_PROJ-1_DR.md
-              - Release Process: 10_System_Design/SD_99_Examples/system-2/03_PROJ-1_release_process.md
-              - API Overview: 10_System_Design/SD_99_Examples/system-2/04_PROJ-1_API.md
+              - B2B model: 10_System_Design/SD_99_Examples/app-6/00_PROJ-1_B2B.md
+              - Design Patterns: 10_System_Design/SD_99_Examples/app-6/01-PROJ-1_Design-patterns.md
+              - Disaster Recovery: 10_System_Design/SD_99_Examples/app-6/02_PROJ-1_DR.md
+              - Release Process: 10_System_Design/SD_99_Examples/app-6/03_PROJ-1_release_process.md
+              - API Overview: 10_System_Design/SD_99_Examples/app-6/04_PROJ-1_API.md
           - byte-byte-go ☑️:
               - 101 rate limiting: 10_System_Design/SD_99_Examples/byte-byte-go/101_rate-limiter.md
               - 110 notification system: 10_System_Design/SD_99_Examples/byte-byte-go/110_notification-system.md

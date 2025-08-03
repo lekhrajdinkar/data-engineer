@@ -5,7 +5,7 @@
 - **Collaboration tools** (Jira, Confluence) facilitate transparency, tracking, documentation, and asynchronous work—essential for modern distributed teams.
 - **DevOps and automation** (CI/CD, test automation) connect development to operations for reliable, rapid releases.
 - **Metrics** (velocity, burn-down) keep delivery data-driven, while **coaching/training** and **maturity assessments** support growth.
-- Agile's **customer-centric approach** means everything is geared to meet real-world needs and maximize business value—critical for financial sector organizations like Capital Group.
+- Agile's **customer-centric approach** means everything is geared to meet real-world needs and maximize business value—critical for financial sector organizations like CCGG.
 
 ---
 ## Agile Mind Map

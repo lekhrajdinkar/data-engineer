@@ -60,11 +60,11 @@
 ```
 
 | **Technique**                             | **Description**                                                                      | **Example Prompt**                                                                                | **Use Case**                        |
-| ----------------------------------------- | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------- | ----------------------------------- |
+| ----------------------------------------- | ------------------------------------------------------------------------------------ |---------------------------------------------------------------------------------------------------| ----------------------------------- |
 | **Zero-shot**                             | Ask a question directly without examples.                                            | “Translate to French: ‘Good morning.’”                                                            | Simple tasks, direct questions      |
 | **Few-shot**                              | Provide a few examples, then ask for new output.                                     | “Translate:\n- Hello → Bonjour\n- Thank you → Merci\n- Goodbye →”                                 | Pattern learning without training   |
 | **Chain-of-Thought (CoT)**                | Ask the model to reason step-by-step before answering.                               | “If Sarah has 3 apples and buys 2 more, how many apples does she have? Let’s think step by step.” | Math, logic, reasoning              |
-| **RAG (Retrieval-Augmented Generation)**  | Retrieve external data (e.g., from documents or a DB) and inject it into the prompt. | “Context: \[doc chunk]\nQuestion: What is Capital Group’s investment strategy?”                   | Internal search, domain-specific QA |
+| **RAG (Retrieval-Augmented Generation)**  | Retrieve external data (e.g., from documents or a DB) and inject it into the prompt. | “Context: \[doc chunk]\nQuestion: What is investment strategy?”                      | Internal search, domain-specific QA |
 
 
 ## check more ❓

@@ -8,11 +8,11 @@
   - At the start of each cycle, we identify business features and technical items
   - like infrastructure updates or tech debt reduction, for the upcoming release. 
   - These are prioritized and assigned to sprints leading up to the release date.
-  - idh/kafka update
+  - IHD/kafka update
   - deploymnet infra ahead of time.
-  - talking and idh/comet team
+  - talking and ihd/comt team
 - **Development Workflow**
-  - updating terraform module for tech upgrac
+  - updating terraform module for tech upgrade
   - business jira
   - peer review
   - offshore code review

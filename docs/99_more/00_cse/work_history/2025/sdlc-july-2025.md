@@ -12,9 +12,9 @@
 ### 2. **Design**
 
 - Common Kafka Stack
-    - Designed shared Kafka infrastructure for SACA, COMET, OIS
+    - Designed shared Kafka infrastructure for SWIFt-adaptor, COMT, SIO
     - Okta ID integration
-- SACA Project
+- SWIFt-adaptor Project
     - Kafka topics design (MT/MX with 7-year retention)
 - Wildcard Certificate on Oz
     - Planned certificate management approach
@@ -30,7 +30,7 @@
     - RBAC role configuration \& manual response sending
 - Mock API for QA
     - Created partner response simulation for Prod 3 fix testing
-- Kafka Bridge with COMET
+- Kafka Bridge with COMT
     - Supported Poland development with replication setup
 
 
@@ -41,7 +41,7 @@
 - DR Script Validation
     - Validated disaster recovery scripts post new model launch
 - Prod Issue 2 (Blank file)
-    - Coordinated upstream fix for noise file issue
+    - Coordinated upstream fix for nSIOe file issue
 
 
 ### 5. **Deployment**
@@ -63,7 +63,7 @@
     - Assisted with Kafka connectivity (404/network), consumer groups, Okta setup
 - ETL File Support
     - Supported E2E team with latest files from S3 ETL bucket
-- SACA/COMET/OIS Meetings
+- SWIFt-adaptor/COMT/SIO Meetings
     - Participated for planning, progress updates, delivery alignment
 
 

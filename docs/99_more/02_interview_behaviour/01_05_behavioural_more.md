@@ -95,7 +95,7 @@
     - senior over did engineer - aws glue job, cluster serverless, hourly pay
     - I advised, max 2 GB csv coming daily and  single server could handle, no cluster needed for processing 
     - advised to write custom etl code with pyspark.
-    - start with ECS cluster task with task=1. will scale task count horizontally in the future.
+    - start with ECS cluster task with task=1. it will scale task count horizontally in the future.
 
 - **story-2**
    
@@ -105,7 +105,7 @@
 - **Decision taken for offshore** ? ❓
 - offshore usually jumping into implementation directly, with **implementation design** 🔸
    - kafka with single system, initially
-   - later on new partner added comet,ois,idh,etc
+   - later on new partner added ( comt,sio,ihd,etc )
    - IAC refactor to create topic with same okta (1-M vs 1-1)
    - wrote java interface + updated spring-boot properties to show my design : serializer
    - code review : redundant code  for  connection
