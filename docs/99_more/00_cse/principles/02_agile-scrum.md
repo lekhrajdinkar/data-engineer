@@ -1,4 +1,14 @@
-## Agile
+## Introduction
+- **Agile frameworks** like Scrum and Kanban help structure work to deliver value frequently and adapt to change.
+- **Cross-functional teams** enable faster, higher quality releases by reducing handoffs and silos.
+- **Feedback loops** (demos, reviews, testing) and **continuous improvement** (retrospectives) ensure learning and iterative value creation.
+- **Collaboration tools** (Jira, Confluence) facilitate transparency, tracking, documentation, and asynchronous work—essential for modern distributed teams.
+- **DevOps and automation** (CI/CD, test automation) connect development to operations for reliable, rapid releases.
+- **Metrics** (velocity, burn-down) keep delivery data-driven, while **coaching/training** and **maturity assessments** support growth.
+- Agile's **customer-centric approach** means everything is geared to meet real-world needs and maximize business value—critical for financial sector organizations like Capital Group.
+
+---
+## Agile Mind Map
 
 ```mermaid
 
@@ -49,8 +59,70 @@ mindmap
       
 ```
 
+---
+## Agile Principles and Practices
 
-## Key terms and concepts
+### Agile Frameworks \& Approaches
+
+- Scrum 🏉
+- Kanban 📝
+- Lean / XP / Scrumban 🏭💻🔄
+
+
+### Team Structure \& Collaboration
+
+- Cross-Functional Teams 🤝
+- Cross-Team Collaboration 🌐
+- Pair Programming 👥
+
+
+### Core Agile Practices
+
+- Iterative Development 🔁
+- Continuous Feedback Loops 🔄
+- Continuous Improvement 📈
+- Customer-Centric Development 👤
+
+
+### Agile Ceremonies \& Events
+
+- Daily Stand-ups 🕗
+- Sprint Planning \& Reviews 🗓️
+- Retrospectives 🔍
+
+
+### Planning \& Prioritization
+
+- Backlog Management 📋
+- User Stories \& Acceptance Criteria ✍️
+
+
+### Tools \& Automation
+
+- Collaboration Tools (Jira, Confluence) 🛠️
+- Test Automation 🤖
+- Continuous Delivery 🚚
+- DevOps Practices ⚙️
+
+
+### Monitoring \& Incident Response
+
+- Monitoring \& Observability 🧐
+- Incident Management 🚨
+
+
+### Learning, Metrics \& Growth
+
+- Continuous Learning \& Adaptation 🎓
+- Knowledge Sharing \& Documentation 📚
+- Feedback Loops 🔄
+- Agile Metrics (Velocity, Burn-down, etc.) 📈
+- Agile Coaching \& Training 🧑🏫
+- Agile Transformation 🔄
+- Agile Maturity Assessments 📊
+
+---
+## Glossary of Agile Concepts
 
 | Concept | Emoji | Explanation |
 | :-- | :-- | :-- |
@@ -83,16 +155,4 @@ mindmap
 | Agile Coaching and Training | 🧑🏫 | Supporting teams/individuals in learning and maturing Agile practices. |
 | Agile Transformation | 🔄 | Organization-wide embrace of Agile mindset, structure, and practices. |
 | Agile Maturity Assessments | 📊 | Frameworks/tools to assess and continuously improve Agile adoption and practices. |
-
-## Summary
-
-- **Agile frameworks** like Scrum and Kanban help structure work to deliver value frequently and adapt to change.
-- **Cross-functional teams** enable faster, higher quality releases by reducing handoffs and silos.
-- **Feedback loops** (demos, reviews, testing) and **continuous improvement** (retrospectives) ensure learning and iterative value creation.
-- **Collaboration tools** (Jira, Confluence) facilitate transparency, tracking, documentation, and asynchronous work—essential for modern distributed teams.
-- **DevOps and automation** (CI/CD, test automation) connect development to operations for reliable, rapid releases.
-- **Metrics** (velocity, burn-down) keep delivery data-driven, while **coaching/training** and **maturity assessments** support growth.
-- Agile's **customer-centric approach** means everything is geared to meet real-world needs and maximize business value—critical for financial sector organizations like Capital Group.
-
-If you want, you can request focused mind maps (e.g., only Scrum, or only engineering practices), or get tailored best-practice checklists for your Agile team!
 

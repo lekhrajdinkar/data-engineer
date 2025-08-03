@@ -110,8 +110,8 @@ nav:
           - principle:
               - cse_best_practice: 99_more/00_cse/principles/00_cse_best_practice.md
               - SDLC (based on resume): 99_more/00_cse/principles/01_my-sdlc-task.md
-              - Agile: 99_more/00_cse/principles/02_agile.md
-              - Kanban: 99_more/00_cse/principles/03_kanban.md
+              - Agile (Scrum): 99_more/00_cse/principles/02_agile-scrum.md
+              - Agile (Kanban): 99_more/00_cse/principles/02_agile-kanban.md
           - coding:
               - coding_best_practice: 99_more/00_cse/coding/03_coding_best_practice.md
               - coding_patterns: 99_more/00_cse/coding/03_coding_patterns.md
