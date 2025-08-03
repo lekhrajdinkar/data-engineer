@@ -1,0 +1,28 @@
+## Agile methodologies
+    - Scrum, Kanban, etc.
+    - Cross-functional teams
+    - Continuous feedback loops
+    - Iterative development
+    - Continuous improvement
+    - Collaboration tools (e.g., Jira, Confluence)
+    - Retrospectives
+    - User stories and acceptance criteria
+    - Backlog management
+    - Sprint planning and reviews
+    - Daily stand-ups
+    - Pair programming
+    - Test automation
+    - Continuous learning and adaptation
+    - Cross-team collaboration
+    - DevOps practices
+    - Continuous delivery
+    - Monitoring and observability
+    - Incident management
+    - Knowledge sharing and documentation
+    - Feedback loops
+    - Customer-centric development
+    - Agile ceremonies (e.g., sprint reviews, retrospectives)
+    - Agile metrics (e.g., velocity, burn-down charts)
+    - Agile coaching and training
+    - Agile transformation
+    - Agile maturity assessments

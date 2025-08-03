@@ -108,6 +108,7 @@ nav:
               - SSE level 3/4: 99_more/03-resume/goal/solution_engineer_3.md
               - PE level 3/4: 99_more/03-resume/goal/platform_engineer_3.md
           - principle:
+              - cse_best_practice: 99_more/00_cse/principles/00_cse_best_practice.md
               - My SDLC: 99_more/00_cse/principles/01_my-sdlc-task.md
               - Agile: 99_more/00_cse/principles/02_agile.md
               - Kanban: 99_more/00_cse/principles/03_kanban.md

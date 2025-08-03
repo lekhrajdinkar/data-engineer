@@ -1,4 +1,4 @@
-## SDLC Mind Map based on your resume
+## SDLC Mind Map (based on resume)
 
 ### 1. **Requirement Gathering \& Analysis**
 
@@ -83,7 +83,109 @@
     - Daily standups, sprint planning, retrospectives
 - Code reviews and mentoring junior/offshore engineers
 
-This mind map organizes your work according to typical SDLC phases reflecting your full-stack, cloud-native, Agile-driven engineering background with strong DevOps experience.
+### summary
+- This mind map organizes your work according to typical SDLC phases reflecting your
+- full-stack, 
+- cloud-native, 
+- Agile-driven engineering background 
+- strong DevOps experience.
 
-If you want, I can prepare this in a visual diagram form with nodes and branches—please let me know!
+---
+## SDLC Principles & Trends - 2025
+- This mind map captures the core principles, popular models, key trends, and best practices in Software Development Life Cycle (SDLC) as of 2025.
+```mermaid
+mindmap
+  root((SDLC Principles & Trends - 2025))
+
+    A. Core_Phases 🔰
+      Planning 🔸
+        Requirements_Gathering
+        Feasibility_Study
+      Analysis 🔸
+        Stakeholder_Interviews
+        Requirements_Specification
+      Design 🔸
+        High-Level_Design
+        Low-Level_Design
+        UI/UX_Design
+      Implementation 🔸
+        Coding
+        Version_Control
+        Code_Reviews
+      Testing 🔸
+        Unit_Testing
+        Integration_Testing
+        System_Testing
+        Acceptance_Testing
+      Deployment 🔸
+        Release_Strategies
+        Rollback_Plans
+      Maintenance 🔸
+        Bug_Fixes
+        Enhancements
+        Monitoring
+
+    B. Popular_Models 🔰
+      Waterfall
+      V-Model
+      Iterative
+      Agile
+        Scrum
+        Kanban
+        Lean
+        XP
+        DevOps
+        Scrumban
+      Spiral
+      Big_Bang
+
+    C. Key_Trends_&_Changes 🔰
+      Agile_Dominance 🔸
+        Agile_Manifesto
+        Continuous_Feedback
+      DevOps_Integration 🔸
+        CI/CD_Pipelines
+        Automation
+        Infrastructure_as_Code
+      Cloud-Native_Software 🔸
+        Microservices
+        Serverless
+        Containerization
+        Cloud_Deployment
+      Security_Shift_Left 🔸
+        DevSecOps
+        Early_Security_Testing
+      Compliance_and_Privacy 🔸
+        GDPR
+        SOC2
+        ISO_27001
+      AI/ML_Integration 🔸
+        Automated_Testing
+        Analytics
+      Remote_Teams 🔸
+        Async_Development
+        Collaboration_Tools
+
+    D. Best_Practices 🔰
+      Continuous_Learning
+      Automation_Testing
+      Regular_Code_Reviews
+      Shift_Left_Testing
+      Monitoring_and_Logging
+      Feedback_Loops
+      Documentation
+      Cross-Functional_Collaboration
+      Emphasis_on_User_Experience
+      Security_by_Design
+
+    E. Useful_References 🔰
+      Agile_Alliance
+      DevOps_Handbook
+      OWASP
+      Cloud_Architectures
+      State_of_DevOps_Report
+
+```
+
+
 
