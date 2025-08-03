@@ -1,5 +1,5 @@
-site_name: System Engineering - quick Notes
-site_description: System Engineering - quick Notes
+site_name: System Engineering -  Notes
+site_description: System Engineering -  Notes
 site_author: Lekhraj
 docs_dir: docs
 
@@ -9,7 +9,7 @@ extra_javascript:
 # Navigation based on your Notes folder
 nav:
   - Home:
-    - Other site: index.md
+    - System Engineering 2025: index.md
     - About me: resume-builder/output/resume-from-tpl-1-profile-se3/resume-from-tpl-1-profile-se3_vlatest.md
   - Web : 03_web/index.md
   - Python:
