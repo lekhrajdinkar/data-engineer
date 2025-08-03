@@ -30,7 +30,9 @@ nav:
       - ETL_02: 01_pyspark/03_ETL_2.md
       - file_format: 01_pyspark/04_file_format.md
       - pyspark_01: 01_pyspark/100_pyspark_01_start.md
-
+  - Data Engineering:
+        - Databricks:
+            - start: 98_Data_engineering/02_Databrick/01_databrick_start.md
   - 🤖AI:
       - Traditional AI + theory:
           - 🔰2025:
