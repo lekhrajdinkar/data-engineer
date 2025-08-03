@@ -27,33 +27,27 @@
 
 ---
 
-## ✔️ ** synchronous communication (teams)**
+## ✔️ synchronous communication (teams)
 - Used for Internal Communication
-- These are Microsoft Teams channels your organization uses for internal communication:
-
 - **app chat | partner app chat**
 - **vendor | Swift Update Chat**
 - **business Support**
 - **Production Issue | Engage Interface**
 - **AWS cloud Support**
-
-Also includes specific technical and support team chats:
-
 - **Developer and Engineer**
-- **multi tenant EKS**
-- **CD pipeline | terraform | ansible | DevSecOps | D-Hub**
-- **Kafka | Message brokers**
-- **Java | Frontend | Python**
+    - **multi tenant EKS**
+    - **CD pipeline | terraform | ansible | DevSecOps | D-Hub**
+    - **Kafka | Message brokers**
+    - **Java | Frontend | Python**
 
 Additionally:
 
 - Weekly release update on AWS
-- eg: **SCP Policy Update** discussions for preventing deployment of **non-golden AMIs**
+- eg: **SCP Policy Update** discussions to preventing deployment of **non-golden AMIs** ,etc
 
 ---
 ## ✔️ **D2D Discussion**
 - PR review and merge process
-- Discussion about conference call and outstanding technical checks
 - **Created Follow-up Jira on Prod Issue**
     - API analysis task \& “Pound your course” analysis
     - test hotfix
@@ -76,13 +70,12 @@ Additionally:
     - API to send data to partner app 2
     - new vehicle (buy but can sell after some time, not right away)
 - **Engineering Tech Stack**
-    - On-prem Confluent Kafka enhancements (topics, replication)
-    - Changelog updates (Spark home updates)
-    - Spring Boot containers (token refresh bean work)
+    - Kafka topic replication
+    - docker update (Spark home updates)
 - **Other Improvements**
     - Content-Type (415 Unsupported Media) bug fixed (duplicated headers)
     - Toggle/Fallback options: rmq vs kafka | mulesoft vs fastapi 
-    - **Spring Boot property loading**
+    - Spring Boot property loading
     - token refresh Lambda enhancements
     - token refresh bean
     - Deserialization only required for specific API responses
