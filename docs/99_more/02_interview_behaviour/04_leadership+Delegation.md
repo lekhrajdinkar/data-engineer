@@ -179,7 +179,7 @@ Encourage questions and open dialogue to ensure understanding.
 ### 2. calculated risk
 - share_qty | t+2
 - UMC : quick fix - added feature to stage file and update it then release it
-    - created endpoints to stage and manually publish.
+    - create endpoints to stage and manually publish.
     - Documented steps. since  manual steps so risk
 
 ### 3. Simplified Complex Problem

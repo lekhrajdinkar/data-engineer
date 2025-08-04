@@ -15,3 +15,6 @@
 
 ---
 ## ✅B. Business Stakeholder Management
+### 1. tech talk with business
+- talk / rephrase my sentence as per individual background and strength.
+    - eg: sns alert with business, QA and dev

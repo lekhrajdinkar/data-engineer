@@ -4,9 +4,7 @@
 - Swift alliance cloud, we start ahead and showing my approach to CASA.
 - volunteer during event/s
 
-### 0. tech talk with business
-- talk / rephrase my sentence as per individual background and strength.
-    - eg: sns alert with business, QA and dev
+
 
 ### 1. Team hard to work on
 - I generally work well with most teams, but I find it difficult when working with teams that lack transparency or ownership. 

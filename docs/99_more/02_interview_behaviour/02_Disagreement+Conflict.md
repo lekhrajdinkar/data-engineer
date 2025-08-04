@@ -58,11 +58,7 @@ sample
 - **Result**: The experiment showed that my approach was more effective, but I acknowledged
   my colleague's contributions. We found common ground and improved our collaboration moving
   forward.
-```
 
-```
-== Tips ==
-  - 5 mistakes in SD
 ```
 
 
