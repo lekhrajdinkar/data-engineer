@@ -1,9 +1,8 @@
-## ✔️ C. Resilient
+## ✅A. Resilient
 - react to failure
 - react to challenge
 
 ### 1. Missed timeline
-
 
 ### 2. Cut the corner
 - Cut the corner to meet timeline
@@ -48,3 +47,12 @@
 - Avoid Repeated patterns of the same mistake
 - Avoid Huge outages with no recovery or learnings
 - eg: **Missed edge cases** in system integration + **Poor estimation** in effort or capacity + Assuming a dependency was stable
+
+### 7. project did not go as planned
+- **maps**
+  - monthly release for Business and non-functional
+  - postpone non-functional items due to delayed QA testing, since working on multiple release
+- **FSR**
+  - planned writing test-case / karma for new screen in phase-2
+  - API contract changed, ended up reworks.
+  - pushed as planned but impacted the release and delivery

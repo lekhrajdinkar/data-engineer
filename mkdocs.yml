@@ -130,11 +130,17 @@ nav:
               - sql_tips: 11_coding_interview/tips/02_01_postgres_tips.md
       - behaviour:
           - start : 99_more/02_interview_behaviour/00_behavior_start.md
-          - behaviour 1 (Teamwork) : 99_more/02_interview_behaviour/01_01_teamwork.md
-          - behaviour 2 (leadership) : 99_more/02_interview_behaviour/01_02_leadership.md
-          - behaviour 3 (Resilience) : 99_more/02_interview_behaviour/01_03_Resilient.md
-          - behaviour 4 (skills) : 99_more/02_interview_behaviour/01_04_tech_skills.md
-          - behaviour 5 (more) : 99_more/02_interview_behaviour/01_05_behavioural_more.md
+          - 1 (teamwork+collaboration) : 99_more/02_interview_behaviour/01_teamwork+collaboration.md
+          - 2 (Disagreement+Conflict) : 99_more/02_interview_behaviour/02_Disagreement+Conflict.md
+          - 3 (Ownership+Accountability) : 99_more/02_interview_behaviour/03_Ownership+Accountability.md
+          - 4 (leadership+Delegation) : 99_more/02_interview_behaviour/04_leadership+Delegation.md
+          - 5 (Technical-Problem-Solving) : 99_more/02_interview_behaviour/05_Technical-Problem-Solving.md
+          - 6 (Resilient+handling-pressure) : 99_more/02_interview_behaviour/06_Resilient+handling-pressure.md
+          - 7 (Adaptability+Learning) : 99_more/02_interview_behaviour/07_Adaptability+Learning.md
+          - 8 (Comm-skill+business-stakeholder) : 99_more/02_interview_behaviour/08_Comm-skill+business-stakeholder.md
+          - 9 (Project-Time-Management) : 99_more/02_interview_behaviour/09_Project-Time-Management.md
+          - 10 (Self-Awareness+Ethical) : 99_more/02_interview_behaviour/10_Self-Awareness+Ethical.md
+
       - Revision/s :
           - revision 2024 - 1 : 99_more/01_revision/revision_01_2024.md
           - revision 2025 - 1 : 99_more/01_revision/revision_02_2025.md

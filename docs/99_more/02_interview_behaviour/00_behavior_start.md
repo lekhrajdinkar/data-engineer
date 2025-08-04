@@ -20,6 +20,11 @@
 ## tips
 - You don't need a unique story for every single skill.
 - Often, one good story can illustrate multiple skills 
+- `show` leadership, show learning / take away from  experience 👈🏻
+- **show** them, `dont just tell `| **captivating story** | not boring | at least 2/3 stories 👈🏻
+- practice and delivery
+- no script | keep bullet only
+- **don't use filler | use silence and thinks**
 
 ---
 ## 🔰Solutions Engineer

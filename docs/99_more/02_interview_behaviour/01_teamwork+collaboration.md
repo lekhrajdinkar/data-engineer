@@ -66,7 +66,7 @@
 
 ### 8. Put someone else interest 🔸
 
-### 9. diff style people 
+### 9. team dynamics | diff style people 
 - good to have mix of people of diff skill background.
 - good for teamwork and balanced team
 - kesav : AWS + env issue
@@ -77,16 +77,10 @@
 - learnt soft skills from seniors,bsa
 
 ---
-
-## Links 
+## Resources
 - https://chatgpt.com/c/6850d0a3-3d8c-800d-98ce-1a4b4bd9a2ce | business 🗨️
 - https://chatgpt.com/c/6850fafa-fc18-800d-9a4a-e8a9641cae8c | behaviour 1 🗨️
 - [behaviour 2 - exponent : se | behaviour ](https://www.tryexponent.com/questions?page=2&role=swe&type=behavioral)
 - https://chatgpt.com/c/685115cc-eef4-800d-971d-1665c4af2684 | behaviour 3 🗨️
 
-## Tips
-- tip : `show` leadership, show learning / take away from  experience 👈🏻
-- **show** them, `dont just tell `| **captivating story** | not boring | at least 2/3 stories 👈🏻
-- practice and delivery
-- no script | keep bullet only
-- **don't use filler | use silence and thinks**
+
