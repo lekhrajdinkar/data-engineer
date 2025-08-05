@@ -1,17 +1,10 @@
-site_name: System Engineering -  Notes
-site_description: System Engineering -  Notes
-site_author: Lekhraj
+site_name: Data Engineering 2025
+site_description: Data Engineering 2025
+site_author: Lekhraj Dinkar
 docs_dir: docs
-
-extra_javascript:
-  - mkdocs.js
 
 # Navigation based on your Notes folder
 nav:
-  - Home:
-    - System Engineering 2025: index.md
-    - About me: resume-builder/output/resume-from-tpl-1-profile-se3/resume-from-tpl-1-profile-se3_vlatest.md
-  - Web : 03_web/index.md
   - Python:
       - kickoff: 02_funda/01_kickoff.md
       - lang_funda: 02_funda/00_py-funda.md
@@ -21,7 +14,7 @@ nav:
       - useful_function: 02_funda/05_useful_function.md
       - More 🗨️: chats.md
 
-  - PySpark:
+  - Spark:
       - index: 01_pyspark/index.md
       - pandas: 01_pyspark/00_panda.md
       - setup_locally: 01_pyspark/01_setup_locally.md
@@ -30,131 +23,31 @@ nav:
       - ETL_02: 01_pyspark/03_ETL_2.md
       - file_format: 01_pyspark/04_file_format.md
       - pyspark_01: 01_pyspark/100_pyspark_01_start.md
-  - Data Engineering:
-        - Databricks:
-            - start: 98_Data_engineering/02_Databrick/01_databrick_start.md
-  - 🤖AI:
-      - Traditional AI + theory:
-          - 🔰2025:
-            - Start: 00_gen_ai/00_temp/00_start.md
-            - Generative AI: 00_gen_ai/00_temp/00_GenAI.md
-            - ML Machine learning: 00_gen_ai/00_temp/04_AI_ML.md
-            - AI challenges: 00_gen_ai/00_temp/05_AI_challenges.md
-      - New AI (genAI):
-          - 🔰2025:
-            - Prompting: 00_gen_ai/00_temp/03_prompt_engineering.md
-            - Agentic AI:
-              - Introduction : 00_gen_ai/02_agentic_ai/00_start.md
-              - AI Tools encountered : 00_gen_ai/02_agentic_ai/03_tried.md
-              - MCP protocol 🔸 : 00_gen_ai/02_agentic_ai/01_MCP.md
-              - A2A protocol 🔸: 00_gen_ai/02_agentic_ai/02_A2A.md
-            - POCs:
-              - 01 chatbot: 00_gen_ai/poc/poc_1_cb.md
-              - 02 RAG with dynamoDB: 00_gen_ai/poc/poc_2_rag.md
-      - AWS:
-          - 🔰2025:
-            - 01_bedrock: 00_gen_ai/01_aws/01_bedrock.md
-            - 02_sageMaker: 00_gen_ai/01_aws/02_sageMaker.md
 
-  - 💻System Design:
-      - Theorem and Patterns ☑️:
-          - CAP : 10_System_Design/SD_00_theorum+patterns/00_CAP.md
-          - tech_stack : 10_System_Design/SD_00_theorum+patterns/00_tech_stack.md
-          - concepts : 10_System_Design/SD_00_theorum+patterns/03_concepts.md
-      - High performance ☑️:
-          - Start: 10_System_Design/SD_01_performance/01_start.md
-      - High Availability ☑️:
-          - Start: 10_System_Design/SD_02_Availability/01_start.md
-      - Scalability ☑️:
-          - services: 10_System_Design/SD_03_scalability/01-services.md
-          - Database: 10_System_Design/SD_03_scalability/02-db+storage.md
-          - Microservices:
-              - monolith: 10_System_Design/SD_03_scalability/micro-service/00_monolith_vs_ms.md
-              - microservice comm: 10_System_Design/SD_03_scalability/micro-service/03_ms_comm.md
-              - Deployment: 10_System_Design/SD_03_scalability/micro-service/04_ms_deployment.md
-              - Container orchestration: 10_System_Design/SD_03_scalability/micro-service/02_ms_orchestration.md
-              - API design 1: 10_System_Design/SD_03_scalability/micro-service/03_01_API.md
-              - API design 2: 10_System_Design/SD_03_scalability/micro-service/03_02_API.md
-      - Reliability ☑️:
-          - resilient: 10_System_Design/SD_04_reliability/01_resiliency-1.md
-          - durable: 10_System_Design/SD_04_reliability/02_durability-1.md
-      - Distributed system ☑️:
-          - Start: 10_System_Design/SD_05_Distributed/01_distributed-start.md
-      - Observability ☑️:
-          - Start: 10_System_Design/SD_06_obs/01_Obs_start.md
-      - Security ☑️:
-          - JWT: 10_System_Design/SD_07_security/01_JWT.md
-          - OAuth2.0 & OIDC: 10_System_Design/SD_07_security/04_03_OAUth+OIDC.md
-          - SAML: 10_System_Design/SD_07_security/04_02_SAML.md
-          - Public Key Infrastructure (PKI): 10_System_Design/SD_07_security/04_01_PKI.md
-      - Database + storage ☑️:
-          - Start: 10_System_Design/SD_08_Storage+database/01_start.md
-          - Design Patterns: 10_System_Design/SD_08_Storage+database/02_design_patterns.md
+  - Database:
+      - Postgres RDBMS:
+          - start: 04_sql-database/01_rdbms/00_postgress.md
+          - Data Types: 04_sql-database/01_rdbms/01_datatype.md
+          - Constraints: 04_sql-database/01_rdbms/02_constraints.md
+          - Normalization: 04_sql-database/01_rdbms/00_Normalization.md
+          - Index: 04_sql-database/01_rdbms/00_db_index.md
+          - DDL: 04_sql-database/01_rdbms/02_ddl.md
+          - DML: 04_sql-database/01_rdbms/02_dml.md
+          - DQL: 04_sql-database/01_rdbms/02_dql.md
+          - DCL: 04_sql-database/01_rdbms/03_dcl.md
+          - ACID & Locks: 04_sql-database/01_rdbms/07_ACID+Locks.md
+          - Functions: 04_sql-database/01_rdbms/04_function.md
+          - CTE: 04_sql-database/01_rdbms/05_CTE.md
+          - Views: 04_sql-database/01_rdbms/06_view.md
+          - partitioning: 04_sql-database/01_rdbms/10_partitioning.md
+          - Sharding: 04_sql-database/01_rdbms/10_sharding-rdbms.md
+          - Project-01 (Shopping App): 04_sql-database/01_rdbms/shopping_app/readme.md
 
-      - ✅Systems:
-          - System-1(app-6) ☑️:
-              - B2B model: 10_System_Design/SD_99_Examples/app-6/00_PROJ-1_B2B.md
-              - Design Patterns: 10_System_Design/SD_99_Examples/app-6/01-PROJ-1_Design-patterns.md
-              - Disaster Recovery: 10_System_Design/SD_99_Examples/app-6/02_PROJ-1_DR.md
-              - Release Process: 10_System_Design/SD_99_Examples/app-6/03_PROJ-1_release_process.md
-              - API Overview: 10_System_Design/SD_99_Examples/app-6/04_PROJ-1_API.md
-          - byte-byte-go ☑️:
-              - 101 rate limiting: 10_System_Design/SD_99_Examples/byte-byte-go/101_rate-limiter.md
-              - 110 notification system: 10_System_Design/SD_99_Examples/byte-byte-go/110_notification-system.md
-          - byteMonk ☑️:
-              - byteMonk_reference: 10_System_Design/SD_99_Examples/byteMonk/00_byteMonk_reference.md
+  - Data platform:
+      - Databricks:
+          - start: 98_Data_engineering/02_Databrick/01_databrick_start.mdd
 
-  - Interview:
-      - CSE:
-          - Goals:
-              - SSE level 3/4: 99_more/03-resume/goal/solution_engineer_3.md
-              - PE level 3/4: 99_more/03-resume/goal/platform_engineer_3.md
-          - principle:
-              - cse_best_practice: 99_more/00_cse/principles/00_cse_best_practice.md
-              - SDLC (based on resume): 99_more/00_cse/principles/01_my-sdlc-task.md
-              - Agile (Scrum): 99_more/00_cse/principles/02_agile-scrum.md
-              - Agile (Kanban): 99_more/00_cse/principles/02_agile-kanban.md
-          - coding:
-              - coding_best_practice: 99_more/00_cse/coding/03_coding_best_practice.md
-              - coding_patterns: 99_more/00_cse/coding/03_coding_patterns.md
-              - code_review: 99_more/00_cse/coding/03_code_review.md
-          - work_history:
-              - 2025:
-                - july app6: 99_more/00_cse/work_history/2025/sdlc-july-2025.md
-
-      - Leetcode:
-          - DSA:
-              - start: 11_coding_interview/ds+algo/00_ds+algo-start.md
-          - Tips:
-              - python_tips: 11_coding_interview/tips/01_01_py_tips.md
-              - sql_tips: 11_coding_interview/tips/02_01_postgres_tips.md
-      - behaviour:
-          - start : 99_more/02_interview_behaviour/00_behavior_start.md
-          - 1 (teamwork+collaboration) : 99_more/02_interview_behaviour/01_teamwork+collaboration.md
-          - 2 (Disagreement+Conflict) : 99_more/02_interview_behaviour/02_Disagreement+Conflict.md
-          - 3 (Ownership+Accountability) : 99_more/02_interview_behaviour/03_Ownership+Accountability.md
-          - 4 (leadership+Delegation) : 99_more/02_interview_behaviour/04_leadership+Delegation.md
-          - 5 (Technical-Problem-Solving) : 99_more/02_interview_behaviour/05_Technical-Problem-Solving.md
-          - 6 (Resilient+handling-pressure) : 99_more/02_interview_behaviour/06_Resilient+handling-pressure.md
-          - 7 (Adaptability+Learning) : 99_more/02_interview_behaviour/07_Adaptability+Learning.md
-          - 8 (Comm-skill+business-stakeholder) : 99_more/02_interview_behaviour/08_Comm-skill+business-stakeholder.md
-          - 9 (Project-Time-Management) : 99_more/02_interview_behaviour/09_Project-Time-Management.md
-          - 10 (Self-Awareness+Ethical) : 99_more/02_interview_behaviour/10_Self-Awareness+Ethical.md
-
-      - Revision/s :
-          - revision 2024 - 1 : 99_more/01_revision/revision_01_2024.md
-          - revision 2025 - 1 : 99_more/01_revision/revision_02_2025.md
-      - Brain dump :
-          - 2025 (app-6): 99_more/02_interview_behaviour/brain-dump/2025.md
-          - 2025 (improvement_idea): 99_more/02_interview_behaviour/brain-dump/2025-improvement-ideas.md
-          - 2025 (d2d_discussion): 99_more/02_interview_behaviour/brain-dump/2025-d2d-discussion.md
-          - 2022-24 app-6): 99_more/02_interview_behaviour/brain-dump/2022-2024.md
-          - 2019-21 (app-4/5): 99_more/02_interview_behaviour/brain-dump/2019-2021.md
-          - 2017-18 (app-1/2/3:on-shore): 99_more/02_interview_behaviour/brain-dump/2017-2018.md
-          - 2012-16 (app-1/2/3:off-shore) : 99_more/02_interview_behaviour/brain-dump/2012-2016.md
-      - Learnings dumps:
-          - Learnings 2025: 99_more/02_interview_behaviour/learning-dumps/learning_2025.md
-          - Learnings 2024: 99_more/02_interview_behaviour/learning-dumps/learning_2024.md
+  - Web : 03_web/index.md
 
 theme:
   name: material
