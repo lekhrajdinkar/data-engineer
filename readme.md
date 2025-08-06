@@ -1,8 +1,8 @@
-# Data Engineering & Analytics Docs
+## Data Engineering & Analytics Docs
 
 🔶 in progress...
 
-## Python
+### Python
 
 Master Python for data engineering, scripting, and backend fundamentals.
 
@@ -15,7 +15,7 @@ Master Python for data engineering, scripting, and backend fundamentals.
 - **More 🗨️:** Q&A, notes, or extra discussions
 
 
-## Spark
+### Spark
 
 Practical, hands-on approach to PySpark, big data processing, and analytics.
 
@@ -28,7 +28,7 @@ Practical, hands-on approach to PySpark, big data processing, and analytics.
 - **PySpark 01:** Beginner’s guide to PySpark APIs and operations
 
 
-## Database (Postgres RDBMS)
+### Database (Postgres RDBMS)
 
 Comprehensive guide to relational databases, focusing on PostgreSQL.
 
@@ -43,13 +43,72 @@ Comprehensive guide to relational databases, focusing on PostgreSQL.
 - **Project 01:** Real-world Postgres project—a Shopping App schema and practices
 
 
-## Data Platform (Databricks)
-
-Unlock scalable big data workflows with Databricks.
+### Data Platform (Databricks) 🔸🔸🔸
 
 - **Databricks Start:** Introduction, workspace setup, and first steps in the Databricks environment
 
-**How to Use:**
-Browse to any section file for focused, step-by-step technical references, project guides, and foundational concepts. Whether working on backend code, data pipelines, or SQL modeling, these sections help you master essential data engineering skills.
 
 ---
+
+## RoadMap
+
+```
+Databricks + PySpark
+│
+├── 1. Fundamentals
+│   ├── Spark Architecture
+│   │   ├── Driver & Executors
+│   │   └── DAG & Stages
+│   ├── Spark Cluster Modes
+│   └── Databricks Architecture
+│       ├── Workspaces
+│       ├── Clusters & Jobs
+│       └── Notebooks & Repos
+│
+├── 2. PySpark Core
+│   ├── RDDs vs DataFrames
+│   ├── Transformations & Actions
+│   ├── Schema Inference & Explicit Schemas
+│   └── Spark SQL
+│
+├── 3. Databricks Essentials
+│   ├── Delta Lake
+│   │   ├── ACID Transactions
+│   │   ├── Time Travel
+│   │   └── Merge (Upserts)
+│   ├── Unity Catalog (Security & Governance)
+│   └── Lakehouse Paradigm
+│
+├── 4. Data Engineering Workflows
+│   ├── Autoloader (Streaming ingestion)
+│   ├── Structured Streaming
+│   ├── Jobs (Workflow Orchestration)
+│   └── Task Dependencies
+│
+├── 5. Optimization Techniques
+│   ├── Caching & Persistence
+│   ├── Broadcast Joins
+│   ├── Predicate Pushdown
+│   └── Adaptive Query Execution (AQE)
+│
+├── 6. CI/CD & Deployment
+│   ├── Repos & Git Integration
+│   ├── dbx CLI
+│   └── Workflow deployment (Job APIs)
+│
+├── 7. Monitoring & Debugging
+│   ├── Spark UI
+│   ├── Cluster Metrics
+│   └── Logging & Alerting
+│
+├── 8. Real Projects / Practice
+│   ├── ETL Pipeline (Batch + Delta)
+│   ├── Streaming Pipeline (Kafka → Delta)
+│   ├── CDC with Merge + Time Travel
+│   └── ML Integration (MLflow intro)
+│
+└── 9. Certifications (Optional)
+    ├── Databricks Data Engineer Associate
+    └── Databricks Data Engineer Professional
+
+```
